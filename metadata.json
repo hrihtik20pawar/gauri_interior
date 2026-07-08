@@ -1,0 +1,6 @@
+{
+  "name": "Gauri Group - Interior Design",
+  "description": "Corporate website for Gauri Group featuring interior design, modular kitchens, and design solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
