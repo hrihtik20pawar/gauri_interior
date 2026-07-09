@@ -60,12 +60,26 @@ export default function App() {
 
     lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
+    const raf = (time: number) => {
       lenis.raf(time * 1000);
-    });
-    gsap.ticker.lagSmoothing(0);
+      requestAnimationFrame(raf);
+    };
+    const rafId = requestAnimationFrame(raf);
+
+    // Handle tab visibility changes
+    const handleVisibility = () => {
+      if (document.hidden) {
+        lenis.stop();
+      } else {
+        lenis.start();
+        ScrollTrigger.refresh();
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibility);
 
     return () => {
+      cancelAnimationFrame(rafId);
+      document.removeEventListener('visibilitychange', handleVisibility);
       lenis.destroy();
     };
   }, []);
