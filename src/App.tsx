@@ -44,6 +44,13 @@ function PageTransition({ children }: { children: React.ReactNode }) {
         { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }
       );
     }
+
+    // Refresh ScrollTrigger after mount to catch all animations
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh(true);
+    }, 200);
+
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   return <div ref={wrapper}>{children}</div>;
@@ -60,26 +67,26 @@ export default function App() {
 
     lenis.on('scroll', ScrollTrigger.update);
 
-    const raf = (time: number) => {
+    gsap.ticker.add((time) => {
       lenis.raf(time * 1000);
-      requestAnimationFrame(raf);
-    };
-    const rafId = requestAnimationFrame(raf);
+    });
+    gsap.ticker.lagSmoothing(0);
 
-    // Handle tab visibility changes
+    // Fix tab switching: refresh ScrollTrigger when tab becomes visible
+    let refreshTimeout: ReturnType<typeof setTimeout>;
     const handleVisibility = () => {
-      if (document.hidden) {
-        lenis.stop();
-      } else {
-        lenis.start();
-        ScrollTrigger.refresh();
+      if (!document.hidden) {
+        clearTimeout(refreshTimeout);
+        refreshTimeout = setTimeout(() => {
+          ScrollTrigger.refresh(true);
+        }, 100);
       }
     };
     document.addEventListener('visibilitychange', handleVisibility);
 
     return () => {
-      cancelAnimationFrame(rafId);
       document.removeEventListener('visibilitychange', handleVisibility);
+      clearTimeout(refreshTimeout);
       lenis.destroy();
     };
   }, []);
