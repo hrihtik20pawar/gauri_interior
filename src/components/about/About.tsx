@@ -167,12 +167,12 @@ export default function About() {
       {/* Managing Director's Message */}
       <div className="about-text relative rounded-2xl overflow-hidden mb-12 min-h-[450px] lg:min-h-[520px] border border-gray-100 bg-gradient-to-br from-gray-50 to-white">
         {/* Background Image - MD photo with fade */}
-        <div className="absolute right-0 top-0 h-full w-[300px] lg:w-[400px]">
+        <div className="absolute right-0 top-0 h-full w-[300px] lg:w-[400px] overflow-hidden">
           <img
             loading="lazy"
             src="/images/team/team_1.avif"
             alt="Managing Director - GAURI GROUP"
-            className="h-full w-full object-cover object-top"
+            className="h-[120%] w-full object-cover object-top -mt-[10%]"
           />
           {/* Fade only the left edge into content */}
           <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent"></div>
