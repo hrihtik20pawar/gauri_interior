@@ -87,6 +87,12 @@ export default function App() {
       if (!document.hidden) {
         clearTimeout(refreshTimeout);
         refreshTimeout = setTimeout(() => {
+          // Force-play any ScrollTrigger animations that were skipped while tab was hidden
+          ScrollTrigger.getAll().forEach(st => {
+            if (st.progress === 0 && !st.isActive) {
+              st.play();
+            }
+          });
           ScrollTrigger.refresh(true);
         }, 100);
       }
