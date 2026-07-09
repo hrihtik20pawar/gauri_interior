@@ -172,7 +172,7 @@ export default function About() {
             loading="lazy"
             src="/images/team/team_1.avif"
             alt="Managing Director - GAURI GROUP"
-            className="h-[120%] w-full object-cover object-top -mt-[10%]"
+            className="h-[140%] w-full object-cover object-top -mt-[20%]"
           />
           {/* Fade only the left edge into content */}
           <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent"></div>
