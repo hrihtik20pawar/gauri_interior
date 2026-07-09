@@ -174,9 +174,8 @@ export default function About() {
             alt="Managing Director - GAURI GROUP"
             className="h-full w-full object-cover object-top"
           />
-          {/* Gradient fade from image to transparent */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+          {/* Fade only the left edge into content */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent"></div>
         </div>
 
         {/* Content - positioned on left */}
