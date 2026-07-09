@@ -21,17 +21,25 @@ export default function WhoWeAre() {
   useGSAP(() => {
     if (!container.current) return;
 
-    gsap.fromTo('.who-header',
-      { y: 40, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out',
-        scrollTrigger: { trigger: container.current, start: 'top 80%' } },
-    );
+    const whoHeader = container.current.querySelector('.who-header');
+    const whoCards = container.current.querySelectorAll('.who-card');
+    const whoGrid = container.current.querySelector('.who-grid');
 
-    gsap.fromTo('.who-card',
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, stagger: 0.12, ease: 'power2.out',
-        scrollTrigger: { trigger: '.who-grid', start: 'top 80%' } },
-    );
+    if (whoHeader) {
+      gsap.fromTo(whoHeader,
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out',
+          scrollTrigger: { trigger: container.current, start: 'top 80%' } },
+      );
+    }
+
+    if (whoCards.length) {
+      gsap.fromTo(whoCards,
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, stagger: 0.12, ease: 'power2.out',
+          scrollTrigger: { trigger: whoGrid || container.current, start: 'top 80%' } },
+      );
+    }
   }, { scope: container });
 
   return (

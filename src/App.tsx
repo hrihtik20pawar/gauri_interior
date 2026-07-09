@@ -87,14 +87,22 @@ export default function App() {
       if (!document.hidden) {
         clearTimeout(refreshTimeout);
         refreshTimeout = setTimeout(() => {
-          // Force-play any ScrollTrigger animations that were skipped while tab was hidden
+          // Force-complete all ScrollTrigger animations that never fired
           ScrollTrigger.getAll().forEach(st => {
-            if (st.progress === 0 && !st.isActive) {
-              st.play();
+            if (st.progress === 0) {
+              st.progress(1);
+            }
+          });
+          // Also clear any stuck inline opacity styles from gsap.fromTo
+          document.querySelectorAll('[style*="opacity: 0"]').forEach(el => {
+            const htmlEl = el as HTMLElement;
+            if (htmlEl.style.opacity === '0') {
+              htmlEl.style.removeProperty('opacity');
+              htmlEl.style.removeProperty('transform');
             }
           });
           ScrollTrigger.refresh(true);
-        }, 100);
+        }, 150);
       }
     };
     document.addEventListener('visibilitychange', handleVisibility);
