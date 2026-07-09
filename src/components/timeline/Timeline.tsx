@@ -177,10 +177,10 @@ export default function Timeline() {
         {/* Header section */}
         <div className="text-center mb-12 md:mb-24 max-w-3xl mx-auto">
           <p className="timeline-header text-brand-orange font-bold tracking-[0.2em] uppercase text-sm mb-4">Our Journey</p>
-          <h2 className="timeline-header text-4xl md:text-5xl lg:text-6xl font-serif text-brand-green leading-[1.1] mb-6">
+          <h2 className="timeline-header text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green leading-[1.1] mb-6">
             The Story of <br /> <span className="text-teal-800 italic font-light">Gauri Group</span>
           </h2>
-          <p className="timeline-header text-gray-500 text-lg leading-relaxed font-medium">
+          <p className="timeline-header text-gray-500 text-xl leading-relaxed font-medium">
             From humble beginnings to becoming a trusted name in interior design and modular manufacturing, our journey is defined by passion, precision, and growth.
           </p>
         </div>
@@ -199,7 +199,7 @@ export default function Timeline() {
           <div className="md:hidden absolute left-8 top-0 bottom-0 w-[3px] bg-gradient-to-b from-brand-orange via-teal-600 to-brand-green rounded-full opacity-30"></div>
 
 
-          <div className="flex flex-col gap-12 md:gap-24 relative z-10">
+          <div className="flex flex-col gap-16 md:gap-32 relative z-10">
             {timelineSteps.map((step, index) => {
               const isEven = index % 2 === 0;
               return (
@@ -210,7 +210,7 @@ export default function Timeline() {
 
                   {/* Center Icon/Node */}
                   <div className="timeline-icon-container absolute left-8 md:left-1/2 -translate-x-1/2 flex items-center justify-center z-20 group">
-                    <div className="timeline-year-icon bg-brand-orange flex items-center justify-center text-white font-bold text-[11px] tracking-wide whitespace-nowrap px-4 py-2.5 rounded-full shadow-[0_0_20px_rgba(234,91,35,0.5)] border-4 border-white hover:border-brand-orange transition-colors duration-300">
+                    <div className="timeline-year-icon bg-brand-orange flex items-center justify-center text-white font-bold text-xs tracking-wide whitespace-nowrap px-4 py-2.5 rounded-full shadow-[0_0_20px_rgba(234,91,35,0.5)] border-4 border-white hover:border-brand-orange transition-colors duration-300">
                       {step.year}
                     </div>
                   </div>
@@ -218,10 +218,10 @@ export default function Timeline() {
                   {/* Content Card */}
                   <div className={`w-full md:w-1/2 pl-16 md:pl-0 md:px-12 ${isEven ? 'md:text-right md:pr-16' : 'md:text-left md:pl-16'}`}>
                     <div className="timeline-card bg-white/60 backdrop-blur-md p-6 md:p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group">
-                      <span className="inline-block text-5xl font-serif text-gray-100 font-bold mb-4 -mt-4 -ml-2 group-hover:text-brand-orange/10 transition-colors duration-300">
+                      <span className="inline-block text-6xl font-serif text-gray-100 font-bold mb-4 -mt-4 -ml-2 group-hover:text-brand-orange/10 transition-colors duration-300">
                         {step.num}
                       </span>
-                      <h3 className="text-2xl font-serif text-brand-green mb-6">
+                      <h3 className="text-3xl font-serif text-brand-green mb-6">
                         {step.highlight ? (
                           <>
                             <span className="text-brand-orange font-sans font-semibold tracking-wider uppercase">{step.highlight}</span>
@@ -233,7 +233,7 @@ export default function Timeline() {
                       </h3>
                       <ul className="space-y-3 flex flex-col items-start text-left">
                         {step.items.map((item, i) => (
-                          <li key={i} className="timeline-list-item flex items-center gap-3 text-gray-600 font-medium">
+                          <li key={i} className="timeline-list-item flex items-center gap-3 text-gray-600 font-medium text-[15px]">
                             <span className="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
                             {item}
                           </li>
@@ -250,7 +250,7 @@ export default function Timeline() {
             <div className="timeline-item relative flex flex-col items-center w-full">
               <div className="w-full pl-16 md:pl-0 md:flex md:justify-center md:px-12">
                 <div className="timeline-card bg-brand-green/5 backdrop-blur-md p-6 md:p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-brand-green/10 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group md:max-w-lg">
-                  <h3 className="text-2xl font-serif text-brand-green mb-6 text-center">Where We Are Now</h3>
+                  <h3 className="text-3xl font-serif text-brand-green mb-6 text-center">Where We Are Now</h3>
                   <ul className="space-y-3 flex flex-col items-start text-left">
                     <li className="timeline-list-item flex items-center gap-3 text-gray-600 font-medium">
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>

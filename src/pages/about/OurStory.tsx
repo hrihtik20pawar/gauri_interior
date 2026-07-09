@@ -38,26 +38,20 @@ export default function OurStory() {
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
           {/* Text */}
           <div className="flex-1 order-2 lg:order-1">
-            <p className="story-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Our Story</p>
+            <p className="story-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">About Us</p>
             <h2 className="story-text text-4xl md:text-5xl font-serif text-brand-green mb-6 leading-tight">
-              Building Dreams Through Design Excellence
+              <span className="text-teal-800">Gauri Group</span>
             </h2>
             <div className="story-text w-24 h-1 bg-brand-orange rounded-full mb-8" />
             <div className="space-y-5 text-gray-600 text-lg leading-relaxed">
             <p className="story-text">
-              <strong className="text-brand-green">Gauri Interior Pvt. Ltd.</strong> is a comprehensive service provider for
-              interior design, renovation &amp; turnkey project execution. We master excellent &amp; renovation services
-              not only commercial establishment but also for residential too.
+              Established with a vision to transform spaces into timeless experiences, <strong className="text-brand-green">GAURI Group</strong> is one of India's emerging names in the field of Interior Solutions, Modular Kitchens, Design Consultancy, and Furniture &amp; Hardware Trading.
             </p>
             <p className="story-text">
-              <strong className="text-brand-green">Gauri Interior Pvt. Ltd.</strong> is growing company in contracting turnkey
-              project &amp; interior decorator work. We are also manufactures of modular furniture. The main goal of
-              our organization is customer satisfaction by Considering time &amp; money.
+              Our journey began in <strong className="text-brand-green">1993</strong>, when <strong className="text-brand-green">Mr. Lalbachan Vishwakarma</strong> laid the foundation of the business by undertaking customized furniture projects with an unwavering commitment to quality and craftsmanship. Over the years, this passion evolved into executing complete turnkey interior projects across residential, commercial, corporate, hospitality, healthcare, educational, and retail sectors.
             </p>
             <p className="story-text">
-              We undertake all kind of interior, decoration project on turnkey basis. It cover Carpentry, POP, Civil,
-              Electrical, Plumbing, Aircondition etc. &amp; also manufactures of modular furniture. We undertake
-              and execute from concept to completion, of any size &amp; time schedule.
+              Under the leadership of <strong className="text-brand-green">Mr. Shilkumar L. Vishwakarma (Managing Director &amp; CEO)</strong>, GAURI Group expanded into a diversified business ecosystem, bringing together multiple specialized ventures under one trusted brand.
             </p>
             </div>
           </div>

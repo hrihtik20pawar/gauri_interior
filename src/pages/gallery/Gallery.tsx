@@ -242,7 +242,7 @@ export default function Gallery() {
                 {showStoryBlock && (
                   <div className="gallery-item col-span-1 md:col-span-2 lg:col-span-2 row-span-1 bg-brand-green rounded-[2rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden text-white shadow-xl">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-brand-teal/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                    <Logo isDark={true} className="h-10 w-auto mb-8 opacity-80" />
+                    <Logo isDark={true} size="lg" className="h-16 w-auto mb-8 opacity-80" />
                     <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif mb-4 leading-tight">
                       "Design is not just what it looks like and feels like. Design is how it works."
                     </h3>

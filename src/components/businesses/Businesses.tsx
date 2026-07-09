@@ -25,31 +25,31 @@ export default function Businesses() {
   const businesses = [
     {
       id: 'interior',
-      logo: images.businesses.interiorLogo || images.logo, // Provide a logo path
-      desc: "Turnkey interior solutions for residential, commercial and retail spaces. From concept to completion, we create functional and beautiful environments.",
+      logo: images.businesses.interiorLogo || images.logo,
+      desc: <>Complete <span className="text-brand-orange font-semibold">turnkey interior solutions</span> for commercial, residential and institutional spaces—from design to <span className="text-brand-orange font-semibold">flawless execution</span>.</>,
       img: images.businesses.interior,
-      btnColor: "bg-teal-800 hover:bg-teal-900"
+      btnColor: "bg-brand-orange hover:bg-orange-700"
     },
     {
       id: 'nikhil',
       logo: images.businesses.nikhilLogo || images.logo,
-      desc: "Reliable trading solutions with quality products, trusted partnerships and efficient supply chain management.",
+      desc: <>Your trusted partner for <span className="text-brand-orange font-semibold">premium plywood, laminates, hardware</span> and modular furniture materials with <span className="text-brand-orange font-semibold">reliable supply solutions</span>.</>,
       img: images.businesses.nikhil,
-      btnColor: "bg-teal-800 hover:bg-teal-900"
+      btnColor: "bg-brand-orange hover:bg-orange-700"
     },
     {
       id: 'kitchen',
-      logo: images.businesses.kitchenLogo || images.logo, // Provide a logo path
-      desc: "Modular kitchens and smart storage solutions designed for style, efficiency and convenience – tailored to your lifestyle.",
+      logo: images.businesses.kitchenLogo || images.logo,
+      desc: <>Elegant <span className="text-brand-orange font-semibold">modular kitchens</span> and <span className="text-brand-orange font-semibold">smart storage solutions</span> designed to enhance functionality, comfort and modern living.</>,
       img: images.businesses.kitchen,
       btnColor: "bg-brand-orange hover:bg-orange-700"
     },
     {
       id: 'studio',
-      logo: images.businesses.studioLogo || images.logo, // Provide a logo path
-      desc: "Design consulting, 3D visualization and styling solutions that bring ideas to life with creativity and precision.",
+      logo: images.businesses.studioLogo || images.logo,
+      desc: <>Creative <span className="text-brand-orange font-semibold">design consultancy</span> delivering architecture, interiors, space planning and <span className="text-brand-orange font-semibold">3D visualization</span> with innovative solutions.</>,
       img: images.businesses.studio,
-      btnColor: "bg-teal-800 hover:bg-teal-900"
+      btnColor: "bg-brand-orange hover:bg-orange-700"
     }
   ];
 

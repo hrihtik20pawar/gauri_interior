@@ -102,7 +102,7 @@ export default function App() {
               {/* Brand */}
               <div>
                 <div className="mb-6">
-                  <Logo isDark={true} />
+                  <Logo isDark={true} size="lg" />
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed max-w-xs">
                   Creating functional, inspiring, and truly personalized spaces since 2014.
