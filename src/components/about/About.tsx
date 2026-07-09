@@ -35,7 +35,7 @@ export default function About() {
   }, [selectedReason]);
 
   useGSAP(() => {
-    gsap.fromTo('.about-text',
+    gsap.fromTo('.about-hero-text',
       { y: 40, opacity: 0 },
       {
         y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power2.out',
@@ -87,17 +87,17 @@ export default function About() {
       {/* Top Part: Title and Image */}
       <div className="flex flex-col lg:flex-row gap-16 mb-24 items-center">
         <div className="flex-1 lg:max-w-2xl">
-          <p className="about-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">About Us</p>
-          <h2 className="about-text text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green leading-[1.15] mb-8">
+          <p className="about-hero-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">About Us</p>
+          <h2 className="about-hero-text text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green leading-[1.15] mb-8">
             <span className="text-teal-800">Gauri Group</span>
           </h2>
-          <p className="about-text text-gray-700 text-xl leading-relaxed mb-6 font-medium">
+          <p className="about-hero-text text-gray-700 text-xl leading-relaxed mb-6 font-medium">
             Established in <strong className="text-brand-green">2012</strong>, <strong className="text-brand-orange">GAURI INTERIOR PVT. LTD.</strong> is the flagship company of the <strong className="text-brand-orange">GAURI GROUP</strong>, specializing in comprehensive turnkey interior contracting solutions. Built upon a legacy that began in <strong className="text-brand-green">1993</strong>, the company has grown into a trusted name in the interior industry by consistently delivering projects with exceptional quality, innovation, and precision.
           </p>
-          <p className="about-text text-gray-700 text-xl leading-relaxed mb-6 font-medium">
+          <p className="about-hero-text text-gray-700 text-xl leading-relaxed mb-6 font-medium">
             Our journey began in <strong className="text-brand-green">1993</strong>, when <strong className="text-brand-orange">Mr. Lalbachan Vishwakarma</strong> laid the foundation of the business by undertaking customized furniture projects with an unwavering commitment to quality and craftsmanship. Over the years, this passion evolved into executing complete turnkey interior projects across residential, commercial, corporate, hospitality, healthcare, educational, and retail sectors.
           </p>
-          <p className="about-text text-gray-700 text-xl leading-relaxed font-medium">
+          <p className="about-hero-text text-gray-700 text-xl leading-relaxed font-medium">
             Under the leadership of <strong className="text-brand-orange">Mr. Shilkumar L. Vishwakarma (Managing Director &amp; CEO)</strong>, GAURI Group expanded into a diversified business ecosystem, bringing together multiple specialized ventures under one trusted brand.
           </p>
         </div>

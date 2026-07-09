@@ -29,28 +29,37 @@ function PageTransition({ children }: { children: React.ReactNode }) {
   const { pathname } = useLocation();
   const wrapper = useRef<HTMLDivElement>(null);
   const prevPathname = useRef(pathname);
+  const tweenRef = useRef<gsap.core.Tween | null>(null);
 
   useEffect(() => {
     if (prevPathname.current !== pathname) {
       prevPathname.current = pathname;
       window.scrollTo(0, 0);
-      ScrollTrigger.getAll().forEach(t => t.kill());
+      // Only kill ScrollTrigger instances tied to page content, not persistent components
+      ScrollTrigger.getAll().forEach(t => {
+        if (t.trigger && !t.trigger.closest?.('nav') && !t.trigger.closest?.('header')) {
+          t.kill();
+        }
+      });
     }
 
     if (wrapper.current) {
-      gsap.fromTo(
+      tweenRef.current?.kill();
+      tweenRef.current = gsap.fromTo(
         wrapper.current,
         { opacity: 0, y: 30 },
         { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }
       );
     }
 
-    // Refresh ScrollTrigger after mount to catch all animations
     const timer = setTimeout(() => {
       ScrollTrigger.refresh(true);
-    }, 200);
+    }, 300);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      tweenRef.current?.kill();
+    };
   }, [pathname]);
 
   return <div ref={wrapper}>{children}</div>;

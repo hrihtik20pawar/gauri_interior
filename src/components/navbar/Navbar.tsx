@@ -39,10 +39,13 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    gsap.fromTo('.nav-item',
-      { y: -20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: 'power2.out', delay: 0.2 }
-    );
+    const ctx = gsap.context(() => {
+      gsap.fromTo('.nav-item',
+        { y: -20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: 'power2.out', delay: 0.2 }
+      );
+    });
+    return () => ctx.revert();
   }, [isHome]);
 
   const navLinks = [
