@@ -36,9 +36,9 @@ export default function About() {
 
   useGSAP(() => {
     gsap.fromTo('.about-hero-text',
-      { y: 40, opacity: 0 },
+      { y: 40 },
       {
-        y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power2.out',
+        y: 0, duration: 0.8, stagger: 0.2, ease: 'power2.out',
         scrollTrigger: { trigger: container.current, start: 'top 80%' }
       },
     );
@@ -68,15 +68,15 @@ export default function About() {
 
       // Animate corner dots
       tl.fromTo('.bp-corner',
-        { scale: 0, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.3, stagger: 0.05, ease: 'back.out(2)' },
+        { scale: 0 },
+        { scale: 1, duration: 0.3, stagger: 0.05, ease: 'back.out(2)' },
         '-=0.2'
       );
 
       // Animate the image itself
       tl.fromTo('.about-office-image',
-        { opacity: 0, scale: 0.95 },
-        { opacity: 1, scale: 1, duration: 0.8, ease: 'power2.out' },
+        { scale: 0.95 },
+        { scale: 1, duration: 0.8, ease: 'power2.out' },
         '-=0.5'
       );
     }

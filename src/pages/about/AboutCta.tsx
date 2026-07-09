@@ -14,8 +14,8 @@ export default function AboutCta() {
   useGSAP(() => {
     if (!ctaRef.current) return;
     gsap.fromTo(ctaRef.current,
-      { opacity: 0, y: 60 },
-      { opacity: 1, y: 0, duration: 1, ease: 'power3.out',
+      { y: 60 },
+      { y: 0, duration: 1, ease: 'power3.out',
         scrollTrigger: { trigger: ctaRef.current, start: 'top 80%' } },
     );
   }, { scope: ctaRef });

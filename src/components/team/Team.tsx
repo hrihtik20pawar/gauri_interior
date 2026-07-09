@@ -28,10 +28,9 @@ export default function Team() {
     cards.forEach((card, i) => {
       gsap.fromTo(
         card,
-        { y: 50, opacity: 0 },
+        { y: 50 },
         {
           y: 0,
-          opacity: 1,
           duration: 0.8,
           delay: i * 0.1,
           ease: 'power3.out',

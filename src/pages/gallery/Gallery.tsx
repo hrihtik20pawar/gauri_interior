@@ -45,24 +45,23 @@ export default function Gallery() {
     const ctx = gsap.context(() => {
       if (heroRef.current) {
         gsap.fromTo('.gallery-hero-text',
-          { y: 50, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: 'power3.out' }
+          { y: 50 },
+          { y: 0, duration: 1, stagger: 0.2, ease: 'power3.out' }
         );
       }
 
       if (galleryRef.current && galleryRef.current.children.length > 0) {
         gsap.fromTo(galleryRef.current.children,
-          { y: 40, opacity: 0, scale: 0.95 },
-          { y: 0, opacity: 1, scale: 1, duration: 0.8, stagger: 0.05, ease: 'power2.out', clearProps: 'all' }
+          { y: 40, scale: 0.95 },
+          { y: 0, scale: 1, duration: 0.8, stagger: 0.05, ease: 'power2.out', clearProps: 'all' }
         );
 
         const items = gsap.utils.toArray('.gallery-item');
         items.forEach((item: any) => {
           gsap.fromTo(item,
-            { y: 50, opacity: 0 },
+            { y: 50 },
             {
               y: 0,
-              opacity: 1,
               duration: 1,
               ease: 'power3.out',
               scrollTrigger: {

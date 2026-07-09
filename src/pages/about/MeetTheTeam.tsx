@@ -20,14 +20,14 @@ export default function MeetTheTeam() {
     if (!container.current) return;
 
     gsap.fromTo('.tm-header',
-      { y: 40, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out',
+      { y: 40 },
+      { y: 0, duration: 0.8, ease: 'power2.out',
         scrollTrigger: { trigger: container.current, start: 'top 80%' } },
     );
 
     gsap.fromTo('.tm-card',
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, stagger: 0.12, ease: 'power2.out', clearProps: 'all',
+      { y: 50 },
+      { y: 0, duration: 0.8, stagger: 0.12, ease: 'power2.out', clearProps: 'all',
         scrollTrigger: { trigger: '.tm-grid', start: 'top 80%' } },
     );
   }, { scope: container });

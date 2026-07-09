@@ -24,14 +24,14 @@ export default function WhyChooseUs() {
     if (!container.current) return;
 
     gsap.fromTo('.wcu-header',
-      { y: 40, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out',
+      { y: 40 },
+      { y: 0, duration: 0.8, ease: 'power2.out',
         scrollTrigger: { trigger: container.current, start: 'top 80%' } },
     );
 
     gsap.fromTo('.wcu-card',
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power2.out',
+      { y: 50 },
+      { y: 0, duration: 0.8, stagger: 0.1, ease: 'power2.out',
         scrollTrigger: { trigger: '.wcu-grid', start: 'top 80%' } },
     );
   }, { scope: container });

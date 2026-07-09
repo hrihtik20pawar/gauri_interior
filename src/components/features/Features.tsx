@@ -45,13 +45,7 @@ export default function Features() {
   const container = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    gsap.fromTo('.features-marquee',
-      { opacity: 0 },
-      {
-        opacity: 1, duration: 0.8, ease: 'power2.out',
-        scrollTrigger: { trigger: container.current, start: 'top 85%' }
-      },
-    );
+    // Features marquee is always visible, no opacity animation needed
   }, { scope: container });
 
   return (

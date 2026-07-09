@@ -84,9 +84,9 @@ export default function Timeline() {
   useGSAP(() => {
     // Header Animation
     gsap.fromTo('.timeline-header',
-      { y: 40, opacity: 0 },
+      { y: 40 },
       {
-        y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power3.out',
+        y: 0, duration: 0.8, stagger: 0.2, ease: 'power3.out',
         scrollTrigger: { trigger: container.current, start: 'top 80%' }
       },
     );
@@ -122,9 +122,9 @@ export default function Timeline() {
 
       // Animate dot/icon with glow
       tl.fromTo(item.querySelector('.timeline-icon-container'),
-        { scale: 0, opacity: 0 },
+        { scale: 0 },
         {
-          scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(1.7)',
+          scale: 1, duration: 0.5, ease: 'back.out(1.7)',
           onComplete: () => {
             const icon = item.querySelector('.timeline-year-icon');
             if (icon) {
@@ -147,12 +147,10 @@ export default function Timeline() {
       tl.fromTo(item.querySelector('.timeline-card'),
         {
           x: isEven ? -50 : 50,
-          opacity: 0,
           scale: 0.95
         },
         {
           x: 0,
-          opacity: 1,
           scale: 1,
           duration: 0.7,
           ease: 'power3.out'
@@ -162,8 +160,8 @@ export default function Timeline() {
 
       // Animate list items staggered
       tl.fromTo(item.querySelectorAll('.timeline-list-item'),
-        { x: isEven ? -10 : 10, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.4, stagger: 0.1, ease: 'power2.out' },
+        { x: isEven ? -10 : 10 },
+        { x: 0, duration: 0.4, stagger: 0.1, ease: 'power2.out' },
         "-=0.4"
       );
     });

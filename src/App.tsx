@@ -107,9 +107,21 @@ export default function App() {
     };
     document.addEventListener('visibilitychange', handleVisibility);
 
+    // Global safety net: after 2s, force any remaining opacity:0 elements visible
+    const safetyTimer = setTimeout(() => {
+      document.querySelectorAll('[style*="opacity: 0"]').forEach(el => {
+        const htmlEl = el as HTMLElement;
+        if (htmlEl.style.opacity === '0') {
+          htmlEl.style.removeProperty('opacity');
+          htmlEl.style.removeProperty('transform');
+        }
+      });
+    }, 2000);
+
     return () => {
       document.removeEventListener('visibilitychange', handleVisibility);
       clearTimeout(refreshTimeout);
+      clearTimeout(safetyTimer);
       lenis.destroy();
     };
   }, []);

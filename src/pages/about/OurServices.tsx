@@ -28,14 +28,14 @@ export default function OurServices() {
     if (!container.current) return;
 
     gsap.fromTo('.svc-header',
-      { y: 40, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out',
+      { y: 40 },
+      { y: 0, duration: 0.8, ease: 'power2.out',
         scrollTrigger: { trigger: container.current, start: 'top 80%' } },
     );
 
     gsap.fromTo('.svc-card',
-      { y: 30, opacity: 0, scale: 0.95 },
-      { y: 0, opacity: 1, scale: 1, duration: 0.6, stagger: 0.05, ease: 'power2.out',
+      { y: 30, scale: 0.95 },
+      { y: 0, scale: 1, duration: 0.6, stagger: 0.05, ease: 'power2.out',
         scrollTrigger: { trigger: '.svc-grid', start: 'top 80%' } },
     );
   }, { scope: container });

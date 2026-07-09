@@ -23,8 +23,8 @@ export default function CoreValues() {
     if (!container.current) return;
 
     gsap.fromTo('.cv-header',
-      { y: 40, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out',
+      { y: 40 },
+      { y: 0, duration: 0.8, ease: 'power2.out',
         scrollTrigger: { trigger: container.current, start: 'top 80%' } },
     );
 
@@ -32,8 +32,8 @@ export default function CoreValues() {
     items.forEach((item, i) => {
       const isEven = i % 2 === 0;
       gsap.fromTo(item,
-        { x: isEven ? -60 : 60, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: 'power3.out',
+        { x: isEven ? -60 : 60 },
+        { x: 0, duration: 1, ease: 'power3.out',
           scrollTrigger: { trigger: item, start: 'top 80%' } },
       );
     });

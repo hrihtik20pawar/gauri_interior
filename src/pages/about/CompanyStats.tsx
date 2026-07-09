@@ -44,8 +44,8 @@ export default function CompanyStats() {
     if (!container.current) return;
 
     gsap.fromTo('.stat-item',
-      { y: 40, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, stagger: 0.12, ease: 'power2.out',
+      { y: 40 },
+      { y: 0, duration: 0.8, stagger: 0.12, ease: 'power2.out',
         scrollTrigger: { trigger: container.current, start: 'top 80%' } },
     );
   }, { scope: container });

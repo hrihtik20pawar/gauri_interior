@@ -27,16 +27,16 @@ export default function OurStory() {
 
     if (storyTexts.length) {
       gsap.fromTo(storyTexts,
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power2.out',
+        { y: 40 },
+        { y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out',
           scrollTrigger: { trigger: container.current, start: 'top 75%' } },
       );
     }
 
     if (storyStatCards.length) {
       gsap.fromTo(storyStatCards,
-        { y: 30, opacity: 0, scale: 0.9 },
-        { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'power3.out',
+        { y: 30, scale: 0.9 },
+        { y: 0, scale: 1, duration: 0.8, ease: 'power3.out',
           scrollTrigger: { trigger: container.current, start: 'top 60%' } },
       );
     }

@@ -16,14 +16,14 @@ export default function Services() {
 
   useGSAP(() => {
     gsap.fromTo('.service-header',
-      { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power2.out',
+      { y: 30 },
+      { y: 0, duration: 0.8, stagger: 0.2, ease: 'power2.out',
         scrollTrigger: { trigger: container.current, start: 'top 80%' } },
     );
     
     gsap.fromTo('.service-card',
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power2.out',
+      { y: 50 },
+      { y: 0, duration: 0.8, stagger: 0.2, ease: 'power2.out',
         scrollTrigger: { trigger: container.current, start: 'top 60%' } },
     );
   }, { scope: container });

@@ -13,14 +13,14 @@ export default function VisionMission() {
     if (!container.current) return;
 
     gsap.fromTo('.vm-vision',
-      { clipPath: 'inset(0 0 0 100%)', opacity: 0 },
-      { clipPath: 'inset(0 0 0 0%)', opacity: 1, duration: 1, ease: 'power3.inOut',
+      { clipPath: 'inset(0 0 0 100%)' },
+      { clipPath: 'inset(0 0 0 0%)', duration: 1, ease: 'power3.inOut',
         scrollTrigger: { trigger: container.current, start: 'top 75%' } },
     );
 
     gsap.fromTo('.vm-mission',
-      { clipPath: 'inset(0 100% 0 0)', opacity: 0 },
-      { clipPath: 'inset(0 0% 0 0)', opacity: 1, duration: 1, ease: 'power3.inOut',
+      { clipPath: 'inset(0 100% 0 0)' },
+      { clipPath: 'inset(0 0% 0 0)', duration: 1, ease: 'power3.inOut',
         scrollTrigger: { trigger: container.current, start: 'top 70%' } },
     );
   }, { scope: container });
