@@ -7,9 +7,9 @@ interface BrandNameProps {
 
 export default function BrandName({ children, className = '', as: Tag = 'span', size = 'md' }: BrandNameProps) {
   const dotSizes = {
-    sm: '-top-[0.3em] w-[0.35em] h-[0.35em]',
-    md: '-top-[0.35em] w-[0.4em] h-[0.4em]',
-    lg: '-top-[0.4em] w-[0.45em] h-[0.45em]'
+    sm: '-top-0.5 w-1.5 h-1.5',
+    md: '-top-1 w-2 h-2',
+    lg: '-top-1 w-2.5 h-2.5'
   };
 
   const parts = children.split(/(gauri)/gi);
