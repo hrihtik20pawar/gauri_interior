@@ -186,7 +186,7 @@ export default function BusinessDetail() {
                   {current.heroTitleLine1}
                 </h1>
                 <p className="text-gray-600 text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
-                  {current.heroDesc}
+                  <BrandName as="span">{current.heroDesc}</BrandName>
                 </p>
                 <Link to="/#businesses" className="bg-teal-800 hover:bg-teal-900 text-white px-8 py-3.5 rounded font-medium transition-colors inline-flex items-center gap-2">
                   Explore Our Work <ArrowRight className="w-4 h-4" />
@@ -213,7 +213,7 @@ export default function BusinessDetail() {
                 <BrandName as="span">Gauri Interior</BrandName><br />Pvt. Ltd.
               </h2>
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
-                <p>{current.details}</p>
+                <p><BrandName as="span">{current.details}</BrandName></p>
                 <p className="font-medium text-gray-800">{current.details2}</p>
                 <p className="text-gray-600">{current.details3}</p>
               </div>
@@ -302,7 +302,7 @@ export default function BusinessDetail() {
                   {current.heroTitleLine1}
                 </h1>
                 <p className="text-gray-600 text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
-                  {current.heroDesc}
+                  <BrandName as="span">{current.heroDesc}</BrandName>
                 </p>
                 <Link to="/#businesses" className="bg-brand-orange hover:bg-orange-700 text-white px-8 py-3.5 rounded font-medium transition-colors inline-flex items-center gap-2">
                   Explore Our Work <ArrowRight className="w-4 h-4" />
@@ -329,8 +329,8 @@ export default function BusinessDetail() {
                 <BrandName as="span">Gauri's</BrandName><br />Kitchen
               </h2>
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
-                <p>{kitchenData!.details}</p>
-                <p className="font-medium text-gray-800">{kitchenData!.details2}</p>
+                <p><BrandName as="span">{kitchenData!.details}</BrandName></p>
+                <p className="font-medium text-gray-800"><BrandName as="span">{kitchenData!.details2}</BrandName></p>
                 <p className="text-gray-600">{kitchenData!.details3}</p>
               </div>
             </div>
@@ -418,7 +418,7 @@ export default function BusinessDetail() {
                   {current.heroTitleLine1}
                 </h1>
                 <p className="text-gray-600 text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
-                  {current.heroDesc}
+                  <BrandName as="span">{current.heroDesc}</BrandName>
                 </p>
                 <Link to="/#businesses" className="bg-teal-800 hover:bg-teal-900 text-white px-8 py-3.5 rounded font-medium transition-colors inline-flex items-center gap-2">
                   Explore Our Work <ArrowRight className="w-4 h-4" />
@@ -445,7 +445,7 @@ export default function BusinessDetail() {
                 Nikhil<br />Enterprises
               </h2>
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
-                <p>{nikhilData!.details}</p>
+                <p><BrandName as="span">{nikhilData!.details}</BrandName></p>
                 <p className="font-medium text-gray-800">{nikhilData!.details2}</p>
                 <p className="text-gray-600">{nikhilData!.details3}</p>
               </div>
@@ -534,7 +534,7 @@ export default function BusinessDetail() {
                   {current.heroTitleLine1}
                 </h1>
                 <p className="text-gray-600 text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
-                  {current.heroDesc}
+                  <BrandName as="span">{current.heroDesc}</BrandName>
                 </p>
                 <span className="bg-brand-orange text-white px-8 py-3.5 rounded font-medium inline-flex items-center gap-2 cursor-default">
                   Launching Soon
@@ -561,8 +561,8 @@ export default function BusinessDetail() {
                 <BrandName as="span">Gauri's Designing</BrandName><br />Studio
               </h2>
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
-                <p>{studioData!.details}</p>
-                <p className="font-medium text-gray-800">{studioData!.details2}</p>
+                <p><BrandName as="span">{studioData!.details}</BrandName></p>
+                <p className="font-medium text-gray-800"><BrandName as="span">{studioData!.details2}</BrandName></p>
                 <p className="text-gray-600">{studioData!.details3}</p>
               </div>
             </div>

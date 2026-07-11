@@ -3,6 +3,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef } from 'react';
+import BrandName from '../brand-name/BrandName';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -98,7 +99,7 @@ export default function Stats() {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-serif text-white font-medium">
-            GAURI GROUP <span className="text-brand-orange">AT A GLANCE</span>
+            <BrandName as="span" size="lg" className="text-white">GAURI GROUP</BrandName> <span className="text-brand-orange">AT A GLANCE</span>
           </h2>
         </div>
 
