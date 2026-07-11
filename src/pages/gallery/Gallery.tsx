@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, X, Maximize2, Search } from 'lucide-react';
 import { galleryImages, galleryCategories, GalleryImage } from '../../data/gallery/gallery';
 import Logo from '../../components/logo/Logo';
 import { useLenis } from '../../App';
+import { useSearchParams } from 'react-router-dom';
 
 const heroSlides = [
   '/images/WEBSITE/2) HOTEL & RESTAURANT/1) CRAVIN CAFE/CRAVIN CAFE FINAL PHOTO/Cravin Cafe (32).avif',
@@ -13,7 +14,9 @@ const heroSlides = [
 ];
 
 export default function Gallery() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [searchParams] = useSearchParams();
+  const initialCategory = searchParams.get('category') || "All";
+  const [activeCategory, setActiveCategory] = useState(initialCategory);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredImages, setFilteredImages] = useState<GalleryImage[]>(galleryImages);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -25,6 +28,14 @@ export default function Gallery() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // Update activeCategory when URL search params change
+  useEffect(() => {
+    const category = searchParams.get('category');
+    if (category && galleryCategories.includes(category)) {
+      setActiveCategory(category);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     const interval = setInterval(() => {
