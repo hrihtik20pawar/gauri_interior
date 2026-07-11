@@ -238,9 +238,9 @@ export default function Timeline() {
                         </h3>
                         <ul className="space-y-3 flex flex-col items-start text-left">
                           {step.items.map((item, i) => (
-                            <li key={i} className="timeline-list-item flex items-center gap-3 text-gray-600 font-medium text-[15px]">
-                              <span className="w-1.5 h-1.5 rounded-full bg-brand-orange flex-shrink-0"></span>
+                            <li key={i} className="timeline-list-item flex items-center justify-end gap-3 text-gray-600 font-medium text-[15px] text-right">
                               <BrandName as="span">{item}</BrandName>
+                              <span className="w-2 h-2 rounded-full bg-brand-orange flex-shrink-0"></span>
                             </li>
                           ))}
                         </ul>
