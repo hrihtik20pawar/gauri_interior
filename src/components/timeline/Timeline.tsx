@@ -8,73 +8,77 @@ gsap.registerPlugin(ScrollTrigger);
 const timelineSteps = [
   {
     num: "01",
-    title: "The Beginning",
+    title: "Gauri Group Founded",
+    highlight: "Gauri Group",
     image: "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
     items: [
-      "Founded Gauri Interior Pvt. Ltd.",
-      "Started with residential turnkey projects",
-      "Focused on quality craftsmanship and client trust",
-      "Built a core team of passionate designers"
+      "Our journey began in 1993.",
+      "Mr. Lalbachan Vishwakarma entered the Furniture Industry.",
+      "Started with small projects.",
+      "Built the foundation of Gauri Group."
     ],
     year: "1993"
   },
   {
     num: "02",
-    title: "Growth & Expansion",
+    title: "The Beginning",
+    highlight: "",
     image: "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
     items: [
-      "Expanded into commercial interior projects",
-      "Delivered 50+ successful projects",
-      "Established strong vendor relationships",
-      "Recognized for innovative design solutions"
+      "Slowly and steadily.",
+      " We evolved & started delivering complete Turnkey Projects.",
+      "Expanded our expertise in interior execution.",
+      "Built a reputation for quality work."
     ],
-    year: "2010"
+    year: "1993-2011"
   },
   {
     num: "03",
     title: "Gauri Interior Pvt. Ltd.",
+    highlight: "Gauri Interior Pvt. Ltd.",
     image: "/images/WEBSITE/2) HOTEL & RESTAURANT/1) CRAVIN CAFE/CRAVIN CAFE FINAL PHOTO/Cravin Cafe (32).avif",
     items: [
-      "Launched our first official venture",
-      "Gauri Interior Pvt. Ltd. established",
-      "Expanded team and operations",
-      "Started working with top architects"
+      "With the vision of our current MD & CEO Mr. Shilkumar L. Vishwakarma.",
+      "We launched our 1st venture.",
+      "Gauri Interior Pvt. Ltd."
     ],
     year: "2012"
   },
   {
     num: "04",
     title: "Nikhil Enterprice",
+    highlight: "Nikhil Enterprice",
     image: "/images/WEBSITE/4) JEWELLARY SHOPE/1) KRA/KRA (1).avif",
     items: [
-      "Expanded with second venture",
-      "NIKHIL ENTERPRISES launched",
-      "Dealing in Hardware, Plywoods & allied products",
-      "Strengthened supply chain network"
+      "Expanded further with our second venture.",
+      "NIKHIL ENTERPRISES.",
+      "Dealing in Hardware, Plywoods & allied products."
     ],
     year: "2017"
   },
   {
     num: "05",
-    title: "Gauri's Kitchen",
+    title: "GAURI'S KITCHEN",
+    highlight: "GAURI'S KITCHEN",
     image: "/images/WEBSITE/9) DISPLAY UNIT/1) Big Mishra/BIG MISHRA FINAL PHOTO/BIG MISHRA (1).avif",
     items: [
-      "Launched GAURI'S KITCHEN",
-      "Dealing in all types of Kitchen & Modular Furniture",
-      "Brought comfort and style to every home",
-      "Established in 2018"
+      "We brought comfort and style to every home.",
+      "Launched GAURI'S KITCHEN.",
+      "Dealing in all types of Kitchen & Modular Furniture.",
+      "Established in 2018."
     ],
     year: "2018"
   },
   {
     num: "06",
-    title: "Designing Studio",
+    title: "Gauri Designing Studio",
+    highlight: "Gauri Designing Studio",
     image: "/images/WEBSITE/1) OFFICES/4) PISPL CALL CENTER/PISPL CALL CENTER FINAL PHOTO/IMG_0335.avif",
     items: [
-      "Upcoming venture: GAURI'S DESIGNING STUDIO",
-      "Dedicated to Designing Consultancy",
-      "Complete operations to commence from 2027",
-      "Vision for premium design services"
+      "Upcoming venture.",
+      "GAURI'S DESIGNING STUDIO.",
+      "Dedicated to Designing Consultancy.",
+      "Complete operations to commence from 2027."
     ],
     year: "2027"
   }
@@ -165,7 +169,16 @@ export default function Timeline() {
 
                 {/* Content */}
                 <div className="p-6 md:p-8">
-                  <h3 className="text-2xl md:text-3xl font-serif text-brand-green mb-6">{step.title}</h3>
+                  <h3 className="text-2xl md:text-3xl font-serif text-brand-green mb-6">
+                    {step.highlight ? (
+                      <>
+                        <span className="text-brand-orange font-sans font-semibold tracking-wider uppercase">{step.highlight}</span>
+                        {step.title.replace(step.highlight, '')}
+                      </>
+                    ) : (
+                      step.title
+                    )}
+                  </h3>
                   
                   <ul className="space-y-4">
                     {step.items.map((item, i) => (
