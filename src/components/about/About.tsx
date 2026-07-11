@@ -209,7 +209,6 @@ export default function About() {
       {/* Why Choose Gauri? */}
       <div className="about-text mb-12">
         <div className="text-center mb-12">
-          <p className="text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Why Us</p>
           <h2 className="text-3xl md:text-4xl font-serif text-brand-green mb-4">Why Choose <BrandName as="span">Gauri</BrandName>?</h2>
           <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
         </div>
