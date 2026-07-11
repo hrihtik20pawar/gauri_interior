@@ -40,7 +40,7 @@ export default function BrandName({ children, className = '', as: Tag = 'span', 
             <span key={i}>
               {studioParts.map((sp, j) => 
                 sp.toLowerCase() === 'studio' 
-                  ? <span key={j} className="text-brand-orange font-semibold">{sp}</span>
+                  ? <span key={j} className="text-brand-orange font-semibold italic">{sp}</span>
                   : <span key={j}>{sp}</span>
               )}
             </span>
