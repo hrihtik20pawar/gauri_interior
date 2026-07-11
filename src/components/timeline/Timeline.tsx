@@ -208,7 +208,7 @@ export default function Timeline() {
 
                   {/* Center Icon/Node */}
                   <div className="timeline-icon-container absolute left-8 md:left-1/2 -translate-x-1/2 flex items-center justify-center z-20 group">
-                    <div className="timeline-year-icon bg-brand-orange flex items-center justify-center text-white font-bold text-xs tracking-wide whitespace-nowrap px-4 py-2.5 rounded-full shadow-[0_0_20px_rgba(234,91,35,0.5)] border-4 border-white hover:border-brand-orange transition-colors duration-300">
+                    <div className="timeline-year-icon bg-brand-orange flex items-center justify-center text-white font-bold text-sm md:text-base tracking-wide whitespace-nowrap px-5 py-3 rounded-full shadow-[0_0_20px_rgba(234,91,35,0.5)] border-4 border-white hover:border-brand-orange transition-colors duration-300">
                       {step.year}
                     </div>
                   </div>
