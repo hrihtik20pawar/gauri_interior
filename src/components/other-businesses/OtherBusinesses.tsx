@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { images } from '../../constants/images';
+import BrandName from '../brand-name/BrandName';
 
 const businesses = [
   { id: 'interior', title: 'Gauri Interior Pvt. Ltd.', desc: 'Comprehensive turnkey interior contracting solutions for commercial, residential, and institutional spaces.', logo: images.businesses.interiorLogo },
@@ -32,7 +33,7 @@ export default function OtherBusinesses({ currentId }: { currentId: string }) {
                 </span>
               </div>
             </div>
-            <h3 className="font-semibold text-gray-900 text-lg mb-1">{biz.title}</h3>
+            <h3 className="font-semibold text-gray-900 text-lg mb-1"><BrandName as="span">{biz.title}</BrandName></h3>
             <p className="text-gray-500 text-sm">{biz.desc}</p>
           </Link>
         ))}

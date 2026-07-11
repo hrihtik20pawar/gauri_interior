@@ -14,6 +14,7 @@ import Logo from './components/logo/Logo';
 import BackButton from './components/back-button/BackButton';
 import { siteConfig } from './constants/contact';
 import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
+import BrandName from './components/brand-name/BrandName';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -229,7 +230,7 @@ export default function App() {
             {/* Copyright bar */}
             <div className="border-t border-white/10">
               <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-24 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-                <p className="text-white/40 text-sm">© {new Date().getFullYear()} Gauri Interior Pvt. Ltd. All rights reserved.</p>
+                <p className="text-white/40 text-sm">© {new Date().getFullYear()} <BrandName as="span">Gauri Interior Pvt. Ltd.</BrandName> All rights reserved.</p>
                 <div className="flex gap-4 sm:gap-6">
                   <a href="#contact-us" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">Contact Us</a>
                   <a href="/about" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">About Us</a>

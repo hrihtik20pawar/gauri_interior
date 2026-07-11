@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import BrandName from '../brand-name/BrandName';
 
 gsap.registerPlugin(ScrollTrigger);
 const timelineSteps = [
@@ -176,7 +177,7 @@ export default function Timeline() {
         <div className="text-center mb-12 md:mb-24 max-w-3xl mx-auto">
           <p className="timeline-header text-brand-orange font-bold tracking-[0.2em] uppercase text-sm mb-4">Our Journey</p>
           <h2 className="timeline-header text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green leading-[1.1] mb-6">
-            The Story of <br /> <span className="text-teal-800 italic font-light">Gauri Group</span>
+            The Story of <br /> <BrandName as="span" size="lg" className="text-teal-800 italic font-light">Gauri Group</BrandName>
           </h2>
           <p className="timeline-header text-gray-500 text-xl leading-relaxed font-medium">
             From humble beginnings to becoming a trusted name in interior design and modular manufacturing, our journey is defined by passion, precision, and growth.
@@ -233,20 +234,13 @@ export default function Timeline() {
                           {step.num}
                         </span>
                         <h3 className="text-3xl font-serif text-brand-green mb-6">
-                          {step.highlight ? (
-                            <>
-                              <span className="text-brand-orange font-sans font-semibold tracking-wider uppercase">{step.highlight}</span>
-                              {step.title.replace(step.highlight, '')}
-                            </>
-                          ) : (
-                            step.title
-                          )}
+                          <BrandName as="span" size="lg">{step.title}</BrandName>
                         </h3>
                         <ul className="space-y-3 flex flex-col items-start text-left">
                           {step.items.map((item, i) => (
                             <li key={i} className="timeline-list-item flex items-center gap-3 text-gray-600 font-medium text-[15px]">
                               <span className="w-1.5 h-1.5 rounded-full bg-brand-orange flex-shrink-0"></span>
-                              {item}
+                              <BrandName as="span">{item}</BrandName>
                             </li>
                           ))}
                         </ul>

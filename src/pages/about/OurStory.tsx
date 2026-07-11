@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Building2, Sofa, Home } from 'lucide-react';
 import { images } from '../../constants/images';
+import BrandName from '../../components/brand-name/BrandName';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,18 +51,18 @@ export default function OurStory() {
           <div className="flex-1 order-2 lg:order-1">
             <p className="story-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">About Us</p>
             <h2 className="story-text text-4xl md:text-5xl font-serif text-brand-green mb-6 leading-tight">
-              <span className="text-teal-800">Gauri Group</span>
+              <BrandName as="span" size="lg" className="text-teal-800">Gauri Group</BrandName>
             </h2>
             <div className="story-text w-24 h-1 bg-brand-orange rounded-full mb-8" />
             <div className="space-y-5 text-gray-600 text-lg leading-relaxed">
             <p className="story-text">
-              Established with a vision to transform spaces into timeless experiences, <strong className="text-brand-green">GAURI Group</strong> is one of India's emerging names in the field of Interior Solutions, Modular Kitchens, Design Consultancy, and Furniture &amp; Hardware Trading.
+              Established with a vision to transform spaces into timeless experiences, <strong className="text-brand-green"><BrandName as="span">GAURI Group</BrandName></strong> is one of India's emerging names in the field of Interior Solutions, Modular Kitchens, Design Consultancy, and Furniture &amp; Hardware Trading.
             </p>
             <p className="story-text">
               Our journey began in <strong className="text-brand-green">1993</strong>, when <strong className="text-brand-green">Mr. Lalbachan Vishwakarma</strong> laid the foundation of the business by undertaking customized furniture projects with an unwavering commitment to quality and craftsmanship. Over the years, this passion evolved into executing complete turnkey interior projects across residential, commercial, corporate, hospitality, healthcare, educational, and retail sectors.
             </p>
             <p className="story-text">
-              Under the leadership of <strong className="text-brand-green">Mr. Shilkumar L. Vishwakarma (Managing Director &amp; CEO)</strong>, GAURI Group expanded into a diversified business ecosystem, bringing together multiple specialized ventures under one trusted brand.
+              Under the leadership of <strong className="text-brand-green">Mr. Shilkumar L. Vishwakarma (Managing Director &amp; CEO)</strong>, <BrandName as="span">GAURI Group</BrandName> expanded into a diversified business ecosystem, bringing together multiple specialized ventures under one trusted brand.
             </p>
             </div>
           </div>

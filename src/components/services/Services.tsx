@@ -8,6 +8,7 @@ import {
   ChefHat, Layers, Settings, Wrench, 
   PenTool, MonitorPlay, Palette, Sparkles, ArrowRight, Package, Truck, Handshake, Globe
 } from 'lucide-react';
+import BrandName from '../brand-name/BrandName';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,7 +102,7 @@ export default function Services() {
         <div className="mb-16 max-w-2xl">
           <h2 className="service-header text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-teal-800 mb-6 font-medium">Our Services</h2>
           <p className="service-header text-gray-700 text-lg leading-relaxed font-medium">
-            Gauri Group is a home to four specialized businesses, each dedicated to delivering excellence in its own way.
+            <BrandName as="span">Gauri Group</BrandName> is a home to four specialized businesses, each dedicated to delivering excellence in its own way.
           </p>
           <div className="service-header w-24 h-1 bg-brand-orange mt-8 rounded-full"></div>
         </div>
@@ -115,7 +116,7 @@ export default function Services() {
                   <img loading="lazy" src={svc.logo} alt={`${svc.brand} Logo`} className="h-12 w-auto object-contain" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-brand-green text-xl leading-tight">{svc.brand}</h3>
+                  <h3 className="font-semibold text-brand-green text-xl leading-tight"><BrandName as="span">{svc.brand}</BrandName></h3>
                   <p className="text-[11px] text-brand-orange uppercase tracking-wider font-semibold mt-1">{svc.brandSub}</p>
                 </div>
               </div>

@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, ShieldCheck, PenTool, Clock, ArrowRight, Quote, Award, Wrench, Factory, Users, Gem, Handshake, BadgeCheck, Target, X } from 'lucide-react';
+import BrandName from '../brand-name/BrandName';
 
 const whyChooseItems = [
   { icon: Award, title: "30+ Years Legacy", desc: "Decades of expertise in furniture manufacturing and turnkey interior execution.", fullDesc: "With a legacy spanning over three decades since 1993, Gauri Group has built an unmatched reputation in the interior industry. Our extensive experience across residential, commercial, corporate, hospitality, healthcare, educational, and retail sectors gives us the insight to handle projects of any scale and complexity." },
@@ -89,16 +90,16 @@ export default function About() {
         <div className="flex-1 lg:max-w-2xl">
           <p className="about-hero-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">About Us</p>
           <h2 className="about-hero-text text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green leading-[1.15] mb-8">
-            <span className="text-teal-800">Gauri Group</span>
+            <BrandName as="span" size="lg" className="text-teal-800">Gauri Group</BrandName>
           </h2>
           <p className="about-hero-text text-gray-700 text-xl leading-relaxed mb-6 font-medium">
-            Established in <strong className="text-brand-green">2012</strong>, <strong className="text-brand-orange">GAURI INTERIOR PVT. LTD.</strong> is the flagship company of the <strong className="text-brand-orange">GAURI GROUP</strong>, specializing in comprehensive turnkey interior contracting solutions. Built upon a legacy that began in <strong className="text-brand-green">1993</strong>, the company has grown into a trusted name in the interior industry by consistently delivering projects with exceptional quality, innovation, and precision.
+            Established in <strong className="text-brand-green">2012</strong>, <strong className="text-brand-orange"><BrandName as="span">GAURI INTERIOR PVT. LTD.</BrandName></strong> is the flagship company of the <strong className="text-brand-orange"><BrandName as="span">GAURI GROUP</BrandName></strong>, specializing in comprehensive turnkey interior contracting solutions. Built upon a legacy that began in <strong className="text-brand-green">1993</strong>, the company has grown into a trusted name in the interior industry by consistently delivering projects with exceptional quality, innovation, and precision.
           </p>
           <p className="about-hero-text text-gray-700 text-xl leading-relaxed mb-6 font-medium">
             Our journey began in <strong className="text-brand-green">1993</strong>, when <strong className="text-brand-orange">Mr. Lalbachan Vishwakarma</strong> laid the foundation of the business by undertaking customized furniture projects with an unwavering commitment to quality and craftsmanship. Over the years, this passion evolved into executing complete turnkey interior projects across residential, commercial, corporate, hospitality, healthcare, educational, and retail sectors.
           </p>
           <p className="about-hero-text text-gray-700 text-xl leading-relaxed font-medium">
-            Under the leadership of <strong className="text-brand-orange">Mr. Shilkumar L. Vishwakarma (Managing Director &amp; CEO)</strong>, GAURI Group expanded into a diversified business ecosystem, bringing together multiple specialized ventures under one trusted brand.
+            Under the leadership of <strong className="text-brand-orange">Mr. Shilkumar L. Vishwakarma (Managing Director &amp; CEO)</strong>, <BrandName as="span">GAURI Group</BrandName> expanded into a diversified business ecosystem, bringing together multiple specialized ventures under one trusted brand.
           </p>
         </div>
         <div ref={imageContainerRef} className="flex-1 w-full about-text relative">
@@ -130,13 +131,13 @@ export default function About() {
       {/* Business Divisions */}
       <div className="about-text bg-gray-50/50 p-8 md:p-12 rounded-2xl border border-gray-100 mb-12">
         <p className="text-gray-700 text-xl leading-relaxed font-medium mb-8">
-          Today, GAURI Group proudly operates through:
+          Today, <BrandName as="span">GAURI Group</BrandName> proudly operates through:
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="flex gap-4">
             <span className="text-brand-orange font-bold text-2xl font-serif shrink-0">1.</span>
             <div>
-              <Link to="/business/interior"><h4 className="font-bold text-brand-green text-xl mb-2 hover:text-brand-orange transition-colors cursor-pointer">GAURI Interior Pvt. Ltd.</h4></Link>
+              <Link to="/business/interior"><h4 className="font-bold text-brand-green text-xl mb-2 hover:text-brand-orange transition-colors cursor-pointer"><BrandName as="span">GAURI Interior Pvt. Ltd.</BrandName></h4></Link>
               <p className="text-gray-600 text-base leading-relaxed">Complete Turnkey Interior Fit-Out Solutions for Corporate Offices, Commercial Spaces, Healthcare, Hospitality, Retail, Educational Institutions and Premium Residences.</p>
             </div>
           </div>
@@ -150,14 +151,14 @@ export default function About() {
           <div className="flex gap-4">
             <span className="text-brand-orange font-bold text-2xl font-serif shrink-0">3.</span>
             <div>
-              <Link to="/business/kitchen"><h4 className="font-bold text-brand-green text-lg mb-2 hover:text-brand-orange transition-colors cursor-pointer">GAURI's Kitchen</h4></Link>
+              <Link to="/business/kitchen"><h4 className="font-bold text-brand-green text-lg mb-2 hover:text-brand-orange transition-colors cursor-pointer"><BrandName as="span">GAURI's Kitchen</BrandName></h4></Link>
               <p className="text-gray-600 text-sm leading-relaxed">Premium Modular Kitchens, Wardrobes and Customized Modular Furniture designed with innovation, functionality and aesthetics.</p>
             </div>
           </div>
           <div className="flex gap-4">
             <span className="text-brand-orange font-bold text-2xl font-serif shrink-0">4.</span>
             <div>
-              <Link to="/business/studio"><h4 className="font-bold text-brand-green text-lg mb-2 hover:text-brand-orange transition-colors cursor-pointer">GAURI's Designing Studio</h4></Link>
+              <Link to="/business/studio"><h4 className="font-bold text-brand-green text-lg mb-2 hover:text-brand-orange transition-colors cursor-pointer"><BrandName as="span">GAURI's Designing Studio</BrandName></h4></Link>
               <p className="text-gray-600 text-sm leading-relaxed">Our upcoming design consultancy division dedicated to architectural planning, interior designing, space planning, 3D visualization, project consultancy and design management.</p>
             </div>
           </div>
@@ -188,9 +189,9 @@ export default function About() {
 
           <div className="space-y-3 text-gray-800 text-base leading-relaxed italic">
             <p>Dear Valued Clients, Partners, and Associates,</p>
-            <p>It gives me immense pride to welcome you to <strong className="text-brand-orange not-italic">GAURI GROUPS.</strong></p>
+            <p>It gives me immense pride to welcome you to <strong className="text-brand-orange not-italic"><BrandName as="span">GAURI GROUPS.</BrandName></strong></p>
             <p>Our journey began with a simple vision—to create quality furniture through honest workmanship and unwavering dedication. Over the years, that vision has grown into a comprehensive turnkey interior solutions company, serving clients across diverse industries while maintaining the same values that laid our foundation.</p>
-            <p>At Gauri, we believe that every space tells a story. Whether it is a corporate office, a healthcare facility, an educational institution, a hospitality project, or a premium residence, our objective is to create environments that combine functionality, innovation, and aesthetics.</p>
+            <p>At <BrandName as="span">Gauri</BrandName>, we believe that every space tells a story. Whether it is a corporate office, a healthcare facility, an educational institution, a hospitality project, or a premium residence, our objective is to create environments that combine functionality, innovation, and aesthetics.</p>
             <p>Our greatest strength lies in our people—their expertise, commitment, and passion for excellence. Together, we strive to deliver projects that exceed expectations in quality, safety, and timely execution.</p>
             <p>As we expand through our group companies and embrace new opportunities, our commitment remains unchanged: to build long-term relationships based on trust, integrity, and exceptional service.</p>
             <p>I sincerely thank our clients, employees, partners, and well-wishers for being an integral part of our journey. We look forward to creating many more inspiring spaces together.</p>
@@ -200,7 +201,7 @@ export default function About() {
           <div className="mt-6 pt-5 border-t border-gray-300">
             <p className="text-gray-500 text-sm mb-1">Warm Regards,</p>
             <p className="text-gray-600 text-sm">Managing Director & CEO</p>
-            <p className="text-brand-green font-semibold text-sm">GAURI GROUP OF COMPANIES</p>
+            <p className="text-brand-green font-semibold text-sm"><BrandName as="span">GAURI GROUP OF COMPANIES</BrandName></p>
           </div>
         </div>
       </div>
@@ -209,7 +210,7 @@ export default function About() {
       <div className="about-text mb-12">
         <div className="text-center mb-12">
           <p className="text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Why Us</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-brand-green mb-4">Why Choose Gauri?</h2>
+          <h2 className="text-3xl md:text-4xl font-serif text-brand-green mb-4">Why Choose <BrandName as="span">Gauri</BrandName>?</h2>
           <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
         </div>
 

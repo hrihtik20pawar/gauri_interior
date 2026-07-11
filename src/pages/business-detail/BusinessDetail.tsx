@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Home, Settings, Building2, Wrench, CheckCircle }
 import { useEffect } from 'react';
 import { images } from '../../constants/images';
 import OtherBusinesses from '../../components/other-businesses/OtherBusinesses';
+import BrandName from '../../components/brand-name/BrandName';
 
 export default function BusinessDetail() {
   const { id } = useParams();
@@ -209,7 +210,7 @@ export default function BusinessDetail() {
                 <div className="h-[1px] w-12 bg-brand-orange"></div>
               </div>
               <h2 className="text-4xl md:text-5xl font-serif text-brand-green mb-8 leading-tight">
-                Gauri Interior<br />Pvt. Ltd.
+                <BrandName as="span">Gauri Interior</BrandName><br />Pvt. Ltd.
               </h2>
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>{current.details}</p>
@@ -325,7 +326,7 @@ export default function BusinessDetail() {
                 <div className="h-[1px] w-12 bg-brand-orange"></div>
               </div>
               <h2 className="text-4xl md:text-5xl font-serif text-brand-green mb-8 leading-tight">
-                Gauri's<br />Kitchen
+                <BrandName as="span">Gauri's</BrandName><br />Kitchen
               </h2>
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>{kitchenData!.details}</p>
@@ -557,7 +558,7 @@ export default function BusinessDetail() {
                 <div className="h-[1px] w-12 bg-brand-orange"></div>
               </div>
               <h2 className="text-4xl md:text-5xl font-serif text-brand-green mb-8 leading-tight">
-                Gauri's Designing<br />Studio
+                <BrandName as="span">Gauri's Designing</BrandName><br />Studio
               </h2>
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>{studioData!.details}</p>
