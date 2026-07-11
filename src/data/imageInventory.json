@@ -1,0 +1,1008 @@
+{
+  "about": {
+    "files": [
+      "/images\\about\\gauri-office.avif"
+    ]
+  },
+  "businesses": {
+    "files": [
+      "/images\\businesses\\interior_logo.avif",
+      "/images\\businesses\\kitchen_logo.avif",
+      "/images\\businesses\\Nikhil_logo.avif",
+      "/images\\businesses\\studio_logo.avif"
+    ]
+  },
+  "manufacturing": {
+    "files": [
+      "/images\\manufacturing\\manufacturing_1.jpeg",
+      "/images\\manufacturing\\manufacturing_2.jpeg",
+      "/images\\manufacturing\\manufacturing_3.jpeg",
+      "/images\\manufacturing\\manufacturing_4.jpeg",
+      "/images\\manufacturing\\manufacturing_5.jpeg",
+      "/images\\manufacturing\\manufacturing_6.jpeg",
+      "/images\\manufacturing\\manufacturing_7.jpeg",
+      "/images\\manufacturing\\manufacturing_8.jpeg",
+      "/images\\manufacturing\\manufacturing_9.jpeg"
+    ]
+  },
+  "team": {
+    "files": [
+      "/images\\team\\team_1.avif",
+      "/images\\team\\team_2.avif",
+      "/images\\team\\team_3.avif",
+      "/images\\team\\team_4.avif",
+      "/images\\team\\team_5.avif",
+      "/images\\team\\team_6.avif",
+      "/images\\team\\team_7.avif",
+      "/images\\team\\team_8.avif",
+      "/images\\team\\team_9.avif"
+    ]
+  },
+  "website": {
+    "offices": {
+      "_displayName": "1) OFFICES",
+      "1) BHARAT BHAI": {},
+      "10) Jaihind College": {
+        "JAIHIND FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\10) Jaihind College\\JAIHIND FINAL PHOTO\\JAI HIND COLLEGE (1).avif",
+            "/images\\WEBSITE\\1) OFFICES\\10) Jaihind College\\JAIHIND FINAL PHOTO\\JAI HIND COLLEGE (7).avif",
+            "/images\\WEBSITE\\1) OFFICES\\10) Jaihind College\\JAIHIND FINAL PHOTO\\JAI HIND COLLEGE (9).avif"
+          ]
+        }
+      },
+      "11) SANJAY KAPOOR": {},
+      "12) ITC GHATKOPAR": {
+        "ITC FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\12) ITC GHATKOPAR\\ITC FINAL PHOTO\\ITC GHATKOPAR (101).avif",
+            "/images\\WEBSITE\\1) OFFICES\\12) ITC GHATKOPAR\\ITC FINAL PHOTO\\ITC GHATKOPAR (105).avif",
+            "/images\\WEBSITE\\1) OFFICES\\12) ITC GHATKOPAR\\ITC FINAL PHOTO\\ITC GHATKOPAR (107).avif",
+            "/images\\WEBSITE\\1) OFFICES\\12) ITC GHATKOPAR\\ITC FINAL PHOTO\\ITC GHATKOPAR (108).avif",
+            "/images\\WEBSITE\\1) OFFICES\\12) ITC GHATKOPAR\\ITC FINAL PHOTO\\ITC GHATKOPAR (110).avif",
+            "/images\\WEBSITE\\1) OFFICES\\12) ITC GHATKOPAR\\ITC FINAL PHOTO\\ITC GHATKOPAR (119).avif",
+            "/images\\WEBSITE\\1) OFFICES\\12) ITC GHATKOPAR\\ITC FINAL PHOTO\\ITC GHATKOPAR (80).avif",
+            "/images\\WEBSITE\\1) OFFICES\\12) ITC GHATKOPAR\\ITC FINAL PHOTO\\ITC GHATKOPAR (81).avif",
+            "/images\\WEBSITE\\1) OFFICES\\12) ITC GHATKOPAR\\ITC FINAL PHOTO\\ITC GHATKOPAR (89).avif",
+            "/images\\WEBSITE\\1) OFFICES\\12) ITC GHATKOPAR\\ITC FINAL PHOTO\\ITC GHATKOPAR (97).avif"
+          ]
+        }
+      },
+      "13) PISPL - SONALE  WARHOUSE": {
+        "SONALE WAREHOUSE FINAL PHOTOS": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0452.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0453.jpg",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0454.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0455.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0456.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0458.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0459.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0460.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0462.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0465.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0467.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0469.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0474.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0475.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0477.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0478.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0480.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0481.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0485.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0491.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0492.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0493.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0498.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0503.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0506.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0508.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0509.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0510.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0511.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0514.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0519.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0522.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0525.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0528.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0531.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0535.jpg",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0536.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0557.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0559.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0561.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0563.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0568.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0571.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0572.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0573.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0574.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0576.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0581.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0587.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0589.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0598.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0602.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0611.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0612.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0616.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0618.avif",
+            "/images\\WEBSITE\\1) OFFICES\\13) PISPL - SONALE  WARHOUSE\\SONALE WAREHOUSE FINAL PHOTOS\\DSC_0628.avif"
+          ]
+        }
+      },
+      "14) PISPL POLYMER": {
+        "PISPL POLYMER FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\14) PISPL POLYMER\\PISPL POLYMER FINAL PHOTO\\IMG_6692.avif",
+            "/images\\WEBSITE\\1) OFFICES\\14) PISPL POLYMER\\PISPL POLYMER FINAL PHOTO\\IMG_6695.avif",
+            "/images\\WEBSITE\\1) OFFICES\\14) PISPL POLYMER\\PISPL POLYMER FINAL PHOTO\\IMG_6706.avif",
+            "/images\\WEBSITE\\1) OFFICES\\14) PISPL POLYMER\\PISPL POLYMER FINAL PHOTO\\IMG_6710.avif",
+            "/images\\WEBSITE\\1) OFFICES\\14) PISPL POLYMER\\PISPL POLYMER FINAL PHOTO\\IMG_6721.avif",
+            "/images\\WEBSITE\\1) OFFICES\\14) PISPL POLYMER\\PISPL POLYMER FINAL PHOTO\\IMG_6725.avif",
+            "/images\\WEBSITE\\1) OFFICES\\14) PISPL POLYMER\\PISPL POLYMER FINAL PHOTO\\IMG_6726.avif",
+            "/images\\WEBSITE\\1) OFFICES\\14) PISPL POLYMER\\PISPL POLYMER FINAL PHOTO\\IMG_6735.avif",
+            "/images\\WEBSITE\\1) OFFICES\\14) PISPL POLYMER\\PISPL POLYMER FINAL PHOTO\\IMG_6736.avif",
+            "/images\\WEBSITE\\1) OFFICES\\14) PISPL POLYMER\\PISPL POLYMER FINAL PHOTO\\IMG_6739.avif"
+          ]
+        }
+      },
+      "15) TAMARIND TOUR": {
+        "TAMARIND TOUR FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\15) TAMARIND TOUR\\TAMARIND TOUR FINAL PHOTO\\TAMARIND TOUR (1).avif",
+            "/images\\WEBSITE\\1) OFFICES\\15) TAMARIND TOUR\\TAMARIND TOUR FINAL PHOTO\\TAMARIND TOUR (2).avif",
+            "/images\\WEBSITE\\1) OFFICES\\15) TAMARIND TOUR\\TAMARIND TOUR FINAL PHOTO\\TAMARIND TOUR (3).avif",
+            "/images\\WEBSITE\\1) OFFICES\\15) TAMARIND TOUR\\TAMARIND TOUR FINAL PHOTO\\TAMARIND TOUR (4).avif",
+            "/images\\WEBSITE\\1) OFFICES\\15) TAMARIND TOUR\\TAMARIND TOUR FINAL PHOTO\\TAMARIND TOUR (5).avif",
+            "/images\\WEBSITE\\1) OFFICES\\15) TAMARIND TOUR\\TAMARIND TOUR FINAL PHOTO\\TAMARIND TOUR (6).avif",
+            "/images\\WEBSITE\\1) OFFICES\\15) TAMARIND TOUR\\TAMARIND TOUR FINAL PHOTO\\TAMARIND TOUR (7).avif",
+            "/images\\WEBSITE\\1) OFFICES\\15) TAMARIND TOUR\\TAMARIND TOUR FINAL PHOTO\\TAMARIND TOUR (8).avif"
+          ]
+        }
+      },
+      "16) BOBBY PARIKH": {
+        "BOBBY PAREKH": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (10).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (11).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (12).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (13).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (16).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (2).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (22).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (28).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (3).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (30).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (5).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (6).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (7).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (8).avif",
+            "/images\\WEBSITE\\1) OFFICES\\16) BOBBY PARIKH\\BOBBY PAREKH\\BOBBY PARIKH     (9).avif"
+          ]
+        }
+      },
+      "17) PRATICLE FINANCE": {
+        "PRACTICAL FINANCE": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (01).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (02).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (03).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (04).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (05).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (06).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (07).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (08).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (09).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (10).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (11).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (13).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (14).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (15).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (16).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (17).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (18).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (19).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (23).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (26).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (27).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (35).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (37).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (38).avif",
+            "/images\\WEBSITE\\1) OFFICES\\17) PRATICLE FINANCE\\PRACTICAL FINANCE\\PRACTICAL FINANCE (39).avif"
+          ]
+        }
+      },
+      "18) Amardeep Projects": {
+        "1. Office Chairs": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\1. Office Chairs\\OFFICE CHAIRS (1).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\1. Office Chairs\\OFFICE CHAIRS (2).avif"
+          ]
+        },
+        "2. Desking & Conference": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\2. Desking & Conference\\DESK AND CONFERENCE (1).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\2. Desking & Conference\\DESK AND CONFERENCE (10).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\2. Desking & Conference\\DESK AND CONFERENCE (11).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\2. Desking & Conference\\DESK AND CONFERENCE (12).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\2. Desking & Conference\\DESK AND CONFERENCE (13).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\2. Desking & Conference\\DESK AND CONFERENCE (2).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\2. Desking & Conference\\DESK AND CONFERENCE (3).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\2. Desking & Conference\\DESK AND CONFERENCE (4).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\2. Desking & Conference\\DESK AND CONFERENCE (5).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\2. Desking & Conference\\DESK AND CONFERENCE (6).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\2. Desking & Conference\\DESK AND CONFERENCE (7).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\2. Desking & Conference\\DESK AND CONFERENCE (8).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\2. Desking & Conference\\DESK AND CONFERENCE (9).avif"
+          ]
+        },
+        "3. Cafe & Food Court": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\3. Cafe & Food Court\\CAFE AND FOOD COURT (1).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\3. Cafe & Food Court\\CAFE AND FOOD COURT (10).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\3. Cafe & Food Court\\CAFE AND FOOD COURT (2).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\3. Cafe & Food Court\\CAFE AND FOOD COURT (3).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\3. Cafe & Food Court\\CAFE AND FOOD COURT (4).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\3. Cafe & Food Court\\CAFE AND FOOD COURT (5).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\3. Cafe & Food Court\\CAFE AND FOOD COURT (6).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\3. Cafe & Food Court\\CAFE AND FOOD COURT (7).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\3. Cafe & Food Court\\CAFE AND FOOD COURT (8).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\3. Cafe & Food Court\\CAFE AND FOOD COURT (9).avif"
+          ]
+        },
+        "4. Breakout & Airport Zone": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\4. Breakout & Airport Zone\\BREAKOUT AND AIRPORT ZONE (1).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\4. Breakout & Airport Zone\\BREAKOUT AND AIRPORT ZONE (2).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\4. Breakout & Airport Zone\\BREAKOUT AND AIRPORT ZONE (3).avif"
+          ]
+        },
+        "5. Auditorium": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\5. Auditorium\\AUDITORIUM (1).avif"
+          ]
+        },
+        "6. Educational": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (1).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (10).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (11).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (12).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (13).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (14).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (15).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (16).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (17).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (18).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (19).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (2).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (20).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (21).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (22).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (23).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (24).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (25).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (26).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (27).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (28).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (29).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (3).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (30).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (31).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (32).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (33).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (34).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (35).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (36).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (37).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (38).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (39).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (4).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (40).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (41).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (42).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (43).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (5).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (6).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (7).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (8).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE (9).avif"
+          ],
+          "EDUCATION TABLE FINAL PHOTO": {
+            "files": [
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (1).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (11).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (12).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (13).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (14).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (15).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (19).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (2).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (21).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (22).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (23).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (24).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (26).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (27).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (28).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (29).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (30).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (31).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (33).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (35).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (38).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (39).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (4).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (41).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (43).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (5).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (6).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (7).avif",
+              "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\6. Educational\\EDUCATION TABLE FINAL PHOTO\\EDUCATION TABLE (9).avif"
+            ]
+          }
+        },
+        "7. Business Club Lounge & Lobby": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (1).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (10).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (11).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (12).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (13).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (14).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (15).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (16).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (17).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (18).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (19).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (2).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (20).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (21).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (22).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (23).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (24).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (25).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (26).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (27).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (28).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (29).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (3).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (30).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (31).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (32).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (33).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (34).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (35).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (36).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (37).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (38).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (39).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (4).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (40).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (41).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (42).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (43).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (44).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (45).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (46).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (47).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (48).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (5).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (6).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (7).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (8).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\7. Business Club Lounge & Lobby\\BUSINESS CLUB LOUNGE AND LOBBY (9).avif"
+          ]
+        },
+        "8. Lights": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\8. Lights\\LIGHT (1).avif",
+            "/images\\WEBSITE\\1) OFFICES\\18) Amardeep Projects\\8. Lights\\LIGHT (2).avif"
+          ]
+        }
+      },
+      "19) PISPL - KOLKATA": {
+        "PISPL KOLKATA FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\19) PISPL - KOLKATA\\PISPL KOLKATA FINAL PHOTO\\PISPL KOLKATA (1).avif",
+            "/images\\WEBSITE\\1) OFFICES\\19) PISPL - KOLKATA\\PISPL KOLKATA FINAL PHOTO\\PISPL KOLKATA (2).avif",
+            "/images\\WEBSITE\\1) OFFICES\\19) PISPL - KOLKATA\\PISPL KOLKATA FINAL PHOTO\\PISPL KOLKATA (3).avif",
+            "/images\\WEBSITE\\1) OFFICES\\19) PISPL - KOLKATA\\PISPL KOLKATA FINAL PHOTO\\PISPL KOLKATA (4).avif",
+            "/images\\WEBSITE\\1) OFFICES\\19) PISPL - KOLKATA\\PISPL KOLKATA FINAL PHOTO\\PISPL KOLKATA (5).avif"
+          ]
+        }
+      },
+      "2) BMR After complition": {
+        "BMR FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (1).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (100).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (101).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (104).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (11).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (14).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (16).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (17).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (19).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (3).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (33).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (35).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (37).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (39).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (4).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (45).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (46).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (50).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (52).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (55).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (56).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (58).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (60).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (62).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (64).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (7).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (75).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (76).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (8).avif",
+            "/images\\WEBSITE\\1) OFFICES\\2) BMR After complition\\BMR FINAL PHOTO\\BMR SITE PHOTO (9).avif"
+          ]
+        }
+      },
+      "20) UNITED SHIPER": {
+        "UNITED SHIPER FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\20) UNITED SHIPER\\UNITED SHIPER FINAL PHOTO\\IMG_00000225.avif",
+            "/images\\WEBSITE\\1) OFFICES\\20) UNITED SHIPER\\UNITED SHIPER FINAL PHOTO\\IMG_00000228.avif",
+            "/images\\WEBSITE\\1) OFFICES\\20) UNITED SHIPER\\UNITED SHIPER FINAL PHOTO\\IMG_00000233.avif",
+            "/images\\WEBSITE\\1) OFFICES\\20) UNITED SHIPER\\UNITED SHIPER FINAL PHOTO\\IMG_00000253.avif"
+          ]
+        }
+      },
+      "3) Delhi ( Carex)": {},
+      "4) PISPL CALL CENTER": {
+        "PISPL CALL CENTER FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\4) PISPL CALL CENTER\\PISPL CALL CENTER FINAL PHOTO\\IMG_0335.avif",
+            "/images\\WEBSITE\\1) OFFICES\\4) PISPL CALL CENTER\\PISPL CALL CENTER FINAL PHOTO\\IMG_0348.avif",
+            "/images\\WEBSITE\\1) OFFICES\\4) PISPL CALL CENTER\\PISPL CALL CENTER FINAL PHOTO\\IMG_0349.avif",
+            "/images\\WEBSITE\\1) OFFICES\\4) PISPL CALL CENTER\\PISPL CALL CENTER FINAL PHOTO\\IMG_0350.avif",
+            "/images\\WEBSITE\\1) OFFICES\\4) PISPL CALL CENTER\\PISPL CALL CENTER FINAL PHOTO\\IMG_0361.avif",
+            "/images\\WEBSITE\\1) OFFICES\\4) PISPL CALL CENTER\\PISPL CALL CENTER FINAL PHOTO\\IMG_0366.avif",
+            "/images\\WEBSITE\\1) OFFICES\\4) PISPL CALL CENTER\\PISPL CALL CENTER FINAL PHOTO\\IMG_0372.avif",
+            "/images\\WEBSITE\\1) OFFICES\\4) PISPL CALL CENTER\\PISPL CALL CENTER FINAL PHOTO\\IMG_0376.avif",
+            "/images\\WEBSITE\\1) OFFICES\\4) PISPL CALL CENTER\\PISPL CALL CENTER FINAL PHOTO\\IMG_0401.avif",
+            "/images\\WEBSITE\\1) OFFICES\\4) PISPL CALL CENTER\\PISPL CALL CENTER FINAL PHOTO\\IMG_0417.avif"
+          ]
+        }
+      },
+      "45) PISPL POLYMER": {
+        "PISPL POLYMER FINAL PHOTOS": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\45) PISPL POLYMER\\PISPL POLYMER FINAL PHOTOS\\IMG_6706.avif",
+            "/images\\WEBSITE\\1) OFFICES\\45) PISPL POLYMER\\PISPL POLYMER FINAL PHOTOS\\IMG_6725.avif",
+            "/images\\WEBSITE\\1) OFFICES\\45) PISPL POLYMER\\PISPL POLYMER FINAL PHOTOS\\IMG_6726.avif",
+            "/images\\WEBSITE\\1) OFFICES\\45) PISPL POLYMER\\PISPL POLYMER FINAL PHOTOS\\IMG_6736.avif",
+            "/images\\WEBSITE\\1) OFFICES\\45) PISPL POLYMER\\PISPL POLYMER FINAL PHOTOS\\IMG_6739.avif"
+          ]
+        }
+      },
+      "5) PISPL GOREGAON FRONT BLDGS": {
+        "PISPL GOREGAON FRONT BLDGS": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\5) PISPL GOREGAON FRONT BLDGS\\PISPL GOREGAON FRONT BLDGS\\100_2899.avif",
+            "/images\\WEBSITE\\1) OFFICES\\5) PISPL GOREGAON FRONT BLDGS\\PISPL GOREGAON FRONT BLDGS\\100_2902.avif"
+          ]
+        }
+      },
+      "6) Hemco Pharma - Office Work": {
+        "HEMCO PHARMA FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (11).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (15).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (17).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (19).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (2).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (22).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (23).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (24).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (27).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (29).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (32).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (33).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (34).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (41).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (43).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (5).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (6).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (7).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (8).avif",
+            "/images\\WEBSITE\\1) OFFICES\\6) Hemco Pharma - Office Work\\HEMCO PHARMA FINAL PHOTO\\HEMCO PHARMA (9).avif"
+          ]
+        }
+      },
+      "7) MAHESH GUPTA -PENINSULA": {
+        "MAHESH GUPTA FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (12).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (13).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (14).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (16).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (20).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (21).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (22).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (24).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (25).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (27).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (28).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (29).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (31).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (35).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (38).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (39).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (47).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (48).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (5).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (53).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (55).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (57).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (6).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (64).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (65).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (67).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (68.avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (69).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (7).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (70).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (71).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (78).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (8).avif",
+            "/images\\WEBSITE\\1) OFFICES\\7) MAHESH GUPTA -PENINSULA\\MAHESH GUPTA FINAL PHOTO\\MAHESH GUPTA - PENINSULA (86).avif"
+          ]
+        }
+      },
+      "8) PISPL - Chennai": {
+        "PISPL CHENNAI FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\8) PISPL - Chennai\\PISPL CHENNAI FINAL PHOTO\\PISPL Channai (21).avif",
+            "/images\\WEBSITE\\1) OFFICES\\8) PISPL - Chennai\\PISPL CHENNAI FINAL PHOTO\\PISPL Channai (25).avif",
+            "/images\\WEBSITE\\1) OFFICES\\8) PISPL - Chennai\\PISPL CHENNAI FINAL PHOTO\\PISPL Channai (53).avif",
+            "/images\\WEBSITE\\1) OFFICES\\8) PISPL - Chennai\\PISPL CHENNAI FINAL PHOTO\\PISPL Channai (58).avif"
+          ]
+        }
+      },
+      "9) Goregaon Parekh": {
+        "PISPL - GOREGAON FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\1) OFFICES\\9) Goregaon Parekh\\PISPL - GOREGAON FINAL PHOTO\\GOREGAON PAREKH (8).avif"
+          ]
+        }
+      }
+    },
+    "hotel_and_restaurant": {
+      "_displayName": "2) HOTEL & RESTAURANT",
+      "1) CRAVIN CAFE": {
+        "CRAVIN CAFE FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\1) CRAVIN CAFE\\CRAVIN CAFE FINAL PHOTO\\Cravin Cafe (32).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\1) CRAVIN CAFE\\CRAVIN CAFE FINAL PHOTO\\Cravin Cafe (34).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\1) CRAVIN CAFE\\CRAVIN CAFE FINAL PHOTO\\Cravin Cafe (36).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\1) CRAVIN CAFE\\CRAVIN CAFE FINAL PHOTO\\Cravin Cafe (39).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\1) CRAVIN CAFE\\CRAVIN CAFE FINAL PHOTO\\Cravin Cafe (44).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\1) CRAVIN CAFE\\CRAVIN CAFE FINAL PHOTO\\Cravin Cafe (45).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\1) CRAVIN CAFE\\CRAVIN CAFE FINAL PHOTO\\Cravin Cafe (48).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\1) CRAVIN CAFE\\CRAVIN CAFE FINAL PHOTO\\Cravin Cafe (49).avif"
+          ]
+        }
+      },
+      "2) Ava Belapur": {
+        "AVA BELAPUR FINAL PHOTOS": {
+          "files": [
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (1).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (10).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (11).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (12).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (13).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (14).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (15).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (16).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (17).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (19).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (2).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (3).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (7).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (8).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\2) Ava Belapur\\AVA BELAPUR FINAL PHOTOS\\AVA BELAPUR (9).avif"
+          ]
+        }
+      },
+      "3) KOHINOOR - 21 ROOMS": {
+        "KOHINOOR HOTEL FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\3) KOHINOOR - 21 ROOMS\\KOHINOOR HOTEL FINAL PHOTO\\KOHINOOR - 21Rooms (17).avif"
+          ]
+        }
+      },
+      "4) ESKANA RESORT AND SPA": {
+        "files": [
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (014).avif",
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (016).avif",
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (017).avif",
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (028).avif",
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (03).avif",
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (031).avif",
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (032).avif",
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (033).avif",
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (041).avif",
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (043).avif",
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (047).avif",
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (05).avif",
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (06).avif",
+          "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\4) ESKANA RESORT AND SPA\\ESKANA RESORT AND SPA (08).avif"
+        ]
+      },
+      "5) KOHINOOR ELITE": {
+        "KOHINOOR ELITE FINAL PHOTOS": {
+          "files": [
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\5) KOHINOOR ELITE\\KOHINOOR ELITE FINAL PHOTOS\\KOHINOOR ELITE (1).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\5) KOHINOOR ELITE\\KOHINOOR ELITE FINAL PHOTOS\\KOHINOOR ELITE (12).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\5) KOHINOOR ELITE\\KOHINOOR ELITE FINAL PHOTOS\\KOHINOOR ELITE (2).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\5) KOHINOOR ELITE\\KOHINOOR ELITE FINAL PHOTOS\\KOHINOOR ELITE (3).avif",
+            "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\5) KOHINOOR ELITE\\KOHINOOR ELITE FINAL PHOTOS\\KOHINOOR ELITE (5).avif"
+          ]
+        }
+      },
+      "6) kohinoor": {
+        "1) KOHINOOR CONTINENTAL": {
+          "KOHINOOR CONTINENTAL FINAL PHOTO": {
+            "files": [
+              "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\6) kohinoor\\1) KOHINOOR CONTINENTAL\\KOHINOOR CONTINENTAL FINAL PHOTO\\KOHINOOR CON (04).avif",
+              "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\6) kohinoor\\1) KOHINOOR CONTINENTAL\\KOHINOOR CONTINENTAL FINAL PHOTO\\KOHINOOR CON (05).avif",
+              "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\6) kohinoor\\1) KOHINOOR CONTINENTAL\\KOHINOOR CONTINENTAL FINAL PHOTO\\KOHINOOR CON (12).avif",
+              "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\6) kohinoor\\1) KOHINOOR CONTINENTAL\\KOHINOOR CONTINENTAL FINAL PHOTO\\KOHINOOR CON (17).avif",
+              "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\6) kohinoor\\1) KOHINOOR CONTINENTAL\\KOHINOOR CONTINENTAL FINAL PHOTO\\KOHINOOR CON (18).avif",
+              "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\6) kohinoor\\1) KOHINOOR CONTINENTAL\\KOHINOOR CONTINENTAL FINAL PHOTO\\KOHINOOR CON (27).avif",
+              "/images\\WEBSITE\\2) HOTEL & RESTAURANT\\6) kohinoor\\1) KOHINOOR CONTINENTAL\\KOHINOOR CONTINENTAL FINAL PHOTO\\KOHINOOR CON (32).avif"
+            ]
+          }
+        },
+        "2) KOHINOOR JB NAGAR": {}
+      }
+    },
+    "residencial": {
+      "_displayName": "3) RESIDENCIAL",
+      "1) MAZDA": {
+        "MAZDA FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (125).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (13).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (139).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (141).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (165).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (173).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (177).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (18).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (19).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (2).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (21).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (23).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (3).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (39).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (41).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (60).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (62).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (9).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\1) MAZDA\\MAZDA FINAL PHOTO\\MAZDA FINAL PHOTO (95).avif"
+          ]
+        }
+      },
+      "10) ATUL KASBEKER": {
+        "ATUL KASBEKAR FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\3) RESIDENCIAL\\10) ATUL KASBEKER\\ATUL KASBEKAR FINAL PHOTO\\DSC00263.avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\10) ATUL KASBEKER\\ATUL KASBEKAR FINAL PHOTO\\DSC00269.avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\10) ATUL KASBEKER\\ATUL KASBEKAR FINAL PHOTO\\DSC00303.avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\10) ATUL KASBEKER\\ATUL KASBEKAR FINAL PHOTO\\DSC00318.avif"
+          ]
+        }
+      },
+      "11) SANDEEP SIR GOREGAON RES": {
+        "SANDEEP SIR FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\3) RESIDENCIAL\\11) SANDEEP SIR GOREGAON RES\\SANDEEP SIR FINAL PHOTO\\IMG_6839.avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\11) SANDEEP SIR GOREGAON RES\\SANDEEP SIR FINAL PHOTO\\IMG_6861.avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\11) SANDEEP SIR GOREGAON RES\\SANDEEP SIR FINAL PHOTO\\IMG_6865.avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\11) SANDEEP SIR GOREGAON RES\\SANDEEP SIR FINAL PHOTO\\IMG_6875.avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\11) SANDEEP SIR GOREGAON RES\\SANDEEP SIR FINAL PHOTO\\IMG_6877.avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\11) SANDEEP SIR GOREGAON RES\\SANDEEP SIR FINAL PHOTO\\IMG_6888.avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\11) SANDEEP SIR GOREGAON RES\\SANDEEP SIR FINAL PHOTO\\IMG_6892.avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\11) SANDEEP SIR GOREGAON RES\\SANDEEP SIR FINAL PHOTO\\IMG_6896.avif"
+          ]
+        }
+      },
+      "12) Parle agro ( 3804,4004,4204,3704)": {
+        "PARLE AGRO FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (10).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (105).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (107).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (11).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (110).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (111).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (113).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (12).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (122).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (123).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (124).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (125).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (138).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (14).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (140).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (141).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (144).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (161).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (163).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (164).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (167).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (170).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (171).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (188).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (2).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (23).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (24).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (28).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (31).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (32).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (34).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (37).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (38).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (40).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (44).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (45).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (46).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (49).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (5).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (50).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (57).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (58).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (59).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (6).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (60).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (61).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (62).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (64).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (68).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (7).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (75).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (78).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (8).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (9).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\12) Parle agro ( 3804,4004,4204,3704)\\PARLE AGRO FINAL PHOTO\\PARLE (93).avif"
+          ]
+        }
+      },
+      "13) Tribica": {
+        "TRIBICA FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\3) RESIDENCIAL\\13) Tribica\\TRIBICA FINAL PHOTO\\TRIBICA (12).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\13) Tribica\\TRIBICA FINAL PHOTO\\TRIBICA (13).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\13) Tribica\\TRIBICA FINAL PHOTO\\TRIBICA (14).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\13) Tribica\\TRIBICA FINAL PHOTO\\TRIBICA (15).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\13) Tribica\\TRIBICA FINAL PHOTO\\TRIBICA (16).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\13) Tribica\\TRIBICA FINAL PHOTO\\TRIBICA (17).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\13) Tribica\\TRIBICA FINAL PHOTO\\TRIBICA (18).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\13) Tribica\\TRIBICA FINAL PHOTO\\TRIBICA (2).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\13) Tribica\\TRIBICA FINAL PHOTO\\TRIBICA (28).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\13) Tribica\\TRIBICA FINAL PHOTO\\TRIBICA (3).avif"
+          ]
+        }
+      },
+      "14) Gupta sir - Lonawala": {},
+      "15) PURNIMA & DIVYA MADAM": {
+        "PURNIMA MAM FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (1).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (10).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (12).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (128).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (129).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (16).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (26).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (27).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (28).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (33).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (34).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (36).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (40).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (48).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (66).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (69).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (8).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (92).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (94).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (95).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\15) PURNIMA & DIVYA MADAM\\PURNIMA MAM FINAL PHOTO\\PURNIMA & DIVYA Home (97).avif"
+          ]
+        }
+      },
+      "16) OCEAN VIEW APPARTMENT": {
+        "OCEAN APARTMENT FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\3) RESIDENCIAL\\16) OCEAN VIEW APPARTMENT\\OCEAN APARTMENT FINAL PHOTO\\OCEAN APARTMENT (3).avif"
+          ]
+        }
+      },
+      "17) Mukesh Sir": {},
+      "18) Sujata Mam - Bharti Bhavan": {
+        "SUJATA MAM FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\3) RESIDENCIAL\\18) Sujata Mam - Bharti Bhavan\\SUJATA MAM FINAL PHOTO\\BHARTI BHWAN 4TH FLOOR (18).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\18) Sujata Mam - Bharti Bhavan\\SUJATA MAM FINAL PHOTO\\BHARTI BHWAN 4TH FLOOR (21).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\18) Sujata Mam - Bharti Bhavan\\SUJATA MAM FINAL PHOTO\\BHARTI BHWAN 4TH FLOOR (22).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\18) Sujata Mam - Bharti Bhavan\\SUJATA MAM FINAL PHOTO\\BHARTI BHWAN 4TH FLOOR (23).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\18) Sujata Mam - Bharti Bhavan\\SUJATA MAM FINAL PHOTO\\BHARTI BHWAN 4TH FLOOR (25).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\18) Sujata Mam - Bharti Bhavan\\SUJATA MAM FINAL PHOTO\\BHARTI BHWAN 4TH FLOOR (26).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\18) Sujata Mam - Bharti Bhavan\\SUJATA MAM FINAL PHOTO\\BHARTI BHWAN 4TH FLOOR (27).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\18) Sujata Mam - Bharti Bhavan\\SUJATA MAM FINAL PHOTO\\BHARTI BHWAN 4TH FLOOR (29).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\18) Sujata Mam - Bharti Bhavan\\SUJATA MAM FINAL PHOTO\\BHARTI BHWAN 4TH FLOOR (30).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\18) Sujata Mam - Bharti Bhavan\\SUJATA MAM FINAL PHOTO\\BHARTI BHWAN 4TH FLOOR (35).avif",
+            "/images\\WEBSITE\\3) RESIDENCIAL\\18) Sujata Mam - Bharti Bhavan\\SUJATA MAM FINAL PHOTO\\BHARTI BHWAN 4TH FLOOR (36).avif"
+          ]
+        }
+      },
+      "19) SAMEER SIR": {},
+      "2) Mrs. Nanda Shetty": {},
+      "3) Delhi ( Sandeep sir Faridabad)": {},
+      "4) Meeta singh": {}
+    },
+    "jewellary_shope": {
+      "_displayName": "4) JEWELLARY SHOPE",
+      "1) KRA": {
+        "files": [
+          "/images\\WEBSITE\\4) JEWELLARY SHOPE\\1) KRA\\KRA (1).avif",
+          "/images\\WEBSITE\\4) JEWELLARY SHOPE\\1) KRA\\KRA (2).avif",
+          "/images\\WEBSITE\\4) JEWELLARY SHOPE\\1) KRA\\KRA (3).avif"
+        ]
+      },
+      "2) RENAISSANCE JEWELLERY LTD": {
+        "files": [
+          "/images\\WEBSITE\\4) JEWELLARY SHOPE\\2) RENAISSANCE JEWELLERY LTD\\RENAISSANCE JEWELLERY (2).avif",
+          "/images\\WEBSITE\\4) JEWELLARY SHOPE\\2) RENAISSANCE JEWELLERY LTD\\RENAISSANCE JEWELLERY (3).avif"
+        ]
+      },
+      "3) TARA JEWELS": {
+        "TARA JEWELLERS FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\4) JEWELLARY SHOPE\\3) TARA JEWELS\\TARA JEWELLERS FINAL PHOTO\\TARA JEWELERS (2).avif",
+            "/images\\WEBSITE\\4) JEWELLARY SHOPE\\3) TARA JEWELS\\TARA JEWELLERS FINAL PHOTO\\TARA JEWELS (2).avif",
+            "/images\\WEBSITE\\4) JEWELLARY SHOPE\\3) TARA JEWELS\\TARA JEWELLERS FINAL PHOTO\\TARA JEWELS (4).avif",
+            "/images\\WEBSITE\\4) JEWELLARY SHOPE\\3) TARA JEWELS\\TARA JEWELLERS FINAL PHOTO\\TARA JEWELS (7).avif",
+            "/images\\WEBSITE\\4) JEWELLARY SHOPE\\3) TARA JEWELS\\TARA JEWELLERS FINAL PHOTO\\WhatsApp Image 2026-07-07 at 2.02.29 PM.avif",
+            "/images\\WEBSITE\\4) JEWELLARY SHOPE\\3) TARA JEWELS\\TARA JEWELLERS FINAL PHOTO\\WhatsApp Image 2026-07-07 at 2.12.40 PM.avif"
+          ]
+        }
+      }
+    },
+    "outlet": {
+      "_displayName": "5) OUTLET",
+      "1) AURA SPA": {
+        "AURA SPA FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\5) OUTLET\\1) AURA SPA\\AURA SPA FINAL PHOTO\\AURA SPA (1).avif",
+            "/images\\WEBSITE\\5) OUTLET\\1) AURA SPA\\AURA SPA FINAL PHOTO\\AURA SPA (11).avif",
+            "/images\\WEBSITE\\5) OUTLET\\1) AURA SPA\\AURA SPA FINAL PHOTO\\AURA SPA (3).avif",
+            "/images\\WEBSITE\\5) OUTLET\\1) AURA SPA\\AURA SPA FINAL PHOTO\\AURA SPA (7).avif",
+            "/images\\WEBSITE\\5) OUTLET\\1) AURA SPA\\AURA SPA FINAL PHOTO\\AURA SPA (8).avif"
+          ]
+        }
+      }
+    },
+    "airport": {
+      "_displayName": "6) AIRPORT",
+      "1) Ahmedabad Airport": {
+        "ADANI AIRPORT FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\6) AIRPORT\\1) Ahmedabad Airport\\ADANI AIRPORT FINAL PHOTO\\AHMEDABAD AIRPORT (1).avif",
+            "/images\\WEBSITE\\6) AIRPORT\\1) Ahmedabad Airport\\ADANI AIRPORT FINAL PHOTO\\AHMEDABAD AIRPORT (12).avif",
+            "/images\\WEBSITE\\6) AIRPORT\\1) Ahmedabad Airport\\ADANI AIRPORT FINAL PHOTO\\AHMEDABAD AIRPORT (2).avif",
+            "/images\\WEBSITE\\6) AIRPORT\\1) Ahmedabad Airport\\ADANI AIRPORT FINAL PHOTO\\AHMEDABAD AIRPORT (4).avif",
+            "/images\\WEBSITE\\6) AIRPORT\\1) Ahmedabad Airport\\ADANI AIRPORT FINAL PHOTO\\AHMEDABAD AIRPORT (6).avif"
+          ]
+        }
+      }
+    },
+    "hospital": {
+      "_displayName": "7) HOSPITAL",
+      "1) AMAHA - MENTAL CLINIC - BANDRA": {
+        "AMAHA MENTAL CLINIC FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\7) HOSPITAL\\1) AMAHA - MENTAL CLINIC - BANDRA\\AMAHA MENTAL CLINIC FINAL PHOTO\\AMAHA - MENTAL CLINIC (12).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\1) AMAHA - MENTAL CLINIC - BANDRA\\AMAHA MENTAL CLINIC FINAL PHOTO\\AMAHA - MENTAL CLINIC (25).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\1) AMAHA - MENTAL CLINIC - BANDRA\\AMAHA MENTAL CLINIC FINAL PHOTO\\AMAHA - MENTAL CLINIC (26).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\1) AMAHA - MENTAL CLINIC - BANDRA\\AMAHA MENTAL CLINIC FINAL PHOTO\\AMAHA - MENTAL CLINIC (35).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\1) AMAHA - MENTAL CLINIC - BANDRA\\AMAHA MENTAL CLINIC FINAL PHOTO\\AMAHA - MENTAL CLINIC (8).avif"
+          ]
+        }
+      },
+      "2) Miti Mam - Sion Clinic": {
+        "MITI MAM FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\7) HOSPITAL\\2) Miti Mam - Sion Clinic\\MITI MAM FINAL PHOTO\\MITI MAAM SION SITE (010).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\2) Miti Mam - Sion Clinic\\MITI MAM FINAL PHOTO\\MITI MAAM SION SITE (012).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\2) Miti Mam - Sion Clinic\\MITI MAM FINAL PHOTO\\MITI MAAM SION SITE (013).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\2) Miti Mam - Sion Clinic\\MITI MAM FINAL PHOTO\\MITI MAAM SION SITE (015).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\2) Miti Mam - Sion Clinic\\MITI MAM FINAL PHOTO\\MITI MAAM SION SITE (018).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\2) Miti Mam - Sion Clinic\\MITI MAM FINAL PHOTO\\MITI MAAM SION SITE (022).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\2) Miti Mam - Sion Clinic\\MITI MAM FINAL PHOTO\\MITI MAAM SION SITE (024).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\2) Miti Mam - Sion Clinic\\MITI MAM FINAL PHOTO\\MITI MAAM SION SITE (038).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\2) Miti Mam - Sion Clinic\\MITI MAM FINAL PHOTO\\MITI MAAM SION SITE (04).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\2) Miti Mam - Sion Clinic\\MITI MAM FINAL PHOTO\\MITI MAAM SION SITE (05).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\2) Miti Mam - Sion Clinic\\MITI MAM FINAL PHOTO\\MITI MAAM SION SITE (06).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\2) Miti Mam - Sion Clinic\\MITI MAM FINAL PHOTO\\MITI MAAM SION SITE (08).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\2) Miti Mam - Sion Clinic\\MITI MAM FINAL PHOTO\\MITI MAAM SION SITE (09).avif"
+          ]
+        }
+      },
+      "40) MITI CLINIC": {
+        "MITI MAM FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\7) HOSPITAL\\40) MITI CLINIC\\MITI MAM FINAL PHOTO\\MITI CLINIC (1).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\40) MITI CLINIC\\MITI MAM FINAL PHOTO\\MITI CLINIC (10).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\40) MITI CLINIC\\MITI MAM FINAL PHOTO\\MITI CLINIC (11).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\40) MITI CLINIC\\MITI MAM FINAL PHOTO\\MITI CLINIC (12).avif",
+            "/images\\WEBSITE\\7) HOSPITAL\\40) MITI CLINIC\\MITI MAM FINAL PHOTO\\MITI CLINIC (9).avif"
+          ]
+        }
+      }
+    },
+    "lobby_and_building_amenties": {
+      "_displayName": "8) LOBBY AND BUILDING AMENTIES",
+      "1) PLL CLUB HOUSE": {
+        "PLL CLUB HOUSE FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\1) PLL CLUB HOUSE\\PLL CLUB HOUSE FINAL PHOTO\\13.avif",
+            "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\1) PLL CLUB HOUSE\\PLL CLUB HOUSE FINAL PHOTO\\3.avif",
+            "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\1) PLL CLUB HOUSE\\PLL CLUB HOUSE FINAL PHOTO\\5.avif"
+          ]
+        }
+      },
+      "2) PIRAMAL VAIKUNTH": {
+        "files": [
+          "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\2) PIRAMAL VAIKUNTH\\VAIKUNTH (1).avif",
+          "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\2) PIRAMAL VAIKUNTH\\VAIKUNTH (10).avif",
+          "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\2) PIRAMAL VAIKUNTH\\VAIKUNTH (11).avif",
+          "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\2) PIRAMAL VAIKUNTH\\VAIKUNTH (2).avif",
+          "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\2) PIRAMAL VAIKUNTH\\VAIKUNTH (3).avif",
+          "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\2) PIRAMAL VAIKUNTH\\VAIKUNTH (4).avif",
+          "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\2) PIRAMAL VAIKUNTH\\VAIKUNTH (5).avif",
+          "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\2) PIRAMAL VAIKUNTH\\VAIKUNTH (6).avif",
+          "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\2) PIRAMAL VAIKUNTH\\VAIKUNTH (7).avif",
+          "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\2) PIRAMAL VAIKUNTH\\VAIKUNTH (8).avif",
+          "/images\\WEBSITE\\8) LOBBY AND BUILDING AMENTIES\\2) PIRAMAL VAIKUNTH\\VAIKUNTH (9).avif"
+        ]
+      }
+    },
+    "display_unit": {
+      "_displayName": "9) DISPLAY UNIT",
+      "1) Big Mishra": {
+        "BIG MISHRA FINAL PHOTO": {
+          "files": [
+            "/images\\WEBSITE\\9) DISPLAY UNIT\\1) Big Mishra\\BIG MISHRA FINAL PHOTO\\BIG MISHRA (1).avif",
+            "/images\\WEBSITE\\9) DISPLAY UNIT\\1) Big Mishra\\BIG MISHRA FINAL PHOTO\\BIG MISHRA (14).avif",
+            "/images\\WEBSITE\\9) DISPLAY UNIT\\1) Big Mishra\\BIG MISHRA FINAL PHOTO\\BIG MISHRA (19).avif",
+            "/images\\WEBSITE\\9) DISPLAY UNIT\\1) Big Mishra\\BIG MISHRA FINAL PHOTO\\BIG MISHRA (24).avif",
+            "/images\\WEBSITE\\9) DISPLAY UNIT\\1) Big Mishra\\BIG MISHRA FINAL PHOTO\\BIG MISHRA (25).avif"
+          ]
+        }
+      },
+      "2) watches and more": {
+        "files": [
+          "/images\\WEBSITE\\9) DISPLAY UNIT\\2) watches and more\\WATCHES AND MORE (1).avif",
+          "/images\\WEBSITE\\9) DISPLAY UNIT\\2) watches and more\\WATCHES AND MORE (2).avif",
+          "/images\\WEBSITE\\9) DISPLAY UNIT\\2) watches and more\\WATCHES AND MORE (3).avif",
+          "/images\\WEBSITE\\9) DISPLAY UNIT\\2) watches and more\\WATCHES AND MORE (4).avif"
+        ]
+      }
+    }
+  }
+}

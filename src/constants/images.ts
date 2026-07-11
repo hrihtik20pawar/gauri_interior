@@ -90,8 +90,6 @@ export const images = {
     g12: "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&q=60&w=600"
   },
 
-  gallery_arr: Array.from({ length: 28 }, (_, i) => `/images/gallery/gallery_${i + 1}.jpeg`),
-
   team: [
     "/images/team/team_1.avif",
     "/images/team/team_2.avif",

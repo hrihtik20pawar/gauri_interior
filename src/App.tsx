@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { Suspense, useEffect, useState, useRef } from 'react';
+import React, { Suspense, useEffect, useState, useRef, createContext, useContext } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Lenis from 'lenis';
 import gsap from 'gsap';
@@ -16,6 +16,12 @@ import { siteConfig } from './constants/contact';
 import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const LenisContext = createContext<Lenis | null>(null);
+
+export function useLenis() {
+  return useContext(LenisContext);
+}
 
 const Home = React.lazy(() => import('./pages/home/Home'));
 const BusinessDetail = React.lazy(() => import('./pages/business-detail/BusinessDetail'));
@@ -48,7 +54,7 @@ function PageTransition({ children }: { children: React.ReactNode }) {
       tweenRef.current = gsap.fromTo(
         wrapper.current,
         { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }
+        { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', clearProps: 'transform,opacity' }
       );
     }
 
@@ -67,12 +73,16 @@ function PageTransition({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const [lenis, setLenis] = useState<Lenis | null>(null);
+  const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
+    lenisRef.current = lenis;
+    setLenis(lenis);
 
     lenis.on('scroll', ScrollTrigger.update);
 
@@ -127,108 +137,110 @@ export default function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-[#faf9f6] text-gray-800 font-sans selection:bg-brand-orange selection:text-white overflow-x-hidden">
-        {loading && <Preloader onComplete={() => setLoading(false)} />}
+    <LenisContext.Provider value={lenis}>
+      <BrowserRouter>
+        <div className="min-h-screen bg-[#faf9f6] text-gray-800 font-sans selection:bg-brand-orange selection:text-white overflow-x-hidden">
+          {loading && <Preloader onComplete={() => setLoading(false)} />}
 
-        <Navbar />
-        <BackButton />
+          <Navbar />
+          <BackButton />
 
-        <Suspense fallback={null}>
-          <PageTransition>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/business/:id" element={<BusinessDetail />} />
-              <Route path="/projects" element={<Navigate to="/gallery" replace />} />
-              <Route path="/projects/:slug" element={<ProjectDetail />} />
-              <Route path="/works/:id" element={<WorkDetail />} />
-              <Route path="/gallery" element={<Gallery />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/services" element={<GenericPage title="Our Services" description="Comprehensive interior design and turnkey solutions." />} />
-              {/* <Route path="/products" element={<GenericPage title="Our Products" description="Explore our exclusive range of modular furniture and finishes." />} /> */}
-              <Route path="/why-us" element={<GenericPage title="Why Choose Us" description="What makes Gauri Group the trusted choice for luxury interiors." />} />
-            </Routes>
-          </PageTransition>
-        </Suspense>
+          <Suspense fallback={null}>
+            <PageTransition>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/business/:id" element={<BusinessDetail />} />
+                <Route path="/projects" element={<Navigate to="/gallery" replace />} />
+                <Route path="/projects/:slug" element={<ProjectDetail />} />
+                <Route path="/works/:id" element={<WorkDetail />} />
+                <Route path="/gallery" element={<Gallery />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/services" element={<GenericPage title="Our Services" description="Comprehensive interior design and turnkey solutions." />} />
+                {/* <Route path="/products" element={<GenericPage title="Our Products" description="Explore our exclusive range of modular furniture and finishes." />} /> */}
+                <Route path="/why-us" element={<GenericPage title="Why Choose Us" description="What makes Gauri Group the trusted choice for luxury interiors." />} />
+              </Routes>
+            </PageTransition>
+          </Suspense>
 
-        <footer className="bg-brand-green text-white" id="contact-us">
-          <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-24 py-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+          <footer className="bg-brand-green text-white" id="contact-us">
+            <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-24 py-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
 
-              {/* Brand */}
-              <div>
-                <div className="mb-6">
-                  <Logo isDark={true} size="lg" />
+                {/* Brand */}
+                <div>
+                  <div className="mb-6">
+                    <Logo isDark={true} size="lg" />
+                  </div>
+                  <p className="text-white/60 text-sm leading-relaxed max-w-xs">
+                    Creating functional, inspiring, and truly personalized spaces since 2014.
+                  </p>
                 </div>
-                <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-                  Creating functional, inspiring, and truly personalized spaces since 2014.
-                </p>
-              </div>
 
-              {/* Get in Touch */}
-              <div>
-                <h3 className="text-lg font-serif font-semibold mb-6">Get in Touch</h3>
-                <ul className="space-y-4">
-                  <li>
-                    <a
-                      href={siteConfig.contact.mapsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-start gap-3 text-white/70 hover:text-white transition-colors group"
-                    >
-                      <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
-                      <span className="text-sm leading-relaxed">{siteConfig.contact.address}</span>
-                    </a>
-                  </li>
-                  <li className="flex items-center gap-3 text-white/70">
-                    <Phone className="w-5 h-5 shrink-0 text-brand-orange" />
-                    <div className="flex flex-wrap gap-x-4 gap-y-1">
-                      {siteConfig.contact.phones.map((phone) => (
-                        <a key={phone} href={`tel:${phone.replace(/-/g, '')}`} className="text-sm hover:text-white transition-colors">
-                          {phone}
-                        </a>
-                      ))}
-                    </div>
-                  </li>
-                </ul>
-              </div>
+                {/* Get in Touch */}
+                <div>
+                  <h3 className="text-lg font-serif font-semibold mb-6">Get in Touch</h3>
+                  <ul className="space-y-4">
+                    <li>
+                      <a
+                        href={siteConfig.contact.mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-start gap-3 text-white/70 hover:text-white transition-colors group"
+                      >
+                        <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
+                        <span className="text-sm leading-relaxed">{siteConfig.contact.address}</span>
+                      </a>
+                    </li>
+                    <li className="flex items-center gap-3 text-white/70">
+                      <Phone className="w-5 h-5 shrink-0 text-brand-orange" />
+                      <div className="flex flex-wrap gap-x-4 gap-y-1">
+                        {siteConfig.contact.phones.map((phone) => (
+                          <a key={phone} href={`tel:${phone.replace(/-/g, '')}`} className="text-sm hover:text-white transition-colors">
+                            {phone}
+                          </a>
+                        ))}
+                      </div>
+                    </li>
+                  </ul>
+                </div>
 
-              {/* Quick Links */}
-              <div>
-                <h3 className="text-lg font-serif font-semibold mb-6">Quick Links</h3>
-                <ul className="space-y-3">
-                  <li>
-                    <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group">
-                      <Mail className="w-5 h-5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
-                      <span className="text-sm">{siteConfig.contact.email}</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={`https://wa.me/${siteConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group">
-                      <MessageCircle className="w-5 h-5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
-                      <span className="text-sm">{siteConfig.contact.whatsappDisplay}</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                {/* Quick Links */}
+                <div>
+                  <h3 className="text-lg font-serif font-semibold mb-6">Quick Links</h3>
+                  <ul className="space-y-3">
+                    <li>
+                      <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group">
+                        <Mail className="w-5 h-5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
+                        <span className="text-sm">{siteConfig.contact.email}</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href={`https://wa.me/${siteConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group">
+                        <MessageCircle className="w-5 h-5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
+                        <span className="text-sm">{siteConfig.contact.whatsappDisplay}</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
 
-            </div>
-          </div>
-
-          {/* Copyright bar */}
-          <div className="border-t border-white/10">
-            <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-24 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-              <p className="text-white/40 text-sm">© {new Date().getFullYear()} Gauri Interior Pvt. Ltd. All rights reserved.</p>
-              <div className="flex gap-4 sm:gap-6">
-                <a href="#contact-us" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">Contact Us</a>
-                <a href="/about" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">About Us</a>
-                <a href="/gallery" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">Gallery</a>
               </div>
             </div>
-          </div>
-        </footer>
-      </div>
-    </BrowserRouter>
+
+            {/* Copyright bar */}
+            <div className="border-t border-white/10">
+              <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-24 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p className="text-white/40 text-sm">© {new Date().getFullYear()} Gauri Interior Pvt. Ltd. All rights reserved.</p>
+                <div className="flex gap-4 sm:gap-6">
+                  <a href="#contact-us" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">Contact Us</a>
+                  <a href="/about" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">About Us</a>
+                  <a href="/gallery" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">Gallery</a>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </BrowserRouter>
+    </LenisContext.Provider>
   );
 }
 

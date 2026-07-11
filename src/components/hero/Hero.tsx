@@ -44,7 +44,7 @@ export default function Hero() {
           <h1 className="hero-text text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.1] mb-6 drop-shadow-lg">
             Designing Spaces <br /> That Reflect <br /> Your <span className="text-brand-orange">Lifestyle</span>
           </h1>
-          <p className="hero-text text-gray-200 text-lg md:text-xl mb-10 max-w-lg font-medium leading-relaxed drop-shadow-md md:pl-[12%]" style={{ fontStyle: 'italic' }}>
+          <p className="hero-text text-gray-200 text-lg md:text-xl mb-10 max-w-lg font-medium leading-relaxed drop-shadow-md" style={{ fontStyle: 'italic' }}>
             From concept to creation
           </p>
           <div className="hero-text flex flex-wrap gap-4">

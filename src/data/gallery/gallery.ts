@@ -1,5 +1,4 @@
-import { images } from '../../constants/images';
-import { projects } from '../projects/projects';
+import { imageInventory } from '../imageInventory';
 
 export interface GalleryImage {
   id: string;
@@ -7,61 +6,109 @@ export interface GalleryImage {
   category: string;
   image: string;
   span?: "col-span-1" | "col-span-2" | "col-span-3" | "row-span-2";
-  type?: "gallery" | "project";
-  slug?: string;
-  location?: string;
-  year?: number;
-  description?: string;
+  type?: "gallery";
 }
 
 export const galleryCategories = [
   "All",
-  "Work Station",
+  "Offices",
+  "Hotels & Restaurants",
   "Residential",
-  "Commercial",
-  "Modular Furniture",
-  "Modular Kitchen",
-  "Living Room",
-  "Bedroom",
-  "Luxury Villas",
-  "Infrastructure"
+  "Jewellery Shops",
+  "Outlets",
+  "Airports",
+  "Hospitals",
+  "Lobbies & Amenities",
+  "Display Units"
 ];
 
-const galleryItems: GalleryImage[] = images.gallery_arr.map((img, idx) => {
-  const spans: ("col-span-1" | "col-span-2" | "row-span-2")[] = ["col-span-1", "col-span-2", "row-span-2", "col-span-1"];
-  const randomSpan = spans[idx % spans.length];
-  
-  const categoryMap: Record<number, string> = {
-    0: "Work Station", 1: "Residential", 2: "Commercial", 3: "Modular Furniture",
-    4: "Work Station", 5: "Infrastructure", 6: "Residential", 7: "Commercial",
-    8: "Modular Furniture", 9: "Work Station", 10: "Infrastructure", 11: "Residential",
-    12: "Commercial", 13: "Modular Furniture", 14: "Work Station", 15: "Infrastructure",
-    16: "Residential", 17: "Commercial", 18: "Modular Furniture", 19: "Work Station",
-    20: "Infrastructure", 21: "Residential", 22: "Commercial", 23: "Modular Furniture",
-    24: "Work Station", 25: "Infrastructure", 26: "Residential", 27: "Commercial",
-  };
-  
-  return {
-    id: `g${idx + 1}`,
-    title: `Project Display ${idx + 1}`,
-    category: categoryMap[idx] || "Work Station",
-    image: img,
-    span: randomSpan as GalleryImage['span'],
-    type: "gallery",
-  };
-});
+const categoryMap: Record<string, string> = {
+  offices: "Offices",
+  hotel_and_restaurant: "Hotels & Restaurants",
+  residencial: "Residential",
+  jewellary_shope: "Jewellery Shops",
+  outlet: "Outlets",
+  airport: "Airports",
+  hospital: "Hospitals",
+  lobby_and_building_amenties: "Lobbies & Amenities",
+  display_unit: "Display Units",
+};
 
-const projectItems: GalleryImage[] = projects.map((p) => ({
-  id: `p-${p.id}`,
-  title: p.title,
-  category: p.category,
-  image: p.image,
-  span: "col-span-1" as const,
-  type: "project",
-  slug: p.slug,
-  location: p.location,
-  year: p.year,
-  description: p.description,
-}));
+function cleanTitle(raw: string): string {
+  return raw
+    .replace(/^\d+\)\s*/, '')
+    .replace(/\s*-\s*Office Work$/i, '')
+    .replace(/\s*After\s+complition$/i, '')
+    .replace(/\s*FINAL\s+PHOTO.*$/i, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
 
-export const galleryImages: GalleryImage[] = [...projectItems, ...galleryItems];
+function findImages(obj: any, maxCount: number = 3): string[] {
+  const results: string[] = [];
+  function recurse(node: any): void {
+    if (results.length >= maxCount) return;
+    if (Array.isArray(node)) {
+      for (const item of node) {
+        if (results.length >= maxCount) return;
+        if (typeof item === 'string' && /\.(avif|jpg|jpeg|png|webp)$/i.test(item)) {
+          results.push(item.replace(/\\/g, '/'));
+        }
+      }
+      return;
+    }
+    if (node && typeof node === 'object') {
+      for (const [key, value] of Object.entries(node)) {
+        if (results.length >= maxCount) return;
+        if (key === 'files') {
+          recurse(value);
+        } else if (key !== '_displayName') {
+          recurse(value);
+        }
+      }
+    }
+  }
+  recurse(obj);
+  return results;
+}
+
+function buildGalleryItems(): GalleryImage[] {
+  const items: GalleryImage[] = [];
+  let idx = 0;
+  const spans: ("col-span-1" | "col-span-2" | "row-span-2")[] = [
+    "col-span-1", "col-span-2", "row-span-2", "col-span-1"
+  ];
+
+  const website = (imageInventory as any).website;
+  if (!website) return items;
+
+  for (const [catKey, catLabel] of Object.entries(categoryMap)) {
+    const catData = website[catKey];
+    if (!catData) continue;
+
+    for (const [projectKey, projectData] of Object.entries(catData)) {
+      if (projectKey === '_displayName') continue;
+
+      const images = findImages(projectData, 3);
+      if (images.length === 0) continue;
+
+      const title = cleanTitle(projectKey);
+
+      for (const img of images) {
+        idx++;
+        items.push({
+          id: `g-${idx}`,
+          title,
+          category: catLabel as string,
+          image: img,
+          span: spans[idx % spans.length] as GalleryImage['span'],
+          type: "gallery",
+        });
+      }
+    }
+  }
+
+  return items;
+}
+
+export const galleryImages: GalleryImage[] = buildGalleryItems();

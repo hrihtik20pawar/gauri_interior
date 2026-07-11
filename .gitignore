@@ -6,3 +6,8 @@ coverage/
 *.log
 .env*
 !.env.example
+*.bak
+*.mp4
+*.pptx
+*.pdf
+Thumbs.db

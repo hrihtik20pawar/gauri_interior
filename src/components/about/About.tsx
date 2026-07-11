@@ -120,7 +120,7 @@ export default function About() {
           </div>
           <img
             loading="lazy"
-            src="/images/about/gauri-office.jpeg"
+            src="/images/about/gauri-office.avif"
             alt="Gauri Group Office"
             className="about-office-image w-full h-[450px] md:h-[550px] object-contain rounded-xl shadow-2xl relative z-10"
           />
@@ -172,8 +172,8 @@ export default function About() {
             loading="lazy"
             src="/images/team/team_1.avif"
             alt="Managing Director - GAURI GROUP"
-            className="h-[150%] w-full object-cover object-top"
-            style={{ marginTop: '-25%', maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}
+            className="h-[150%] w-full object-cover object-top opacity-80"
+            style={{ marginTop: '-25%', maskImage: 'linear-gradient(to bottom, black 40%, transparent 90%), linear-gradient(to right, transparent 0%, black 40%)', WebkitMaskImage: 'linear-gradient(to bottom, black 40%, transparent 90%), linear-gradient(to right, transparent 0%, black 40%)', maskComposite: 'intersect', WebkitMaskComposite: 'source-in' }}
           />
           {/* Fade only the left edge into content */}
           <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent"></div>

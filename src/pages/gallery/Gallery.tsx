@@ -1,25 +1,32 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { createPortal } from 'react-dom';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ChevronLeft, ChevronRight, X, Maximize2, Search, MapPin, Calendar, ExternalLink } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, Maximize2, Search } from 'lucide-react';
 import { galleryImages, galleryCategories, GalleryImage } from '../../data/gallery/gallery';
 import Logo from '../../components/logo/Logo';
-
-gsap.registerPlugin(ScrollTrigger);
+import { useLenis } from '../../App';
 
 export default function Gallery() {
-  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredImages, setFilteredImages] = useState<GalleryImage[]>(galleryImages);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const galleryRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
+  const lenis = useLenis();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    return () => {
+      if (lightboxIndex !== null) {
+        document.body.style.overflow = 'auto';
+        lenis?.start();
+      }
+    };
+  }, [lightboxIndex, lenis]);
 
   useEffect(() => {
     let result = galleryImages;
@@ -32,9 +39,7 @@ export default function Gallery() {
       const q = searchQuery.toLowerCase();
       result = result.filter(img =>
         img.title.toLowerCase().includes(q) ||
-        img.category.toLowerCase().includes(q) ||
-        (img.location && img.location.toLowerCase().includes(q)) ||
-        (img.description && img.description.toLowerCase().includes(q))
+        img.category.toLowerCase().includes(q)
       );
     }
 
@@ -55,23 +60,6 @@ export default function Gallery() {
           { y: 40, scale: 0.95 },
           { y: 0, scale: 1, duration: 0.8, stagger: 0.05, ease: 'power2.out', clearProps: 'all' }
         );
-
-        const items = gsap.utils.toArray('.gallery-item');
-        items.forEach((item: any) => {
-          gsap.fromTo(item,
-            { y: 50 },
-            {
-              y: 0,
-              duration: 1,
-              ease: 'power3.out',
-              scrollTrigger: {
-                trigger: item,
-                start: 'top 85%',
-                toggleActions: 'play none none reverse'
-              }
-            }
-          );
-        });
       }
     });
 
@@ -81,56 +69,35 @@ export default function Gallery() {
   const openLightbox = (index: number) => {
     setLightboxIndex(index);
     document.body.style.overflow = 'hidden';
+    lenis?.stop();
   };
 
   const closeLightbox = () => {
     setLightboxIndex(null);
     document.body.style.overflow = 'auto';
+    lenis?.start();
   };
 
   const nextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (lightboxIndex !== null) {
-      setLightboxIndex((lightboxIndex + 1) % filteredImages.length);
-    }
+    setLightboxIndex((prev) => prev !== null ? (prev + 1) % filteredImages.length : null);
   };
 
   const prevImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (lightboxIndex !== null) {
-      setLightboxIndex((lightboxIndex - 1 + filteredImages.length) % filteredImages.length);
-    }
-  };
-
-  const handleItemClick = (item: GalleryImage, index: number) => {
-    if (item.type === "project" && item.slug) {
-      navigate(`/projects/${item.slug}`);
-    } else {
-      openLightbox(index);
-    }
+    setLightboxIndex((prev) => prev !== null ? (prev - 1 + filteredImages.length) % filteredImages.length : null);
   };
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (lightboxIndex === null) return;
       if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowRight') setLightboxIndex((lightboxIndex + 1) % filteredImages.length);
-      if (e.key === 'ArrowLeft') setLightboxIndex((lightboxIndex - 1 + filteredImages.length) % filteredImages.length);
+      if (e.key === 'ArrowRight') setLightboxIndex((prev) => prev !== null ? (prev + 1) % filteredImages.length : null);
+      if (e.key === 'ArrowLeft') setLightboxIndex((prev) => prev !== null ? (prev - 1 + filteredImages.length) % filteredImages.length : null);
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [lightboxIndex, filteredImages.length]);
-
-  const galleryOnlyImages = lightboxIndex !== null ? filteredImages.filter(i => i.type !== "project") : [];
-
-  const getLightboxIndex = () => {
-    if (lightboxIndex === null) return null;
-    const item = filteredImages[lightboxIndex];
-    if (!item || item.type === "project") return null;
-    return galleryOnlyImages.findIndex(i => i.id === item.id);
-  };
-
-  const lightboxGalleryIndex = getLightboxIndex();
 
   return (
     <div className="min-h-screen bg-[#faf9f6] pb-24">
@@ -181,60 +148,34 @@ export default function Gallery() {
         <div ref={galleryRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 auto-rows-[300px] md:auto-rows-[400px]">
           {filteredImages.map((item, index) => {
             const showStoryBlock = (index + 1) % 7 === 0;
-            const isProject = item.type === "project";
 
             return (
               <React.Fragment key={item.id}>
                 {/* Image Item */}
                 <div
-                  className={`gallery-item group relative overflow-hidden rounded-[2rem] cursor-pointer bg-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 ${item.span || ''}`}
-                  onClick={() => handleItemClick(item, index)}
+                  className={`gallery-item group relative overflow-hidden rounded-[2rem] cursor-pointer bg-white shadow-sm hover:shadow-2xl transition-all duration-500 ${item.span || ''}`}
+                  onClick={() => openLightbox(index)}
                 >
+                  <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-100 to-white animate-pulse" />
                   <img
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="relative w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
 
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-green/90 via-brand-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-green/90 via-brand-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 pointer-events-none">
                     <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                       <span className="inline-block px-3 py-1 bg-brand-orange/90 backdrop-blur-sm text-white text-xs font-semibold tracking-wider uppercase rounded-full mb-3">
                         {item.category}
                       </span>
                       <h3 className="text-white text-2xl font-serif mb-2">{item.title}</h3>
-
-                      {isProject ? (
-                        <div className="flex flex-col gap-2 mt-3">
-                          {item.location && (
-                            <div className="flex items-center gap-2 text-white/80 font-medium text-sm">
-                              <MapPin className="w-4 h-4" /> {item.location}
-                            </div>
-                          )}
-                          {item.year && (
-                            <div className="flex items-center gap-2 text-white/80 font-medium text-sm">
-                              <Calendar className="w-4 h-4" /> {item.year}
-                            </div>
-                          )}
-                          <div className="flex items-center gap-2 text-white font-medium text-sm mt-2">
-                            <ExternalLink className="w-4 h-4" /> View Project Details
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="flex items-center gap-2 text-white/80 font-medium text-sm mt-4">
-                          <Maximize2 className="w-4 h-4" /> View Fullscreen
-                        </div>
-                      )}
+                      <div className="flex items-center gap-2 text-white/80 font-medium text-sm mt-4">
+                        <Maximize2 className="w-4 h-4" /> View Photo
+                      </div>
                     </div>
                   </div>
-
-                  {/* Project badge */}
-                  {isProject && (
-                    <div className="absolute top-4 right-4 bg-brand-orange text-white px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase shadow-lg z-10">
-                      Featured
-                    </div>
-                  )}
                 </div>
 
                 {/* Storytelling Block */}
@@ -261,32 +202,32 @@ export default function Gallery() {
       </div>
 
       {/* Lightbox */}
-      {lightboxIndex !== null && filteredImages[lightboxIndex]?.type !== "project" && (
-        <div className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl flex items-center justify-center">
+      {lightboxIndex !== null && filteredImages[lightboxIndex] && createPortal(
+        <div className="fixed inset-0 z-[200] bg-white/95 backdrop-blur-xl flex items-center justify-center">
           <button
             onClick={closeLightbox}
-            className="absolute top-6 right-6 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors z-50"
+            className="absolute top-6 right-6 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-3 rounded-full transition-colors z-50"
           >
             <X className="w-6 h-6" />
           </button>
 
-          <div className="absolute top-6 left-6 text-white z-50 flex flex-col gap-1">
-            <span className="text-white/50 text-sm font-medium tracking-widest uppercase">
+          <div className="absolute top-6 left-6 text-gray-900 z-50 flex flex-col gap-1">
+            <span className="text-gray-400 text-sm font-medium tracking-widest uppercase">
               {lightboxIndex + 1} / {filteredImages.length}
             </span>
-            <h3 className="text-xl font-serif">{filteredImages[lightboxIndex].title}</h3>
+            <h3 className="text-3xl md:text-4xl font-serif text-brand-orange">{filteredImages[lightboxIndex].title}</h3>
           </div>
 
           <button
             onClick={prevImage}
-            className="absolute left-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-4 rounded-full transition-colors z-50"
+            className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-4 rounded-full transition-colors z-50"
           >
             <ChevronLeft className="w-8 h-8" />
           </button>
 
           <button
             onClick={nextImage}
-            className="absolute right-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-4 rounded-full transition-colors z-50"
+            className="absolute right-6 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-4 rounded-full transition-colors z-50"
           >
             <ChevronRight className="w-8 h-8" />
           </button>
@@ -299,7 +240,8 @@ export default function Gallery() {
               onClick={(e) => e.stopPropagation()}
             />
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
