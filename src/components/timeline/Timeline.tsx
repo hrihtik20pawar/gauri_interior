@@ -8,36 +8,37 @@ gsap.registerPlugin(ScrollTrigger);
 const timelineSteps = [
   {
     num: "01",
-    title: "Gauri Group Founded",
+    title: "The Beginning",
     image: "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
     items: [
-      "Our journey began in 1993.",
-      "Mr. Lalbachan Vishwakarma entered the Furniture Industry.",
-      "Started with small projects.",
-      "Built the foundation of Gauri Group."
+      "Founded Gauri Interior Pvt. Ltd.",
+      "Started with residential turnkey projects",
+      "Focused on quality craftsmanship and client trust",
+      "Built a core team of passionate designers"
     ],
     year: "1993"
   },
   {
     num: "02",
-    title: "The Beginning",
+    title: "Growth & Expansion",
     image: "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
     items: [
-      "Slowly and steadily.",
-      "We evolved & started delivering complete Turnkey Projects.",
-      "Expanded our expertise in interior execution.",
-      "Built a reputation for quality work."
+      "Expanded into commercial interior projects",
+      "Delivered 50+ successful projects",
+      "Established strong vendor relationships",
+      "Recognized for innovative design solutions"
     ],
-    year: "1993-2011"
+    year: "2010"
   },
   {
     num: "03",
     title: "Gauri Interior Pvt. Ltd.",
     image: "/images/WEBSITE/2) HOTEL & RESTAURANT/1) CRAVIN CAFE/CRAVIN CAFE FINAL PHOTO/Cravin Cafe (32).avif",
     items: [
-      "With the vision of our current MD & CEO Mr. Shilkumar L. Vishwakarma.",
-      "We launched our 1st venture.",
-      "Gauri Interior Pvt. Ltd."
+      "Launched our first official venture",
+      "Gauri Interior Pvt. Ltd. established",
+      "Expanded team and operations",
+      "Started working with top architects"
     ],
     year: "2012"
   },
@@ -46,33 +47,34 @@ const timelineSteps = [
     title: "Nikhil Enterprice",
     image: "/images/WEBSITE/4) JEWELLARY SHOPE/1) KRA/KRA (1).avif",
     items: [
-      "Expanded further with our second venture.",
-      "NIKHIL ENTERPRISES.",
-      "Dealing in Hardware, Plywoods & allied products."
+      "Expanded with second venture",
+      "NIKHIL ENTERPRISES launched",
+      "Dealing in Hardware, Plywoods & allied products",
+      "Strengthened supply chain network"
     ],
     year: "2017"
   },
   {
     num: "05",
-    title: "GAURI'S KITCHEN",
+    title: "Gauri's Kitchen",
     image: "/images/WEBSITE/9) DISPLAY UNIT/1) Big Mishra/BIG MISHRA FINAL PHOTO/BIG MISHRA (1).avif",
     items: [
-      "We brought comfort and style to every home.",
-      "Launched GAURI'S KITCHEN.",
-      "Dealing in all types of Kitchen & Modular Furniture.",
-      "Established in 2018."
+      "Launched GAURI'S KITCHEN",
+      "Dealing in all types of Kitchen & Modular Furniture",
+      "Brought comfort and style to every home",
+      "Established in 2018"
     ],
     year: "2018"
   },
   {
     num: "06",
-    title: "Gauri Designing Studio",
+    title: "Designing Studio",
     image: "/images/WEBSITE/1) OFFICES/4) PISPL CALL CENTER/PISPL CALL CENTER FINAL PHOTO/IMG_0335.avif",
     items: [
-      "Upcoming venture.",
-      "GAURI'S DESIGNING STUDIO.",
-      "Dedicated to Designing Consultancy.",
-      "Complete operations to commence from 2027."
+      "Upcoming venture: GAURI'S DESIGNING STUDIO",
+      "Dedicated to Designing Consultancy",
+      "Complete operations to commence from 2027",
+      "Vision for premium design services"
     ],
     year: "2027"
   }
@@ -142,7 +144,9 @@ export default function Timeline() {
               
               {/* Left Node */}
               <div className="timeline-node flex-shrink-0 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white border-4 border-brand-orange shadow-[0_0_20px_rgba(234,91,35,0.3)] flex items-center justify-center z-10">
-                <span className="text-brand-orange font-bold text-lg md:text-xl">{step.num}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 md:w-7 md:h-7 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
               </div>
 
               {/* Card */}
