@@ -35,7 +35,7 @@ export default function AboutHero() {
   }, { scope: heroRef });
 
   return (
-    <div ref={heroRef} className="relative h-screen overflow-hidden">
+    <div ref={heroRef} className="relative h-[100dvh] overflow-hidden">
       <div className="about-hero-bg absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${images.about.hero}')` }} />
       <div className="absolute inset-0 bg-gradient-to-b from-brand-green/70 via-brand-green/40 to-brand-green/80" />
 

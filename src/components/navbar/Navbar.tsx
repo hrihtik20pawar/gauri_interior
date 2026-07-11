@@ -27,15 +27,29 @@ export default function Navbar() {
     setIsOpen(false);
   }, [location.pathname]);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
+
   // Click outside to close contact dropdown
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       if (contactRef.current && !contactRef.current.contains(event.target as Node)) {
         setContactOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
   }, []);
 
   useEffect(() => {
@@ -137,56 +151,62 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 py-6 px-6 flex flex-col gap-4 shadow-xl z-40 max-h-[80vh] overflow-y-auto">
-          {navLinks.map((link, i) => {
-            const isActive = location.pathname === link.path;
-            return (
-              <Link key={i} to={link.path} className={`font-medium py-3 block ${isActive ? 'text-brand-orange' : 'text-gray-700'}`}>{link.name}</Link>
-            )
-          })}
+        <>
+          {/* Backdrop */}
+          <div className="lg:hidden fixed inset-0 bg-black/50 z-30" onClick={() => setIsOpen(false)} />
+          
+          {/* Menu */}
+          <div className="lg:hidden fixed top-[60px] left-0 right-0 bg-white border-b border-gray-100 py-6 px-6 flex flex-col gap-4 shadow-xl z-40 max-h-[calc(100dvh-60px)] overflow-y-auto">
+            {navLinks.map((link, i) => {
+              const isActive = location.pathname === link.path;
+              return (
+                <Link key={i} to={link.path} className={`font-medium py-3 block ${isActive ? 'text-brand-orange' : 'text-gray-700'}`}>{link.name}</Link>
+              )
+            })}
 
-          {/* Mobile Get in Touch Dropdown */}
-          <div ref={contactRef}>
-            <button
-              onClick={() => setContactOpen(!contactOpen)}
-              className="w-full text-center bg-brand-orange text-white py-3 rounded-lg font-medium hover:bg-brand-orange/90 active:scale-98 transition-all duration-200 mt-2 flex items-center justify-center gap-2"
-            >
-              Get in Touch
-            </button>
+            {/* Mobile Get in Touch Dropdown */}
+            <div ref={contactRef}>
+              <button
+                onClick={() => setContactOpen(!contactOpen)}
+                className="w-full text-center bg-brand-orange text-white py-3 rounded-lg font-medium hover:bg-brand-orange/90 active:scale-98 transition-all duration-200 mt-2 flex items-center justify-center gap-2"
+              >
+                Get in Touch
+              </button>
 
-            {contactOpen && (
-              <div className="mt-2 bg-gray-50 rounded-xl overflow-hidden border border-gray-100">
-                <a
-                  href={`mailto:${siteConfig.contact.email}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors"
-                  onClick={() => { setContactOpen(false); setIsOpen(false); }}
-                >
-                  <Mail className="w-5 h-5 text-brand-orange" />
-                  <div>
-                    <p className="text-sm font-medium text-gray-900">Email Us</p>
-                    <p className="text-xs text-gray-500">{siteConfig.contact.email}</p>
-                  </div>
-                </a>
+              {contactOpen && (
+                <div className="mt-2 bg-gray-50 rounded-xl overflow-hidden border border-gray-100">
+                  <a
+                    href={`mailto:${siteConfig.contact.email}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors"
+                    onClick={() => { setContactOpen(false); setIsOpen(false); }}
+                  >
+                    <Mail className="w-5 h-5 text-brand-orange" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Email Us</p>
+                      <p className="text-xs text-gray-500">{siteConfig.contact.email}</p>
+                    </div>
+                  </a>
 
-                <a
-                  href={`https://wa.me/${siteConfig.contact.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors"
-                  onClick={() => { setContactOpen(false); setIsOpen(false); }}
-                >
-                  <MessageCircle className="w-5 h-5 text-green-600" />
-                  <div>
-                    <p className="text-sm font-medium text-gray-900">WhatsApp</p>
-                    <p className="text-xs text-gray-500">{siteConfig.contact.whatsappDisplay}</p>
-                  </div>
-                </a>
-              </div>
-            )}
+                  <a
+                    href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors"
+                    onClick={() => { setContactOpen(false); setIsOpen(false); }}
+                  >
+                    <MessageCircle className="w-5 h-5 text-green-600" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">WhatsApp</p>
+                      <p className="text-xs text-gray-500">{siteConfig.contact.whatsappDisplay}</p>
+                    </div>
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        </>
       )}
     </nav>
   );

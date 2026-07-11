@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { images } from '../../constants/images';
 
@@ -10,6 +10,7 @@ export default function Hero() {
   const container = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const touchStartX = useRef<number>(0);
 
   useGSAP(() => {
     const tl = gsap.timeline({ delay: 0.5 });
@@ -31,8 +32,32 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const deltaX = touchEndX - touchStartX.current;
+
+    if (Math.abs(deltaX) > 50) {
+      if (deltaX > 0) {
+        // Swipe right - previous slide
+        setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+      } else {
+        // Swipe left - next slide
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+      }
+    }
+  }, []);
+
   return (
-    <section ref={container} className="relative w-full h-screen min-h-[600px] flex items-center overflow-hidden">
+    <section 
+      ref={container} 
+      className="relative w-full h-[100dvh] min-h-[600px] flex items-center overflow-hidden"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       {heroSlides.map((src, i) => (
         <div
           key={src}

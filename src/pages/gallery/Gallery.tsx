@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import gsap from 'gsap';
 import { ChevronLeft, ChevronRight, X, Maximize2, Search } from 'lucide-react';
@@ -41,6 +41,25 @@ export default function Gallery() {
       }
     };
   }, [lightboxIndex, lenis]);
+
+  const heroTouchStartX = useRef<number>(0);
+
+  const handleHeroTouchStart = useCallback((e: React.TouchEvent) => {
+    heroTouchStartX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleHeroTouchEnd = useCallback((e: React.TouchEvent) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const deltaX = touchEndX - heroTouchStartX.current;
+
+    if (Math.abs(deltaX) > 50) {
+      if (deltaX > 0) {
+        setHeroSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+      } else {
+        setHeroSlide((prev) => (prev + 1) % heroSlides.length);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     let result = galleryImages;
@@ -113,10 +132,43 @@ export default function Gallery() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [lightboxIndex, filteredImages.length]);
 
+  // Touch/swipe support for lightbox
+  const touchStartX = useRef<number>(0);
+  const touchStartY = useRef<number>(0);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  }, []);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    if (lightboxIndex === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchEndY = e.changedTouches[0].clientY;
+    const deltaX = touchEndX - touchStartX.current;
+    const deltaY = touchEndY - touchStartY.current;
+
+    // Only trigger if horizontal swipe is dominant (not vertical scroll)
+    if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY) * 1.5) {
+      if (deltaX > 0) {
+        // Swipe right - previous image
+        setLightboxIndex((prev) => prev !== null ? (prev - 1 + filteredImages.length) % filteredImages.length : null);
+      } else {
+        // Swipe left - next image
+        setLightboxIndex((prev) => prev !== null ? (prev + 1) % filteredImages.length : null);
+      }
+    }
+  }, [lightboxIndex, filteredImages.length]);
+
   return (
     <div className="min-h-screen bg-[#faf9f6] pb-24">
       {/* Hero Section with Slideshow */}
-      <div ref={heroRef} className="relative h-[60vh] min-h-[400px] overflow-hidden">
+      <div 
+        ref={heroRef} 
+        className="relative h-[60vh] min-h-[400px] overflow-hidden"
+        onTouchStart={handleHeroTouchStart}
+        onTouchEnd={handleHeroTouchEnd}
+      >
         {heroSlides.map((src, i) => (
           <div
             key={src}
@@ -242,10 +294,14 @@ export default function Gallery() {
 
       {/* Lightbox */}
       {lightboxIndex !== null && filteredImages[lightboxIndex] && createPortal(
-        <div className="fixed inset-0 z-[200] bg-white/95 backdrop-blur-xl flex items-center justify-center">
+        <div 
+          className="fixed inset-0 z-[200] bg-white/95 backdrop-blur-xl flex items-center justify-center"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <button
             onClick={closeLightbox}
-            className="absolute top-6 right-6 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-3 rounded-full transition-colors z-50"
+            className="absolute top-6 right-6 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-4 rounded-full transition-colors z-50 min-w-[48px] min-h-[48px] flex items-center justify-center"
           >
             <X className="w-6 h-6" />
           </button>
@@ -259,16 +315,16 @@ export default function Gallery() {
 
           <button
             onClick={prevImage}
-            className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-4 rounded-full transition-colors z-50"
+            className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-4 md:p-5 rounded-full transition-colors z-50 min-w-[52px] min-h-[52px] flex items-center justify-center"
           >
-            <ChevronLeft className="w-8 h-8" />
+            <ChevronLeft className="w-7 h-7 md:w-8 md:h-8" />
           </button>
 
           <button
             onClick={nextImage}
-            className="absolute right-6 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-4 rounded-full transition-colors z-50"
+            className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-4 md:p-5 rounded-full transition-colors z-50 min-w-[52px] min-h-[52px] flex items-center justify-center"
           >
-            <ChevronRight className="w-8 h-8" />
+            <ChevronRight className="w-7 h-7 md:w-8 md:h-8" />
           </button>
 
           <div className="w-full h-full p-4 md:p-12 lg:p-24 flex items-center justify-center" onClick={closeLightbox}>
