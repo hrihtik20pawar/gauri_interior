@@ -2,7 +2,11 @@ export const images = {
   logo: "/logo.png",
 
   hero: {
-    main: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=60&w=1200",
+    slides: [
+      "/images/WEBSITE/2) HOTEL & RESTAURANT/2) Ava Belapur/AVA BELAPUR FINAL PHOTOS/AVA BELAPUR (1).avif",
+      "/images/WEBSITE/2) HOTEL & RESTAURANT/4) ESKANA RESORT AND SPA/ESKANA RESORT AND SPA (014).avif",
+      "/images/WEBSITE/2) HOTEL & RESTAURANT/5) KOHINOOR ELITE/KOHINOOR ELITE FINAL PHOTOS/KOHINOOR ELITE (1).avif",
+    ],
   },
 
   about: {
@@ -33,45 +37,36 @@ export const images = {
 
   projects: {
     oasisVilla: {
-      main: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=60&w=800",
-      gallery: [
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=60&w=600",
-        "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=60&w=600"
-      ]
+      main: "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
+      gallery: []
     },
     zenWorkspace: {
-      main: "https://images.unsplash.com/photo-1600607687644-aac4c15cecb1?auto=format&fit=crop&q=60&w=800",
-      gallery: [
-        "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=60&w=600"
-      ]
+      main: "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
+      gallery: []
     },
     minimalistKitchen: {
-      main: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=60&w=800",
-      gallery: [
-        "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&q=60&w=600"
-      ]
+      main: "/images/WEBSITE/2) HOTEL & RESTAURANT/1) CRAVIN CAFE/CRAVIN CAFE FINAL PHOTO/Cravin Cafe (32).avif",
+      gallery: []
     },
     skylinePenthouse: {
-      main: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=60&w=800",
-      gallery: [
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=60&w=600"
-      ]
+      main: "/images/WEBSITE/9) DISPLAY UNIT/1) Big Mishra/BIG MISHRA FINAL PHOTO/BIG MISHRA (1).avif",
+      gallery: []
     },
     boutiqueRetail: {
-      main: "https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?auto=format&fit=crop&q=60&w=800",
+      main: "/images/WEBSITE/4) JEWELLARY SHOPE/1) KRA/KRA (1).avif",
       gallery: []
     },
     modernRenovation: {
-      main: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&q=60&w=800",
+      main: "/images/WEBSITE/1) OFFICES/4) PISPL CALL CENTER/PISPL CALL CENTER FINAL PHOTO/IMG_0335.avif",
       gallery: []
     },
     works: [
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=60&w=600",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=60&w=600",
-      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=60&w=600",
-      "https://images.unsplash.com/photo-1600607687644-aac4c15cecb1?auto=format&fit=crop&q=60&w=600",
-      "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=60&w=600",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=60&w=600"
+      "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
+      "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
+      "/images/WEBSITE/2) HOTEL & RESTAURANT/1) CRAVIN CAFE/CRAVIN CAFE FINAL PHOTO/Cravin Cafe (32).avif",
+      "/images/WEBSITE/9) DISPLAY UNIT/1) Big Mishra/BIG MISHRA FINAL PHOTO/BIG MISHRA (1).avif",
+      "/images/WEBSITE/4) JEWELLARY SHOPE/1) KRA/KRA (1).avif",
+      "/images/WEBSITE/1) OFFICES/4) PISPL CALL CENTER/PISPL CALL CENTER FINAL PHOTO/IMG_0335.avif"
     ]
   },
 

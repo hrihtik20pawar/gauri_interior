@@ -6,6 +6,12 @@ import { galleryImages, galleryCategories, GalleryImage } from '../../data/galle
 import Logo from '../../components/logo/Logo';
 import { useLenis } from '../../App';
 
+const heroSlides = [
+  '/images/WEBSITE/2) HOTEL & RESTAURANT/1) CRAVIN CAFE/CRAVIN CAFE FINAL PHOTO/Cravin Cafe (32).avif',
+  '/images/WEBSITE/2) HOTEL & RESTAURANT/2) Ava Belapur/AVA BELAPUR FINAL PHOTOS/AVA BELAPUR (1).avif',
+  '/images/WEBSITE/2) HOTEL & RESTAURANT/3) KOHINOOR - 21 ROOMS/KOHINOOR HOTEL FINAL PHOTO/KOHINOOR - 21Rooms (17).avif',
+];
+
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
@@ -14,9 +20,17 @@ export default function Gallery() {
   const galleryRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const lenis = useLenis();
+  const [heroSlide, setHeroSlide] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeroSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 4000);
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -101,45 +115,70 @@ export default function Gallery() {
 
   return (
     <div className="min-h-screen bg-[#faf9f6] pb-24">
-      {/* Hero Section */}
-      <div ref={heroRef} className="pt-32 pb-16 px-6 md:px-12 lg:px-24">
-        <div className="max-w-[1500px] mx-auto text-center">
-          <p className="gallery-hero-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Curated Portfolio</p>
-          <h1 className="gallery-hero-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-brand-green mb-6">Our Gallery</h1>
-          <p className="gallery-hero-text text-gray-600 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-            A visual journey through our finest projects, showcasing the intersection of premium materials, flawless execution, and architectural elegance.
-          </p>
+      {/* Hero Section with Slideshow */}
+      <div ref={heroRef} className="relative h-[60vh] min-h-[400px] overflow-hidden">
+        {heroSlides.map((src, i) => (
+          <div
+            key={src}
+            className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+            style={{ opacity: heroSlide === i ? 1 : 0 }}
+          >
+            <img src={src} alt="" className="w-full h-full object-cover" />
+          </div>
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center px-6">
+            <p className="gallery-hero-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Curated Portfolio</p>
+            <h1 className="gallery-hero-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6">Our Gallery</h1>
+            <p className="gallery-hero-text text-white/80 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+              A visual journey through our finest projects, showcasing the intersection of premium materials, flawless execution, and architectural elegance.
+            </p>
 
-          {/* Search */}
-          <div className="gallery-hero-text max-w-md mx-auto mb-10">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search projects, locations, styles..."
-                className="w-full pl-12 pr-4 py-4 rounded-2xl bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-teal/50 transition-all text-gray-700 shadow-sm"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+            {/* Search */}
+            <div className="gallery-hero-text max-w-md mx-auto mb-10">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search projects, locations, styles..."
+                  className="w-full pl-12 pr-4 py-4 rounded-2xl bg-white/90 backdrop-blur-sm border border-white/20 focus:outline-none focus:ring-2 focus:ring-brand-teal/50 transition-all text-gray-700 shadow-sm"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+              </div>
+            </div>
+
+            {/* Filters */}
+            <div className="gallery-hero-text flex flex-wrap justify-center gap-3">
+              {galleryCategories.map(cat => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeCategory === cat
+                      ? 'bg-brand-teal text-white shadow-lg shadow-teal-900/20 scale-105'
+                      : 'bg-white/90 backdrop-blur-sm text-gray-600 hover:bg-white hover:text-gray-900 border border-white/20'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
             </div>
           </div>
+        </div>
 
-          {/* Filters */}
-          <div className="gallery-hero-text flex flex-wrap justify-center gap-3">
-            {galleryCategories.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeCategory === cat
-                    ? 'bg-brand-teal text-white shadow-lg shadow-teal-900/20 scale-105'
-                    : 'bg-white text-gray-600 hover:bg-gray-100 hover:text-gray-900 border border-gray-200'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+        {/* Slide indicators */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+          {heroSlides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setHeroSlide(i)}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                heroSlide === i ? 'bg-brand-orange w-8' : 'bg-white/50 hover:bg-white/80'
+              }`}
+            />
+          ))}
         </div>
       </div>
 
