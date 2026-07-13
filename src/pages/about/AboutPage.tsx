@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import AboutHero from './AboutHero';
-import OurStory from './OurStory';
 import WhoWeAre from './WhoWeAre';
 import VisionMission from './VisionMission';
 import OurServices from './OurServices';
@@ -10,6 +9,7 @@ import CompanyStats from './CompanyStats';
 import MeetTheTeam from './MeetTheTeam';
 import CoreValues from './CoreValues';
 import AboutCta from './AboutCta';
+import Businesses from '../../components/businesses/Businesses';
 
 export default function AboutPage() {
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#faf9f6]">
       <AboutHero />
-      <OurStory />
+      <Businesses />
       <WhoWeAre />
       <VisionMission />
       <OurServices />

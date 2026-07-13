@@ -99,7 +99,7 @@ export default function Stats() {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-serif text-white font-medium">
-            <BrandName as="span" size="lg" className="text-white">GAURI GROUP</BrandName> <span className="text-brand-orange">AT A GLANCE</span>
+            <BrandName as="span" size="lg" color="teal" className="whitespace-nowrap">GAURI GROUP</BrandName> <span className="text-brand-orange">AT A GLANCE</span>
           </h2>
         </div>
 
@@ -122,11 +122,14 @@ export default function Stats() {
         </div>
 
         {/* Motto */}
-        <div className="stats-motto text-center mt-14">
-          <p className="text-white/80 text-lg md:text-xl tracking-wide">
-            Our Motto — <span className="text-brand-orange font-medium italic">"Designing Spaces. Building Relationships. Creating Excellence."</span>
-          </p>
-        </div>
+      <div className="stats-motto mt-14 flex justify-center">
+  <p className="text-white/80 text-lg md:text-xl tracking-wide text-center whitespace-nowrap">
+    Our Motto —{" "}
+    <span className="text-brand-orange font-medium italic">
+      "Designing Spaces. Building Relationships. Creating Excellence."
+    </span>
+  </p>
+</div>
       </div>
     </section>
   );

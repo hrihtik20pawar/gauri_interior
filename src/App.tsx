@@ -31,6 +31,8 @@ const Gallery = React.lazy(() => import('./pages/gallery/Gallery'));
 const GenericPage = React.lazy(() => import('./pages/generic-page/GenericPage'));
 const WorkDetail = React.lazy(() => import('./pages/work-detail/WorkDetail'));
 const AboutPage = React.lazy(() => import('./pages/about/AboutPage'));
+const BusinessesPage = React.lazy(() => import('./pages/businesses/BusinessesPage'));
+const TeamMemberDetail = React.lazy(() => import('./pages/team-detail/TeamMemberDetail'));
 
 function PageTransition({ children }: { children: React.ReactNode }) {
   const { pathname } = useLocation();
@@ -165,6 +167,8 @@ export default function App() {
                 <Route path="/works/:id" element={<WorkDetail />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/businesses" element={<BusinessesPage />} />
+                <Route path="/team/:id" element={<TeamMemberDetail />} />
                 <Route path="/services" element={<GenericPage title="Our Services" description="Comprehensive interior design and turnkey solutions." />} />
                 {/* <Route path="/products" element={<GenericPage title="Our Products" description="Explore our exclusive range of modular furniture and finishes." />} /> */}
                 <Route path="/why-us" element={<GenericPage title="Why Choose Us" description="What makes Gauri Group the trusted choice for luxury interiors." />} />

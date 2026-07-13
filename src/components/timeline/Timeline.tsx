@@ -177,7 +177,7 @@ export default function Timeline() {
         <div className="text-center mb-12 md:mb-24 max-w-3xl mx-auto">
           <p className="timeline-header text-brand-orange font-bold tracking-[0.2em] uppercase text-sm mb-4">Our Journey</p>
           <h2 className="timeline-header text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green leading-[1.1] mb-6">
-            The Story of <br /> <BrandName as="span" size="lg" className="text-teal-800 italic font-light">Gauri Group</BrandName>
+            The Story of <br /> <BrandName as="span" size="lg" className="text-teal-800 font-sans">Gauri Group</BrandName>
           </h2>
           <p className="timeline-header text-gray-500 text-xl leading-relaxed font-medium">
             From humble beginnings to becoming a trusted name in interior design and modular manufacturing, our journey is defined by passion, precision, and growth.
@@ -205,12 +205,15 @@ export default function Timeline() {
                 <div key={step.num} className={`timeline-item relative flex flex-col md:flex-row items-center w-full ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
 
                   {/* Empty space for alternating layout on desktop */}
-                  <div className="hidden md:block w-1/2 px-12"></div>
+                  <div className="hidden md:block w-1/2 px-12 flex items-center justify-center">
+                    <span className="text-7xl lg:text-8xl font-serif text-brand-orange/20 font-bold whitespace-nowrap">
+                      {step.year}
+                    </span>
+                  </div>
 
                   {/* Center Icon/Node */}
                   <div className="timeline-icon-container absolute left-8 md:left-1/2 -translate-x-1/2 flex items-center justify-center z-20 group">
-                    <div className="timeline-year-icon bg-brand-orange flex items-center justify-center text-white font-bold text-sm md:text-base tracking-wide whitespace-nowrap px-5 py-3 rounded-full shadow-[0_0_20px_rgba(234,91,35,0.5)] border-4 border-white hover:border-brand-orange transition-colors duration-300">
-                      {step.year}
+                    <div className="timeline-year-icon w-4 h-4 bg-brand-orange rounded-full shadow-[0_0_20px_rgba(234,91,35,0.5)] border-4 border-white hover:border-brand-orange transition-colors duration-300">
                     </div>
                   </div>
 
@@ -255,10 +258,10 @@ export default function Timeline() {
 
             {/* Where We Are Now - Centered End Card */}
             <div className="timeline-item relative flex flex-col items-center w-full">
-              <div className="w-full pl-16 md:pl-0 md:flex md:justify-center md:px-12">
-                <div className="timeline-card bg-brand-green/5 backdrop-blur-md p-6 md:p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-brand-green/10 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group md:max-w-lg">
+              <div className="w-full flex justify-center px-4 md:px-12">
+                <div className="timeline-card bg-brand-green/5 backdrop-blur-md p-6 md:p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-brand-green/10 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group w-full max-w-lg">
                   <h3 className="text-3xl font-serif text-brand-green mb-6 text-center">Where We Are Now</h3>
-                  <ul className="space-y-3 flex flex-col items-start text-left">
+                  <ul className="space-y-3 flex flex-col items-start text-left ml-4">
                     <li className="timeline-list-item flex items-center gap-3 text-gray-600 font-medium">
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
                       Over 100+ successful projects delivered

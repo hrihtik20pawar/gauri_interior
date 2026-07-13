@@ -56,7 +56,7 @@ export default function Businesses() {
   return (
     <section ref={container} className="py-20 px-6 max-w-[1400px] mx-auto">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-serif text-teal-800 mb-4">Our Businesses</h2>
+        <h2 className="text-3xl md:text-4xl font-serif text-teal-800 mb-4">Our Ventures</h2>
         <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
       </div>
 
