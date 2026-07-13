@@ -46,12 +46,89 @@ export default function MeetTheTeam() {
           <div className="w-24 h-1 bg-white mx-auto rounded-full" />
         </div>
 
-        <div className="tm-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+        {/* Desktop Pyramid Layout */}
+        <div className="hidden lg:flex flex-col items-center gap-8">
+          {/* Row 1 - 1 image */}
+          <div className="flex justify-center">
+            <div className="tm-card group relative rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-500 bg-white w-[220px] aspect-[3/4]">
+              <img loading="lazy" src={teamMembers[0].image} alt={teamMembers[0].name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-brand-green/0 group-hover:bg-brand-green/70 backdrop-blur-0 group-hover:backdrop-blur-sm transition-all duration-500 flex flex-col justify-end p-6">
+                <div className="translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-75">
+                  <h3 className="text-white text-xl font-serif mb-1">{teamMembers[0].name}</h3>
+                  <p className="text-white/70 text-sm font-medium tracking-wide">{teamMembers[0].role}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 2 - 2 images */}
+          <div className="flex justify-center gap-8">
+            {teamMembers.slice(1, 3).map((member, idx) => (
+              <div key={idx} className="tm-card group relative rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-500 bg-white w-[220px] aspect-[3/4]">
+                <img loading="lazy" src={member.image} alt={member.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-brand-green/0 group-hover:bg-brand-green/70 backdrop-blur-0 group-hover:backdrop-blur-sm transition-all duration-500 flex flex-col justify-end p-6">
+                  <div className="translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-75">
+                    <h3 className="text-white text-xl font-serif mb-1">{member.name}</h3>
+                    <p className="text-white/70 text-sm font-medium tracking-wide">{member.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Row 3 - 3 images */}
+          <div className="flex justify-center gap-8">
+            {teamMembers.slice(3, 6).map((member, idx) => (
+              <div key={idx} className="tm-card group relative rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-500 bg-white w-[220px] aspect-[3/4]">
+                <img loading="lazy" src={member.image} alt={member.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-brand-green/0 group-hover:bg-brand-green/70 backdrop-blur-0 group-hover:backdrop-blur-sm transition-all duration-500 flex flex-col justify-end p-6">
+                  <div className="translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-75">
+                    <h3 className="text-white text-xl font-serif mb-1">{member.name}</h3>
+                    <p className="text-white/70 text-sm font-medium tracking-wide">{member.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Row 4 - 4 images */}
+          <div className="flex justify-center gap-8">
+            {teamMembers.slice(6, 10).map((member, idx) => (
+              <div key={idx} className="tm-card group relative rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-500 bg-white w-[220px] aspect-[3/4]">
+                <img loading="lazy" src={member.image} alt={member.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-brand-green/0 group-hover:bg-brand-green/70 backdrop-blur-0 group-hover:backdrop-blur-sm transition-all duration-500 flex flex-col justify-end p-6">
+                  <div className="translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-75">
+                    <h3 className="text-white text-xl font-serif mb-1">{member.name}</h3>
+                    <p className="text-white/70 text-sm font-medium tracking-wide">{member.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Tablet - 2 columns */}
+        <div className="hidden md:grid lg:hidden grid-cols-2 gap-6">
           {teamMembers.map((member, idx) => (
             <div key={idx} className="tm-card group relative rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-500 bg-white aspect-[3/4]">
               <img loading="lazy" src={member.image} alt={member.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent sm:bg-brand-green/0 sm:group-hover:bg-brand-green/70 sm:backdrop-blur-0 sm:group-hover:backdrop-blur-sm transition-all duration-500 flex flex-col justify-end p-6">
-                <div className="sm:translate-y-6 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100 transition-all duration-500 delay-75">
+              <div className="absolute inset-0 bg-brand-green/0 group-hover:bg-brand-green/70 backdrop-blur-0 group-hover:backdrop-blur-sm transition-all duration-500 flex flex-col justify-end p-6">
+                <div className="translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-75">
+                  <h3 className="text-white text-xl font-serif mb-1">{member.name}</h3>
+                  <p className="text-white/70 text-sm font-medium tracking-wide">{member.role}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile - 1 column */}
+        <div className="grid md:hidden grid-cols-1 gap-5">
+          {teamMembers.map((member, idx) => (
+            <div key={idx} className="tm-card group relative rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-500 bg-white aspect-[3/4]">
+              <img loading="lazy" src={member.image} alt={member.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-6">
+                <div>
                   <h3 className="text-white text-xl font-serif mb-1">{member.name}</h3>
                   <p className="text-white/70 text-sm font-medium tracking-wide">{member.role}</p>
                 </div>
