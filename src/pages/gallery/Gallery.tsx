@@ -176,7 +176,7 @@ export default function Gallery() {
       {/* Hero Section with Slideshow */}
       <div 
         ref={heroRef} 
-        className="relative h-[60vh] min-h-[400px] overflow-hidden"
+        className="relative h-[100vh] min-h-[500px] sm:min-h-[600px] md:min-h-[700px] overflow-hidden"
         onTouchStart={handleHeroTouchStart}
         onTouchEnd={handleHeroTouchEnd}
       >
@@ -194,17 +194,17 @@ export default function Gallery() {
           <div className="text-center px-6">
             <p className="gallery-hero-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Curated Portfolio</p>
             <h1 className="gallery-hero-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6">Our Gallery</h1>
-            <p className="gallery-hero-text text-white/80 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="gallery-hero-text text-white/80 text-base sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-10 leading-relaxed px-2">
               A visual journey through our finest projects, showcasing the intersection of premium materials, flawless execution, and architectural elegance.
             </p>
 
             {/* Search */}
-            <div className="gallery-hero-text max-w-md mx-auto mb-10">
+            <div className="gallery-hero-text max-w-md mx-auto mb-6 sm:mb-10 px-2">
               <div className="relative">
                 <input
                   type="text"
                   placeholder="Search projects, locations, styles..."
-                  className="w-full pl-12 pr-4 py-4 rounded-2xl bg-white/90 backdrop-blur-sm border border-white/20 focus:outline-none focus:ring-2 focus:ring-brand-teal/50 transition-all text-gray-700 shadow-sm"
+                  className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 rounded-2xl bg-white/90 backdrop-blur-sm border border-white/20 focus:outline-none focus:ring-2 focus:ring-brand-teal/50 transition-all text-gray-700 shadow-sm text-sm sm:text-base"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -213,12 +213,12 @@ export default function Gallery() {
             </div>
 
             {/* Filters */}
-            <div className="gallery-hero-text flex flex-wrap justify-center gap-3">
+            <div className="gallery-hero-text flex flex-wrap justify-center gap-2 sm:gap-3 px-2">
               {galleryCategories.map(cat => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
                     activeCategory === cat
                       ? 'bg-brand-teal text-white shadow-lg shadow-teal-900/20 scale-105'
                       : 'bg-white/90 backdrop-blur-sm text-gray-600 hover:bg-white hover:text-gray-900 border border-white/20'
@@ -232,7 +232,7 @@ export default function Gallery() {
         </div>
 
         {/* Slide indicators */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+        <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
           {heroSlides.map((_, i) => (
             <button
               key={i}
@@ -246,8 +246,8 @@ export default function Gallery() {
       </div>
 
       {/* Gallery Grid */}
-      <div className="px-4 md:px-8 lg:px-16 max-w-[1800px] mx-auto">
-        <div ref={galleryRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 auto-rows-[300px] md:auto-rows-[400px]">
+      <div className="px-4 md:px-8 lg:px-16 max-w-[1800px] mx-auto mt-8 sm:mt-16">
+        <div ref={galleryRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 auto-rows-[250px] sm:auto-rows-[300px] md:auto-rows-[400px]">
           {filteredImages.map((item, index) => {
             const showStoryBlock = (index + 1) % 7 === 0;
 
@@ -267,12 +267,12 @@ export default function Gallery() {
                   />
 
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-green/90 via-brand-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-green/90 via-brand-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4 sm:p-8 pointer-events-none">
                     <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                      <span className="inline-block px-3 py-1 bg-brand-orange/90 backdrop-blur-sm text-white text-xs font-semibold tracking-wider uppercase rounded-full mb-3">
+                      <span className="inline-block px-2 sm:px-3 py-1 bg-brand-orange/90 backdrop-blur-sm text-white text-[10px] sm:text-xs font-semibold tracking-wider uppercase rounded-full mb-2 sm:mb-3">
                         {item.category}
                       </span>
-                      <h3 className="text-white text-2xl font-serif mb-2">{item.title}</h3>
+                      <h3 className="text-white text-lg sm:text-2xl font-serif mb-2">{item.title}</h3>
                       <div className="flex items-center gap-2 text-white/80 font-medium text-sm mt-4">
                         <Maximize2 className="w-4 h-4" /> View Photo
                       </div>
@@ -282,10 +282,10 @@ export default function Gallery() {
 
                 {/* Storytelling Block */}
                 {showStoryBlock && (
-                  <div className="gallery-item col-span-1 md:col-span-2 lg:col-span-2 row-span-1 bg-brand-green rounded-[2rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden text-white shadow-xl">
+                  <div className="gallery-item col-span-1 sm:col-span-2 lg:col-span-2 row-span-1 bg-brand-green rounded-[2rem] p-6 sm:p-8 md:p-12 flex flex-col justify-center relative overflow-hidden text-white shadow-xl">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-brand-teal/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                    <Logo isDark={true} size="lg" className="h-16 w-auto mb-8 opacity-80" />
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif mb-4 leading-tight">
+                    <Logo isDark={true} size="lg" className="h-12 sm:h-16 w-auto mb-4 sm:mb-8 opacity-80" />
+                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif mb-3 sm:mb-4 leading-tight">
                       "Design is not just what it looks like and feels like. Design is how it works."
                     </h3>
                     <p className="text-white/60 font-medium tracking-wide uppercase text-sm">Our Philosophy</p>
@@ -297,8 +297,8 @@ export default function Gallery() {
         </div>
 
         {filteredImages.length === 0 && (
-          <div className="text-center py-32 text-gray-500">
-            <p className="text-xl">No projects found matching your criteria.</p>
+          <div className="text-center py-20 sm:py-32 text-gray-500 px-4">
+            <p className="text-lg sm:text-xl">No projects found matching your criteria.</p>
           </div>
         )}
       </div>
@@ -312,33 +312,33 @@ export default function Gallery() {
         >
           <button
             onClick={closeLightbox}
-            className="absolute top-6 right-6 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-4 rounded-full transition-colors z-50 min-w-[48px] min-h-[48px] flex items-center justify-center"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-3 sm:p-4 rounded-full transition-colors z-50 min-w-[44px] min-h-[44px] flex items-center justify-center"
           >
-            <X className="w-6 h-6" />
+            <X className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
-          <div className="absolute top-6 left-6 text-gray-900 z-50 flex flex-col gap-1">
-            <span className="text-gray-400 text-sm font-medium tracking-widest uppercase">
+          <div className="absolute top-4 left-4 sm:top-6 sm:left-6 text-gray-900 z-50 flex flex-col gap-1 max-w-[70%]">
+            <span className="text-gray-400 text-xs sm:text-sm font-medium tracking-widest uppercase">
               {lightboxIndex + 1} / {filteredImages.length}
             </span>
-            <h3 className="text-3xl md:text-4xl font-serif text-brand-orange">{filteredImages[lightboxIndex].title}</h3>
+            <h3 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-serif text-brand-orange truncate">{filteredImages[lightboxIndex].title}</h3>
           </div>
 
           <button
             onClick={prevImage}
-            className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-4 md:p-5 rounded-full transition-colors z-50 min-w-[52px] min-h-[52px] flex items-center justify-center"
+            className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-3 sm:p-5 rounded-full transition-colors z-50 min-w-[44px] min-h-[44px] sm:min-w-[52px] sm:min-h-[52px] flex items-center justify-center"
           >
-            <ChevronLeft className="w-7 h-7 md:w-8 md:h-8" />
+            <ChevronLeft className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8" />
           </button>
 
           <button
             onClick={nextImage}
-            className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-4 md:p-5 rounded-full transition-colors z-50 min-w-[52px] min-h-[52px] flex items-center justify-center"
+            className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-3 sm:p-5 rounded-full transition-colors z-50 min-w-[44px] min-h-[44px] sm:min-w-[52px] sm:min-h-[52px] flex items-center justify-center"
           >
-            <ChevronRight className="w-7 h-7 md:w-8 md:h-8" />
+            <ChevronRight className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8" />
           </button>
 
-          <div className="w-full h-full p-4 md:p-12 lg:p-24 flex items-center justify-center" onClick={closeLightbox}>
+          <div className="w-full h-full p-2 sm:p-12 lg:p-24 flex items-center justify-center" onClick={closeLightbox}>
             <img
               src={filteredImages[lightboxIndex].image}
               alt={filteredImages[lightboxIndex].title}

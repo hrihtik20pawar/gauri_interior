@@ -240,14 +240,33 @@ export default function BusinessDetail() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {interiorData!.services.map((service, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                  <div className="w-12 h-12 rounded-full bg-brand-teal/10 flex items-center justify-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-brand-teal" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 text-base">{service}</h3>
-                </div>
-              ))}
+              {(() => {
+                const serviceCategoryMap: Record<string, string> = {
+                  "Turnkey Interior Contracting": "All",
+                  "Corporate Office Interiors": "Offices",
+                  "Commercial & Retail Fit-Outs": "Outlets",
+                  "Healthcare & Educational Interiors": "Hospitals",
+                  "Hospitality Interiors": "Hotels & Restaurants",
+                  "Custom Furniture Manufacturing": "Display Units",
+                  "Civil, Electrical & MEP Coordination": "Lobbies & Amenities",
+                  "Project Management & Execution": "All",
+                };
+                return interiorData!.services.map((service, idx) => {
+                  const category = serviceCategoryMap[service] || "All";
+                  return (
+                    <Link
+                      key={idx}
+                      to={`/gallery?category=${encodeURIComponent(category)}`}
+                      className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 block"
+                    >
+                      <div className="w-12 h-12 rounded-full bg-brand-teal/10 flex items-center justify-center mb-4">
+                        <CheckCircle className="w-6 h-6 text-brand-teal" />
+                      </div>
+                      <h3 className="font-semibold text-gray-900 text-base">{service}</h3>
+                    </Link>
+                  );
+                });
+              })()}
             </div>
 
             {/* Promise */}
