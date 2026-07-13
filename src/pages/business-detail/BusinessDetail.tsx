@@ -257,7 +257,7 @@ export default function BusinessDetail() {
                     <Link
                       key={idx}
                       to={`/gallery?category=${encodeURIComponent(category)}`}
-                      className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-150 block"
+                      className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-75 block"
                     >
                       <div className="w-12 h-12 rounded-full bg-brand-teal/10 flex items-center justify-center mb-4">
                         <CheckCircle className="w-6 h-6 text-brand-teal" />
@@ -291,7 +291,7 @@ export default function BusinessDetail() {
             {current.showcase.map((item, idx) => (
               <div key={idx} className="group cursor-pointer">
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
-                  <img loading="lazy" src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img loading="lazy" src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 <h3 className="font-semibold text-gray-900 text-lg flex items-center justify-between">
                   {item.title} <ArrowRight className="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
@@ -376,7 +376,7 @@ export default function BusinessDetail() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {kitchenData!.services.map((service, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-75">
                   <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center mb-4">
                     <CheckCircle className="w-6 h-6 text-brand-orange" />
                   </div>
@@ -407,7 +407,7 @@ export default function BusinessDetail() {
             {current.showcase.map((item, idx) => (
               <div key={idx} className="group cursor-pointer">
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
-                  <img loading="lazy" src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img loading="lazy" src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 <h3 className="font-semibold text-gray-900 text-lg flex items-center justify-between">
                   {item.title} <ArrowRight className="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
@@ -492,7 +492,7 @@ export default function BusinessDetail() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {nikhilData!.services.map((service, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-75">
                   <div className="w-12 h-12 rounded-full bg-brand-teal/10 flex items-center justify-center mb-4">
                     <CheckCircle className="w-6 h-6 text-brand-teal" />
                   </div>
@@ -523,7 +523,7 @@ export default function BusinessDetail() {
             {current.showcase.map((item, idx) => (
               <div key={idx} className="group cursor-pointer">
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
-                  <img loading="lazy" src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img loading="lazy" src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 <h3 className="font-semibold text-gray-900 text-lg flex items-center justify-between">
                   {item.title} <ArrowRight className="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
@@ -608,7 +608,7 @@ export default function BusinessDetail() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {studioData!.services.map((service, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-75">
                   <div className="w-12 h-12 rounded-full bg-brand-teal/10 flex items-center justify-center mb-4">
                     <CheckCircle className="w-6 h-6 text-brand-teal" />
                   </div>
@@ -740,7 +740,7 @@ export default function BusinessDetail() {
             {current.showcase.map((item, idx) => (
               <div key={idx} className="group cursor-pointer">
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-4">
-                  <img loading="lazy" src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img loading="lazy" src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 <h3 className="font-semibold text-gray-900 text-lg flex items-center justify-between">
                   {item.title} <ArrowRight className="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
