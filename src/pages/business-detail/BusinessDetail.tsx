@@ -257,7 +257,7 @@ export default function BusinessDetail() {
                     <Link
                       key={idx}
                       to={`/gallery?category=${encodeURIComponent(category)}`}
-                      className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 block"
+                      className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-150 block"
                     >
                       <div className="w-12 h-12 rounded-full bg-brand-teal/10 flex items-center justify-center mb-4">
                         <CheckCircle className="w-6 h-6 text-brand-teal" />
