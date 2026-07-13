@@ -167,16 +167,6 @@ export default function About() {
 
       {/* Managing Director's Message */}
       <div className="about-text relative rounded-2xl overflow-hidden mb-12 border border-gray-100 bg-gradient-to-br from-gray-50 to-white">
-        {/* Mobile Avatar - small circle shown only on mobile */}
-        <div className="md:hidden flex justify-center pt-8">
-          <img
-            loading="lazy"
-            src="/images/team/team_1.avif"
-            alt="Managing Director - GAURI GROUP"
-            className="w-20 h-20 rounded-full object-cover object-top border-4 border-white shadow-lg"
-          />
-        </div>
-
         {/* Background Image - MD photo with fade (hidden on mobile) */}
         <div className="absolute right-0 top-0 h-full w-[200px] md:w-[250px] lg:w-[400px] overflow-hidden hidden md:block">
           <img
