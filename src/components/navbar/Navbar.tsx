@@ -76,7 +76,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
 
         <Link to="/" className="nav-item block">
-          <Logo isDark={!scrolled} size="lg" />
+          <Logo isDark={!scrolled} size="lg" className="scale-75 sm:scale-90 md:scale-100 origin-left" />
         </Link>
 
         {/* Desktop Links */}
