@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const teamMembers = [
   { name: "Shilkumar L. Vishwakarma", role: "Managing Director & CEO", image: "/images/team/TEAM_01.jpeg" },
+  { name: "Shilkumar L. Vishwakarma", role: "Managing Director & CEO", image: "/images/team/team_1.avif" },
   { name: "Poonam S. Vishwakarma", role: "Non-Executive Director", image: "/images/team/team_2.avif" },
   { name: "Nikhil S. Vishwakarma", role: "Director", image: "/images/team/team_3.avif" },
   { name: "Komal N. Vishwakarma", role: "Business Head", image: "/images/team/team_4.avif" },
@@ -99,9 +100,9 @@ export default function Team() {
             ))}
           </div>
 
-          {/* Row 4 - 3 images */}
+          {/* Row 4 - 4 images */}
           <div className="flex justify-center gap-8">
-            {teamMembers.slice(6, 9).map((member, idx) => (
+            {teamMembers.slice(6, 10).map((member, idx) => (
               <div key={idx} className="team-mosaic-card group relative rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-500 bg-white w-[220px] aspect-[3/4]">
                 <img loading="lazy" src={member.image} alt={member.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-brand-green/0 group-hover:bg-brand-green/70 backdrop-blur-0 group-hover:backdrop-blur-sm transition-all duration-500 flex flex-col justify-end p-6">

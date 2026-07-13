@@ -7,10 +7,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const teamMembers = [
   { name: "Shilkumar L. Vishwakarma", role: "Managing Director & CEO", image: "/images/team/TEAM_01.jpeg" },
+  { name: "Shilkumar L. Vishwakarma", role: "Managing Director & CEO", image: "/images/team/team_1.avif" },
   { name: "Poonam S. Vishwakarma", role: "Non-Executive Director", image: "/images/team/team_2.avif" },
   { name: "Nikhil S. Vishwakarma", role: "Director", image: "/images/team/team_3.avif" },
   { name: "Komal N. Vishwakarma", role: "Business Head", image: "/images/team/team_4.avif" },
   { name: "Nupur S. Vishwakarma", role: "Next-Gen Design Advisor", image: "/images/team/team_5.avif" },
+  { name: "Sarita D. Pandey", role: "General Manager", image: "/images/team/team_6.avif" },
+  { name: "Ashok B. Passi", role: "Accounts Head", image: "/images/team/team_7.avif" },
+  { name: "Satyendra Paswan", role: "Project Head", image: "/images/team/team_8.avif" },
+  { name: "Nandini D. Kalambe", role: "HR & Purchase Head", image: "/images/team/team_9.avif" },
 ];
 
 export default function MeetTheTeam() {
