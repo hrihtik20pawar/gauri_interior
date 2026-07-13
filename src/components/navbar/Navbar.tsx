@@ -145,11 +145,11 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button 
-          className={`lg:hidden nav-item p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg border shadow-sm ${scrolled ? 'text-gray-800 bg-white border-gray-200' : 'text-white bg-black/30 border-white/30 backdrop-blur-sm'}`} 
+          className={`lg:hidden nav-item p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg border shadow-md ${scrolled ? 'text-gray-800 bg-white border-gray-200' : 'text-white bg-black/50 border-white/20 backdrop-blur-md'}`} 
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="w-6 h-6" strokeWidth={2.5} /> : <Menu className="w-6 h-6" strokeWidth={2.5} />}
+          {isOpen ? <X className="w-7 h-7" strokeWidth={2.5} /> : <Menu className="w-7 h-7" strokeWidth={2.5} />}
         </button>
       </div>
 
