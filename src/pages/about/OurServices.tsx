@@ -29,13 +29,13 @@ export default function OurServices() {
 
     gsap.fromTo('.svc-header',
       { y: 40 },
-      { y: 0, duration: 0.8, ease: 'power2.out',
+      { y: 0, duration: 0.4, ease: 'power2.out',
         scrollTrigger: { trigger: container.current, start: 'top 80%' } },
     );
 
     gsap.fromTo('.svc-card',
       { y: 30, scale: 0.95 },
-      { y: 0, scale: 1, duration: 0.6, stagger: 0.05, ease: 'power2.out',
+      { y: 0, scale: 1, duration: 0.3, stagger: 0.03, ease: 'power2.out',
         scrollTrigger: { trigger: '.svc-grid', start: 'top 80%' } },
     );
   }, { scope: container });
@@ -51,11 +51,11 @@ export default function OurServices() {
 
         <div className="svc-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {services.map((svc, i) => (
-            <div key={i} className="svc-card group bg-gray-50/50 rounded-xl p-6 border border-gray-100 hover:bg-brand-green hover:shadow-xl transition-all duration-500 text-center cursor-default">
-              <div className="w-12 h-12 rounded-xl bg-brand-teal/10 group-hover:bg-white/20 flex items-center justify-center mx-auto mb-4 transition-colors duration-500">
-                <svc.icon className="w-6 h-6 text-brand-teal group-hover:text-white transition-colors duration-500" />
+            <div key={i} className="svc-card group bg-gray-50/50 rounded-xl p-6 border border-gray-100 hover:bg-brand-green hover:shadow-xl transition-all duration-150 text-center cursor-default">
+              <div className="w-12 h-12 rounded-xl bg-brand-teal/10 group-hover:bg-white/20 flex items-center justify-center mx-auto mb-4 transition-colors duration-150">
+                <svc.icon className="w-6 h-6 text-brand-teal group-hover:text-white transition-colors duration-150" />
               </div>
-              <p className="font-semibold text-gray-900 group-hover:text-white transition-colors duration-500 text-sm md:text-base">{svc.title}</p>
+              <p className="font-semibold text-gray-900 group-hover:text-white transition-colors duration-150 text-sm md:text-base">{svc.title}</p>
             </div>
           ))}
         </div>
