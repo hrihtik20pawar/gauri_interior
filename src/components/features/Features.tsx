@@ -67,7 +67,7 @@ export default function Features() {
             return (
               <div key={idx} className="flex-shrink-0 w-[280px] md:w-[320px] flex items-start gap-4 px-8 py-6 relative">
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-20 bg-gray-200"></div>
-                <span className="text-3xl font-serif font-bold text-gray-200 leading-none mt-1 select-none">{serialNum}</span>
+                <span className="text-5xl md:text-6xl font-serif font-bold text-gray-200 leading-none mt-1 select-none">{serialNum}</span>
                 <div className="flex flex-col items-start">
                   <div className="text-teal-800 mb-3">
                     {feature.icon}
