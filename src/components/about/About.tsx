@@ -171,7 +171,7 @@ export default function About() {
         <div className="absolute right-0 top-0 h-full w-[200px] md:w-[250px] lg:w-[400px] overflow-hidden hidden md:block">
           <img
             loading="lazy"
-            src="/images/team/TEAM_01.jpeg"
+            src="/images/team/team_1.avif"
             alt="Managing Director - GAURI GROUP"
             className="h-[150%] w-full object-cover object-top opacity-80"
             style={{ marginTop: '-25%', maskImage: 'linear-gradient(to bottom, black 40%, transparent 90%), linear-gradient(to right, transparent 0%, black 50%)', WebkitMaskImage: 'linear-gradient(to bottom, black 40%, transparent 90%), linear-gradient(to right, transparent 0%, black 50%)', maskComposite: 'intersect', WebkitMaskComposite: 'source-in' }}

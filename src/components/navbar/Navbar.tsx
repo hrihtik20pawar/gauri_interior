@@ -11,6 +11,8 @@ export default function Navbar() {
   const [contactOpen, setContactOpen] = useState(false);
   const location = useLocation();
   const contactRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLElement>(null);
+  const [navHeight, setNavHeight] = useState(0);
 
   const isHome = location.pathname === '/';
 
@@ -36,6 +38,13 @@ export default function Navbar() {
     }
     return () => { document.body.style.overflow = ''; };
   }, [isOpen]);
+
+  // Track navbar height for mobile menu positioning
+  useEffect(() => {
+    if (navRef.current) {
+      setNavHeight(navRef.current.offsetHeight);
+    }
+  }, [scrolled, isOpen]);
 
   // Click outside to close contact dropdown
   useEffect(() => {
@@ -67,12 +76,10 @@ export default function Navbar() {
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Gallery", path: "/gallery" },
-    // { name: "Products", path: "/products" },
-    // { name: "Why Us", path: "/why-us" }
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-6'}`}>
+    <nav ref={navRef} className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-6'}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
 
         <Link to="/" className="nav-item block">
@@ -154,64 +161,75 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu Overlay */}
-      {isOpen && (
-        <>
-          {/* Backdrop */}
-          <div className="lg:hidden fixed inset-0 bg-black/50 z-30" onClick={() => setIsOpen(false)} />
-          
-          {/* Menu */}
-          <div className="lg:hidden fixed top-[60px] left-0 right-0 bg-white border-b border-gray-100 py-6 px-6 flex flex-col gap-4 shadow-xl z-40 max-h-[calc(100dvh-60px)] overflow-y-auto">
-            {navLinks.map((link, i) => {
-              const isActive = location.pathname === link.path;
-              return (
-                <Link key={i} to={link.path} className={`font-medium py-3 block ${isActive ? 'text-brand-orange' : 'text-gray-700'}`}>{link.name}</Link>
-              )
-            })}
-
-            {/* Mobile Get in Touch Dropdown */}
-            <div ref={contactRef}>
-              <button
-                onClick={() => setContactOpen(!contactOpen)}
-                className="w-full text-center bg-brand-orange text-white py-3 rounded-lg font-medium hover:bg-brand-orange/90 active:scale-98 transition-all duration-200 mt-2 flex items-center justify-center gap-2"
+      <div 
+        className={`lg:hidden fixed left-0 right-0 bg-white border-b border-gray-100 shadow-xl z-40 overflow-y-auto transition-all duration-300 ease-in-out ${
+          isOpen 
+            ? 'opacity-100 translate-y-0 pointer-events-auto' 
+            : 'opacity-0 -translate-y-4 pointer-events-none'
+        }`}
+        style={{ top: `${navHeight}px`, maxHeight: `calc(100dvh - ${navHeight}px)` }}
+      >
+        <div className="py-4 px-6 flex flex-col">
+          {navLinks.map((link, i) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <Link 
+                key={i} 
+                to={link.path} 
+                className={`font-medium py-3.5 block transition-colors border-b border-gray-100 last:border-b-0 ${
+                  isActive 
+                    ? 'text-brand-orange border-l-4 border-brand-orange pl-4 -ml-[1px]' 
+                    : 'text-gray-700 hover:text-brand-orange hover:bg-gray-50 rounded-lg px-2'
+                }`}
               >
-                Get in Touch
-              </button>
+                {link.name}
+              </Link>
+            )
+          })}
 
-              {contactOpen && (
-                <div className="mt-2 bg-gray-50 rounded-xl overflow-hidden border border-gray-100">
-                  <a
-                    href={`mailto:${siteConfig.contact.email}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors"
-                    onClick={() => { setContactOpen(false); setIsOpen(false); }}
-                  >
-                    <Mail className="w-5 h-5 text-brand-orange" />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">Email Us</p>
-                      <p className="text-xs text-gray-500">{siteConfig.contact.email}</p>
-                    </div>
-                  </a>
+          {/* Mobile Get in Touch */}
+          <div ref={contactRef} className="mt-4 pt-4 border-t border-gray-100">
+            <button
+              onClick={() => setContactOpen(!contactOpen)}
+              className="w-full text-center bg-brand-orange text-white py-3 rounded-lg font-medium hover:bg-brand-orange/90 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2"
+            >
+              Get in Touch
+            </button>
 
-                  <a
-                    href={`https://wa.me/${siteConfig.contact.whatsapp}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors"
-                    onClick={() => { setContactOpen(false); setIsOpen(false); }}
-                  >
-                    <MessageCircle className="w-5 h-5 text-green-600" />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">WhatsApp</p>
-                      <p className="text-xs text-gray-500">{siteConfig.contact.whatsappDisplay}</p>
-                    </div>
-                  </a>
-                </div>
-              )}
+            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${contactOpen ? 'max-h-[200px] opacity-100 mt-3' : 'max-h-0 opacity-0'}`}>
+              <div className="bg-gray-50 rounded-xl overflow-hidden border border-gray-100">
+                <a
+                  href={`mailto:${siteConfig.contact.email}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors"
+                  onClick={() => { setContactOpen(false); setIsOpen(false); }}
+                >
+                  <Mail className="w-5 h-5 text-brand-orange" />
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">Email Us</p>
+                    <p className="text-xs text-gray-500">{siteConfig.contact.email}</p>
+                  </div>
+                </a>
+
+                <a
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors"
+                  onClick={() => { setContactOpen(false); setIsOpen(false); }}
+                >
+                  <MessageCircle className="w-5 h-5 text-green-600" />
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">WhatsApp</p>
+                    <p className="text-xs text-gray-500">{siteConfig.contact.whatsappDisplay}</p>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
-        </>
-      )}
+        </div>
+      </div>
     </nav>
   );
 }
