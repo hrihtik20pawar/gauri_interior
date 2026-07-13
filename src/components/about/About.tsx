@@ -166,22 +166,32 @@ export default function About() {
       </div>
 
       {/* Managing Director's Message */}
-      <div className="about-text relative rounded-2xl overflow-hidden mb-12 min-h-[450px] lg:min-h-[520px] border border-gray-100 bg-gradient-to-br from-gray-50 to-white">
-        {/* Background Image - MD photo with fade */}
-        <div className="absolute right-0 top-0 h-full w-[300px] lg:w-[400px] overflow-hidden">
+      <div className="about-text relative rounded-2xl overflow-hidden mb-12 border border-gray-100 bg-gradient-to-br from-gray-50 to-white">
+        {/* Mobile Avatar - small circle shown only on mobile */}
+        <div className="md:hidden flex justify-center pt-8">
+          <img
+            loading="lazy"
+            src="/images/team/team_1.avif"
+            alt="Managing Director - GAURI GROUP"
+            className="w-20 h-20 rounded-full object-cover object-top border-4 border-white shadow-lg"
+          />
+        </div>
+
+        {/* Background Image - MD photo with fade (hidden on mobile) */}
+        <div className="absolute right-0 top-0 h-full w-[200px] md:w-[250px] lg:w-[400px] overflow-hidden hidden md:block">
           <img
             loading="lazy"
             src="/images/team/team_1.avif"
             alt="Managing Director - GAURI GROUP"
             className="h-[150%] w-full object-cover object-top opacity-80"
-            style={{ marginTop: '-25%', maskImage: 'linear-gradient(to bottom, black 40%, transparent 90%), linear-gradient(to right, transparent 0%, black 40%)', WebkitMaskImage: 'linear-gradient(to bottom, black 40%, transparent 90%), linear-gradient(to right, transparent 0%, black 40%)', maskComposite: 'intersect', WebkitMaskComposite: 'source-in' }}
+            style={{ marginTop: '-25%', maskImage: 'linear-gradient(to bottom, black 40%, transparent 90%), linear-gradient(to right, transparent 0%, black 50%)', WebkitMaskImage: 'linear-gradient(to bottom, black 40%, transparent 90%), linear-gradient(to right, transparent 0%, black 50%)', maskComposite: 'intersect', WebkitMaskComposite: 'source-in' }}
           />
           {/* Fade only the left edge into content */}
-          <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent"></div>
+          <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-white to-transparent"></div>
         </div>
 
         {/* Content - positioned on left */}
-        <div className="relative z-10 p-8 md:p-12 lg:p-16 max-w-2xl">
+        <div className="relative z-10 p-6 md:p-12 lg:p-16 max-w-2xl">
           <div className="flex items-center gap-3 mb-6">
             <Quote className="w-8 h-8 text-brand-orange rotate-180 shrink-0" />
             <p className="text-sm font-semibold tracking-widest text-brand-orange uppercase">Managing Director's Message</p>
