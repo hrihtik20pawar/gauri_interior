@@ -42,8 +42,8 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
   return (
     <div ref={container} className="fixed inset-0 z-[100] bg-white flex items-center justify-center">
       <div className="preloader-logo">
-        <div style={{ transform: 'scale(2.5)', transformOrigin: 'center' }}>
-          <Logo className="h-16 w-auto" />
+        <div className="scale-[1.5] sm:scale-[2] md:scale-[2.5] origin-center">
+          <Logo className="h-10 sm:h-14 md:h-16 w-auto" />
         </div>
       </div>
     </div>
