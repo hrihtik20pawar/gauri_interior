@@ -53,7 +53,7 @@ export default function BrandName({ children, className = '', as: Tag = 'span', 
           );
         }
         
-        return <span key={i} className={`${colorClasses[color]}`}>{part}</span>;
+        return <span key={i} className={`${colorClasses[color]} font-semibold`}>{part}</span>;
       })}
     </Tag>
   );

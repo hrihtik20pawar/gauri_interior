@@ -14,7 +14,7 @@ export default function Logo({ className = "", isDark = false, size = "sm", type
 
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      <div className={`grid grid-cols-3 gap-[3px] shrink-0 ${isLarge ? 'w-16 h-16' : 'w-12 h-12'}`}>
+      <div className={`grid grid-cols-3 gap-1 shrink-0 ${isLarge ? 'w-20 h-20' : 'w-14 h-14'}`}>
         {[...Array(9)].map((_, i) => {
           const isDiagonal = i === 0 || i === 4 || i === 8;
           const tileClass = blueprint ? 'bp-tile' : '';
@@ -50,10 +50,10 @@ export default function Logo({ className = "", isDark = false, size = "sm", type
             <span className="ml-2">GROUP</span>
           )}
         </h1>
-        <div className={`w-full h-[1px] my-1 ${isDark ? 'bg-white/50' : 'bg-brand-teal/40'}`}></div>
-        <p className={`${isLarge ? 'text-xs' : 'text-[11px]'} tracking-widest font-medium uppercase mt-0 transition-colors ${isDark ? 'text-gray-300' : 'text-brand-orange'} text-center w-full`}>
+        <p className={`${isLarge ? 'text-xs' : 'text-[11px]'} tracking-widest font-medium mt-1 transition-colors ${isDark ? 'text-gray-300' : 'text-brand-orange'} text-center w-full`}>
           {typewriter ? <TypewriterText text="Interior • Kitchen • Design" /> : "Interior • Kitchen • Design"}
         </p>
+        <div className={`w-full h-[1px] mt-1 ${isDark ? 'bg-white/50' : 'bg-brand-teal/40'}`}></div>
       </div>
     </div>
   );

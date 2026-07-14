@@ -88,8 +88,8 @@ export default function About() {
       <div className="flex flex-col lg:flex-row gap-16 mb-24 items-center">
         <div className="flex-1 lg:max-w-2xl">
           <p className="about-hero-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">About Us</p>
-          <h2 className="about-hero-text text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green leading-[1.15] mb-8 uppercase tracking-wide">
-            <BrandName as="span" size="lg" className="text-teal-800">GAURI Group</BrandName>
+          <h2 className="about-hero-text text-5xl md:text-6xl lg:text-7xl font-sans text-brand-green leading-[1.15] mb-8 tracking-wide">
+            <BrandName as="span" size="lg">GAURI GROUP</BrandName>
           </h2>
           <p className="about-hero-text text-gray-700 text-xl leading-relaxed mb-6 font-medium">
             Established in <strong className="text-brand-green">2012</strong>, <strong className="text-brand-orange"><BrandName as="span">GAURI INTERIOR PVT. LTD.</BrandName></strong> is the flagship company of the <strong className="text-brand-orange"><BrandName as="span">GAURI GROUP</BrandName></strong>, specializing in comprehensive turnkey interior contracting solutions. Built upon a legacy that began in <strong className="text-brand-green">1993</strong>, the company has grown into a trusted name in the interior industry by consistently delivering projects with exceptional quality, innovation, and precision.
@@ -120,7 +120,7 @@ export default function About() {
           </div>
           <img
             loading="lazy"
-            src="/images/about/gauri-office.avif"
+            src="/images/about/new_office_image.jpeg"
             alt="Gauri Group Office"
             className="about-office-image w-full h-[450px] md:h-[550px] object-contain rounded-xl shadow-2xl relative z-10"
           />
@@ -189,53 +189,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Founder's Card - Reliance Style */}
-        <div className="bg-brand-green mt-8 relative overflow-hidden">
-          {/* Background pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 border border-white/20 rounded-full"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-64 h-64 border border-white/20 rounded-full"></div>
-          </div>
-          
-          <div className="relative max-w-6xl mx-auto px-8 md:px-16 py-16 md:py-24">
-            {/* Top Label */}
-            <div className="text-center mb-12">
-              <p className="text-brand-orange font-bold tracking-[0.3em] uppercase text-sm">Founder</p>
-            </div>
-
-            {/* Main Content Grid */}
-            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-              {/* Left - Image Card */}
-              <div className="w-full lg:w-2/5 flex justify-center">
-                <div className="relative">
-                  {/* Card */}
-                  <div className="bg-white rounded-sm shadow-2xl overflow-hidden w-[300px] h-[400px]">
-                    <img
-                      loading="lazy"
-                      src="/images/team/TEAM_01.jpeg"
-                      alt="Founder - GAURI GROUP"
-                      className="w-full h-full object-cover object-top scale-125"
-                    />
-                  </div>
-                  {/* Decorative dot */}
-                  <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-brand-orange rounded-full"></div>
-                </div>
-              </div>
-
-              {/* Right - Text Content */}
-              <div className="w-full lg:w-3/5 text-white">
-                <h3 className="text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.1] mb-8">
-                  Lalbachan<br />Vishwakarma
-                </h3>
-                <div className="w-20 h-[2px] bg-brand-orange mb-8"></div>
-                <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-                  The visionary who laid the foundation of Gauri Group in 1993. With decades of experience in furniture manufacturing and interior execution, he built the cornerstone of quality and craftsmanship that continues to drive our success today.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
 
       </div>
 
@@ -247,7 +200,7 @@ export default function About() {
         </div>
 
         {/* Auto-scrolling marquee */}
-        <div className="relative group">
+        <div className="relative group overflow-hidden">
           {/* Fade edges */}
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
