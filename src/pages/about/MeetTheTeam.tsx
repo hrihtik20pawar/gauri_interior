@@ -122,7 +122,7 @@ export default function MeetTheTeam() {
                 <div className="flex items-center justify-center mb-2">
                   <div className="w-2 h-2 bg-brand-green rotate-45"></div>
                 </div>
-                <p className="text-gray-500 text-sm uppercase tracking-widest">{teamMembers[0].role}</p>
+                <p className="text-gray-500 text-sm uppercase tracking-widest text-center">{teamMembers[0].role}</p>
               </div>
             </Link>
           </div>
@@ -139,7 +139,7 @@ export default function MeetTheTeam() {
                   <div className="flex items-center justify-center mb-2">
                     <div className="w-2 h-2 bg-brand-green rotate-45"></div>
                   </div>
-                  <p className="text-gray-500 text-sm uppercase tracking-widest">{member.role}</p>
+                  <p className="text-gray-500 text-sm uppercase tracking-widest text-center">{member.role}</p>
                 </div>
               </Link>
             ))}
@@ -157,7 +157,7 @@ export default function MeetTheTeam() {
                   <div className="flex items-center justify-center mb-2">
                     <div className="w-2 h-2 bg-brand-green rotate-45"></div>
                   </div>
-                  <p className="text-gray-500 text-sm uppercase tracking-widest">{member.role}</p>
+                  <p className="text-gray-500 text-sm uppercase tracking-widest text-center">{member.role}</p>
                 </div>
               </Link>
             ))}
@@ -175,7 +175,7 @@ export default function MeetTheTeam() {
                   <div className="flex items-center justify-center mb-2">
                     <div className="w-2 h-2 bg-brand-green rotate-45"></div>
                   </div>
-                  <p className="text-gray-500 text-sm uppercase tracking-widest">{member.role}</p>
+                  <p className="text-gray-500 text-sm uppercase tracking-widest text-center">{member.role}</p>
                 </div>
               </Link>
             ))}
@@ -194,7 +194,7 @@ export default function MeetTheTeam() {
                 <div className="flex items-center justify-center mb-2">
                   <div className="w-2 h-2 bg-brand-green rotate-45"></div>
                 </div>
-                <p className="text-gray-500 text-sm uppercase tracking-widest">{member.role}</p>
+                <p className="text-gray-500 text-sm uppercase tracking-widest text-center">{member.role}</p>
               </div>
             </Link>
           ))}
@@ -212,7 +212,7 @@ export default function MeetTheTeam() {
                 <div className="flex items-center justify-center mb-2">
                   <div className="w-2 h-2 bg-brand-green rotate-45"></div>
                 </div>
-                <p className="text-gray-500 text-sm uppercase tracking-widest">{member.role}</p>
+                <p className="text-gray-500 text-sm uppercase tracking-widest text-center">{member.role}</p>
               </div>
             </Link>
           ))}
