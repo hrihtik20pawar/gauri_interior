@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" fill="white"/>
+  <rect x="40" y="15" width="120" height="50" rx="5" fill="#1a3a5c" stroke="#c9a855" stroke-width="2"/>
+  <text x="100" y="40" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#c9a855" text-anchor="middle">KRA</text>
+  <text x="100" y="55" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle" letter-spacing="1">JEWELLERS</text>
+</svg>

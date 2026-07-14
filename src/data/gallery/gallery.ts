@@ -23,15 +23,15 @@ export const galleryCategories = [
 ];
 
 const categoryMap: Record<string, string> = {
-  offices: "Offices",
   hotel_and_restaurant: "Hotels & Restaurants",
   residencial: "Residential",
+  lobby_and_building_amenties: "Lobbies & Amenities",
+  display_unit: "Display Units",
   jewellary_shope: "Jewellery Shops",
+  offices: "Offices",
   outlet: "Outlets",
   airport: "Airports",
   hospital: "Hospitals",
-  lobby_and_building_amenties: "Lobbies & Amenities",
-  display_unit: "Display Units",
 };
 
 function cleanTitle(raw: string): string {

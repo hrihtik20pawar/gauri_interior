@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" fill="white"/>
+  <polygon points="60,25 70,45 50,45" fill="#1a1a1a"/>
+  <text x="110" y="40" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1a3a5c" text-anchor="middle">PAREKH</text>
+  <text x="100" y="60" font-family="Arial, sans-serif" font-size="7" fill="#666" text-anchor="middle">Customize. Deliver. Delight.</text>
+</svg>

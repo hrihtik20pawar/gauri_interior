@@ -15,7 +15,7 @@ export default function BrandName({ children, className = '', as: Tag = 'span', 
   const dotSizes = {
     sm: '-top-0.5 w-1.5 h-1.5',
     md: '-top-1 w-2 h-2',
-    lg: '-top-1 w-2.5 h-2.5'
+    lg: '-top-2 w-3 h-3'
   };
 
   // Split by "gauri" first, then check each part for "studio"
@@ -53,7 +53,7 @@ export default function BrandName({ children, className = '', as: Tag = 'span', 
           );
         }
         
-        return <span key={i} className={`${colorClasses[color]} font-semibold`}>{part}</span>;
+        return <span key={i} className={`${colorClasses[color]}`}>{part}</span>;
       })}
     </Tag>
   );

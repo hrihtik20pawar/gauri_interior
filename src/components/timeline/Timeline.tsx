@@ -10,7 +10,7 @@ const timelineSteps = [
     num: "01",
     title: "Gauri Group Founded",
     highlight: "Gauri Group",
-    image: "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
+    image: "/images/WEBSITE/2) HOTEL & RESTAURANT/4) ESKANA RESORT AND SPA/ESKANA RESORT AND SPA (032).avif",
     items: [
       "Our journey began in 1993.",
       "Mr. Lalbachan Vishwakarma entered the Furniture Industry.",
@@ -26,7 +26,7 @@ const timelineSteps = [
     image: "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
     items: [
       "Slowly and steadily.",
-      " We evolved & started delivering complete Turnkey Projects.",
+      "We evolved & started delivering complete Turnkey Projects.",
       "Expanded our expertise in interior execution.",
       "Built a reputation for quality work."
     ],
@@ -176,8 +176,8 @@ export default function Timeline() {
         {/* Header section */}
         <div className="text-center mb-12 md:mb-24 max-w-3xl mx-auto">
           <p className="timeline-header text-brand-orange font-bold tracking-[0.2em] uppercase text-sm mb-4">Our Journey</p>
-          <h2 className="timeline-header text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green leading-[1.1] mb-6">
-            The Story of <br /> <BrandName as="span" size="lg" className="text-teal-800 font-sans">Gauri Group</BrandName>
+          <h2 className="timeline-header text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green leading-[1.1] mb-6 uppercase">
+            The Story of <br /> <BrandName as="span" size="lg" className="text-brand-teal font-sans tracking-wide">GAURI Group</BrandName>
           </h2>
           <p className="timeline-header text-gray-500 text-xl leading-relaxed font-medium">
             From humble beginnings to becoming a trusted name in interior design and modular manufacturing, our journey is defined by passion, precision, and growth.
