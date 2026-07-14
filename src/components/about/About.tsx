@@ -88,8 +88,8 @@ export default function About() {
       <div className="flex flex-col lg:flex-row gap-16 mb-24 items-center">
         <div className="flex-1 lg:max-w-2xl">
           <p className="about-hero-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">About Us</p>
-          <h2 className="about-hero-text text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green leading-[1.15] mb-8">
-            <BrandName as="span" size="lg" className="text-teal-800">Gauri Group</BrandName>
+          <h2 className="about-hero-text text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green leading-[1.15] mb-8 uppercase tracking-wide">
+            <BrandName as="span" size="lg" className="text-teal-800 uppercase">Gauri Group</BrandName>
           </h2>
           <p className="about-hero-text text-gray-700 text-xl leading-relaxed mb-6 font-medium">
             Established in <strong className="text-brand-green">2012</strong>, <strong className="text-brand-orange"><BrandName as="span">GAURI INTERIOR PVT. LTD.</BrandName></strong> is the flagship company of the <strong className="text-brand-orange"><BrandName as="span">GAURI GROUP</BrandName></strong>, specializing in comprehensive turnkey interior contracting solutions. Built upon a legacy that began in <strong className="text-brand-green">1993</strong>, the company has grown into a trusted name in the interior industry by consistently delivering projects with exceptional quality, innovation, and precision.
@@ -178,63 +178,18 @@ export default function About() {
             </div>
 
             {/* Right - Portrait */}
-            <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-0 bg-gray-50">
+            <div className="w-full md:w-1/2 flex items-center justify-start p-6 md:p-0 bg-gray-50">
               <img
                 loading="lazy"
                 src="/images/team/team_1.avif"
                 alt="Managing Director - GAURI GROUP"
-                className="w-full h-full object-cover object-top"
+                className="w-[80%] h-full object-cover object-top -ml-8"
               />
             </div>
           </div>
         </div>
 
-        {/* Founder's Card */}
-        <div className="bg-white rounded-3xl shadow-xl overflow-hidden mt-8">
-          <div className="flex flex-col md:flex-row items-stretch">
-            {/* Left - Portrait */}
-            <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-0 bg-gray-50 order-2 md:order-1">
-              <img
-                loading="lazy"
-                src="/images/team/team_1.avif"
-                alt="Founder - GAURI GROUP"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
 
-            {/* Right Content */}
-            <div className="w-full md:w-1/2 p-8 md:p-10 lg:p-12 relative order-1 md:order-2">
-              {/* Decorative Quote Icon */}
-              <div className="mb-4">
-                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" className="text-brand-orange/20">
-                  <path d="M10 8c-1.1 0-2 .9-2 2v4h4v-4H8c0-1.1.9-2 2-2V6c-2.2 0-4 1.8-4 4v8h8v-8c0-2.2-1.8-4-4-4zm10 0c-1.1 0-2 .9-2 2v4h4v-4h-4c0-1.1.9-2 2-2V6c-2.2 0-4 1.8-4 4v8h8v-8c0-2.2-1.8-4-4-4z" fill="currentColor"/>
-                </svg>
-              </div>
-
-              {/* Label */}
-              <div className="mb-5">
-                <p className="text-brand-orange font-semibold tracking-widest uppercase text-xs mb-2">Message From The Founder</p>
-                <div className="w-10 h-0.5 bg-brand-orange rounded-full"></div>
-              </div>
-
-              {/* Message Content */}
-              <div className="space-y-3 text-gray-600 text-sm leading-relaxed">
-                <p>Dear Clients, Partners, and Well-Wishers,</p>
-                <p>What began as a small furniture business in 1993 has grown into the <BrandName as="span">GAURI GROUP OF COMPANIES</BrandName>, thanks to the trust of our clients and the dedication of our team.</p>
-                <p>Our vision has always been simple—to deliver quality craftsmanship, innovative designs, and reliable turnkey solutions while building lasting relationships through integrity and customer satisfaction.</p>
-                <p>As we continue to grow with the next generation of leadership, we remain committed to creating spaces that inspire and delivering excellence in every project we undertake.</p>
-                <p>Thank you for your continued trust and support. We look forward to building a better future together.</p>
-              </div>
-
-              {/* Signature */}
-              <div className="mt-6">
-                <p className="text-brand-green font-bold text-base">Lalbachan Vishwakarma</p>
-                <p className="text-gray-600 text-sm">Founder</p>
-                <p className="text-brand-green font-bold text-sm mt-1"><BrandName as="span">GAURI GROUP OF COMPANIES</BrandName></p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Why Choose Gauri? */}
