@@ -1,4 +1,4 @@
-import { Menu, X, Mail, MessageCircle } from 'lucide-react';
+import { Menu, X, Mail, MessageCircle, Phone } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
@@ -115,6 +115,20 @@ export default function Navbar() {
             <div className="absolute top-full right-0 mt-2 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-50">
               <div className="p-2">
                 <a
+                  href={`tel:${siteConfig.contact.whatsapp}`}
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                  onClick={() => setContactOpen(false)}
+                >
+                  <div className="w-10 h-10 rounded-full bg-brand-teal/10 flex items-center justify-center group-hover:bg-brand-teal/20 transition-colors">
+                    <Phone className="w-5 h-5 text-brand-teal" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">Call Us</p>
+                    <p className="text-xs text-gray-500">{siteConfig.contact.whatsappDisplay}</p>
+                  </div>
+                </a>
+
+                <a
                   href={`mailto:${siteConfig.contact.email}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -198,6 +212,18 @@ export default function Navbar() {
 
             <div className={`overflow-hidden transition-all duration-300 ease-in-out ${contactOpen ? 'max-h-[200px] opacity-100 mt-3' : 'max-h-0 opacity-0'}`}>
               <div className="bg-gray-50 rounded-xl overflow-hidden border border-gray-100">
+                <a
+                  href={`tel:${siteConfig.contact.whatsapp}`}
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors"
+                  onClick={() => { setContactOpen(false); setIsOpen(false); }}
+                >
+                  <Phone className="w-5 h-5 text-brand-teal" />
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">Call Us</p>
+                    <p className="text-xs text-gray-500">{siteConfig.contact.whatsappDisplay}</p>
+                  </div>
+                </a>
+
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
                   target="_blank"
