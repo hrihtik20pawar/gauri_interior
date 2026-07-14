@@ -11,7 +11,7 @@ const teamMembers = [
     id: 'lalbachan-vishwakarma',
     name: "Lalbachan Vishwakarma",
     role: "Founder",
-    image: "/images/team/TEAM_01.jpeg",
+    image: "/images/team/TEAM_01_noName.jpg",
     description: "What began as a small furniture business in 1993 has grown into the GAURI GROUP OF COMPANIES, thanks to the trust of our clients and the dedication of our team. Our vision has always been simple—to deliver quality craftsmanship, innovative designs, and reliable turnkey solutions while building lasting relationships through integrity and customer satisfaction. As we continue to grow with the next generation of leadership, we remain committed to creating spaces that inspire and delivering excellence in every project we undertake."
   },
   {
