@@ -6,8 +6,7 @@ import { useRef } from 'react';
 gsap.registerPlugin(ScrollTrigger);
 
 const teamMembers = [
-  { name: "Shilkumar L. Vishwakarma", role: "Managing Director & CEO", image: "/images/team/TEAM_01.jpeg" },
-  { name: "Shilkumar L. Vishwakarma", role: "Managing Director & CEO", image: "/images/team/team_1.avif" },
+  { name: "Shilkumar L. Vishwakarma", role: "Managing Director & CEO", image: "/images/team/TEAM_01.avif" },
   { name: "Poonam S. Vishwakarma", role: "Non-Executive Director", image: "/images/team/team_2.avif" },
   { name: "Nikhil S. Vishwakarma", role: "Director", image: "/images/team/team_3.avif" },
   { name: "Komal N. Vishwakarma", role: "Business Head", image: "/images/team/team_4.avif" },
