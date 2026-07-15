@@ -86,8 +86,8 @@ export default function Navbar() {
     <nav ref={navRef} className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-6'}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
 
-        <Link to="/" className="nav-item block shrink-0 min-w-0 overflow-hidden">
-          <Logo isDark={!scrolled} size="lg" className="scale-[0.55] sm:scale-75 md:scale-100 origin-left" />
+        <Link to="/" className="nav-item block shrink-0 min-w-0 overflow-hidden max-w-[45vw]">
+          <Logo isDark={!scrolled} size="lg" className="scale-[0.4] sm:scale-[0.55] md:scale-75 lg:scale-100 origin-left" />
         </Link>
 
         {/* Desktop Links */}
