@@ -98,7 +98,7 @@ export default function Stats() {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-serif text-white font-medium">
+          <h2 className="text-3xl md:text-4xl font-sans font-semibold tracking-wide text-white">
             <BrandName as="span" size="lg" color="teal" className="whitespace-nowrap">GAURI GROUP</BrandName> <span className="text-brand-orange">AT A GLANCE</span>
           </h2>
         </div>
@@ -111,9 +111,9 @@ export default function Stats() {
                 {stat.icon}
               </div>
               {stat.isText ? (
-                <h3 className="text-3xl md:text-4xl text-white mb-2 font-medium font-serif">{stat.displayText}</h3>
+                <h3 className="text-3xl md:text-4xl text-white mb-2 font-sans font-semibold">{stat.displayText}</h3>
               ) : (
-                <h3 className="stat-counter text-3xl md:text-4xl text-white mb-2 font-medium font-serif">0{stat.suffix}</h3>
+                <h3 className="stat-counter text-3xl md:text-4xl text-white mb-2 font-sans font-semibold">0{stat.suffix}</h3>
               )}
               <p className="text-sm md:text-base text-white font-medium">{stat.label}</p>
               <p className="text-xs md:text-sm text-gray-400 mt-1">{stat.sublabel}</p>

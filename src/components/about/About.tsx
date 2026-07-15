@@ -1,9 +1,11 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useRef, useState, useEffect } from 'react';
-import { CheckCircle2, ShieldCheck, PenTool, Clock, ArrowRight, Quote, Award, Wrench, Factory, Users, Gem, Handshake, BadgeCheck, Target, X } from 'lucide-react';
+import { useRef, useState } from 'react';
+import { CheckCircle2, ShieldCheck, PenTool, Clock, ArrowRight, Award, Wrench, Factory, Users, Gem, Handshake, BadgeCheck, Target } from 'lucide-react';
 import BrandName from '../brand-name/BrandName';
+import Modal from '../ui/Modal';
+import InfoCard from '../ui/InfoCard';
 
 const whyChooseItems = [
   { icon: Award, title: "30+ Years Legacy", desc: "Decades of expertise in furniture manufacturing and turnkey interior execution.", fullDesc: "With a legacy spanning over three decades since 1993, Gauri Group has built an unmatched reputation in the interior industry. Our extensive experience across residential, commercial, corporate, hospitality, healthcare, educational, and retail sectors gives us the insight to handle projects of any scale and complexity." },
@@ -25,16 +27,9 @@ export default function About() {
   const imageContainerRef = useRef<HTMLDivElement>(null);
   const [selectedReason, setSelectedReason] = useState<typeof whyChooseItems[number] | null>(null);
 
-  useEffect(() => {
-    if (selectedReason) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => { document.body.style.overflow = ''; };
-  }, [selectedReason]);
-
   useGSAP(() => {
+    if (!container.current) return;
+    
     gsap.fromTo('.about-hero-text',
       { y: 40 },
       {
@@ -230,56 +225,28 @@ export default function About() {
         </div>
         {/* 4 Points Horizontal with Arrows */}
         <div className="about-text flex flex-col sm:flex-row items-stretch gap-4">
-          <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md border-t-2 border-brand-teal w-full sm:flex-1">
-            <CheckCircle2 className="w-8 h-8 text-teal-700 shrink-0 stroke-[1.5]" />
-            <div>
-              <h5 className="font-semibold text-gray-900 text-sm mb-1">Client-Centric Approach</h5>
-              <p className="text-xs text-gray-500">Your vision is our priority.</p>
-            </div>
-          </div>
+          <InfoCard icon={CheckCircle2} iconClassName="w-8 h-8 text-teal-700 stroke-[1.5]" title="Client-Centric Approach" description="Your vision is our priority." />
           <ArrowRight className="w-5 h-5 text-gray-300 shrink-0 hidden sm:block" />
-          <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md border-t-2 border-brand-teal w-full sm:flex-1">
-            <PenTool className="w-8 h-8 text-teal-700 shrink-0 stroke-[1.5]" />
-            <div>
-              <h5 className="font-semibold text-gray-900 text-sm mb-1">Innovative Design</h5>
-              <p className="text-xs text-gray-500">Creative solutions for every space.</p>
-            </div>
-          </div>
+          <InfoCard icon={PenTool} iconClassName="w-8 h-8 text-teal-700 stroke-[1.5]" title="Innovative Design" description="Creative solutions for every space." />
           <ArrowRight className="w-5 h-5 text-gray-300 shrink-0 hidden sm:block" />
-          <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md border-t-2 border-brand-teal w-full sm:flex-1">
-            <ShieldCheck className="w-8 h-8 text-teal-700 shrink-0 stroke-[1.5]" />
-            <div>
-              <h5 className="font-semibold text-gray-900 text-sm mb-1">Quality Craftsmanship</h5>
-              <p className="text-xs text-gray-500">Precision in every detail.</p>
-            </div>
-          </div>
+          <InfoCard icon={ShieldCheck} iconClassName="w-8 h-8 text-teal-700 stroke-[1.5]" title="Quality Craftsmanship" description="Precision in every detail." />
           <ArrowRight className="w-5 h-5 text-gray-300 shrink-0 hidden sm:block" />
-          <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md border-t-2 border-brand-teal w-full sm:flex-1">
-            <Clock className="w-8 h-8 text-teal-700 shrink-0 stroke-[1.5]" />
-            <div>
-              <h5 className="font-semibold text-gray-900 text-sm mb-1">Timely Delivery</h5>
-              <p className="text-xs text-gray-500">Commitment you can rely on.</p>
-            </div>
-          </div>
+          <InfoCard icon={Clock} iconClassName="w-8 h-8 text-teal-700 stroke-[1.5]" title="Timely Delivery" description="Commitment you can rely on." />
         </div>
       </div>
 
       {/* Why Choose Modal */}
-      {selectedReason && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={() => setSelectedReason(null)}>
-          <div className="absolute inset-0 bg-black/50"></div>
-          <div className="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 animate-fadeIn" onClick={(e) => e.stopPropagation()}>
-            <button onClick={() => setSelectedReason(null)} className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors">
-              <X className="w-4 h-4 text-gray-600" />
-            </button>
-            <div className="w-14 h-14 rounded-full bg-brand-orange/10 flex items-center justify-center mb-5">
+      <Modal isOpen={!!selectedReason} onClose={() => setSelectedReason(null)}>
+        {selectedReason && (
+          <>
+            <div className="w-14 h-14 rounded-full bg-brand-orange/10 flex items-center justify-center mb-5 mx-auto">
               <selectedReason.icon className="w-7 h-7 text-brand-orange" />
             </div>
             <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">{selectedReason.title}</h3>
             <p className="text-gray-600 text-sm leading-relaxed">{selectedReason.fullDesc}</p>
-          </div>
-        </div>
-      )}
+          </>
+        )}
+      </Modal>
     </section>
   );
 }

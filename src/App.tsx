@@ -12,6 +12,7 @@ import Navbar from './components/navbar/Navbar';
 import Preloader from './components/preloader/Preloader';
 import Logo from './components/logo/Logo';
 import BackButton from './components/back-button/BackButton';
+import ScrollToTop from './components/scroll-to-top/ScrollToTop';
 import { siteConfig } from './constants/contact';
 import { MapPin, Phone, Mail, MessageCircle, Instagram, Linkedin, Facebook } from 'lucide-react';
 import BrandName from './components/brand-name/BrandName';
@@ -157,6 +158,7 @@ export default function App() {
 
           <Navbar />
           <BackButton />
+          <ScrollToTop />
 
           <Suspense fallback={null}>
             <PageTransition>

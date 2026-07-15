@@ -55,6 +55,7 @@ export default function Hero() {
   return (
     <section 
       ref={container} 
+      id="hero"
       className="relative w-full h-[100dvh] min-h-[600px] flex items-center overflow-hidden"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
