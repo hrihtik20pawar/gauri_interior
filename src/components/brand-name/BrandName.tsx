@@ -12,13 +12,9 @@ export default function BrandName({ children, className = '', as: Tag = 'span', 
     white: 'text-white',
     green: 'text-brand-green'
   };
-  const dotSizes = {
-    sm: 'w-1.5 h-1.5 -top-0.5',
-    md: 'w-2 h-2 -top-0.5',
-    lg: 'w-2.5 h-2.5 -top-1'
-  };
 
-  // Split by "gauri" first, then check each part for "studio"
+  const dotClass = "absolute left-1/2 -translate-x-1/2 bg-brand-orange rounded-full w-[0.19em] h-[0.19em] -top-[0.12em]";
+
   const gauriParts = children.split(/(gauri)/gi);
   
   if (gauriParts.length === 1) return <Tag className={className}>{children}</Tag>;
@@ -27,19 +23,17 @@ export default function BrandName({ children, className = '', as: Tag = 'span', 
     <Tag className={className}>
       {gauriParts.map((part, i) => {
         if (part.toLowerCase() === 'gauri') {
-          // Check if remaining text after gauri contains "studio"
           return (
-            <span key={i} className="inline-flex items-start relative">
-              <span className={`${colorClasses[color]} font-semibold`}>GAUR</span>
+            <span key={i} className={`${colorClasses[color]} font-semibold`}>
+              GAUR
               <span className="relative inline-block">
-                <span className={`absolute left-1/2 -translate-x-1/2 bg-brand-orange rounded-full ${dotSizes[size]}`}></span>
-                <span className={`${colorClasses[color]} font-semibold`}>I</span>
+                <span className={dotClass}></span>
+                <span>I</span>
               </span>
             </span>
           );
         }
         
-        // Check if this part contains "studio" and make it orange
         if (part.toLowerCase().includes('studio')) {
           const studioParts = part.split(/(studio)/gi);
           return (

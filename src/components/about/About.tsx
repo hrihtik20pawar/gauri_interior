@@ -91,13 +91,13 @@ export default function About() {
           <h2 className="about-hero-text text-5xl md:text-6xl lg:text-7xl font-sans text-brand-green leading-[1.15] mb-8 tracking-wide">
             <BrandName as="span" size="lg">GAURI GROUP</BrandName>
           </h2>
-          <p className="about-hero-text text-gray-700 text-xl leading-relaxed mb-6 font-medium">
+          <p className="about-hero-text text-gray-700 text-xl leading-relaxed mb-6 font-medium text-justify">
             Established in <strong className="text-brand-green">2012</strong>, <strong className="text-brand-orange"><BrandName as="span">GAURI INTERIOR PVT. LTD.</BrandName></strong> is the flagship company of the <strong className="text-brand-orange"><BrandName as="span">GAURI GROUP</BrandName></strong>, specializing in comprehensive turnkey interior contracting solutions. Built upon a legacy that began in <strong className="text-brand-green">1993</strong>, the company has grown into a trusted name in the interior industry by consistently delivering projects with exceptional quality, innovation, and precision.
           </p>
-          <p className="about-hero-text text-gray-700 text-xl leading-relaxed mb-6 font-medium">
+          <p className="about-hero-text text-gray-700 text-xl leading-relaxed mb-6 font-medium text-justify">
             Our journey began in <strong className="text-brand-green">1993</strong>, when <strong className="text-brand-orange">Mr. Lalbachan Vishwakarma</strong> laid the foundation of the business by undertaking customized furniture projects with an unwavering commitment to quality and craftsmanship. Over the years, this passion evolved into executing complete turnkey interior projects across residential, commercial, corporate, hospitality, healthcare, educational, and retail sectors.
           </p>
-          <p className="about-hero-text text-gray-700 text-xl leading-relaxed font-medium">
+          <p className="about-hero-text text-gray-700 text-xl leading-relaxed font-medium text-justify">
             Under the leadership of <strong className="text-brand-orange">Mr. Shilkumar L. Vishwakarma (Managing Director &amp; CEO)</strong>, <BrandName as="span">GAURI Group</BrandName> expanded into a diversified business ecosystem, bringing together multiple specialized ventures under one trusted brand.
           </p>
         </div>
@@ -137,17 +137,17 @@ export default function About() {
         </div>
 
         {/* Main Card */}
-        <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+        <div className="bg-white rounded-3xl shadow-xl overflow-visible relative">
+          {/* Large Decorative Quote Marks - positioned outside card */}
+          <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 z-20">
+            <svg width="100" height="100" viewBox="0 0 80 80" fill="none" className="opacity-20">
+              <path d="M30 45C30 51.627 24.627 57 18 57C11.373 57 6 51.627 6 45C6 32.297 16.297 22 29 22V30C22.373 30 17 35.373 17 42H24C27.314 42 30 44.686 30 48V45ZM66 45C66 51.627 60.627 57 54 57C47.373 57 42 51.627 42 45C42 32.297 52.297 22 65 22V30C58.373 30 53 35.373 53 42H60C63.314 42 66 44.686 66 48V45Z" fill="#E8734A"/>
+            </svg>
+          </div>
+
           <div className="flex flex-col md:flex-row items-stretch">
             {/* Left Content */}
-            <div className="w-full md:w-1/2 p-8 md:p-10 lg:p-12 relative">
-              {/* Decorative Quote Icon */}
-              <div className="mb-4">
-                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" className="text-brand-orange/20">
-                  <path d="M10 8c-1.1 0-2 .9-2 2v4h4v-4H8c0-1.1.9-2 2-2V6c-2.2 0-4 1.8-4 4v8h8v-8c0-2.2-1.8-4-4-4zm10 0c-1.1 0-2 .9-2 2v4h4v-4h-4c0-1.1.9-2 2-2V6c-2.2 0-4 1.8-4 4v8h8v-8c0-2.2-1.8-4-4-4z" fill="currentColor"/>
-                </svg>
-              </div>
-
+            <div className="w-full md:w-[45%] p-8 md:p-10 lg:p-12 relative z-10">
               {/* Label */}
               <div className="mb-5">
                 <p className="text-brand-orange font-semibold tracking-widest uppercase text-xs mb-2">Message From The Managing Director</p>
@@ -161,7 +161,7 @@ export default function About() {
               </h3>
 
               {/* Message Content */}
-              <div className="space-y-3 text-gray-600 text-sm leading-relaxed">
+              <div className="space-y-3 text-gray-600 text-sm leading-relaxed text-justify">
                 <p>At <BrandName as="span">GAURI GROUP</BrandName>, our journey has always been guided by a simple belief – to create spaces that inspire and relationships that last.</p>
                 <p>From humble beginnings to growing into a diverse group of companies, we have stayed true to our values of honesty, quality, and commitment. Every project we undertake is a reflection of our passion for excellence and our dedication to our clients.</p>
                 <p>As we look ahead, our focus remains the same – to innovate, to evolve, and to deliver environments that truly make a difference in people's lives.</p>
@@ -178,12 +178,12 @@ export default function About() {
             </div>
 
             {/* Right - Portrait */}
-            <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-0 bg-gray-50 min-h-[300px] md:min-h-[400px]">
+            <div className="w-full md:w-[55%] flex items-end justify-center p-6 md:p-0 bg-gray-50 min-h-[450px] md:min-h-[750px] relative overflow-hidden rounded-r-3xl -ml-4 md:-ml-8">
               <img
                 loading="lazy"
                 src="/images/team/team_1.avif"
                 alt="Managing Director - GAURI GROUP"
-                className="w-[80%] h-auto object-cover object-top rounded-lg"
+                className="w-full h-[550px] md:h-[750px] object-cover object-top"
               />
             </div>
           </div>
@@ -229,8 +229,8 @@ export default function About() {
           <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
         </div>
         {/* 4 Points Horizontal with Arrows */}
-        <div className="about-text flex flex-col sm:flex-row items-center gap-4">
-          <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md border-t-2 border-brand-teal flex-1">
+        <div className="about-text flex flex-col sm:flex-row items-stretch gap-4">
+          <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md border-t-2 border-brand-teal w-full sm:flex-1">
             <CheckCircle2 className="w-8 h-8 text-teal-700 shrink-0 stroke-[1.5]" />
             <div>
               <h5 className="font-semibold text-gray-900 text-sm mb-1">Client-Centric Approach</h5>
@@ -238,7 +238,7 @@ export default function About() {
             </div>
           </div>
           <ArrowRight className="w-5 h-5 text-gray-300 shrink-0 hidden sm:block" />
-          <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md border-t-2 border-brand-teal flex-1">
+          <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md border-t-2 border-brand-teal w-full sm:flex-1">
             <PenTool className="w-8 h-8 text-teal-700 shrink-0 stroke-[1.5]" />
             <div>
               <h5 className="font-semibold text-gray-900 text-sm mb-1">Innovative Design</h5>
@@ -246,7 +246,7 @@ export default function About() {
             </div>
           </div>
           <ArrowRight className="w-5 h-5 text-gray-300 shrink-0 hidden sm:block" />
-          <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md border-t-2 border-brand-teal flex-1">
+          <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md border-t-2 border-brand-teal w-full sm:flex-1">
             <ShieldCheck className="w-8 h-8 text-teal-700 shrink-0 stroke-[1.5]" />
             <div>
               <h5 className="font-semibold text-gray-900 text-sm mb-1">Quality Craftsmanship</h5>
@@ -254,7 +254,7 @@ export default function About() {
             </div>
           </div>
           <ArrowRight className="w-5 h-5 text-gray-300 shrink-0 hidden sm:block" />
-          <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md border-t-2 border-brand-teal flex-1">
+          <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md border-t-2 border-brand-teal w-full sm:flex-1">
             <Clock className="w-8 h-8 text-teal-700 shrink-0 stroke-[1.5]" />
             <div>
               <h5 className="font-semibold text-gray-900 text-sm mb-1">Timely Delivery</h5>

@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { useRef, useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { images } from '../../constants/images';
 
 const heroSlides = images.hero.slides;
@@ -95,21 +96,21 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Slide indicators */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-10 hero-text">
-        {heroSlides.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrentSlide(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`rounded-full transition-all duration-300 cursor-pointer ${
-              currentSlide === i
-                ? 'w-8 h-2.5 bg-brand-orange shadow-[0_0_8px_rgba(234,91,35,0.8)]'
-                : 'w-2.5 h-2.5 bg-white/50 backdrop-blur-sm hover:bg-white/80'
-            }`}
-          />
-        ))}
-      </div>
+      {/* Navigation arrows */}
+      <button
+        onClick={() => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/60 transition-colors hero-text"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="w-6 h-6" />
+      </button>
+      <button
+        onClick={() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/60 transition-colors hero-text"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="w-6 h-6" />
+      </button>
     </section>
   );
 }

@@ -184,8 +184,8 @@ export default function App() {
 
                 {/* Brand */}
                 <div>
-                  <div className="mb-6">
-                    <Logo isDark={true} size="lg" />
+                  <div className="mb-4">
+                    <Logo isDark={true} size="sm" />
                   </div>
                   <p className="text-white/60 text-sm leading-relaxed max-w-xs">
                     Creating functional, inspiring, and truly personalized spaces since 2014.
@@ -240,7 +240,7 @@ export default function App() {
 
                   {/* Social Media */}
                   <div className="flex gap-3 mt-6">
-                    <a href="https://www.instagram.com/gauriinterior/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
+                    <a href="https://www.instagram.com/gauri_group__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
                       <Instagram className="w-5 h-5 text-white" />
                     </a>
                     <a href="https://www.linkedin.com/company/gauri-interior/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
