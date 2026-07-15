@@ -34,13 +34,13 @@ export default function Logo({ className = "", isDark = false, size = "sm", type
             <>
               <TypewriterText text="GAUR" />
               <span className="relative inline-flex items-center">
-                <span className={`absolute bg-brand-orange rounded-full ${isLarge ? '-top-2 w-3 h-3' : '-top-1.5 w-2 h-2'}`}></span>
+                <span className={`absolute bg-brand-orange rounded-full left-1/2 -translate-x-1/2 ${isLarge ? '-top-[0.35em] w-[0.55em] h-[0.55em]' : '-top-[0.3em] w-[0.5em] h-[0.5em]'}`}></span>
                 <span className="tw-char" style={{ opacity: 0, display: "inline-block" }}>I</span>
               </span>
             </>
           ) : (
             <>GAUR<span className="relative inline-flex flex-col items-center">
-              <span className={`absolute bg-brand-orange rounded-full ${isLarge ? '-top-2 w-3 h-3' : '-top-1.5 w-2 h-2'}`}></span>
+              <span className={`absolute bg-brand-orange rounded-full left-1/2 -translate-x-1/2 ${isLarge ? '-top-[0.35em] w-[0.55em] h-[0.55em]' : '-top-[0.3em] w-[0.5em] h-[0.5em]'}`}></span>
               <span>I</span>
             </span></>
           )}
