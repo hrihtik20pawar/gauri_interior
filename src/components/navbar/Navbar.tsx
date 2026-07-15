@@ -84,14 +84,14 @@ export default function Navbar() {
 
   return (
     <nav ref={navRef} className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-6'}`}>
-      <div className="flex justify-between items-center max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+      <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
 
-        <Link to="/" className="nav-item block">
-          <Logo isDark={!scrolled} size="lg" className="scale-75 sm:scale-90 md:scale-100 origin-left" />
+        <Link to="/" className="nav-item block shrink-0 min-w-0 overflow-hidden">
+          <Logo isDark={!scrolled} size="lg" className="scale-[0.55] sm:scale-75 md:scale-100 origin-left" />
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
+        <div className="hidden lg:flex items-center gap-8 text-sm font-medium shrink-0">
           {navLinks.map((link, i) => {
             const isActive = location.pathname === link.path;
             return (
@@ -170,7 +170,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button 
-          className={`lg:hidden nav-item p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg border shadow-md ${scrolled ? 'text-gray-800 bg-white border-gray-200' : 'text-white bg-black/50 border-white/20 backdrop-blur-md'}`} 
+          className={`lg:hidden nav-item shrink-0 p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg border shadow-md ${scrolled ? 'text-gray-800 bg-white border-gray-200' : 'text-white bg-black/50 border-white/20 backdrop-blur-md'}`} 
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
