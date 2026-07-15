@@ -13,9 +13,9 @@ export default function BrandName({ children, className = '', as: Tag = 'span', 
     green: 'text-brand-green'
   };
   const dotSizes = {
-    sm: '-top-0.5 w-1.5 h-1.5',
-    md: '-top-1 w-2 h-2',
-    lg: '-top-2 w-3 h-3'
+    sm: '-top-[0.15em] w-[0.22em] h-[0.22em]',
+    md: '-top-[0.18em] w-[0.25em] h-[0.25em]',
+    lg: '-top-[0.2em] w-[0.28em] h-[0.28em]'
   };
 
   // Split by "gauri" first, then check each part for "studio"

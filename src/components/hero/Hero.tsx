@@ -61,14 +61,16 @@ export default function Hero() {
       {heroSlides.map((src, i) => (
         <div
           key={src}
-          className="absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out hero-bg"
-          style={{ opacity: currentSlide === i ? 1 : 0 }}
+          className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out hero-bg ${currentSlide === i ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         >
-          <img
-            src={src}
-            alt="Interior design showcase"
-            className="w-full h-full object-cover object-center"
-          />
+          {Math.abs(currentSlide - i) <= 1 && (
+            <img
+              src={src}
+              alt="Interior design showcase"
+              loading={i === 0 ? 'eager' : 'lazy'}
+              className="w-full h-full object-cover object-center"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
         </div>
       ))}
@@ -79,7 +81,7 @@ export default function Hero() {
           <h1 className="hero-text text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.1] mb-6 drop-shadow-lg">
             Designing Spaces <br /> That Reflect <br /> Your <span className="text-brand-orange">Lifestyle</span>
           </h1>
-          <p className="hero-text text-gray-200 text-lg md:text-xl mb-10 max-w-lg font-medium leading-relaxed drop-shadow-md ml-20" style={{ fontStyle: 'italic' }}>
+          <p className="hero-text text-gray-200 text-lg md:text-xl mb-10 max-w-lg font-medium leading-relaxed drop-shadow-md ml-4 sm:ml-8 md:ml-20" style={{ fontStyle: 'italic' }}>
             From concept to creation
           </p>
           <div className="hero-text flex flex-wrap gap-4">
@@ -99,6 +101,7 @@ export default function Hero() {
           <button
             key={i}
             onClick={() => setCurrentSlide(i)}
+            aria-label={`Go to slide ${i + 1}`}
             className={`rounded-full transition-all duration-300 cursor-pointer ${
               currentSlide === i
                 ? 'w-8 h-2.5 bg-brand-orange shadow-[0_0_8px_rgba(234,91,35,0.8)]'

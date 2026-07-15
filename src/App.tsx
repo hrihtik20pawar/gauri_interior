@@ -4,7 +4,7 @@
  */
 
 import React, { Suspense, useEffect, useState, useRef, createContext, useContext } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate, Link } from 'react-router-dom';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -13,7 +13,7 @@ import Preloader from './components/preloader/Preloader';
 import Logo from './components/logo/Logo';
 import BackButton from './components/back-button/BackButton';
 import { siteConfig } from './constants/contact';
-import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, MessageCircle, Instagram, Linkedin, Facebook } from 'lucide-react';
 import BrandName from './components/brand-name/BrandName';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -33,6 +33,7 @@ const WorkDetail = React.lazy(() => import('./pages/work-detail/WorkDetail'));
 const AboutPage = React.lazy(() => import('./pages/about/AboutPage'));
 const BusinessesPage = React.lazy(() => import('./pages/businesses/BusinessesPage'));
 const TeamMemberDetail = React.lazy(() => import('./pages/team-detail/TeamMemberDetail'));
+const NotFound = React.lazy(() => import('./pages/not-found/NotFound'));
 
 function PageTransition({ children }: { children: React.ReactNode }) {
   const { pathname } = useLocation();
@@ -172,6 +173,7 @@ export default function App() {
                 <Route path="/services" element={<GenericPage title="Our Services" description="Comprehensive interior design and turnkey solutions." />} />
                 {/* <Route path="/products" element={<GenericPage title="Our Products" description="Explore our exclusive range of modular furniture and finishes." />} /> */}
                 <Route path="/why-us" element={<GenericPage title="Why Choose Us" description="What makes Gauri Group the trusted choice for luxury interiors." />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </PageTransition>
           </Suspense>
@@ -235,6 +237,19 @@ export default function App() {
                       </a>
                     </li>
                   </ul>
+
+                  {/* Social Media */}
+                  <div className="flex gap-3 mt-6">
+                    <a href="https://www.instagram.com/gauriinterior/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
+                      <Instagram className="w-5 h-5 text-white" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/gauri-interior/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
+                      <Linkedin className="w-5 h-5 text-white" />
+                    </a>
+                    <a href="https://www.facebook.com/gauriinterior" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
+                      <Facebook className="w-5 h-5 text-white" />
+                    </a>
+                  </div>
                 </div>
 
               </div>
@@ -246,8 +261,8 @@ export default function App() {
                 <p className="text-white/40 text-sm">© {new Date().getFullYear()} <BrandName as="span">Gauri Interior Pvt. Ltd.</BrandName> All rights reserved.</p>
                 <div className="flex gap-4 sm:gap-6">
                   <a href="#contact-us" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">Contact Us</a>
-                  <a href="/about" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">About Us</a>
-                  <a href="/gallery" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">Gallery</a>
+                  <Link to="/about" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">About Us</Link>
+                  <Link to="/gallery" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">Gallery</Link>
                 </div>
               </div>
             </div>

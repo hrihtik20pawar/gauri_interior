@@ -1,9 +1,14 @@
 import { useEffect } from 'react';
 import Businesses from '../../components/businesses/Businesses';
 
+const SITE_NAME = 'Gauri Interior Pvt. Ltd.';
+
 export default function BusinessesPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = `Our Ventures | ${SITE_NAME}`;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', 'Explore the Gauri Group ventures - Gauri Interior, Nikhil Enterprises, Gauri Kitchen, and Gauri Designing Studio. A diversified business ecosystem in Mumbai.');
   }, []);
 
   return (

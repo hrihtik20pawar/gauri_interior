@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+const SITE_NAME = 'Gauri Interior Pvt. Ltd.';
 
 export default function GenericPage({ title, description }: { title: string, description: string }) {
+  useEffect(() => {
+    document.title = `${title} | ${SITE_NAME}`;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', description);
+  }, [title, description]);
+
   return (
     <div className="min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-24 bg-white">
       <div className="max-w-[1500px] mx-auto text-center">

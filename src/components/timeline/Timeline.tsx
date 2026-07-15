@@ -176,7 +176,7 @@ export default function Timeline() {
         {/* Header section */}
         <div className="text-center mb-12 md:mb-24 max-w-3xl mx-auto">
           <p className="timeline-header text-brand-orange font-bold tracking-[0.2em] uppercase text-sm mb-4">Our Journey</p>
-          <h2 className="timeline-header text-5xl md:text-6xl lg:text-7xl font-serif text-brand-green leading-[1.1] mb-6 uppercase">
+          <h2 className="timeline-header text-5xl md:text-6xl lg:text-7xl font-sans text-brand-green leading-[1.1] mb-6 uppercase">
             The Story of <br /> <BrandName as="span" size="lg" className="text-brand-teal font-sans tracking-wide">GAURI Group</BrandName>
           </h2>
           <p className="timeline-header text-gray-500 text-xl leading-relaxed font-medium">
@@ -206,7 +206,7 @@ export default function Timeline() {
 
                   {/* Empty space for alternating layout on desktop */}
                   <div className="hidden md:block w-1/2 px-12 flex items-center justify-center">
-                    <span className="text-7xl lg:text-8xl font-serif text-brand-orange/20 font-bold whitespace-nowrap">
+                    <span className="text-7xl lg:text-8xl font-sans text-brand-orange/20 font-bold whitespace-nowrap">
                       {step.year}
                     </span>
                   </div>
@@ -222,6 +222,7 @@ export default function Timeline() {
                       {/* Project Image */}
                       <div className="relative h-48 md:h-56 overflow-hidden">
                         <img 
+                          loading="lazy"
                           src={step.image} 
                           alt={step.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -231,10 +232,10 @@ export default function Timeline() {
 
                       {/* Text Content */}
                       <div className="p-6 md:p-10">
-                        <span className="inline-block text-6xl font-serif text-gray-100 font-bold mb-4 -mt-4 -ml-2 group-hover:text-brand-orange/10 transition-colors duration-300">
+                        <span className="inline-block text-6xl font-sans text-gray-100 font-bold mb-4 -mt-4 -ml-2 group-hover:text-brand-orange/10 transition-colors duration-300">
                           {step.num}
                         </span>
-                        <h3 className="text-3xl font-serif text-brand-green mb-6">
+                        <h3 className="text-3xl font-sans text-brand-green mb-6">
                           <BrandName as="span" size="lg">{step.title}</BrandName>
                         </h3>
                         <ul className="space-y-3 flex flex-col items-start text-left">
@@ -258,7 +259,7 @@ export default function Timeline() {
             <div className="timeline-item relative flex flex-col items-center w-full">
               <div className="w-full flex justify-center px-4 md:px-12">
                 <div className="timeline-card bg-brand-green/5 backdrop-blur-md p-6 md:p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-brand-green/10 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group w-full max-w-lg">
-                  <h3 className="text-3xl font-serif text-brand-green mb-6 text-center">Where We Are Now</h3>
+                  <h3 className="text-3xl font-sans text-brand-green mb-6 text-center">Where We Are Now</h3>
                   <ul className="space-y-3 flex flex-col items-start text-left ml-4">
                     <li className="timeline-list-item flex items-center gap-3 text-gray-600 font-medium">
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>

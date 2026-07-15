@@ -27,6 +27,9 @@ export default function Gallery() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = `Gallery | ${'Gauri Interior Pvt. Ltd.'}`;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', 'Explore our curated portfolio of interior design projects - hotels, offices, residences, healthcare spaces, and more by Gauri Interior in Mumbai.');
   }, []);
 
   // Update activeCategory when URL search params change
@@ -186,7 +189,7 @@ export default function Gallery() {
             className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
             style={{ opacity: heroSlide === i ? 1 : 0 }}
           >
-            <img src={src} alt="" className="w-full h-full object-cover" />
+            <img src={src} alt="" loading={i === 0 ? "eager" : "lazy"} className="w-full h-full object-cover" />
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
@@ -312,6 +315,7 @@ export default function Gallery() {
         >
           <button
             onClick={closeLightbox}
+            aria-label="Close lightbox"
             className="absolute top-4 right-4 sm:top-6 sm:right-6 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-3 sm:p-4 rounded-full transition-colors z-50 min-w-[44px] min-h-[44px] flex items-center justify-center"
           >
             <X className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -326,6 +330,7 @@ export default function Gallery() {
 
           <button
             onClick={prevImage}
+            aria-label="Previous image"
             className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-3 sm:p-5 rounded-full transition-colors z-50 min-w-[44px] min-h-[44px] sm:min-w-[52px] sm:min-h-[52px] flex items-center justify-center"
           >
             <ChevronLeft className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8" />
@@ -333,16 +338,18 @@ export default function Gallery() {
 
           <button
             onClick={nextImage}
+            aria-label="Next image"
             className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 p-3 sm:p-5 rounded-full transition-colors z-50 min-w-[44px] min-h-[44px] sm:min-w-[52px] sm:min-h-[52px] flex items-center justify-center"
           >
             <ChevronRight className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8" />
           </button>
 
           <div className="w-full h-full p-2 sm:p-12 lg:p-24 flex items-center justify-center" onClick={closeLightbox}>
-            <img
-              src={filteredImages[lightboxIndex].image}
-              alt={filteredImages[lightboxIndex].title}
-              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+              <img
+                src={filteredImages[lightboxIndex].image}
+                alt={filteredImages[lightboxIndex].title}
+                loading="eager"
+                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             />
           </div>

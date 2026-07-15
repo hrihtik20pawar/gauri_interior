@@ -16,12 +16,12 @@ export const images = {
     vision: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=60&w=800",
     process: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=60&w=800",
     cta: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=60&w=800",
-    value1: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=60&w=800",
-    value2: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=60&w=800",
-    value3: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=60&w=800",
-    value4: "https://images.unsplash.com/photo-1600607687644-aac4c15cecb1?auto=format&fit=crop&q=60&w=800",
-    value5: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=60&w=800",
-    value6: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=60&w=800",
+    value1: "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
+    value2: "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
+    value3: "/images/WEBSITE/4) JEWELLARY SHOPE/1) KRA/KRA (1).avif",
+    value4: "/images/WEBSITE/2) HOTEL & RESTAURANT/1) CRAVIN CAFE/CRAVIN CAFE FINAL PHOTO/Cravin Cafe (32).avif",
+    value5: "/images/WEBSITE/8) LOBBY AND BUILDING AMENTIES/2) PIRAMAL VAIKUNTH/VAIKUNTH (1).avif",
+    value6: "/images/WEBSITE/9) DISPLAY UNIT/1) Big Mishra/BIG MISHRA FINAL PHOTO/BIG MISHRA (1).avif",
   },
 
   businesses: {

@@ -122,7 +122,7 @@ export default function About() {
             loading="lazy"
             src="/images/about/new_office_image.jpeg"
             alt="Gauri Group Office"
-            className="about-office-image w-full h-[450px] md:h-[550px] object-contain rounded-xl shadow-2xl relative z-10"
+            className="about-office-image w-full h-[450px] md:h-[550px] object-cover rounded-xl shadow-2xl relative z-10"
           />
         </div>
       </div>
@@ -195,7 +195,7 @@ export default function About() {
       {/* Why Choose Gauri? */}
       <div className="about-text mb-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif text-brand-green mb-4">Why Choose <BrandName as="span" className="font-sans">Gauri</BrandName>?</h2>
+          <h2 className="text-3xl md:text-4xl font-sans text-brand-green mb-4">Why Choose <BrandName as="span">Gauri</BrandName>?</h2>
           <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
         </div>
 

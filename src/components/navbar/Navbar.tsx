@@ -10,7 +10,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const location = useLocation();
-  const contactRef = useRef<HTMLDivElement>(null);
+  const desktopContactRef = useRef<HTMLDivElement>(null);
+  const mobileContactRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLElement>(null);
   const [navHeight, setNavHeight] = useState(0);
 
@@ -49,7 +50,10 @@ export default function Navbar() {
   // Click outside to close contact dropdown
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
-      if (contactRef.current && !contactRef.current.contains(event.target as Node)) {
+      const target = event.target as Node;
+      const clickedInsideDesktop = desktopContactRef.current?.contains(target);
+      const clickedInsideMobile = mobileContactRef.current?.contains(target);
+      if (!clickedInsideDesktop && !clickedInsideMobile) {
         setContactOpen(false);
       }
     };
@@ -103,7 +107,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Get in Touch Dropdown */}
-        <div className="hidden lg:flex items-center gap-6 nav-item relative" ref={contactRef}>
+        <div className="hidden lg:flex items-center gap-6 nav-item relative" ref={desktopContactRef}>
           <button
             onClick={() => setContactOpen(!contactOpen)}
             className="bg-brand-orange text-white px-5 py-2.5 rounded-lg font-medium hover:bg-brand-orange/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-brand-orange/15 text-sm flex items-center gap-2"
@@ -115,7 +119,7 @@ export default function Navbar() {
             <div className="absolute top-full right-0 mt-2 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-50">
               <div className="p-2">
                 <a
-                  href={`tel:${siteConfig.contact.whatsapp}`}
+                  href={`tel:${siteConfig.contact.phones[0].replace(/-/g, '')}`}
                   className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors group"
                   onClick={() => setContactOpen(false)}
                 >
@@ -124,7 +128,7 @@ export default function Navbar() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-gray-900">Call Us</p>
-                    <p className="text-xs text-gray-500">{siteConfig.contact.whatsappDisplay}</p>
+                    <p className="text-xs text-gray-500">{siteConfig.contact.phones[0]}</p>
                   </div>
                 </a>
 
@@ -202,7 +206,7 @@ export default function Navbar() {
           })}
 
           {/* Mobile Get in Touch */}
-          <div ref={contactRef} className="mt-4 pt-4 border-t border-gray-100">
+          <div ref={mobileContactRef} className="mt-4 pt-4 border-t border-gray-100">
             <button
               onClick={() => setContactOpen(!contactOpen)}
               className="w-full text-center bg-brand-orange text-white py-3 rounded-lg font-medium hover:bg-brand-orange/90 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2"
@@ -213,14 +217,14 @@ export default function Navbar() {
             <div className={`overflow-hidden transition-all duration-300 ease-in-out ${contactOpen ? 'max-h-[200px] opacity-100 mt-3' : 'max-h-0 opacity-0'}`}>
               <div className="bg-gray-50 rounded-xl overflow-hidden border border-gray-100">
                 <a
-                  href={`tel:${siteConfig.contact.whatsapp}`}
+                  href={`tel:${siteConfig.contact.phones[0].replace(/-/g, '')}`}
                   className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors"
                   onClick={() => { setContactOpen(false); setIsOpen(false); }}
                 >
                   <Phone className="w-5 h-5 text-brand-teal" />
                   <div>
                     <p className="text-sm font-medium text-gray-900">Call Us</p>
-                    <p className="text-xs text-gray-500">{siteConfig.contact.whatsappDisplay}</p>
+                    <p className="text-xs text-gray-500">{siteConfig.contact.phones[0]}</p>
                   </div>
                 </a>
 

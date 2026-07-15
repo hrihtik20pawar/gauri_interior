@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
       <div className="max-w-[1500px] mx-auto">
         <div className="wcu-header text-center mb-16">
           <p className="text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Why Us</p>
-          <h2 className="text-4xl md:text-5xl font-serif text-brand-green mb-6">Why Choose <BrandName as="span">Gauri Interior</BrandName></h2>
+          <h2 className="text-4xl md:text-5xl font-sans text-brand-green mb-6">Why Choose <BrandName as="span">Gauri Interior</BrandName></h2>
           <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full" />
         </div>
 

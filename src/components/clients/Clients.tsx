@@ -61,6 +61,7 @@ export default function Clients() {
               className="flex-shrink-0 w-44 md:w-56 h-28 md:h-36 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center p-4 md:p-6 border border-gray-100 hover:border-brand-orange/30 group overflow-hidden"
             >
               <img
+                loading="lazy"
                 src={client.logo}
                 alt={client.name}
                 className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"

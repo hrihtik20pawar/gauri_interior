@@ -4,12 +4,14 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useLenis } from '../../App';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutCta() {
   const ctaRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  const lenis = useLenis();
 
   useGSAP(() => {
     if (!ctaRef.current) return;
@@ -19,6 +21,15 @@ export default function AboutCta() {
         scrollTrigger: { trigger: ctaRef.current, start: 'top 80%' } },
     );
   }, { scope: ctaRef });
+
+  const scrollToContact = () => {
+    if (lenis) {
+      lenis.scrollTo('#contact-us', { offset: -80 });
+    } else {
+      const el = document.getElementById('contact-us');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div ref={ctaRef} className="bg-brand-green py-24 md:py-32 px-6">
@@ -31,7 +42,7 @@ export default function AboutCta() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
-            onClick={() => navigate('/projects')}
+            onClick={scrollToContact}
             className="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold tracking-wide transition-all duration-300 hover:shadow-xl hover:shadow-orange-900/30 group"
           >
             Start Your Project

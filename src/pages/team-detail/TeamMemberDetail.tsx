@@ -37,6 +37,7 @@ export default function TeamMemberDetail() {
             <div className="w-full md:w-1/3">
               <div className="rounded-[2rem] overflow-hidden shadow-2xl aspect-[3/4]">
                 <img 
+                  loading="lazy"
                   src={member.image} 
                   alt={member.name} 
                   className="w-full h-full object-cover"
