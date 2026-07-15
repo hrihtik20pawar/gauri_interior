@@ -13,9 +13,9 @@ export default function BrandName({ children, className = '', as: Tag = 'span', 
     green: 'text-brand-green'
   };
   const dotSizes = {
-    sm: 'top-0 left-1/2 -translate-x-1/2 -translate-y-[55%] w-[0.18em] h-[0.18em]',
-    md: 'top-0 left-1/2 -translate-x-1/2 -translate-y-[55%] w-[0.2em] h-[0.2em]',
-    lg: 'top-0 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[0.22em] h-[0.22em]'
+    sm: 'w-1.5 h-1.5 -top-0.5',
+    md: 'w-2 h-2 -top-0.5',
+    lg: 'w-2.5 h-2.5 -top-1'
   };
 
   // Split by "gauri" first, then check each part for "studio"
@@ -31,7 +31,7 @@ export default function BrandName({ children, className = '', as: Tag = 'span', 
           return (
             <span key={i} className="inline-flex items-start relative">
               <span className={`${colorClasses[color]} font-semibold`}>GAUR</span>
-              <span className="relative inline-flex flex-col items-center">
+              <span className="relative inline-block">
                 <span className={`absolute left-1/2 -translate-x-1/2 bg-brand-orange rounded-full ${dotSizes[size]}`}></span>
                 <span className={`${colorClasses[color]} font-semibold`}>I</span>
               </span>

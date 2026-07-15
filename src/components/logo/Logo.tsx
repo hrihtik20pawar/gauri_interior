@@ -10,7 +10,7 @@ function TypewriterText({ text, className }: { text: string, className?: string 
 
 export default function Logo({ className = "", isDark = false, size = "sm", typewriter = false, blueprint = false }: { className?: string, isDark?: boolean, size?: "sm" | "lg", typewriter?: boolean, blueprint?: boolean }) {
   const isLarge = size === "lg";
-  const headingClass = `${isLarge ? 'text-5xl' : 'text-3xl'} font-semibold tracking-wider transition-colors leading-none flex items-center ${isDark ? 'text-white' : 'text-brand-teal'}`;
+  const headingClass = `${isLarge ? 'text-5xl' : 'text-3xl'} font-bold tracking-wider transition-colors leading-none flex items-center ${isDark ? 'text-white' : 'text-brand-teal'}`;
 
   return (
     <div className={`flex items-center gap-3 ${className}`}>
@@ -33,14 +33,14 @@ export default function Logo({ className = "", isDark = false, size = "sm", type
           {typewriter ? (
             <>
               <TypewriterText text="GAUR" />
-              <span className="relative inline-flex items-start">
-                <span className={`absolute bg-brand-orange rounded-full ${isLarge ? 'top-0 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[0.35em] h-[0.35em]' : 'top-0 left-1/2 -translate-x-1/2 -translate-y-[55%] w-[0.3em] h-[0.3em]'}`}></span>
+              <span className="relative inline-block">
+                <span className={`absolute left-1/2 -translate-x-1/2 bg-brand-orange rounded-full ${isLarge ? 'w-3 h-3 -top-1' : 'w-2 h-2 -top-0.5'}`}></span>
                 <span className="tw-char" style={{ opacity: 0, display: "inline-block" }}>I</span>
               </span>
             </>
           ) : (
-            <>GAUR<span className="relative inline-flex items-start">
-              <span className={`absolute bg-brand-orange rounded-full ${isLarge ? 'top-0 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[0.35em] h-[0.35em]' : 'top-0 left-1/2 -translate-x-1/2 -translate-y-[55%] w-[0.3em] h-[0.3em]'}`}></span>
+            <>GAUR<span className="relative inline-block">
+              <span className={`absolute left-1/2 -translate-x-1/2 bg-brand-orange rounded-full ${isLarge ? 'w-3 h-3 -top-1' : 'w-2 h-2 -top-0.5'}`}></span>
               <span>I</span>
             </span></>
           )}
