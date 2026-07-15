@@ -33,14 +33,14 @@ export default function Logo({ className = "", isDark = false, size = "sm", type
           {typewriter ? (
             <>
               <TypewriterText text="GAUR" />
-              <span className="relative inline-flex items-center">
-                <span className={`absolute bg-brand-orange rounded-full left-1/2 -translate-x-1/2 ${isLarge ? '-top-[0.35em] w-[0.55em] h-[0.55em]' : '-top-[0.3em] w-[0.5em] h-[0.5em]'}`}></span>
+              <span className="relative inline-flex items-start">
+                <span className={`absolute bg-brand-orange rounded-full ${isLarge ? 'top-0 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[0.35em] h-[0.35em]' : 'top-0 left-1/2 -translate-x-1/2 -translate-y-[55%] w-[0.3em] h-[0.3em]'}`}></span>
                 <span className="tw-char" style={{ opacity: 0, display: "inline-block" }}>I</span>
               </span>
             </>
           ) : (
-            <>GAUR<span className="relative inline-flex flex-col items-center">
-              <span className={`absolute bg-brand-orange rounded-full left-1/2 -translate-x-1/2 ${isLarge ? '-top-[0.35em] w-[0.55em] h-[0.55em]' : '-top-[0.3em] w-[0.5em] h-[0.5em]'}`}></span>
+            <>GAUR<span className="relative inline-flex items-start">
+              <span className={`absolute bg-brand-orange rounded-full ${isLarge ? 'top-0 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[0.35em] h-[0.35em]' : 'top-0 left-1/2 -translate-x-1/2 -translate-y-[55%] w-[0.3em] h-[0.3em]'}`}></span>
               <span>I</span>
             </span></>
           )}
