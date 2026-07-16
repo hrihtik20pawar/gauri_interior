@@ -24,7 +24,7 @@ export default function Logo({ className = "", isDark = false, size = "sm", type
           return (
             <div 
               key={i} 
-              className={`${isDiagonal ? 'bg-brand-teal' : (isDark ? 'bg-white/20' : 'bg-black/80')} w-full h-full transition-colors ${tileClass}`}
+              className={`${isDiagonal ? 'bg-brand-teal' : (isDark ? 'bg-gray-400' : 'bg-black/80')} w-full h-full transition-colors ${tileClass}`}
               style={tileStyle}
             ></div>
           )
@@ -54,10 +54,10 @@ export default function Logo({ className = "", isDark = false, size = "sm", type
         </h1>
         {showSubtitle && (
           <>
-            <p className={`${isLarge ? 'text-xs' : 'text-[11px]'} tracking-widest font-normal mt-1 transition-colors ${isDark ? 'text-gray-300' : 'text-brand-orange'} text-center w-full`}>
+            <p className={`${isLarge ? 'text-xs' : 'text-[11px]'} tracking-widest font-normal mt-1 transition-colors ${isDark ? 'text-gray-200' : 'text-brand-orange'} text-center w-full`}>
               {typewriter ? <TypewriterText text="Interior • Kitchen • Design" /> : "Interior • Kitchen • Design"}
             </p>
-            <div className={`w-full h-[1px] mt-1.5 ${isDark ? 'bg-white/60' : 'bg-brand-teal'}`}></div>
+            <div className={`w-full h-[1px] mt-1.5 ${isDark ? 'bg-gray-300' : 'bg-brand-teal'}`}></div>
           </>
         )}
       </div>
