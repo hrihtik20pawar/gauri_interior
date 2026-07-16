@@ -87,7 +87,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
 
         <Link to="/" className="nav-item block shrink-0 min-w-0 overflow-visible max-w-[45vw]">
-          <Logo isDark={true} size="lg" className={`${scrolled ? 'lg:scale-[0.25]' : 'scale-[0.35] sm:scale-[0.5] md:scale-70 lg:scale-90'} origin-left transition-transform duration-300`} />
+          <Logo isDark={true} size="lg" className={`${scrolled ? 'lg:scale-[0.25]' : 'scale-[0.25] sm:scale-[0.4] md:scale-[0.55] lg:scale-75'} origin-left transition-transform duration-300`} />
         </Link>
 
         {/* Desktop Links */}
