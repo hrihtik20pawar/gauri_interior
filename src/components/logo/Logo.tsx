@@ -10,7 +10,7 @@ function TypewriterText({ text, className }: { text: string, className?: string 
 
 export default function Logo({ className = "", isDark = false, size = "sm", typewriter = false, blueprint = false, showSubtitle = true }: { className?: string, isDark?: boolean, size?: "sm" | "lg", typewriter?: boolean, blueprint?: boolean, showSubtitle?: boolean }) {
   const isLarge = size === "lg";
-  const headingClass = `${isLarge ? 'text-5xl' : 'text-3xl'} font-semibold tracking-wide transition-colors leading-none ${isDark ? 'text-white' : 'text-brand-teal'}`;
+  const headingClass = `${isLarge ? 'text-5xl' : 'text-3xl'} font-semibold tracking-wide transition-colors leading-none whitespace-nowrap ${isDark ? 'text-white' : 'text-brand-teal'}`;
 
   const dotClass = "absolute left-1/2 -translate-x-1/2 bg-brand-orange rounded-full w-[0.19em] h-[0.19em] -top-[0.12em]";
 
