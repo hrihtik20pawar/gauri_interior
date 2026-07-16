@@ -179,7 +179,7 @@ export default function Gallery() {
       {/* Hero Section with Slideshow */}
       <div 
         ref={heroRef} 
-        className="relative h-[100vh] min-h-[500px] sm:min-h-[600px] md:min-h-[700px] overflow-hidden"
+        className="relative h-[100dvh] min-h-[500px] sm:min-h-[600px] md:min-h-[700px] overflow-hidden"
         onTouchStart={handleHeroTouchStart}
         onTouchEnd={handleHeroTouchEnd}
       >
