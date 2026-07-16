@@ -1,4 +1,4 @@
-import { Menu, X, Mail, MessageCircle, Phone } from 'lucide-react';
+import { Mail, MessageCircle, Phone } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
@@ -170,11 +170,13 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button 
-          className={`lg:hidden nav-item shrink-0 p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg border shadow-md ${scrolled ? 'text-gray-800 bg-white border-gray-200' : 'text-white bg-black/50 border-white/20 backdrop-blur-md'}`} 
+          className="lg:hidden nav-item shrink-0 p-2.5 min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-1.5"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="w-7 h-7" strokeWidth={2.5} /> : <Menu className="w-7 h-7" strokeWidth={2.5} />}
+          <span className="block w-6 h-[2px] bg-white rounded-full transition-all duration-300"></span>
+          <span className="block w-6 h-[2px] bg-white rounded-full transition-all duration-300"></span>
+          <span className="block w-6 h-[2px] bg-white rounded-full transition-all duration-300"></span>
         </button>
       </div>
 
