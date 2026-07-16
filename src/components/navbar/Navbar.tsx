@@ -7,12 +7,24 @@ import { siteConfig } from '../../constants/contact';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const location = useLocation();
   const desktopContactRef = useRef<HTMLDivElement>(null);
   const mobileContactRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLElement>(null);
   const [navHeight, setNavHeight] = useState(0);
+
+  const isHome = location.pathname === '/';
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20 || !isHome);
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isHome]);
 
   useEffect(() => {
     setIsOpen(false);
@@ -33,7 +45,7 @@ export default function Navbar() {
     if (navRef.current) {
       setNavHeight(navRef.current.offsetHeight);
     }
-  }, [isOpen]);
+  }, [scrolled, isOpen]);
 
   // Click outside to close contact dropdown
   useEffect(() => {
@@ -61,7 +73,7 @@ export default function Navbar() {
       );
     });
     return () => ctx.revert();
-  }, []);
+  }, [isHome]);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -71,11 +83,11 @@ export default function Navbar() {
   ];
 
   return (
-    <nav ref={navRef} className="fixed w-full z-50 transition-all duration-300 bg-transparent py-5">
+    <nav ref={navRef} className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-5'}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
 
         <Link to="/" className="nav-item block shrink-0 min-w-0 overflow-visible max-w-[45vw]">
-          <Logo isDark={true} size="lg" className="scale-[0.4] sm:scale-[0.55] md:scale-75 lg:scale-100 origin-left transition-transform duration-300" />
+          <Logo isDark={!scrolled} size="lg" className={`${scrolled ? 'scale-[0.3] sm:scale-[0.4] md:scale-[0.55] lg:scale-75' : 'scale-[0.4] sm:scale-[0.55] md:scale-75 lg:scale-100'} origin-left transition-transform duration-300`} />
         </Link>
 
         {/* Desktop Links */}
@@ -86,7 +98,7 @@ export default function Navbar() {
               <Link
                 key={i}
                 to={link.path}
-                className={`nav-item transition-colors hover:text-brand-orange text-gray-100 ${isActive ? 'border-b-2 border-brand-orange pb-1 text-brand-orange' : ''}`}
+                className={`nav-item transition-colors hover:text-brand-orange ${scrolled ? 'text-gray-700' : 'text-gray-100'} ${isActive ? 'border-b-2 border-brand-orange pb-1 text-brand-orange' : ''}`}
               >
                 {link.name}
               </Link>
