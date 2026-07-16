@@ -13,12 +13,12 @@ export const images = {
   },
 
   about: {
-    main: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=60&w=800",
-    hero: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=60&w=1200",
-    story: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=60&w=800",
-    vision: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=60&w=800",
-    process: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=60&w=800",
-    cta: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=60&w=800",
+    main: "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
+    hero: "/images/WEBSITE/2) HOTEL & RESTAURANT/2) Ava Belapur/AVA BELAPUR FINAL PHOTOS/AVA BELAPUR (1).avif",
+    story: "/images/WEBSITE/2) HOTEL & RESTAURANT/4) ESKANA RESORT AND SPA/ESKANA RESORT AND SPA (014).avif",
+    vision: "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
+    process: "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
+    cta: "/images/WEBSITE/2) HOTEL & RESTAURANT/5) KOHINOOR ELITE/KOHINOOR ELITE FINAL PHOTOS/KOHINOOR ELITE (1).avif",
     value1: "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
     value2: "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
     value3: "/images/WEBSITE/4) JEWELLARY SHOPE/1) KRA/KRA (1).avif",
