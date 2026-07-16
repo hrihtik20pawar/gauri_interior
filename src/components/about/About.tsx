@@ -151,22 +151,25 @@ export default function About() {
 
               {/* Title */}
               <h3 className="text-2xl md:text-3xl mb-5">
-                <span className="text-gray-900 font-serif">Welcome to</span><br />
-                <BrandName as="span" size="lg">GAURI GROUP</BrandName>
+                <span className="text-gray-900 font-serif">Managing Director's</span><br />
+                <span className="text-gray-900 font-serif">Message</span>
               </h3>
 
               {/* Message Content */}
               <div className="space-y-3 text-gray-600 text-sm leading-relaxed text-justify">
-                <p>At <BrandName as="span">GAURI GROUP</BrandName>, our journey has always been guided by a simple belief – to create spaces that inspire and relationships that last.</p>
-                <p>From humble beginnings to growing into a diverse group of companies, we have stayed true to our values of honesty, quality, and commitment. Every project we undertake is a reflection of our passion for excellence and our dedication to our clients.</p>
-                <p>As we look ahead, our focus remains the same – to innovate, to evolve, and to deliver environments that truly make a difference in people's lives.</p>
-                <p>I extend my heartfelt thanks to our clients, partners, and team members for their trust and support. Together, let us continue building a better tomorrow.</p>
+                <p>Dear Valued Clients, Partners, and Associates,</p>
+                <p>It gives me immense pride to welcome you to <BrandName as="span">GAURI GROUP.</BrandName></p>
+                <p>Our journey began with a simple vision—to create quality furniture through honest workmanship and unwavering dedication. Over the years, that vision has grown into a comprehensive turnkey interior solutions company, serving clients across diverse industries while maintaining the same values that laid our foundation.</p>
+                <p>At Gauri, we believe that every space tells a story. Whether it is a corporate office, a healthcare facility, an educational institution, a hospitality project, or a premium residence, our objective is to create environments that combine functionality, innovation, and aesthetics.</p>
+                <p>Our greatest strength lies in our people—their expertise, commitment, and passion for excellence. Together, we strive to deliver projects that exceed expectations in quality, safety, and timely execution.</p>
+                <p>As we expand through our group companies and embrace new opportunities, our commitment remains unchanged: to build long-term relationships based on trust, integrity, and exceptional service.</p>
+                <p>I sincerely thank our clients, employees, partners, and well-wishers for being an integral part of our journey. We look forward to creating many more inspiring spaces together.</p>
               </div>
 
               {/* Signature */}
               <div className="mt-6">
                 <p className="text-gray-700 text-sm mb-2">Warm Regards,</p>
-                <p className="text-brand-green font-bold text-base">Shilkumar L. Vishwakarma</p>
+                <p className="text-brand-green font-bold text-base">Mr. Shilkumar L. Vishwakarma</p>
                 <p className="text-gray-600 text-sm">Managing Director & CEO</p>
                 <p className="text-brand-green font-bold text-sm mt-1"><BrandName as="span">GAURI GROUP OF COMPANIES</BrandName></p>
               </div>
