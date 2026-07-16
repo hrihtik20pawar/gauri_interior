@@ -19,7 +19,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20 || !isHome);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     handleScroll();
@@ -174,9 +174,9 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          <span className="block w-6 h-[2px] bg-white rounded-full transition-all duration-300"></span>
-          <span className="block w-6 h-[2px] bg-white rounded-full transition-all duration-300"></span>
-          <span className="block w-6 h-[2px] bg-white rounded-full transition-all duration-300"></span>
+          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 ${scrolled ? 'bg-gray-800' : 'bg-white'}`}></span>
+          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 ${scrolled ? 'bg-gray-800' : 'bg-white'}`}></span>
+          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 ${scrolled ? 'bg-gray-800' : 'bg-white'}`}></span>
         </button>
       </div>
 
