@@ -61,7 +61,7 @@ export default function Navbar() {
       );
     });
     return () => ctx.revert();
-  }, [isHome]);
+  }, []);
 
   const navLinks = [
     { name: "Home", path: "/" },
