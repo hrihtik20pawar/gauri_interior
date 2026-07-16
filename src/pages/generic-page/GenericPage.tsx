@@ -10,7 +10,7 @@ export default function GenericPage({ title, description }: { title: string, des
   }, [title, description]);
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-24 bg-white">
+    <div className="min-h-screen pt-20 md:pt-32 pb-20 px-6 md:px-12 lg:px-24 bg-white">
       <div className="max-w-[1500px] mx-auto text-center">
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-brand-green mb-6">{title}</h1>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-16">{description}</p>

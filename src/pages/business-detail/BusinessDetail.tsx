@@ -176,7 +176,7 @@ export default function BusinessDetail() {
     return (
       <div className="min-h-screen bg-white">
         {/* Hero Section - Interior */}
-        <div className="bg-teal-50 pt-32 pb-20 overflow-hidden relative">
+        <div className="bg-teal-50 pt-20 md:pt-32 pb-20 overflow-hidden relative">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="flex-1">
@@ -311,7 +311,7 @@ export default function BusinessDetail() {
     return (
       <div className="min-h-screen bg-white">
         {/* Hero Section - Kitchen */}
-        <div className="bg-orange-50 pt-32 pb-20 overflow-hidden relative">
+        <div className="bg-orange-50 pt-20 md:pt-32 pb-20 overflow-hidden relative">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="flex-1">
@@ -427,7 +427,7 @@ export default function BusinessDetail() {
     return (
       <div className="min-h-screen bg-white">
         {/* Hero Section - Nikhil */}
-        <div className="bg-teal-50 pt-32 pb-20 overflow-hidden relative">
+        <div className="bg-teal-50 pt-20 md:pt-32 pb-20 overflow-hidden relative">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="flex-1">
@@ -543,7 +543,7 @@ export default function BusinessDetail() {
     return (
       <div className="min-h-screen bg-white">
         {/* Hero Section - Studio */}
-        <div className="bg-teal-50 pt-32 pb-20 overflow-hidden relative">
+        <div className="bg-teal-50 pt-20 md:pt-32 pb-20 overflow-hidden relative">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="flex-1">
@@ -635,7 +635,7 @@ export default function BusinessDetail() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className={`${bgColor} pt-32 pb-20 overflow-hidden relative`}>
+      <div className={`${bgColor} pt-20 md:pt-32 pb-20 overflow-hidden relative`}>
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1">

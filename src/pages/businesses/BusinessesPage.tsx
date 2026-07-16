@@ -14,7 +14,7 @@ export default function BusinessesPage() {
   return (
     <main className="min-h-screen bg-[#faf9f6]">
       {/* Hero Section */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-brand-green to-teal-800">
+      <section className="py-12 md:py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-brand-green to-teal-800">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Our Companies</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6">Our Ventures</h1>

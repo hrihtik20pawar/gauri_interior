@@ -26,7 +26,7 @@ export default function TeamMemberDetail() {
   return (
     <main className="min-h-screen bg-[#faf9f6]">
       {/* Hero Section */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-brand-green to-teal-800">
+      <section className="py-12 md:py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-brand-green to-teal-800">
         <div className="max-w-6xl mx-auto">
           <Link to="/about" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-8">
             <ArrowLeft className="w-5 h-5" />
