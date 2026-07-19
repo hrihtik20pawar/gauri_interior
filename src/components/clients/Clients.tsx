@@ -20,17 +20,28 @@ const clients = [
   { name: "Client 15", logo: "/images/clients/client-15-05-31.avif" },
 ];
 
+const clientsRow2 = [...clients].reverse();
+
 export default function Clients() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollRef1 = useRef<HTMLDivElement>(null);
+  const scrollRef2 = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    if (!scrollRef.current) return;
+    if (!scrollRef1.current || !scrollRef2.current) return;
 
-    const scrollWidth = scrollRef.current.scrollWidth / 2;
-    
-    gsap.to(scrollRef.current, {
-      x: -scrollWidth,
+    const scrollWidth1 = scrollRef1.current.scrollWidth / 2;
+    const scrollWidth2 = scrollRef2.current.scrollWidth / 2;
+
+    gsap.to(scrollRef1.current, {
+      x: -scrollWidth1,
+      duration: 40,
+      ease: 'none',
+      repeat: -1,
+    });
+
+    gsap.to(scrollRef2.current, {
+      x: -scrollWidth2,
       duration: 40,
       ease: 'none',
       repeat: -1,
@@ -47,15 +58,33 @@ export default function Clients() {
         </div>
       </div>
 
-      {/* Carousel Container */}
+      {/* Carousel 1 */}
       <div className="relative">
-        {/* Fade Edges */}
         <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
         <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
-
-        {/* Scrolling Content */}
-        <div ref={scrollRef} className="flex gap-8 md:gap-12 items-center w-max">
+        <div ref={scrollRef1} className="flex gap-8 md:gap-12 items-center w-max">
           {[...clients, ...clients].map((client, idx) => (
+            <div
+              key={idx}
+              className="flex-shrink-0 w-44 md:w-56 h-28 md:h-36 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center p-4 md:p-6 border border-gray-100 hover:border-brand-orange/30 group overflow-hidden"
+            >
+              <img
+                loading="lazy"
+                src={client.logo}
+                alt={client.name}
+                className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Carousel 2 */}
+      <div className="relative mt-8 md:mt-10">
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
+        <div ref={scrollRef2} className="flex gap-8 md:gap-12 items-center w-max">
+          {[...clientsRow2, ...clientsRow2].map((client, idx) => (
             <div
               key={idx}
               className="flex-shrink-0 w-44 md:w-56 h-28 md:h-36 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center p-4 md:p-6 border border-gray-100 hover:border-brand-orange/30 group overflow-hidden"

@@ -3,12 +3,13 @@ export const images = {
 
   hero: {
     slides: [
-      "/images/WEBSITE/2) HOTEL & RESTAURANT/2) Ava Belapur/AVA BELAPUR FINAL PHOTOS/AVA BELAPUR (1).avif",
-      "/images/WEBSITE/2) HOTEL & RESTAURANT/4) ESKANA RESORT AND SPA/ESKANA RESORT AND SPA (014).avif",
-      "/images/WEBSITE/2) HOTEL & RESTAURANT/5) KOHINOOR ELITE/KOHINOOR ELITE FINAL PHOTOS/KOHINOOR ELITE (1).avif",
-      "/images/WEBSITE/tribica.avif",
-      "/images/WEBSITE/tribica2.avif",
-      "/images/WEBSITE/purnima_divya_home.avif",
+      "/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.14.53.avif",
+      "/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.00.avif",
+      "/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.06.avif",
+      "/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.14.avif",
+      "/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.29.avif",
+      "/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.36.avif",
+      "/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.56.avif",
     ],
   },
 

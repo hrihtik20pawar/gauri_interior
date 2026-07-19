@@ -46,8 +46,8 @@ const timelineSteps = [
   },
   {
     num: "04",
-    title: "Nikhil Enterprice",
-    highlight: "Nikhil Enterprice",
+    title: "Nikhil Enterprise",
+    highlight: "Nikhil Enterprise",
     image: "/images/WEBSITE/4) JEWELLARY SHOPE/1) KRA/KRA (1).avif",
     items: [
       "Expanded further with our second venture.",
@@ -218,12 +218,12 @@ export default function Timeline() {
                   {/* Content Card */}
                   <div className={`w-full md:w-1/2 pl-16 md:pl-0 md:px-12 ${isEven ? 'md:text-right md:pr-16' : 'md:text-left md:pl-16'}`}>
                     <div className="timeline-card bg-white/60 backdrop-blur-md rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group overflow-hidden">
-                      
+
                       {/* Project Image */}
                       <div className="relative h-48 md:h-56 overflow-hidden">
-                        <img 
+                        <img
                           loading="lazy"
-                          src={step.image} 
+                          src={step.image}
                           alt={step.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />

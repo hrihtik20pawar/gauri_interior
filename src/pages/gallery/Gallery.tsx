@@ -8,9 +8,9 @@ import { useLenis } from '../../App';
 import { useSearchParams } from 'react-router-dom';
 
 const heroSlides = [
-  '/images/WEBSITE/2) HOTEL & RESTAURANT/1) CRAVIN CAFE/CRAVIN CAFE FINAL PHOTO/Cravin Cafe (32).avif',
-  '/images/WEBSITE/2) HOTEL & RESTAURANT/2) Ava Belapur/AVA BELAPUR FINAL PHOTOS/AVA BELAPUR (1).avif',
-  '/images/WEBSITE/2) HOTEL & RESTAURANT/3) KOHINOOR - 21 ROOMS/KOHINOOR HOTEL FINAL PHOTO/KOHINOOR - 21Rooms (17).avif',
+  '/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.14.53.avif',
+  '/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.06.avif',
+  '/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.29.avif',
 ];
 
 export default function Gallery() {
@@ -269,6 +269,17 @@ export default function Gallery() {
                     className="relative w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
 
+                  {/* Company Logo Badge */}
+                  {item.companyLogo && (
+                    <div className="absolute top-3 right-3 z-20 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-md flex items-center justify-center p-1.5">
+                      <img
+                        src={item.companyLogo}
+                        alt={`${item.title} logo`}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  )}
+
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-green/90 via-brand-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4 sm:p-8 pointer-events-none">
                     <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
@@ -344,12 +355,28 @@ export default function Gallery() {
             <ChevronRight className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8" />
           </button>
 
-          <div className="w-full h-full p-2 sm:p-12 lg:p-24 flex items-center justify-center" onClick={closeLightbox}>
-              <img
-                src={filteredImages[lightboxIndex].image}
-                alt={filteredImages[lightboxIndex].title}
-                loading="eager"
-                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+          <div className="w-full h-full flex flex-col items-center justify-center p-2 sm:p-12 lg:p-24" onClick={closeLightbox}>
+            {/* Company Logo or Project Name */}
+            <div className="flex-shrink-0 mb-5 md:mb-7 flex items-center justify-center">
+              {filteredImages[lightboxIndex].companyLogo ? (
+                <img
+                  src={filteredImages[lightboxIndex].companyLogo}
+                  alt={`${filteredImages[lightboxIndex].title} logo`}
+                  className="h-[70px] md:h-[100px] max-w-[260px] object-contain"
+                />
+              ) : (
+                <h4 className="text-xl sm:text-2xl md:text-3xl font-serif text-brand-green/70 tracking-wide text-center italic">
+                  {filteredImages[lightboxIndex].title}
+                </h4>
+              )}
+            </div>
+
+            {/* Image */}
+            <img
+              src={filteredImages[lightboxIndex].image}
+              alt={filteredImages[lightboxIndex].title}
+              loading="eager"
+              className="max-w-full max-h-[calc(100vh-14rem)] object-contain rounded-lg shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             />
           </div>
