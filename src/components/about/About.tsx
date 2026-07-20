@@ -176,12 +176,12 @@ export default function About() {
             </div>
 
             {/* Right - Portrait */}
-            <div className="w-full md:w-[55%] flex items-end justify-center p-6 md:p-0 bg-gray-50 min-h-[450px] md:min-h-[750px] relative overflow-hidden rounded-r-3xl -ml-4 md:-ml-8">
+            <div className="w-full md:w-[55%] flex items-start justify-center p-6 md:p-0 bg-gray-50 min-h-[450px] md:min-h-[750px] relative overflow-hidden rounded-r-3xl -ml-4 md:-ml-8">
               <img
                 loading="lazy"
                 src="/images/team/team_1.avif"
                 alt="Managing Director - GAURI GROUP"
-                className="w-full h-[550px] md:h-[750px] object-cover object-top"
+                className="w-full h-full object-cover object-top"
               />
             </div>
           </div>

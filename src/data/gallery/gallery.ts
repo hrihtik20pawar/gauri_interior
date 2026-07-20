@@ -20,24 +20,25 @@ interface FolderConfig {
   folder: string;
   title: string;
   category: string;
+  companyLogo?: string;
 }
 
 const folders: FolderConfig[] = [
-  { folder: "6. PENINSULA", title: "Peninsula", category: "Hotels & Restaurants" },
-  { folder: "7. PIPSL CHENNAI GODOWN", title: "PIPSL Chennai Godown", category: "Outlets" },
-  { folder: "8. JAINHIND COLLEGE LABORATORY", title: "Jainhind College Laboratory", category: "Offices" },
-  { folder: "9. SANJAY KAPOOR OFFICE", title: "Sanjay Kapoor Office", category: "Offices" },
-  { folder: "10. ITC GHATKOPAR", title: "ITC Ghatkopar", category: "Hotels & Restaurants" },
-  { folder: "11. TAMARIND TOUR", title: "Tamarind Tour", category: "Hotels & Restaurants" },
-  { folder: "12. BOBBY PAREKH", title: "Bobby Parekh", category: "Residential" },
-  { folder: "13. PRACTICLE FINANCE", title: "Practicle Finance", category: "Offices" },
-  { folder: "14. AMARDEEP PROJECTS", title: "Amardeep Projects", category: "Residential" },
-  { folder: "15. UNITED SHIPPERS", title: "United Shippers", category: "Offices" },
-  { folder: "Bharat Residential", title: "Bharat Residential", category: "Residential" },
-  { folder: "BMR ADVISOR OFFICE", title: "BMR Advisor Office", category: "Offices" },
-  { folder: "CRAVIN CAFE", title: "Cravin Cafe", category: "Hotels & Restaurants" },
-  { folder: "HEMCO PHARMA", title: "Hemco Pharma", category: "Offices" },
-  { folder: "PISPL BPO", title: "PISPL BPO", category: "Offices" },
+  { folder: "6. PENINSULA", title: "Peninsula", category: "Hotels & Restaurants", companyLogo: "/images/clients/client-13-26-37.avif" },
+  { folder: "7. PIPSL CHENNAI GODOWN", title: "PIPSL Chennai Godown", category: "Outlets", companyLogo: "/images/clients/client-13-27-46.avif" },
+  { folder: "8. JAINHIND COLLEGE LABORATORY", title: "Jainhind College Laboratory", category: "Offices", companyLogo: "/images/clients/client-13-28-33.avif" },
+  { folder: "9. SANJAY KAPOOR OFFICE", title: "Sanjay Kapoor Office", category: "Offices", companyLogo: "/images/clients/client-13-30-51.avif" },
+  { folder: "10. ITC GHATKOPAR", title: "ITC Ghatkopar", category: "Hotels & Restaurants", companyLogo: "/images/clients/client-13-31-26.avif" },
+  { folder: "11. TAMARIND TOUR", title: "Tamarind Tour", category: "Hotels & Restaurants", companyLogo: "/images/clients/client-13-33-18.avif" },
+  { folder: "12. BOBBY PAREKH", title: "Bobby Parekh", category: "Residential", companyLogo: "/images/clients/client-13-34-21.avif" },
+  { folder: "13. PRACTICLE FINANCE", title: "Practicle Finance", category: "Offices", companyLogo: "/images/clients/client-13-36-36.avif" },
+  { folder: "14. AMARDEEP PROJECTS", title: "Amardeep Projects", category: "Residential", companyLogo: "/images/clients/client-13-41-57.avif" },
+  { folder: "15. UNITED SHIPPERS", title: "United Shippers", category: "Offices", companyLogo: "/images/clients/client-13-52-04.avif" },
+  { folder: "Bharat Residential", title: "Bharat Residential", category: "Residential", companyLogo: "/images/clients/client-13-53-29.avif" },
+  { folder: "BMR ADVISOR OFFICE", title: "BMR Advisor Office", category: "Offices", companyLogo: "/images/clients/client-14-55-36.avif" },
+  { folder: "CRAVIN CAFE", title: "Cravin Cafe", category: "Hotels & Restaurants", companyLogo: "/images/clients/client-14-56-18.avif" },
+  { folder: "HEMCO PHARMA", title: "Hemco Pharma", category: "Offices", companyLogo: "/images/clients/client-14-58-05.avif" },
+  { folder: "PISPL BPO", title: "PISPL BPO", category: "Offices", companyLogo: "/images/clients/client-15-05-31.avif" },
 ];
 
 const imageFiles: Record<string, string[]> = {
@@ -195,6 +196,7 @@ function buildGalleryItems(): GalleryImage[] {
         title: q.config.title,
         category: q.config.category,
         image: q.files[q.cursor],
+        companyLogo: q.config.companyLogo,
         span: spans[idx % spans.length],
         type: "gallery",
       });

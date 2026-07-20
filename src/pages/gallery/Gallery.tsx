@@ -25,6 +25,7 @@ export default function Gallery() {
   const lenis = useLenis();
   const [heroSlide, setHeroSlide] = useState(0);
 
+
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = `Gallery | ${'Gauri Interior Pvt. Ltd.'}`;
@@ -356,22 +357,6 @@ export default function Gallery() {
           </button>
 
           <div className="w-full h-full flex flex-col items-center justify-center p-2 sm:p-12 lg:p-24" onClick={closeLightbox}>
-            {/* Company Logo or Project Name */}
-            <div className="flex-shrink-0 mb-5 md:mb-7 flex items-center justify-center">
-              {filteredImages[lightboxIndex].companyLogo ? (
-                <img
-                  src={filteredImages[lightboxIndex].companyLogo}
-                  alt={`${filteredImages[lightboxIndex].title} logo`}
-                  className="h-[70px] md:h-[100px] max-w-[260px] object-contain"
-                />
-              ) : (
-                <h4 className="text-xl sm:text-2xl md:text-3xl font-serif text-brand-green/70 tracking-wide text-center italic">
-                  {filteredImages[lightboxIndex].title}
-                </h4>
-              )}
-            </div>
-
-            {/* Image */}
             <img
               src={filteredImages[lightboxIndex].image}
               alt={filteredImages[lightboxIndex].title}
