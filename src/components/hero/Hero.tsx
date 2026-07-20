@@ -73,12 +73,12 @@ export default function Hero() {
               className="w-full h-full object-cover object-[center_65%]"
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
         </div>
       ))}
 
       {/* Content overlay */}
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-24 max-w-7xl mx-auto pt-20">
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-24 max-w-7xl mx-auto pt-24 md:pt-28">
         <div className="max-w-2xl items-start text-left">
           <h1 className="hero-text text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.1] mb-6 drop-shadow-lg">
             Designing Spaces <br /> That Reflect <br /> Your <span className="text-brand-orange">Lifestyle</span>

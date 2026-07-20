@@ -10,7 +10,7 @@ const timelineSteps = [
     num: "01",
     title: "Gauri Group Founded",
     highlight: "Gauri Group",
-    image: "/images/WEBSITE/2) HOTEL & RESTAURANT/4) ESKANA RESORT AND SPA/ESKANA RESORT AND SPA (032).avif",
+    image: "/images/Final_Images/Bharat Residential/WhatsApp Image 2026-07-17 at 15.55.53.avif",
     items: [
       "Our journey began in 1993.",
       "Mr. Lalbachan Vishwakarma entered the Furniture Industry.",
@@ -23,7 +23,7 @@ const timelineSteps = [
     num: "02",
     title: "The Beginning",
     highlight: "",
-    image: "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
+    image: "/images/Final_Images/HEMCO PHARMA/WhatsApp Image 2026-07-18 at 11.43.21.avif",
     items: [
       "Slowly and steadily.",
       "We evolved & started delivering complete Turnkey Projects.",
@@ -36,7 +36,7 @@ const timelineSteps = [
     num: "03",
     title: "Gauri Interior Pvt. Ltd.",
     highlight: "Gauri Interior Pvt. Ltd.",
-    image: "/images/WEBSITE/2) HOTEL & RESTAURANT/1) CRAVIN CAFE/CRAVIN CAFE FINAL PHOTO/Cravin Cafe (32).avif",
+    image: "/images/Final_Images/CRAVIN CAFE/WhatsApp Image 2026-07-18 at 14.38.40.avif",
     items: [
       "With the vision of our current MD & CEO Mr. Shilkumar L. Vishwakarma.",
       "We launched our 1st venture.",
@@ -48,7 +48,7 @@ const timelineSteps = [
     num: "04",
     title: "Nikhil Enterprise",
     highlight: "Nikhil Enterprise",
-    image: "/images/WEBSITE/4) JEWELLARY SHOPE/1) KRA/KRA (1).avif",
+    image: "/images/Final_Images/BMR ADVISOR OFFICE/WhatsApp Image 2026-07-18 at 11.13.08.avif",
     items: [
       "Expanded further with our second venture.",
       "NIKHIL ENTERPRISES.",
@@ -60,7 +60,7 @@ const timelineSteps = [
     num: "05",
     title: "GAURI'S KITCHEN",
     highlight: "GAURI'S KITCHEN",
-    image: "/images/WEBSITE/9) DISPLAY UNIT/1) Big Mishra/BIG MISHRA FINAL PHOTO/BIG MISHRA (1).avif",
+    image: "/images/Final_Images/6. PENINSULA/WhatsApp Image 2026-07-18 at 11.48.05.avif",
     items: [
       "We brought comfort and style to every home.",
       "Launched GAURI'S KITCHEN.",
@@ -73,7 +73,7 @@ const timelineSteps = [
     num: "06",
     title: "Gauri Designing Studio",
     highlight: "Gauri Designing Studio",
-    image: "/images/WEBSITE/1) OFFICES/4) PISPL CALL CENTER/PISPL CALL CENTER FINAL PHOTO/IMG_0335.avif",
+    image: "/images/Final_Images/PISPL BPO/WhatsApp Image 2026-07-18 at 11.27.48.avif",
     items: [
       "Upcoming venture.",
       "GAURI'S DESIGNING STUDIO.",

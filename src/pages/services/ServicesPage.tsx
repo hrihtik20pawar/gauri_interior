@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ServicesHero from '../about/ServicesHero';
 import WhoWeAre from '../about/WhoWeAre';
 import VisionMission from '../about/VisionMission';
 import OurServices from '../about/OurServices';
@@ -18,9 +19,12 @@ export default function ServicesPage() {
 
   return (
     <main className="min-h-screen bg-[#faf9f6]">
+      <ServicesHero />
       <WhoWeAre />
       <VisionMission />
-      <OurServices />
+      <div id="our-services">
+        <OurServices />
+      </div>
       <WhyChooseUs />
       <CoreValues />
       <AboutCta />

@@ -11,9 +11,18 @@
   --color-brand-beige: #f9f6f0;
 }
 
-body {
+html, body {
+  margin: 0;
+  padding: 0;
   background-color: #faf9f6;
   color: #333333;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes fadeIn {

@@ -46,7 +46,7 @@ export default function TeamMemberDetail() {
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === currentSlide ? 'opacity-100' : 'opacity-0'}`}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-green/70 via-brand-green/50 to-brand-green/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-brand-green/50 to-brand-green/80" />
         <div className="relative z-10 h-full flex items-center px-6 md:px-12 lg:px-24">
           <div className="max-w-6xl mx-auto w-full">
             <div className="flex flex-col md:flex-row items-center gap-12">

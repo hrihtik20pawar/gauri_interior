@@ -19,12 +19,12 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20 || !isHome);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isHome]);
+  }, []);
 
   useEffect(() => {
     setIsOpen(false);
@@ -83,7 +83,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav ref={navRef} className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-5'}`}>
+    <nav ref={navRef} className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-5'}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
 
         <Link to="/" className="nav-item block shrink-0 min-w-0 overflow-visible max-w-[45vw]">
@@ -182,7 +182,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`lg:hidden fixed left-0 right-0 bg-white border-b border-gray-100 shadow-xl z-40 overflow-y-auto transition-all duration-300 ease-in-out ${
+        className={`lg:hidden fixed left-0 right-0 bg-black/60 backdrop-blur-xl border-b border-white/10 z-40 overflow-y-auto transition-all duration-300 ease-in-out ${
           isOpen 
             ? 'opacity-100 translate-y-0 pointer-events-auto' 
             : 'opacity-0 -translate-y-4 pointer-events-none'
@@ -196,10 +196,10 @@ export default function Navbar() {
               <Link 
                 key={i} 
                 to={link.path} 
-                className={`font-medium py-3.5 block transition-colors border-b border-gray-100 last:border-b-0 ${
+                className={`font-medium py-3.5 block transition-colors border-b border-white/10 last:border-b-0 ${
                   isActive 
                     ? 'text-brand-orange border-l-4 border-brand-orange pl-4 -ml-[1px]' 
-                    : 'text-gray-700 hover:text-brand-orange hover:bg-gray-50 rounded-lg px-2'
+                    : 'text-white hover:text-brand-orange hover:bg-white/5 rounded-lg px-2'
                 }`}
               >
                 {link.name}
@@ -208,7 +208,7 @@ export default function Navbar() {
           })}
 
           {/* Mobile Get in Touch */}
-          <div ref={mobileContactRef} className="mt-4 pt-4 border-t border-gray-100">
+          <div ref={mobileContactRef} className="mt-4 pt-4 border-t border-white/10">
             <button
               onClick={() => setContactOpen(!contactOpen)}
               className="w-full text-center bg-brand-orange text-white py-3 rounded-lg font-medium hover:bg-brand-orange/90 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2"
@@ -217,16 +217,16 @@ export default function Navbar() {
             </button>
 
             <div className={`overflow-hidden transition-all duration-300 ease-in-out ${contactOpen ? 'max-h-[200px] opacity-100 mt-3' : 'max-h-0 opacity-0'}`}>
-              <div className="bg-gray-50 rounded-xl overflow-hidden border border-gray-100">
+              <div className="bg-white/10 rounded-xl overflow-hidden border border-white/10">
                 <a
                   href={`tel:${siteConfig.contact.phones[0].replace(/-/g, '')}`}
-                  className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors"
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-white/10 transition-colors"
                   onClick={() => { setContactOpen(false); setIsOpen(false); }}
                 >
                   <Phone className="w-5 h-5 text-brand-teal" />
                   <div>
-                    <p className="text-sm font-medium text-gray-900">Call Us</p>
-                    <p className="text-xs text-gray-500">{siteConfig.contact.phones[0]}</p>
+                    <p className="text-sm font-medium text-white">Call Us</p>
+                    <p className="text-xs text-white/60">{siteConfig.contact.phones[0]}</p>
                   </div>
                 </a>
 
@@ -234,13 +234,13 @@ export default function Navbar() {
                   href={`mailto:${siteConfig.contact.email}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors"
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-white/10 transition-colors"
                   onClick={() => { setContactOpen(false); setIsOpen(false); }}
                 >
                   <Mail className="w-5 h-5 text-brand-orange" />
                   <div>
-                    <p className="text-sm font-medium text-gray-900">Email Us</p>
-                    <p className="text-xs text-gray-500">{siteConfig.contact.email}</p>
+                    <p className="text-sm font-medium text-white">Email Us</p>
+                    <p className="text-xs text-white/60">{siteConfig.contact.email}</p>
                   </div>
                 </a>
 
@@ -248,13 +248,13 @@ export default function Navbar() {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors"
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-white/10 transition-colors"
                   onClick={() => { setContactOpen(false); setIsOpen(false); }}
                 >
-                  <MessageCircle className="w-5 h-5 text-green-600" />
+                  <MessageCircle className="w-5 h-5 text-green-400" />
                   <div>
-                    <p className="text-sm font-medium text-gray-900">WhatsApp</p>
-                    <p className="text-xs text-gray-500">{siteConfig.contact.whatsappDisplay}</p>
+                    <p className="text-sm font-medium text-white">WhatsApp</p>
+                    <p className="text-xs text-white/60">{siteConfig.contact.whatsappDisplay}</p>
                   </div>
                 </a>
               </div>

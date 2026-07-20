@@ -176,11 +176,56 @@ export default function Gallery() {
   }, [lightboxIndex, filteredImages.length]);
 
   return (
-    <div className="min-h-screen bg-[#faf9f6] pb-24">
-      {/* Hero Section with Slideshow */}
+    <div className="min-h-screen bg-[#faf9f6] pb-24 overflow-x-hidden">
+      {/* Mobile Hero - extends behind navbar */}
+      <div className="sm:hidden relative w-full h-[70vh] min-h-[400px] overflow-hidden -mt-[64px]">
+        {heroSlides.map((src, i) => (
+          <div
+            key={src}
+            className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+            style={{ opacity: heroSlide === i ? 1 : 0 }}
+          >
+            <img src={src} alt="" loading={i === 0 ? "eager" : "lazy"} className="w-full h-full object-cover object-[center_65%]" />
+          </div>
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
+
+        {/* Mobile content overlay */}
+        <div className="relative z-10 h-full flex flex-col justify-end px-4 pb-6 pt-20">
+          <p className="text-brand-orange font-bold tracking-wider uppercase text-xs mb-2">Curated Portfolio</p>
+          <h1 className="text-3xl font-serif text-white mb-3">Our Gallery</h1>
+          <div className="relative mb-3">
+            <input
+              type="text"
+              placeholder="Search projects..."
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white/90 backdrop-blur-sm border border-white/20 focus:outline-none focus:ring-2 focus:ring-brand-teal/50 transition-all text-gray-700 shadow-sm text-sm"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {galleryCategories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
+                  activeCategory === cat
+                    ? 'bg-brand-teal text-white shadow-lg shadow-teal-900/20'
+                    : 'bg-white/90 backdrop-blur-sm text-gray-700 hover:bg-white border border-white/30'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Hero Section with Slideshow - desktop/tablet only */}
       <div 
         ref={heroRef} 
-        className="relative h-[100dvh] min-h-[500px] sm:min-h-[600px] md:min-h-[700px] overflow-hidden"
+        className="relative w-full hidden sm:block h-[100dvh] min-h-[500px] md:min-h-[700px] overflow-hidden"
         onTouchStart={handleHeroTouchStart}
         onTouchEnd={handleHeroTouchEnd}
       >
@@ -190,14 +235,15 @@ export default function Gallery() {
             className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
             style={{ opacity: heroSlide === i ? 1 : 0 }}
           >
-            <img src={src} alt="" loading={i === 0 ? "eager" : "lazy"} className="w-full h-full object-cover" />
+            <img src={src} alt="" loading={i === 0 ? "eager" : "lazy"} className="w-full h-full object-cover object-[center_65%]" />
           </div>
         ))}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center px-6">
             <p className="gallery-hero-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Curated Portfolio</p>
-            <h1 className="gallery-hero-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6">Our Gallery</h1>
+            <h1 className="gallery-hero-text text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6">Our Gallery</h1>
             <p className="gallery-hero-text text-white/80 text-base sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-10 leading-relaxed px-2">
               A visual journey through our finest projects, showcasing the intersection of premium materials, flawless execution, and architectural elegance.
             </p>
@@ -250,7 +296,7 @@ export default function Gallery() {
       </div>
 
       {/* Gallery Grid */}
-      <div className="px-4 md:px-8 lg:px-16 max-w-[1800px] mx-auto mt-8 sm:mt-16">
+      <div className="px-4 md:px-8 lg:px-16 max-w-[1800px] mx-auto mt-6 sm:mt-8 md:mt-16">
         <div ref={galleryRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 auto-rows-[250px] sm:auto-rows-[300px] md:auto-rows-[400px]">
           {filteredImages.map((item, index) => {
             const showStoryBlock = (index + 1) % 7 === 0;

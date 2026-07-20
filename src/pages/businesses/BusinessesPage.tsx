@@ -17,7 +17,7 @@ export default function BusinessesPage() {
       {/* Hero Section */}
       <section className="relative h-[100dvh] min-h-[500px] overflow-hidden">
         <img src={images.about.hero} alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-green/70 via-brand-green/50 to-brand-green/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-brand-green/50 to-brand-green/80" />
         <div className="relative z-10 h-full flex items-center justify-center px-6">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Our Companies</p>
