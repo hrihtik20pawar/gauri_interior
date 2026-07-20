@@ -243,13 +243,13 @@ export default function App() {
 
                   {/* Social Media */}
                   <div className="flex gap-3 mt-6">
-                    <a href="https://www.instagram.com/gauri_group__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
+                    <a href="https://www.instagram.com/gauri_group__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
                       <Instagram className="w-5 h-5 text-white" />
                     </a>
-                    <a href="https://www.linkedin.com/company/gauri-interior/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
+                    <a href="https://www.linkedin.com/company/gauri-interior/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
                       <Linkedin className="w-5 h-5 text-white" />
                     </a>
-                    <a href="https://www.facebook.com/gauriinterior" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
+                    <a href="https://www.facebook.com/gauriinterior" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
                       <Facebook className="w-5 h-5 text-white" />
                     </a>
                   </div>
@@ -263,9 +263,9 @@ export default function App() {
               <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-24 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
                 <p className="text-white/40 text-sm">© {new Date().getFullYear()} <BrandName as="span">Gauri Interior Pvt. Ltd.</BrandName> All rights reserved.</p>
                 <div className="flex gap-4 sm:gap-6">
-                  <a href="#contact-us" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">Contact Us</a>
-                  <Link to="/about" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">About Us</Link>
-                  <Link to="/gallery" className="text-white/40 text-sm hover:text-white/70 transition-colors py-2">Gallery</Link>
+                  <a href="#contact-us" className="text-white/40 text-sm hover:text-white/70 transition-colors py-3">Contact Us</a>
+                  <Link to="/about" className="text-white/40 text-sm hover:text-white/70 transition-colors py-3">About Us</Link>
+                  <Link to="/gallery" className="text-white/40 text-sm hover:text-white/70 transition-colors py-3">Gallery</Link>
                 </div>
               </div>
             </div>

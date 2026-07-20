@@ -42,7 +42,7 @@ export default function TeamMemberDetail() {
           <img
             key={idx}
             src={slide}
-            alt=""
+            alt="Interior design showcase"
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === currentSlide ? 'opacity-100' : 'opacity-0'}`}
           />
         ))}

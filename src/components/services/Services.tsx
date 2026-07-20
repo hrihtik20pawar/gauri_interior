@@ -139,7 +139,7 @@ export default function Services() {
                     <div className="text-teal-700 mb-2 p-2 rounded-lg bg-teal-50/50">
                       {feat.icon}
                     </div>
-                    <p className="text-[10px] text-gray-600 font-medium whitespace-pre-line leading-tight">{feat.label}</p>
+                    <p className="text-xs text-gray-600 font-medium whitespace-pre-line leading-tight">{feat.label}</p>
                   </div>
                 ))}
               </div>

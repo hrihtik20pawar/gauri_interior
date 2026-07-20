@@ -123,7 +123,7 @@ export default function Stats() {
 
         {/* Motto */}
       <div className="stats-motto mt-14 flex justify-center">
-  <p className="text-white/80 text-lg md:text-xl tracking-wide text-center whitespace-nowrap">
+  <p className="text-white/80 text-lg md:text-xl tracking-wide text-center">
     Our Motto —{" "}
     <span className="text-brand-orange font-medium italic">
       "Designing Spaces. Building Relationships. Creating Excellence."

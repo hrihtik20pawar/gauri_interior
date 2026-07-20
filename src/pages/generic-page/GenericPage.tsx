@@ -13,7 +13,7 @@ export default function GenericPage({ title, description }: { title: string, des
   return (
     <div className="min-h-screen bg-white">
       <div className="relative h-[100dvh] min-h-[500px] overflow-hidden">
-        <img src={images.about.hero} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={images.about.hero} alt="Page hero background" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-brand-green/50 to-brand-green/80" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-white mb-6">{title}</h1>

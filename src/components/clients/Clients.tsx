@@ -3,21 +3,21 @@ import gsap from 'gsap';
 import { useRef } from 'react';
 
 const clients = [
-  { name: "Client 1", logo: "/images/clients/client-13-26-37.avif" },
-  { name: "Client 2", logo: "/images/clients/client-13-27-46.avif" },
-  { name: "Client 3", logo: "/images/clients/client-13-28-33.avif" },
-  { name: "Client 4", logo: "/images/clients/client-13-30-51.avif" },
-  { name: "Client 5", logo: "/images/clients/client-13-31-26.avif" },
-  { name: "Client 6", logo: "/images/clients/client-13-33-18.avif" },
-  { name: "Client 7", logo: "/images/clients/client-13-34-21.avif" },
-  { name: "Client 8", logo: "/images/clients/client-13-36-36.avif" },
-  { name: "Client 9", logo: "/images/clients/client-13-41-57.avif" },
-  { name: "Client 10", logo: "/images/clients/client-13-52-04.avif" },
-  { name: "Client 11", logo: "/images/clients/client-13-53-29.avif" },
-  { name: "Client 12", logo: "/images/clients/client-14-55-36.avif" },
-  { name: "Client 13", logo: "/images/clients/client-14-56-18.avif" },
-  { name: "Client 14", logo: "/images/clients/client-14-58-05.avif" },
-  { name: "Client 15", logo: "/images/clients/client-15-05-31.avif" },
+  { name: "GTC", logo: "/images/clients/client-13-26-37.avif" },
+  { name: "Mahindra", logo: "/images/clients/client-13-27-46.avif" },
+  { name: "TATA", logo: "/images/clients/client-13-28-33.avif" },
+  { name: "SBI", logo: "/images/clients/client-13-30-51.avif" },
+  { name: "Reliance", logo: "/images/clients/client-13-31-26.avif" },
+  { name: "Bajaj", logo: "/images/clients/client-13-33-18.avif" },
+  { name: "KPMG", logo: "/images/clients/client-13-34-21.avif" },
+  { name: "JCB", logo: "/images/clients/client-13-36-36.avif" },
+  { name: "Adani", logo: "/images/clients/client-13-41-57.avif" },
+  { name: "Infosys", logo: "/images/clients/client-13-52-04.avif" },
+  { name: "Wipro", logo: "/images/clients/client-13-53-29.avif" },
+  { name: "HDFC", logo: "/images/clients/client-14-55-36.avif" },
+  { name: "ITC", logo: "/images/clients/client-14-56-18.avif" },
+  { name: "Vardhman", logo: "/images/clients/client-14-58-05.avif" },
+  { name: "Cafco", logo: "/images/clients/client-15-05-31.avif" },
 ];
 
 const clientsRow2 = [...clients].reverse();

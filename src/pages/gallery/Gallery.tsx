@@ -185,7 +185,7 @@ export default function Gallery() {
             className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
             style={{ opacity: heroSlide === i ? 1 : 0 }}
           >
-            <img src={src} alt="" loading={i === 0 ? "eager" : "lazy"} className="w-full h-full object-cover object-[center_65%]" />
+            <img src={src} alt="Interior design gallery showcase" loading={i === 0 ? "eager" : "lazy"} className="w-full h-full object-cover object-[center_65%]" />
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
@@ -198,7 +198,7 @@ export default function Gallery() {
             <input
               type="text"
               placeholder="Search projects..."
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white/90 backdrop-blur-sm border border-white/20 focus:outline-none focus:ring-2 focus:ring-brand-teal/50 transition-all text-gray-700 shadow-sm text-sm"
+              className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/90 backdrop-blur-sm border border-white/20 focus:outline-none focus:ring-2 focus:ring-brand-teal/50 transition-all text-gray-700 shadow-sm text-sm"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -209,7 +209,7 @@ export default function Gallery() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
+                className={`px-3 py-2.5 rounded-full text-xs font-medium transition-all duration-300 ${
                   activeCategory === cat
                     ? 'bg-brand-teal text-white shadow-lg shadow-teal-900/20'
                     : 'bg-white/90 backdrop-blur-sm text-gray-700 hover:bg-white border border-white/30'
@@ -235,7 +235,7 @@ export default function Gallery() {
             className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
             style={{ opacity: heroSlide === i ? 1 : 0 }}
           >
-            <img src={src} alt="" loading={i === 0 ? "eager" : "lazy"} className="w-full h-full object-cover object-[center_65%]" />
+            <img src={src} alt="Interior design gallery showcase" loading={i === 0 ? "eager" : "lazy"} className="w-full h-full object-cover object-[center_65%]" />
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
@@ -282,12 +282,13 @@ export default function Gallery() {
         </div>
 
         {/* Slide indicators */}
-        <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+        <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-1">
           {heroSlides.map((_, i) => (
             <button
               key={i}
               onClick={() => setHeroSlide(i)}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              aria-label={`Go to slide ${i + 1}`}
+              className={`min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full transition-all duration-300 ${
                 heroSlide === i ? 'bg-brand-orange w-8' : 'bg-white/50 hover:bg-white/80'
               }`}
             />
@@ -366,7 +367,10 @@ export default function Gallery() {
 
       {/* Lightbox */}
       {lightboxIndex !== null && filteredImages[lightboxIndex] && createPortal(
-        <div 
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image lightbox"
           className="fixed inset-0 z-[200] bg-white/95 backdrop-blur-xl flex items-center justify-center"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}

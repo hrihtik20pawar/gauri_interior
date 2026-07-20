@@ -5,8 +5,8 @@ interface LinkedInIconProps {
 }
 
 const sizeMap = {
-  sm: { wrapper: 'w-7 h-7', icon: 'w-3 h-3' },
-  md: { wrapper: 'w-9 h-9', icon: 'w-4 h-4' },
+  sm: { wrapper: 'w-8 h-8', icon: 'w-3 h-3' },
+  md: { wrapper: 'w-11 h-11', icon: 'w-4 h-4' },
   lg: { wrapper: 'w-11 h-11', icon: 'w-5 h-5' },
 };
 
@@ -19,6 +19,7 @@ export default function LinkedInIcon({ href, size = 'md', variant = 'dark' }: Li
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="LinkedIn profile"
       onClick={(e) => e.stopPropagation()}
       className={`inline-flex items-center justify-center ${s.wrapper} rounded-full transition-all duration-300 hover:-translate-y-[3px] mx-auto ${
         isLight
@@ -27,6 +28,7 @@ export default function LinkedInIcon({ href, size = 'md', variant = 'dark' }: Li
       }`}
     >
       <svg
+        aria-hidden="true"
         className={`${s.icon} transition-colors duration-300 ${
           isLight ? 'text-white' : 'text-[#0A66C2] group-hover:text-white'
         }`}

@@ -174,9 +174,9 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          <span className="block w-6 h-[2px] bg-white rounded-full transition-all duration-300"></span>
-          <span className="block w-6 h-[2px] bg-white rounded-full transition-all duration-300"></span>
-          <span className="block w-6 h-[2px] bg-white rounded-full transition-all duration-300"></span>
+          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 ${scrolled ? 'bg-gray-700' : 'bg-white'}`}></span>
+          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 ${scrolled ? 'bg-gray-700' : 'bg-white'}`}></span>
+          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 ${scrolled ? 'bg-gray-700' : 'bg-white'}`}></span>
         </button>
       </div>
 

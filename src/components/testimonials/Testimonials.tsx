@@ -79,26 +79,29 @@ export default function Testimonials() {
 
           {/* Navigation */}
           <div className="flex items-center justify-between mt-10">
-            <div className="flex gap-2">
+            <div className="flex gap-1">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
+                  aria-label={`Go to testimonial ${index + 1}`}
+                  className={`min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full transition-all duration-300 ${
                     index === currentIndex ? 'bg-brand-orange w-10' : 'bg-gray-300 w-2'
                   }`}
                 />
               ))}
             </div>
             <div className="flex gap-3">
-              <button 
+              <button
                 onClick={goToPrevious}
+                aria-label="Previous testimonial"
                 className="w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all duration-300"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
-              <button 
+              <button
                 onClick={goToNext}
+                aria-label="Next testimonial"
                 className="w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all duration-300"
               >
                 <ChevronRight className="w-5 h-5" />
