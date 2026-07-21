@@ -53,7 +53,7 @@ export default function Hero() {
     <section 
       ref={container} 
       id="hero"
-      className="relative w-full h-[100dvh] min-h-[600px] flex items-center overflow-hidden"
+      className="relative w-full h-screen min-h-[600px] flex items-center overflow-hidden -mt-[76px] pt-[76px]"
     >
       {heroSlides.map((src, i) => (
         <div

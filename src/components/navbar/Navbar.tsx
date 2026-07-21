@@ -80,7 +80,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav ref={navRef} className={`fixed w-full z-50 bg-white border-b-2 border-brand-green transition-all duration-500 ${scrolled ? 'shadow-sm py-2' : 'py-3'}`}>
+    <nav ref={navRef} className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white shadow-sm py-2 border-b-2 border-brand-green' : 'bg-transparent py-4 border-b-2 border-white/20'}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
 
         <Link to="/" className="nav-item block shrink-0 min-w-0 overflow-visible max-w-[45vw]">
@@ -94,7 +94,7 @@ export default function Navbar() {
               <Link
                 key={i}
                 to={link.path}
-                className={`nav-item transition-colors hover:text-brand-orange text-gray-700 ${isActive ? 'border-b-2 border-brand-green pb-1 text-brand-green font-semibold' : ''}`}
+                className={`nav-item transition-colors hover:text-brand-orange ${scrolled ? 'text-gray-700' : 'text-white'} ${isActive ? (scrolled ? 'border-b-2 border-brand-green pb-1 text-brand-green font-semibold' : 'border-b-2 border-brand-orange pb-1 text-brand-orange') : ''}`}
               >
                 {link.name}
               </Link>
@@ -168,9 +168,9 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 bg-gray-900`}></span>
-          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 bg-gray-900`}></span>
-          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 bg-gray-900`}></span>
+          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 ${scrolled ? 'bg-gray-900' : 'bg-white'}`}></span>
+          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 ${scrolled ? 'bg-gray-900' : 'bg-white'}`}></span>
+          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 ${scrolled ? 'bg-gray-900' : 'bg-white'}`}></span>
         </button>
       </div>
 
