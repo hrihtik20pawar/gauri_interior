@@ -30,7 +30,6 @@ export default function Navbar() {
     setIsOpen(false);
   }, [location.pathname]);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -40,14 +39,12 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ''; };
   }, [isOpen]);
 
-  // Track navbar height for mobile menu positioning
   useEffect(() => {
     if (navRef.current) {
       setNavHeight(navRef.current.offsetHeight);
     }
   }, [scrolled, isOpen]);
 
-  // Click outside to close contact dropdown
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       const target = event.target as Node;
@@ -83,11 +80,11 @@ export default function Navbar() {
   ];
 
   return (
-    <nav ref={navRef} className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white shadow-sm py-2' : 'bg-transparent py-5'}`}>
+    <nav ref={navRef} className={`fixed w-full z-50 bg-white border-b-2 border-brand-green transition-all duration-500 ${scrolled ? 'shadow-sm py-2' : 'py-3'}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
 
         <Link to="/" className="nav-item block shrink-0 min-w-0 overflow-visible max-w-[45vw]">
-          <Logo isDark={true} size="lg" className={`${scrolled ? 'scale-[0.35] sm:scale-[0.4] md:scale-[0.55] lg:scale-75' : 'scale-[0.5] sm:scale-[0.55] md:scale-75 lg:scale-100'} origin-left transition-transform duration-300`} />
+          <Logo isDark={false} size="lg" className={`${scrolled ? 'scale-[0.35] sm:scale-[0.4] md:scale-[0.55] lg:scale-75' : 'scale-[0.5] sm:scale-[0.55] md:scale-75 lg:scale-100'} origin-left transition-transform duration-300`} />
         </Link>
 
         <div className="hidden lg:flex items-center gap-8 text-sm font-medium shrink-0">
@@ -97,7 +94,7 @@ export default function Navbar() {
               <Link
                 key={i}
                 to={link.path}
-                className={`nav-item transition-colors hover:text-brand-orange ${scrolled ? 'text-gray-900' : 'text-gray-100'} ${isActive ? 'border-b-2 border-brand-orange pb-1 text-brand-orange' : ''}`}
+                className={`nav-item transition-colors hover:text-brand-orange text-gray-700 ${isActive ? 'border-b-2 border-brand-green pb-1 text-brand-green font-semibold' : ''}`}
               >
                 {link.name}
               </Link>
@@ -108,7 +105,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-6 nav-item relative" ref={desktopContactRef}>
           <button
             onClick={() => setContactOpen(!contactOpen)}
-            className="bg-brand-orange text-white px-5 py-2.5 rounded-lg font-medium hover:bg-brand-orange/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-brand-orange/15 text-sm flex items-center gap-2"
+            className="bg-brand-orange text-white px-6 py-2.5 rounded-full font-medium hover:bg-brand-orange/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-brand-orange/15 text-sm"
           >
             Get in Touch
           </button>
@@ -171,9 +168,9 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 ${scrolled ? 'bg-gray-900' : 'bg-white'}`}></span>
-          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 ${scrolled ? 'bg-gray-900' : 'bg-white'}`}></span>
-          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 ${scrolled ? 'bg-gray-900' : 'bg-white'}`}></span>
+          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 bg-gray-900`}></span>
+          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 bg-gray-900`}></span>
+          <span className={`block w-6 h-[2px] rounded-full transition-all duration-300 bg-gray-900`}></span>
         </button>
       </div>
 
@@ -206,7 +203,7 @@ export default function Navbar() {
           <div ref={mobileContactRef} className="mt-4 pt-4 border-t border-white/10">
             <button
               onClick={() => setContactOpen(!contactOpen)}
-              className="w-full text-center bg-brand-orange text-white py-3 rounded-lg font-medium hover:bg-brand-orange/90 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2"
+              className="w-full text-center bg-brand-orange text-white py-3 rounded-full font-medium hover:bg-brand-orange/90 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2"
             >
               Get in Touch
             </button>
