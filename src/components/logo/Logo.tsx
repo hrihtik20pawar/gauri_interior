@@ -8,24 +8,38 @@ function TypewriterText({ text, className }: { text: string, className?: string 
   );
 }
 
+const tileConfig = [
+  { color: 'bg-brand-teal', depth: 'shadow-[2px_4px_6px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]' },
+  { color: 'bg-[#1a1a1a]', depth: 'shadow-[2px_4px_6px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]' },
+  { color: 'bg-[#1a1a1a]', depth: 'shadow-[2px_4px_6px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]' },
+  { color: 'bg-[#1a1a1a]', depth: 'shadow-[2px_4px_6px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]' },
+  { color: 'bg-brand-teal', depth: 'shadow-[2px_4px_6px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]' },
+  { color: 'bg-[#1a1a1a]', depth: 'shadow-[2px_4px_6px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]' },
+  { color: 'bg-[#1a1a1a]', depth: 'shadow-[2px_4px_6px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]' },
+  { color: 'bg-[#1a1a1a]', depth: 'shadow-[2px_4px_6px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]' },
+  { color: 'bg-brand-teal', depth: 'shadow-[2px_4px_6px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]' },
+];
+
 export default function Logo({ className = "", isDark = false, size = "sm", typewriter = false, blueprint = false, showSubtitle = true }: { className?: string, isDark?: boolean, size?: "sm" | "lg", typewriter?: boolean, blueprint?: boolean, showSubtitle?: boolean }) {
   const isLarge = size === "lg";
   const headingClass = `${isLarge ? 'text-5xl' : 'text-3xl'} font-semibold tracking-wide transition-colors leading-none whitespace-nowrap ${isDark ? 'text-white' : 'text-brand-teal'}`;
 
   const dotClass = "absolute left-1/2 -translate-x-1/2 bg-brand-orange rounded-full w-[0.19em] h-[0.19em] -top-[0.12em]";
 
+  const tileGap = isLarge ? 'gap-[5px]' : 'gap-[3px]';
+  const tileSize = isLarge ? 'w-[22px] h-[22px]' : 'w-[15px] h-[15px]';
+
   return (
     <div className={`flex items-start gap-3 ${className}`}>
-      <div className={`grid grid-cols-3 gap-[2px] shrink-0 bg-white p-[2px] ${isLarge ? 'w-20 h-20' : 'w-14 h-14'}`}>
-        {[...Array(9)].map((_, i) => {
-          const isCenter = i === 4;
+      <div className={`grid grid-cols-3 ${tileGap} shrink-0 ${isLarge ? 'w-[76px] h-[76px]' : 'w-[53px] h-[53px]'}`}>
+        {tileConfig.map((tile, i) => {
           const tileClass = blueprint ? 'bp-tile' : '';
           const tileStyle = blueprint ? { opacity: 0 } : {};
           return (
             <div 
               key={i} 
-              className={`${isCenter ? 'bg-brand-teal' : 'bg-black'} w-full h-full transition-colors ${tileClass}`}
-              style={tileStyle}
+              className={`${tileSize} ${tile.color} ${tile.depth} rounded-[2px] transition-all ${tileClass}`}
+              style={{ ...tileStyle, transform: 'translateZ(0)' }}
             ></div>
           )
         })}
