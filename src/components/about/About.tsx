@@ -179,23 +179,18 @@ export default function About() {
           <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
         </div>
 
-        <div className="relative group overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
-
-          <div className="flex gap-6 animate-marquee group-hover:[animation-play-state:paused]">
-            {[...whyChooseItems, ...whyChooseItems].map((item, idx) => (
-              <div key={idx} onClick={() => setSelectedReason(item)} className="flex items-center gap-4 bg-white border border-gray-100 rounded-xl px-6 py-4 shadow-sm shrink-0 min-w-[280px] cursor-pointer hover:shadow-md hover:border-brand-orange/30 transition-all">
-                <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0">
-                  <item.icon className="w-5 h-5 text-brand-orange" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 text-sm">{item.title}</h4>
-                  <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
-                </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {whyChooseItems.slice(0, 4).map((item, idx) => (
+            <div key={idx} onClick={() => setSelectedReason(item)} className="flex items-center gap-4 bg-white border border-gray-100 rounded-xl px-6 py-4 shadow-sm cursor-pointer hover:shadow-md hover:border-brand-orange/30 transition-all">
+              <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0">
+                <span className="text-brand-orange font-bold text-sm">{idx + 1}</span>
               </div>
-            ))}
-          </div>
+              <div>
+                <h4 className="font-bold text-gray-900 text-sm">{item.title}</h4>
+                <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
