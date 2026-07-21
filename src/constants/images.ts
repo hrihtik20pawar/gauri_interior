@@ -4,8 +4,6 @@ export const images = {
   hero: {
     slides: [
       "/images/Final_Images/HomeScreen/homescreen1.jpeg",
-      "/images/Final_Images/HomeScreen/homescreen2.jpeg",
-      "/images/Final_Images/HomeScreen/homescreen3.jpeg",
     ],
   },
 
