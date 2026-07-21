@@ -42,29 +42,23 @@ export default function Testimonials() {
   return (
     <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white">
       <div className="max-w-5xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-12">
           <p className="text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Testimonials</p>
           <h2 className="text-3xl md:text-4xl font-serif text-brand-green mb-4">What Our Clients Say</h2>
           <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
         </div>
 
-        {/* Testimonial Card */}
         <div className="relative bg-gray-50 rounded-3xl p-8 md:p-12 lg:p-16">
-          {/* Quote Icon */}
           <div className="mb-6">
             <Quote className="w-10 h-10 text-brand-orange/30" />
           </div>
 
-          {/* Content */}
           <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-8">
             "{testimonials[currentIndex].content}"
           </p>
 
-          {/* Divider */}
           <div className="w-16 h-0.5 bg-brand-orange mb-6"></div>
 
-          {/* Author Info */}
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-full bg-brand-teal flex items-center justify-center">
               <span className="text-white font-bold text-xl">
@@ -77,7 +71,6 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Navigation */}
           <div className="flex items-center justify-between mt-10">
             <div className="flex gap-1">
               {testimonials.map((_, index) => (

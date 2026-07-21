@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom';
 import gsap from 'gsap';
 import { ChevronLeft, ChevronRight, X, Maximize2, Search } from 'lucide-react';
 import { galleryImages, galleryCategories, GalleryImage } from '../../data/gallery/gallery';
-import Logo from '../../components/logo/Logo';
 import { useLenis } from '../../App';
 import { useSearchParams } from 'react-router-dom';
 
@@ -177,7 +176,7 @@ export default function Gallery() {
 
   return (
     <div className="min-h-screen bg-[#faf9f6] pb-24 overflow-x-hidden">
-      {/* Mobile Hero - extends behind navbar */}
+
       <div className="sm:hidden relative w-full h-[70vh] min-h-[400px] overflow-hidden -mt-[64px]">
         {heroSlides.map((src, i) => (
           <div
@@ -190,7 +189,6 @@ export default function Gallery() {
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
 
-        {/* Mobile content overlay */}
         <div className="relative z-10 h-full flex flex-col justify-end px-4 pb-6 pt-20">
           <p className="text-brand-orange font-bold tracking-wider uppercase text-xs mb-2">Curated Portfolio</p>
           <h1 className="text-3xl font-serif text-white mb-3">Our Gallery</h1>
@@ -222,7 +220,6 @@ export default function Gallery() {
         </div>
       </div>
 
-      {/* Hero Section with Slideshow - desktop/tablet only */}
       <div 
         ref={heroRef} 
         className="relative w-full hidden sm:block h-[100dvh] min-h-[500px] md:min-h-[700px] overflow-hidden"
@@ -248,7 +245,6 @@ export default function Gallery() {
               A visual journey through our finest projects, showcasing the intersection of premium materials, flawless execution, and architectural elegance.
             </p>
 
-            {/* Search */}
             <div className="gallery-hero-text max-w-md mx-auto mb-6 sm:mb-10 px-2">
               <div className="relative">
                 <input
@@ -262,7 +258,6 @@ export default function Gallery() {
               </div>
             </div>
 
-            {/* Filters */}
             <div className="gallery-hero-text flex flex-wrap justify-center gap-2 sm:gap-3 px-2">
               {galleryCategories.map(cat => (
                 <button
@@ -281,79 +276,48 @@ export default function Gallery() {
           </div>
         </div>
 
-        {/* Slide indicators */}
-        <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-1">
-          {heroSlides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setHeroSlide(i)}
-              aria-label={`Go to slide ${i + 1}`}
-              className={`min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full transition-all duration-300 ${
-                heroSlide === i ? 'bg-brand-orange w-8' : 'bg-white/50 hover:bg-white/80'
-              }`}
-            />
-          ))}
-        </div>
+
       </div>
 
-      {/* Gallery Grid */}
       <div className="px-4 md:px-8 lg:px-16 max-w-[1800px] mx-auto mt-6 sm:mt-8 md:mt-16">
         <div ref={galleryRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 auto-rows-[250px] sm:auto-rows-[300px] md:auto-rows-[400px]">
           {filteredImages.map((item, index) => {
-            const showStoryBlock = (index + 1) % 7 === 0;
-
             return (
-              <React.Fragment key={item.id}>
-                {/* Image Item */}
-                <div
-                  className={`gallery-item group relative overflow-hidden rounded-[2rem] cursor-pointer bg-white shadow-sm hover:shadow-2xl transition-all duration-500 ${item.span || ''}`}
-                  onClick={() => openLightbox(index)}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-100 to-white animate-pulse" />
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    loading="lazy"
-                    className="relative w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+              <div
+                key={item.id}
+                className={`gallery-item group relative overflow-hidden rounded-[2rem] cursor-pointer bg-white shadow-sm hover:shadow-2xl transition-all duration-500 ${item.span || ''}`}
+                onClick={() => openLightbox(index)}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-100 to-white animate-pulse" />
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  loading="lazy"
+                  className="relative w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
 
-                  {/* Company Logo Badge */}
-                  {item.companyLogo && (
-                    <div className="absolute top-3 right-3 z-20 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-md flex items-center justify-center p-1.5">
-                      <img
-                        src={item.companyLogo}
-                        alt={`${item.title} logo`}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                  )}
+                {item.companyLogo && (
+                  <div className="absolute top-3 right-3 z-20 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-md flex items-center justify-center p-1.5">
+                    <img
+                      src={item.companyLogo}
+                      alt={`${item.title} logo`}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                )}
 
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-green/90 via-brand-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4 sm:p-8 pointer-events-none">
-                    <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                      <span className="inline-block px-2 sm:px-3 py-1 bg-brand-orange/90 backdrop-blur-sm text-white text-[10px] sm:text-xs font-semibold tracking-wider uppercase rounded-full mb-2 sm:mb-3">
-                        {item.category}
-                      </span>
-                      <h3 className="text-white text-lg sm:text-2xl font-serif mb-2">{item.title}</h3>
-                      <div className="flex items-center gap-2 text-white/80 font-medium text-sm mt-4">
-                        <Maximize2 className="w-4 h-4" /> View Photo
-                      </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-green/90 via-brand-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4 sm:p-8 pointer-events-none">
+                  <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                    <span className="inline-block px-2 sm:px-3 py-1 bg-brand-orange/90 backdrop-blur-sm text-white text-[10px] sm:text-xs font-semibold tracking-wider uppercase rounded-full mb-2 sm:mb-3">
+                      {item.category}
+                    </span>
+                    <h3 className="text-white text-lg sm:text-2xl font-serif mb-2">{item.title}</h3>
+                    <div className="flex items-center gap-2 text-white/80 font-medium text-sm mt-4">
+                      <Maximize2 className="w-4 h-4" /> View Photo
                     </div>
                   </div>
                 </div>
-
-                {/* Storytelling Block */}
-                {showStoryBlock && (
-                  <div className="gallery-item col-span-1 sm:col-span-2 lg:col-span-2 row-span-1 bg-brand-green rounded-[2rem] p-6 sm:p-8 md:p-12 flex flex-col justify-center relative overflow-hidden text-white shadow-xl">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-brand-teal/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                    <Logo isDark={true} size="lg" className="h-12 sm:h-16 w-auto mb-4 sm:mb-8 opacity-80" />
-                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif mb-3 sm:mb-4 leading-tight">
-                      "Design is not just what it looks like and feels like. Design is how it works."
-                    </h3>
-                    <p className="text-white/60 font-medium tracking-wide uppercase text-sm">Our Philosophy</p>
-                  </div>
-                )}
-              </React.Fragment>
+              </div>
             );
           })}
         </div>
@@ -365,7 +329,6 @@ export default function Gallery() {
         )}
       </div>
 
-      {/* Lightbox */}
       {lightboxIndex !== null && filteredImages[lightboxIndex] && createPortal(
         <div
           role="dialog"

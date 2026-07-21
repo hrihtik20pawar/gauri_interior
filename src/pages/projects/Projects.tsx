@@ -50,7 +50,7 @@ export default function Projects() {
     <div className="pt-28 pb-20 px-6 md:px-12 lg:px-24 min-h-screen bg-white">
       <div className="max-w-[1500px] mx-auto">
         
-        {/* Header */}
+
         <div className="text-center mb-16">
           <p className="text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Portfolio</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-brand-green mb-6">Our Works</h1>
@@ -59,7 +59,6 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Search & Filters */}
         <div className="mb-12 space-y-8">
           <div className="relative max-w-md mx-auto">
             <input 
@@ -89,7 +88,6 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Gallery Grid */}
         <div ref={galleryRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project) => (

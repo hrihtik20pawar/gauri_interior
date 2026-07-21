@@ -14,7 +14,6 @@ export default function BusinessesPage() {
 
   return (
     <main className="min-h-screen bg-[#faf9f6]">
-      {/* Hero Section */}
       <section className="relative h-[100dvh] min-h-[500px] overflow-hidden">
         <img src={images.about.hero} alt="Our company ventures" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-brand-green/50 to-brand-green/80" />
@@ -30,7 +29,6 @@ export default function BusinessesPage() {
         </div>
       </section>
 
-      {/* Businesses Section */}
       <Businesses />
     </main>
   );

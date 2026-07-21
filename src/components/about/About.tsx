@@ -79,7 +79,6 @@ export default function About() {
 
   return (
     <section ref={container} className="py-24 px-6 md:px-12 lg:px-24 max-w-[1400px] mx-auto bg-white" id="about">
-      {/* Top Part: Title and Image */}
       <div className="flex flex-col lg:flex-row gap-16 mb-24 items-center">
         <div className="flex-1 lg:max-w-2xl">
           <p className="about-hero-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">About Us</p>
@@ -97,17 +96,11 @@ export default function About() {
           </p>
         </div>
         <div ref={imageContainerRef} className="flex-1 w-full about-text relative">
-          {/* Blueprint lines */}
           <div className="absolute inset-0 pointer-events-none">
-            {/* Top line */}
             <div className="bp-line-h absolute top-0 left-8 right-8 h-[1px] bg-brand-teal/40 origin-left"></div>
-            {/* Bottom line */}
             <div className="bp-line-h absolute bottom-0 left-8 right-8 h-[1px] bg-brand-teal/40 origin-left"></div>
-            {/* Left line */}
             <div className="bp-line-v absolute left-0 top-8 bottom-8 w-[1px] bg-brand-teal/40 origin-top"></div>
-            {/* Right line */}
             <div className="bp-line-v absolute right-0 top-8 bottom-8 w-[1px] bg-brand-teal/40 origin-top"></div>
-            {/* Corner dots */}
             <div className="bp-corner absolute top-0 left-0 w-3 h-3 bg-brand-orange rounded-full -translate-x-1/2 -translate-y-1/2"></div>
             <div className="bp-corner absolute top-0 right-0 w-3 h-3 bg-brand-orange rounded-full translate-x-1/2 -translate-y-1/2"></div>
             <div className="bp-corner absolute bottom-0 left-0 w-3 h-3 bg-brand-orange rounded-full -translate-x-1/2 translate-y-1/2"></div>
@@ -122,18 +115,14 @@ export default function About() {
         </div>
       </div>
 
-      {/* Managing Director's Message - Leadership Section */}
       <div className="mb-12">
-        {/* Header */}
         <div className="text-center mb-10">
           <p className="text-brand-orange font-semibold tracking-widest uppercase text-sm mb-3">A Message From Our Leadership</p>
           <h2 className="text-3xl md:text-4xl font-serif text-brand-green">Building Spaces. Building Relationships.</h2>
           <div className="w-16 h-1 bg-brand-orange mx-auto rounded-full mt-4"></div>
         </div>
 
-        {/* Main Card */}
         <div className="bg-white rounded-3xl shadow-xl overflow-visible relative">
-          {/* Large Decorative Quote Marks - positioned outside card */}
           <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 z-20">
             <svg width="100" height="100" viewBox="0 0 80 80" fill="none" className="opacity-20">
               <path d="M30 45C30 51.627 24.627 57 18 57C11.373 57 6 51.627 6 45C6 32.297 16.297 22 29 22V30C22.373 30 17 35.373 17 42H24C27.314 42 30 44.686 30 48V45ZM66 45C66 51.627 60.627 57 54 57C47.373 57 42 51.627 42 45C42 32.297 52.297 22 65 22V30C58.373 30 53 35.373 53 42H60C63.314 42 66 44.686 66 48V45Z" fill="#E8734A"/>
@@ -141,21 +130,17 @@ export default function About() {
           </div>
 
           <div className="flex flex-col md:flex-row items-stretch">
-            {/* Left Content */}
             <div className="w-full md:w-[45%] p-8 md:p-10 lg:p-12 relative z-10">
-              {/* Label */}
               <div className="mb-5">
                 <p className="text-brand-orange font-semibold tracking-widest uppercase text-xs mb-2">Message From The Managing Director</p>
                 <div className="w-10 h-0.5 bg-brand-orange rounded-full"></div>
               </div>
 
-              {/* Title */}
               <h3 className="text-2xl md:text-3xl mb-5">
                 <span className="text-gray-900 font-serif">Managing Director's</span><br />
                 <span className="text-gray-900 font-serif">Message</span>
               </h3>
 
-              {/* Message Content */}
               <div className="space-y-3 text-gray-600 text-sm leading-relaxed text-justify">
                 <p>Dear Valued Clients, Partners, and Associates,</p>
                 <p>It gives me immense pride to welcome you to <BrandName as="span">GAURI GROUP.</BrandName></p>
@@ -166,7 +151,6 @@ export default function About() {
                 <p>I sincerely thank our clients, employees, partners, and well-wishers for being an integral part of our journey. We look forward to creating many more inspiring spaces together.</p>
               </div>
 
-              {/* Signature */}
               <div className="mt-6">
                 <p className="text-gray-700 text-sm mb-2">Warm Regards,</p>
                 <p className="text-brand-green font-bold text-base">Mr. Shilkumar L. Vishwakarma</p>
@@ -175,7 +159,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* Right - Portrait */}
             <div className="w-full md:w-[55%] flex items-start justify-center p-6 md:p-0 bg-gray-50 min-h-[450px] md:min-h-[750px] relative overflow-hidden rounded-r-3xl -ml-4 md:-ml-8">
               <img
                 loading="lazy"
@@ -190,16 +173,13 @@ export default function About() {
 
       </div>
 
-      {/* Why Choose Gauri? */}
       <div className="about-text mb-12">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-sans text-brand-green mb-4">Why Choose <BrandName as="span">Gauri</BrandName>?</h2>
           <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
         </div>
 
-        {/* Auto-scrolling marquee */}
         <div className="relative group overflow-hidden">
-          {/* Fade edges */}
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
@@ -219,14 +199,11 @@ export default function About() {
         </div>
       </div>
 
-      {/* Bottom Part: Highlights */}
       <div className="p-8 rounded-2xl border border-gray-100">
-        {/* Heading */}
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-serif text-brand-green mb-4">Our USP at <BrandName as="span" className="font-sans">Gauri</BrandName></h2>
           <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
         </div>
-        {/* 4 Points Horizontal with Arrows */}
         <div className="about-text flex flex-col sm:flex-row items-stretch gap-4">
           <InfoCard icon={CheckCircle2} iconClassName="w-8 h-8 text-teal-700 stroke-[1.5]" title="Client-Centric Approach" description="Your vision is our priority." />
           <ArrowRight className="w-5 h-5 text-gray-300 shrink-0 hidden sm:block" />
@@ -238,16 +215,15 @@ export default function About() {
         </div>
       </div>
 
-      {/* Why Choose Modal */}
       <Modal isOpen={!!selectedReason} onClose={() => setSelectedReason(null)}>
         {selectedReason && (
-          <>
+          <div className="text-center">
             <div className="w-14 h-14 rounded-full bg-brand-orange/10 flex items-center justify-center mb-5 mx-auto">
               <selectedReason.icon className="w-7 h-7 text-brand-orange" />
             </div>
             <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">{selectedReason.title}</h3>
             <p className="text-gray-600 text-sm leading-relaxed">{selectedReason.fullDesc}</p>
-          </>
+          </div>
         )}
       </Modal>
     </section>

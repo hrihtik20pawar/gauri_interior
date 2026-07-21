@@ -110,7 +110,6 @@ export default function Services() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {services.map((svc, idx) => (
             <div key={idx} className={`service-card ${svc.bg} rounded-[2rem] shadow-xl shadow-gray-200/50 border border-gray-100 p-8 flex flex-col`}>
-              {/* Brand Header */}
               <div className="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
                 <div className="bg-gray-50 rounded-xl p-3 border border-gray-100 shrink-0">
                   <img loading="lazy" src={svc.logo} alt={`${svc.brand} Logo`} className="h-12 w-auto object-contain" />
@@ -121,18 +120,15 @@ export default function Services() {
                 </div>
               </div>
 
-              {/* Content */}
               <div className="text-center mb-8 px-4 flex-1">
                 <h4 className="text-xl font-bold text-gray-900 mb-4 whitespace-pre-line leading-snug">{svc.title}</h4>
                 <p className="text-sm text-gray-500 leading-relaxed max-w-[280px] mx-auto">{svc.desc}</p>
               </div>
 
-              {/* Image */}
               <div className="w-full h-48 rounded-xl overflow-hidden mb-8 shadow-inner">
                 <img loading="lazy" src={svc.img} alt={svc.title} className="w-full h-full object-cover" />
               </div>
 
-              {/* Feature Icons */}
               <div className="grid grid-cols-4 gap-2 mb-8">
                 {svc.features.map((feat, fidx) => (
                   <div key={fidx} className="flex flex-col items-center text-center">
@@ -144,7 +140,6 @@ export default function Services() {
                 ))}
               </div>
 
-              {/* Button */}
               <div className="flex justify-center mt-auto">
                 <button className={`${svc.btnColor} text-white px-8 py-3 rounded-full text-sm font-semibold transition-colors flex items-center gap-2 shadow-lg shadow-teal-900/10`}>
                   Explore More <ArrowRight className="w-4 h-4" />
@@ -154,7 +149,6 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Footer Text */}
         <div className="text-center service-header">
           <p className="text-2xl font-serif text-gray-800">
             Four brands. <span className="text-brand-orange font-bold">One vision.</span> Endless possibilities.

@@ -35,7 +35,6 @@ export default function VisionMission() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Vision */}
           <div className="vm-vision lg:col-span-7 bg-brand-green rounded-[2rem] p-6 md:p-10 lg:p-14 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-brand-teal/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             <div className="relative z-10">
@@ -49,7 +48,6 @@ export default function VisionMission() {
             </div>
           </div>
 
-          {/* Mission */}
           <div className="vm-mission lg:col-span-5 bg-white rounded-[2rem] p-6 md:p-10 lg:p-14 border border-gray-100 shadow-xl relative overflow-hidden">
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-brand-orange/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
             <div className="relative z-10">

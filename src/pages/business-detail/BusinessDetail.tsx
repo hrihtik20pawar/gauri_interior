@@ -175,7 +175,7 @@ export default function BusinessDetail() {
   if (isInterior) {
     return (
       <div className="min-h-screen bg-white">
-        {/* Hero Section - Interior */}
+
         <div className="bg-teal-50 pt-24 pb-20 overflow-hidden relative">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
             <div className="flex flex-col md:flex-row items-center gap-12">
@@ -201,7 +201,6 @@ export default function BusinessDetail() {
           </div>
         </div>
 
-        {/* About Section */}
         <section className="py-24 max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -230,7 +229,6 @@ export default function BusinessDetail() {
           </div>
         </section>
 
-        {/* Services Section */}
         <section className="py-24 bg-gray-50 border-t border-gray-100">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12">
             <div className="text-center mb-16">
@@ -269,7 +267,6 @@ export default function BusinessDetail() {
               })()}
             </div>
 
-            {/* Promise */}
             <div className="mt-16 bg-brand-green rounded-2xl p-8 md:p-12 text-center">
               <p className="text-white/80 text-sm font-semibold tracking-widest uppercase mb-4">Our Promise</p>
               <p className="text-white text-xl md:text-2xl font-serif italic max-w-3xl mx-auto">
@@ -279,7 +276,6 @@ export default function BusinessDetail() {
           </div>
         </section>
 
-        {/* Featured Work */}
         <section className="py-24 max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
             <p className="text-sm font-semibold tracking-widest text-brand-orange uppercase mb-4">Portfolio</p>
@@ -310,7 +306,6 @@ export default function BusinessDetail() {
   if (isKitchen) {
     return (
       <div className="min-h-screen bg-white">
-        {/* Hero Section - Kitchen */}
         <div className="bg-orange-50 pt-24 pb-20 overflow-hidden relative">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
             <div className="flex flex-col md:flex-row items-center gap-12">
@@ -336,7 +331,6 @@ export default function BusinessDetail() {
           </div>
         </div>
 
-        {/* About Section */}
         <section className="py-24 max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -365,7 +359,6 @@ export default function BusinessDetail() {
           </div>
         </section>
 
-        {/* Our Solutions Section */}
         <section className="py-24 bg-gray-50 border-t border-gray-100">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12">
             <div className="text-center mb-16">
@@ -385,7 +378,6 @@ export default function BusinessDetail() {
               ))}
             </div>
 
-            {/* Promise */}
             <div className="mt-16 bg-brand-green rounded-2xl p-8 md:p-12 text-center">
               <p className="text-white/80 text-sm font-semibold tracking-widest uppercase mb-4">Our Promise</p>
               <p className="text-white text-xl md:text-2xl font-serif italic max-w-3xl mx-auto">
@@ -395,7 +387,7 @@ export default function BusinessDetail() {
           </div>
         </section>
 
-        {/* Featured Work */}
+
         <section className="py-24 max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
             <p className="text-sm font-semibold tracking-widest text-brand-orange uppercase mb-4">Portfolio</p>
@@ -426,7 +418,6 @@ export default function BusinessDetail() {
   if (isNikhil) {
     return (
       <div className="min-h-screen bg-white">
-        {/* Hero Section - Nikhil */}
         <div className="bg-teal-50 pt-24 pb-20 overflow-hidden relative">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
             <div className="flex flex-col md:flex-row items-center gap-12">
@@ -452,7 +443,6 @@ export default function BusinessDetail() {
           </div>
         </div>
 
-        {/* About Section */}
         <section className="py-24 max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -481,7 +471,6 @@ export default function BusinessDetail() {
           </div>
         </section>
 
-        {/* Product Categories Section */}
         <section className="py-24 bg-gray-50 border-t border-gray-100">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12">
             <div className="text-center mb-16">
@@ -501,7 +490,6 @@ export default function BusinessDetail() {
               ))}
             </div>
 
-            {/* Promise */}
             <div className="mt-16 bg-brand-green rounded-2xl p-8 md:p-12 text-center">
               <p className="text-white/80 text-sm font-semibold tracking-widest uppercase mb-4">Our Promise</p>
               <p className="text-white text-xl md:text-2xl font-serif italic max-w-3xl mx-auto">
@@ -511,7 +499,7 @@ export default function BusinessDetail() {
           </div>
         </section>
 
-        {/* Featured Work */}
+
         <section className="py-24 max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
             <p className="text-sm font-semibold tracking-widest text-brand-orange uppercase mb-4">Portfolio</p>
@@ -542,7 +530,6 @@ export default function BusinessDetail() {
   if (isStudio) {
     return (
       <div className="min-h-screen bg-white">
-        {/* Hero Section - Studio */}
         <div className="bg-teal-50 pt-24 pb-20 overflow-hidden relative">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
             <div className="flex flex-col md:flex-row items-center gap-12">
@@ -568,7 +555,6 @@ export default function BusinessDetail() {
           </div>
         </div>
 
-        {/* About Section */}
         <section className="py-24 max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -597,7 +583,6 @@ export default function BusinessDetail() {
           </div>
         </section>
 
-        {/* Planned Services Section */}
         <section className="py-24 bg-gray-50 border-t border-gray-100">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12">
             <div className="text-center mb-16">
@@ -617,7 +602,6 @@ export default function BusinessDetail() {
               ))}
             </div>
 
-            {/* Vision */}
             <div className="mt-16 bg-brand-green rounded-2xl p-8 md:p-12 text-center">
               <p className="text-white/80 text-sm font-semibold tracking-widest uppercase mb-4">Our Vision</p>
               <p className="text-white text-xl md:text-2xl font-serif italic max-w-3xl mx-auto">
@@ -634,7 +618,6 @@ export default function BusinessDetail() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
       <div className={`${bgColor} pt-24 pb-20 overflow-hidden relative`}>
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-12">
@@ -661,7 +644,6 @@ export default function BusinessDetail() {
         </div>
       </div>
 
-      {/* Who We Are */}
       <section className="py-24 max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           <div>
@@ -679,7 +661,6 @@ export default function BusinessDetail() {
               <p className="leading-relaxed text-sm">{current.details3}</p>
             </div>
 
-            {/* Services list for studio */}
             {studioData && studioData.services && (
               <div className="mt-8">
                 <h3 className="text-xl font-serif text-gray-900 mb-4">Services</h3>
@@ -704,7 +685,6 @@ export default function BusinessDetail() {
           </div>
         </div>
 
-        {/* Features Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { title: "Turnkey Interior Solutions", icon: <Building2 className={`w-6 h-6 ${primaryColor}`} /> },
@@ -720,7 +700,6 @@ export default function BusinessDetail() {
         </div>
       </section>
 
-      {/* Featured Work */}
       <section className="py-24 bg-gray-50 border-t border-gray-100">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -752,7 +731,6 @@ export default function BusinessDetail() {
         </div>
       </section>
 
-      {/* Our Process */}
       <section className="py-24 max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="mb-16">
           <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-4">Our Process</p>

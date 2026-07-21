@@ -174,7 +174,6 @@ export default function App() {
                 <Route path="/businesses" element={<BusinessesPage />} />
                 <Route path="/team/:id" element={<TeamMemberDetail />} />
                 <Route path="/services" element={<ServicesPage />} />
-                {/* <Route path="/products" element={<GenericPage title="Our Products" description="Explore our exclusive range of modular furniture and finishes." />} /> */}
                 <Route path="/why-us" element={<GenericPage title="Why Choose Us" description="What makes Gauri Group the trusted choice for luxury interiors." />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
@@ -185,7 +184,6 @@ export default function App() {
             <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-24 py-16">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
 
-                {/* Brand */}
                 <div>
                   <div className="mb-4">
                     <Logo isDark={true} size="sm" />
@@ -195,7 +193,6 @@ export default function App() {
                   </p>
                 </div>
 
-                {/* Get in Touch */}
                 <div>
                   <h3 className="text-lg font-serif font-semibold mb-6">Get in Touch</h3>
                   <ul className="space-y-4">
@@ -223,7 +220,6 @@ export default function App() {
                   </ul>
                 </div>
 
-                {/* Quick Links */}
                 <div>
                   <h3 className="text-lg font-serif font-semibold mb-6">Quick Links</h3>
                   <ul className="space-y-3">
@@ -241,7 +237,6 @@ export default function App() {
                     </li>
                   </ul>
 
-                  {/* Social Media */}
                   <div className="flex gap-3 mt-6">
                     <a href="https://www.instagram.com/gauri_group__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
                       <Instagram className="w-5 h-5 text-white" />
@@ -258,7 +253,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* Copyright bar */}
             <div className="border-t border-white/10">
               <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-24 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
                 <p className="text-white/40 text-sm">© {new Date().getFullYear()} <BrandName as="span">Gauri Interior Pvt. Ltd.</BrandName> All rights reserved.</p>

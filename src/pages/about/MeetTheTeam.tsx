@@ -119,28 +119,23 @@ export default function MeetTheTeam() {
           <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full" />
         </div>
 
-        {/* Desktop Pyramid Layout */}
         <div className="hidden lg:flex flex-col items-center gap-10 tm-grid">
-          {/* Row 1 - 1 image */}
           <div className="flex justify-center">
             <TeamMemberCard member={teamMembers[0]} fixedWidth />
           </div>
 
-          {/* Row 2 - 2 images */}
           <div className="flex justify-center gap-8">
             {teamMembers.slice(1, 3).map((member) => (
               <TeamMemberCard key={member.id} member={member} fixedWidth />
             ))}
           </div>
 
-          {/* Row 3 - 3 images */}
           <div className="flex justify-center gap-8">
             {teamMembers.slice(3, 6).map((member) => (
               <TeamMemberCard key={member.id} member={member} fixedWidth />
             ))}
           </div>
 
-          {/* Row 4 - 4 images */}
           <div className="flex justify-center gap-8">
             {teamMembers.slice(6, 10).map((member) => (
               <TeamMemberCard key={member.id} member={member} fixedWidth />
@@ -148,14 +143,12 @@ export default function MeetTheTeam() {
           </div>
         </div>
 
-        {/* Tablet - 2 columns */}
         <div className="hidden md:grid lg:hidden grid-cols-2 gap-6">
           {teamMembers.map((member) => (
             <TeamMemberCard key={member.id} member={member} />
           ))}
         </div>
 
-        {/* Mobile - 1 column */}
         <div className="grid md:hidden grid-cols-1 gap-6">
           {teamMembers.map((member) => (
             <TeamMemberCard key={member.id} member={member} />

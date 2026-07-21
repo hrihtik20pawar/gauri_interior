@@ -18,7 +18,7 @@ export default function WorkDetail() {
 
   return (
     <div className="min-h-screen bg-white pb-24">
-      {/* Hero Banner */}
+
       <div className="relative h-[70vh] min-h-[600px] w-full">
         <img 
           loading="lazy"
@@ -58,12 +58,10 @@ export default function WorkDetail() {
         </div>
       </div>
 
-      {/* Content */}
       <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-24 pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           <div className="lg:col-span-8 space-y-16">
-            {/* Overview */}
             <div>
               <h2 className="text-3xl font-serif text-brand-green mb-6">Project Overview</h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
@@ -74,7 +72,6 @@ export default function WorkDetail() {
               </p>
             </div>
 
-            {/* Gallery */}
             {project.gallery.length > 0 && (
               <div>
                 <h2 className="text-3xl font-serif text-brand-green mb-6">Gallery</h2>
@@ -86,7 +83,6 @@ export default function WorkDetail() {
               </div>
             )}
 
-            {/* Additional Images Grid */}
             <div>
               <h2 className="text-3xl font-serif text-brand-green mb-6">More Views</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

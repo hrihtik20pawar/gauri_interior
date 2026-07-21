@@ -47,7 +47,6 @@ export default function OurStory() {
     <section ref={container} className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-[#faf9f6]">
       <div className="max-w-[1500px] mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
-          {/* Text */}
           <div className="flex-1 order-2 lg:order-1">
             <p className="story-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">About Us</p>
             <h2 className="story-text text-4xl md:text-5xl font-serif text-brand-green mb-6 leading-tight">
@@ -67,7 +66,6 @@ export default function OurStory() {
             </div>
           </div>
 
-          {/* Image */}
           <div className="flex-1 order-1 lg:order-2 relative">
             <div className="story-image rounded-[2rem] overflow-hidden shadow-2xl">
               <img loading="lazy" src={images.about.story} alt="Gauri Interior workspace" className="w-full h-[300px] md:h-[500px] object-cover" />

@@ -77,7 +77,6 @@ export default function Hero() {
         </div>
       ))}
 
-      {/* Content overlay */}
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-24 max-w-7xl mx-auto pt-24 md:pt-28">
         <div className="max-w-2xl items-start text-left">
           <h1 className="hero-text text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.1] mb-6 drop-shadow-lg">
@@ -97,7 +96,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Navigation arrows */}
       <button
         onClick={() => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
         className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/60 transition-colors hero-text"

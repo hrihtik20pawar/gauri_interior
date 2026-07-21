@@ -58,7 +58,6 @@ export default function Clients() {
         </div>
       </div>
 
-      {/* Carousel 1 */}
       <div className="relative">
         <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
         <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
@@ -79,7 +78,6 @@ export default function Clients() {
         </div>
       </div>
 
-      {/* Carousel 2 */}
       <div className="relative mt-8 md:mt-10">
         <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
         <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>

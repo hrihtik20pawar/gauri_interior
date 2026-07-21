@@ -173,7 +173,6 @@ export default function Timeline() {
     <section ref={container} className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden" id="process">
       <div className="max-w-7xl mx-auto">
 
-        {/* Header section */}
         <div className="text-center mb-12 md:mb-24 max-w-3xl mx-auto">
           <p className="timeline-header text-brand-orange font-bold tracking-[0.2em] uppercase text-sm mb-4">Our Journey</p>
           <h2 className="timeline-header text-5xl md:text-6xl lg:text-7xl font-sans text-brand-green leading-[1.1] mb-6 uppercase">
@@ -184,17 +183,12 @@ export default function Timeline() {
           </p>
         </div>
 
-        {/* Timeline Layout */}
         <div className="timeline-wrapper relative max-w-5xl mx-auto">
 
-          {/* Central Line - Desktop */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-gray-200 -translate-x-1/2 rounded-full"></div>
-          {/* Progress Line - Desktop */}
           <div ref={lineRef} className="hidden md:block absolute left-1/2 top-0 w-[3px] bg-gradient-to-b from-brand-orange via-teal-600 to-brand-green -translate-x-1/2 rounded-full shadow-[0_0_15px_rgba(234,91,35,0.4)]"></div>
 
-          {/* Central Line - Mobile */}
           <div className="md:hidden absolute left-8 top-0 bottom-0 w-[2px] bg-gray-200 rounded-full"></div>
-          {/* Progress Line - Mobile */}
           <div className="md:hidden absolute left-8 top-0 bottom-0 w-[3px] bg-gradient-to-b from-brand-orange via-teal-600 to-brand-green rounded-full opacity-30"></div>
 
 
@@ -204,22 +198,18 @@ export default function Timeline() {
               return (
                 <div key={step.num} className={`timeline-item relative flex flex-col md:flex-row items-center w-full ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
 
-                  {/* Empty space for alternating layout on desktop */}
                   <div className="hidden md:block w-1/2 px-12 flex items-center justify-center">
                     <span className="text-7xl lg:text-8xl font-sans text-brand-orange/20 font-bold whitespace-nowrap">
                       {step.year}
                     </span>
                   </div>
 
-                  {/* Center Icon/Node */}
                   <div className="timeline-icon-container absolute left-8 md:left-1/2 -translate-x-1/2 flex items-center justify-center z-20 group">
                   </div>
 
-                  {/* Content Card */}
                   <div className={`w-full md:w-1/2 pl-16 md:pl-0 md:px-12 ${isEven ? 'md:text-right md:pr-16' : 'md:text-left md:pl-16'}`}>
                     <div className="timeline-card bg-white/60 backdrop-blur-md rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group overflow-hidden">
 
-                      {/* Project Image */}
                       <div className="relative h-48 md:h-56 overflow-hidden">
                         <img
                           loading="lazy"
@@ -230,7 +220,6 @@ export default function Timeline() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                       </div>
 
-                      {/* Text Content */}
                       <div className="p-6 md:p-10">
                         <span className="inline-block text-6xl font-sans text-gray-100 font-bold mb-4 -mt-4 -ml-2 group-hover:text-brand-orange/10 transition-colors duration-300">
                           {step.num}
@@ -255,7 +244,6 @@ export default function Timeline() {
               );
             })}
 
-            {/* Where We Are Now - Centered End Card */}
             <div className="timeline-item relative flex flex-col items-center w-full">
               <div className="w-full flex justify-center px-4 md:px-12">
                 <div className="timeline-card bg-brand-green/5 backdrop-blur-md p-6 md:p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-brand-green/10 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group w-full max-w-lg">

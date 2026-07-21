@@ -96,14 +96,12 @@ export default function Stats() {
   return (
     <section ref={container} className="bg-brand-green py-20 px-6 relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative z-10">
-        {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-sans font-semibold tracking-wide text-white">
             <BrandName as="span" size="lg" color="teal" className="whitespace-nowrap">GAURI GROUP</BrandName> <span className="text-brand-orange">AT A GLANCE</span>
           </h2>
         </div>
 
-        {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-8 md:gap-x-12">
           {stats.map((stat, idx) => (
             <div key={idx} className="stat-item flex flex-col items-center text-center">
@@ -121,7 +119,6 @@ export default function Stats() {
           ))}
         </div>
 
-        {/* Motto */}
       <div className="stats-motto mt-14 flex justify-center">
   <p className="text-white/80 text-lg md:text-xl tracking-wide text-center">
     Our Motto —{" "}
