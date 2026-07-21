@@ -16,15 +16,15 @@ export default function Logo({ className = "", isDark = false, size = "sm", type
 
   return (
     <div className={`flex items-start gap-3 ${className}`}>
-      <div className={`grid grid-cols-3 gap-[2px] shrink-0 ${isLarge ? 'w-20 h-20' : 'w-14 h-14'}`}>
+      <div className={`grid grid-cols-3 gap-[2px] shrink-0 bg-white p-[2px] ${isLarge ? 'w-20 h-20' : 'w-14 h-14'}`}>
         {[...Array(9)].map((_, i) => {
-          const isDiagonal = i === 0 || i === 4 || i === 8;
+          const isCenter = i === 4;
           const tileClass = blueprint ? 'bp-tile' : '';
           const tileStyle = blueprint ? { opacity: 0 } : {};
           return (
             <div 
               key={i} 
-              className={`${isDiagonal ? 'bg-brand-teal' : (isDark ? 'bg-gray-400' : 'bg-black/80')} w-full h-full transition-colors ${tileClass}`}
+              className={`${isCenter ? 'bg-brand-teal' : 'bg-black'} w-full h-full transition-colors ${tileClass}`}
               style={tileStyle}
             ></div>
           )
