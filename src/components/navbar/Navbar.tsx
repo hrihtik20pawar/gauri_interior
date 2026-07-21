@@ -80,7 +80,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav ref={navRef} className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white shadow-sm py-2 border-b-2 border-brand-green' : 'bg-transparent py-4'}`}>
+    <nav ref={navRef} className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white shadow-sm py-2' : 'bg-transparent py-4'}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
 
         <Link to="/" className="nav-item block shrink-0 min-w-0 overflow-visible max-w-[45vw]">
