@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { useRef, useState, useCallback } from 'react';
+import { useRef, useState, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { images } from '../../constants/images';
@@ -12,6 +12,13 @@ export default function Hero() {
   const slideRefs = useRef<HTMLDivElement[]>([]);
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    slideRefs.current.forEach((el, i) => {
+      if (!el) return;
+      gsap.set(el, { opacity: i === 0 ? 1 : 0, scale: i === 0 ? 1 : 1.1 });
+    });
+  }, []);
 
   const goToSlide = useCallback((index: number) => {
     slideRefs.current.forEach((el, i) => {
@@ -60,7 +67,6 @@ export default function Hero() {
           key={src}
           ref={(el) => { if (el) slideRefs.current[i] = el; }}
           className="absolute inset-0 z-0 hero-bg"
-          style={{ opacity: i === 0 ? 1 : 0 }}
         >
           <img
             src={src}
