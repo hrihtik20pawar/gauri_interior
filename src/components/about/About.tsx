@@ -108,7 +108,7 @@ export default function About() {
           </div>
           <img
             loading="lazy"
-            src="/images/about/new_office_image.jpeg"
+            src="/images/about/new_office_image.avif"
             alt="Gauri Group Office"
             className="about-office-image w-full h-[450px] md:h-[550px] object-cover rounded-xl shadow-2xl relative z-10"
           />
