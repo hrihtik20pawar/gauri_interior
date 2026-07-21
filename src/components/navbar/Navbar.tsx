@@ -94,7 +94,7 @@ export default function Navbar() {
               <Link
                 key={i}
                 to={link.path}
-                className={`nav-item transition-colors hover:text-brand-orange ${scrolled ? 'text-gray-700' : 'text-white'} ${isActive ? (scrolled ? 'border-b-2 border-brand-green pb-1 text-brand-green font-semibold' : 'border-b-2 border-brand-orange pb-1 text-brand-orange') : ''}`}
+                className={`nav-item transition-colors hover:text-brand-orange ${scrolled ? 'text-gray-700' : 'text-white'} ${isActive ? (scrolled ? 'border-b-2 border-brand-orange pb-1 text-brand-orange font-semibold' : 'border-b-2 border-brand-orange pb-1 text-brand-orange') : ''}`}
               >
                 {link.name}
               </Link>
