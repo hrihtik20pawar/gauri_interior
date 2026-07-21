@@ -12,13 +12,16 @@ export default function Hero() {
   const slideRefs = useRef<HTMLDivElement[]>([]);
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [failedSlides, setFailedSlides] = useState<Set<number>>(new Set());
 
   useEffect(() => {
-    slideRefs.current.forEach((el, i) => {
-      if (!el) return;
-      gsap.set(el, { opacity: i === 0 ? 1 : 0, scale: i === 0 ? 1 : 1.1 });
-    });
-  }, []);
+    if (failedSlides.size === 0) return;
+    if (failedSlides.has(currentSlide)) {
+      const nextIndex = (currentSlide + 1) % heroSlides.length;
+      setCurrentSlide(nextIndex);
+      goToSlide(nextIndex);
+    }
+  }, [failedSlides, currentSlide]);
 
   const goToSlide = useCallback((index: number) => {
     slideRefs.current.forEach((el, i) => {
@@ -28,6 +31,14 @@ export default function Hero() {
         duration: 1,
         ease: 'power2.inOut',
       });
+    });
+  }, []);
+
+  const handleImageError = useCallback((index: number) => {
+    setFailedSlides(prev => {
+      const next = new Set(prev);
+      next.add(index);
+      return next;
     });
   }, []);
 
@@ -45,16 +56,22 @@ export default function Hero() {
   }, { scope: container });
 
   const handlePrev = useCallback(() => {
-    const newIndex = (currentSlide - 1 + heroSlides.length) % heroSlides.length;
+    let newIndex = (currentSlide - 1 + heroSlides.length) % heroSlides.length;
+    while (failedSlides.has(newIndex) && newIndex !== currentSlide) {
+      newIndex = (newIndex - 1 + heroSlides.length) % heroSlides.length;
+    }
     setCurrentSlide(newIndex);
     goToSlide(newIndex);
-  }, [currentSlide, goToSlide]);
+  }, [currentSlide, goToSlide, failedSlides]);
 
   const handleNext = useCallback(() => {
-    const newIndex = (currentSlide + 1) % heroSlides.length;
+    let newIndex = (currentSlide + 1) % heroSlides.length;
+    while (failedSlides.has(newIndex) && newIndex !== currentSlide) {
+      newIndex = (newIndex + 1) % heroSlides.length;
+    }
     setCurrentSlide(newIndex);
     goToSlide(newIndex);
-  }, [currentSlide, goToSlide]);
+  }, [currentSlide, goToSlide, failedSlides]);
 
   return (
     <section 
@@ -67,12 +84,14 @@ export default function Hero() {
           key={src}
           ref={(el) => { if (el) slideRefs.current[i] = el; }}
           className="absolute inset-0 z-0 hero-bg"
+          style={{ opacity: i === 0 ? 1 : 0 }}
         >
           <img
             src={src}
             alt="Interior design showcase"
             loading={i === 0 ? 'eager' : 'lazy'}
             className="w-full h-full object-cover object-[center_65%]"
+            onError={() => handleImageError(i)}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
         </div>

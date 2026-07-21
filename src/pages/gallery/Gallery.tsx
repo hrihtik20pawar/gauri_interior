@@ -5,12 +5,9 @@ import { ChevronLeft, ChevronRight, X, Maximize2, Search } from 'lucide-react';
 import { galleryImages, galleryCategories, GalleryImage } from '../../data/gallery/gallery';
 import { useLenis } from '../../App';
 import { useSearchParams } from 'react-router-dom';
+import { images } from '../../constants/images';
 
-const heroSlides = [
-  '/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.14.53.avif',
-  '/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.06.avif',
-  '/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.29.avif',
-];
+const heroSlides = images.hero.slides;
 
 export default function Gallery() {
   const [searchParams] = useSearchParams();
