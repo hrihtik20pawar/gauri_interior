@@ -6,6 +6,11 @@ export const images = {
       "/images/Final_Images/HomeScreen/homescreen_1.avif",
       "/images/Final_Images/HomeScreen/homescreen_2.avif",
       "/images/Final_Images/HomeScreen/homescreen_3.avif",
+      "/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.14.53.avif",
+      "/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.06.avif",
+      "/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.14.avif",
+      "/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.29.avif",
+      "/images/Final_Images/HomeScreen/WhatsApp Image 2026-07-17 at 13.15.36.avif",
     ],
   },
 
