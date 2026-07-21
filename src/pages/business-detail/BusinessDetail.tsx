@@ -208,10 +208,10 @@ export default function BusinessDetail() {
                 <p className="text-sm font-semibold tracking-widest text-brand-orange uppercase">About Us</p>
                 <div className="h-[1px] w-12 bg-brand-orange"></div>
               </div>
-              <h2 className="text-4xl md:text-5xl font-serif text-brand-green mb-8 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-sans font-bold text-brand-green mb-8 leading-tight">
                 <BrandName as="span">Gauri Interior</BrandName><br />Pvt. Ltd.
               </h2>
-              <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
+              <div className="space-y-6 text-gray-600 text-lg leading-relaxed font-sans">
                 <p><BrandName as="span">{current.details}</BrandName></p>
                 <p className="font-medium text-gray-800">{current.details2}</p>
                 <p className="text-gray-600">{current.details3}</p>
