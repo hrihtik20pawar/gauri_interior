@@ -8,10 +8,10 @@ import Modal from '../ui/Modal';
 import InfoCard from '../ui/InfoCard';
 
 const whyChooseItems = [
-  { icon: Award, title: "30+ Years Legacy", desc: "Decades of expertise in furniture manufacturing and turnkey interior execution.", fullDesc: "With a legacy spanning over three decades since 1993, Gauri Group has built an unmatched reputation in the interior industry. Our extensive experience across residential, commercial, corporate, hospitality, healthcare, educational, and retail sectors gives us the insight to handle projects of any scale and complexity." },
   { icon: Wrench, title: "Turnkey Solutions", desc: "From planning to handover, we manage every stage of your project.", fullDesc: "We offer complete end-to-end interior solutions — from initial consultation, concept design, and 3D visualization to manufacturing, installation, and final handover. Our turnkey approach means you have a single point of contact throughout the project, ensuring seamless coordination and accountability." },
   { icon: Factory, title: "In-House Manufacturing", desc: "Modern facilities ensure quality, faster delivery, and cost control.", fullDesc: "Our state-of-the-art in-house manufacturing facilities are equipped with modern machinery and technology. This allows us to maintain strict quality control, reduce dependency on third-party vendors, ensure faster turnaround times, and offer competitive pricing without compromising on quality." },
   { icon: Target, title: "Project Management", desc: "Seamless coordination, quality assurance, and on-time completion.", fullDesc: "Dedicated project managers oversee every aspect of your project — coordinating between design, manufacturing, civil work, electrical, MEP, and installation teams. Our structured project management approach ensures quality benchmarks are met and timelines are strictly followed." },
+  { icon: Award, title: "30+ Years Legacy", desc: "Decades of expertise in furniture manufacturing and turnkey interior execution.", fullDesc: "With a legacy spanning over three decades since 1993, Gauri Group has built an unmatched reputation in the interior industry. Our extensive experience across residential, commercial, corporate, hospitality, healthcare, educational, and retail sectors gives us the insight to handle projects of any scale and complexity." },
   { icon: Users, title: "Skilled Workforce", desc: "Experienced craftsmen delivering superior workmanship.", fullDesc: "Our team comprises experienced designers, architects, engineers, and skilled craftsmen who bring passion and precision to every project. Continuous training and upskilling ensure our workforce stays updated with the latest techniques, materials, and industry trends." },
   { icon: Gem, title: "Customized Solutions", desc: "Designed around your needs, brand, and budget.", fullDesc: "We understand that every client is unique. That's why we offer fully customized design solutions tailored to your specific business needs, brand identity, functional requirements, and budget constraints. No cookie-cutter solutions — every project is a bespoke creation." },
   { icon: ShieldCheck, title: "Quality Assurance", desc: "Strict processes and premium materials for lasting interiors.", fullDesc: "Quality is at the core of everything we do. We follow rigorous quality control processes at every stage — from material procurement and manufacturing to installation and handover. We use only premium-grade materials sourced from trusted national and international brands." },
@@ -29,7 +29,7 @@ export default function About() {
 
   useGSAP(() => {
     if (!container.current) return;
-    
+
     gsap.fromTo('.about-hero-text',
       { y: 40 },
       {
@@ -125,7 +125,7 @@ export default function About() {
         <div className="bg-white rounded-3xl shadow-xl overflow-visible relative">
           <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 z-20">
             <svg width="100" height="100" viewBox="0 0 80 80" fill="none" className="opacity-20">
-              <path d="M30 45C30 51.627 24.627 57 18 57C11.373 57 6 51.627 6 45C6 32.297 16.297 22 29 22V30C22.373 30 17 35.373 17 42H24C27.314 42 30 44.686 30 48V45ZM66 45C66 51.627 60.627 57 54 57C47.373 57 42 51.627 42 45C42 32.297 52.297 22 65 22V30C58.373 30 53 35.373 53 42H60C63.314 42 66 44.686 66 48V45Z" fill="#E8734A"/>
+              <path d="M30 45C30 51.627 24.627 57 18 57C11.373 57 6 51.627 6 45C6 32.297 16.297 22 29 22V30C22.373 30 17 35.373 17 42H24C27.314 42 30 44.686 30 48V45ZM66 45C66 51.627 60.627 57 54 57C47.373 57 42 51.627 42 45C42 32.297 52.297 22 65 22V30C58.373 30 53 35.373 53 42H60C63.314 42 66 44.686 66 48V45Z" fill="#E8734A" />
             </svg>
           </div>
 

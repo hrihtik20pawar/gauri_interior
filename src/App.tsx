@@ -115,7 +115,7 @@ export default function App() {
           // Force-complete all ScrollTrigger animations that never fired
           ScrollTrigger.getAll().forEach(st => {
             if (st.progress === 0) {
-              st.progress(1);
+              st.animation?.progress(1);
             }
           });
           // Also clear any stuck inline opacity styles from gsap.fromTo
