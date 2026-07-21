@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { useRef, useState } from 'react';
+import { useRef, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { images } from '../../constants/images';
@@ -9,12 +9,24 @@ const heroSlides = images.hero.slides;
 
 export default function Hero() {
   const container = useRef<HTMLDivElement>(null);
+  const slideRefs = useRef<HTMLDivElement[]>([]);
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const goToSlide = useCallback((index: number) => {
+    slideRefs.current.forEach((el, i) => {
+      if (!el) return;
+      gsap.to(el, {
+        opacity: i === index ? 1 : 0,
+        duration: 1,
+        ease: 'power2.inOut',
+      });
+    });
+  }, []);
+
   useGSAP(() => {
     const tl = gsap.timeline({ delay: 0.5 });
-    tl.fromTo('.hero-bg',
+    tl.fromTo(slideRefs.current[0],
       { scale: 1.1, opacity: 0 },
       { scale: 1, opacity: 1, duration: 1.5, ease: 'power2.out' }
     )
@@ -25,6 +37,18 @@ export default function Hero() {
       );
   }, { scope: container });
 
+  const handlePrev = useCallback(() => {
+    const newIndex = (currentSlide - 1 + heroSlides.length) % heroSlides.length;
+    setCurrentSlide(newIndex);
+    goToSlide(newIndex);
+  }, [currentSlide, goToSlide]);
+
+  const handleNext = useCallback(() => {
+    const newIndex = (currentSlide + 1) % heroSlides.length;
+    setCurrentSlide(newIndex);
+    goToSlide(newIndex);
+  }, [currentSlide, goToSlide]);
+
   return (
     <section 
       ref={container} 
@@ -34,7 +58,9 @@ export default function Hero() {
       {heroSlides.map((src, i) => (
         <div
           key={src}
-          className={`absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out hero-bg ${currentSlide === i ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+          ref={(el) => { if (el) slideRefs.current[i] = el; }}
+          className="absolute inset-0 z-0 hero-bg"
+          style={{ opacity: i === 0 ? 1 : 0 }}
         >
           <img
             src={src}
@@ -66,14 +92,14 @@ export default function Hero() {
       </div>
 
       <button
-        onClick={() => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
+        onClick={handlePrev}
         className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/60 transition-colors hero-text"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
-        onClick={() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
+        onClick={handleNext}
         className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/60 transition-colors hero-text"
         aria-label="Next slide"
       >
