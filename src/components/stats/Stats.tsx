@@ -91,6 +91,17 @@ export default function Stats() {
         scrollTrigger: { trigger: container.current, start: 'top 85%' }
       },
     );
+
+    gsap.fromTo('.stat-icon-inner',
+      { rotateY: 0 },
+      {
+        rotateY: 360,
+        duration: 1.2,
+        stagger: 0.15,
+        ease: 'back.out(1.4)',
+        scrollTrigger: { trigger: container.current, start: 'top 85%' }
+      }
+    );
   }, { scope: container });
 
   return (
@@ -105,8 +116,10 @@ export default function Stats() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-8 md:gap-x-12">
           {stats.map((stat, idx) => (
             <div key={idx} className="stat-item flex flex-col items-center text-center">
-              <div className="text-brand-orange mb-4">
-                {stat.icon}
+              <div className="stat-icon-wrapper mb-4">
+                <div className="stat-icon-inner text-brand-orange">
+                  {stat.icon}
+                </div>
               </div>
               {stat.isText ? (
                 <h3 className="text-3xl md:text-4xl text-white mb-2 font-sans font-semibold">{stat.displayText}</h3>

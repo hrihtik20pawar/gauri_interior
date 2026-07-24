@@ -6,6 +6,7 @@ import Timeline from '../../components/timeline/Timeline';
 import Testimonials from '../../components/testimonials/Testimonials';
 import Clients from '../../components/clients/Clients';
 import Values from '../../components/values/Values';
+import Faq from '../../components/faq/Faq';
 
 const SITE_NAME = 'Gauri Interior Pvt. Ltd.';
 
@@ -24,6 +25,7 @@ export default function Home() {
       <Timeline />
       <Clients />
       <Testimonials />
+      <Faq />
     </main>
   );
 }

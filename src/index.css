@@ -53,3 +53,12 @@ html, body {
   position: fixed;
   width: 100%;
 }
+
+.stat-icon-wrapper {
+  perspective: 1000px;
+}
+
+.stat-icon-inner {
+  transform-style: preserve-3d;
+  will-change: transform;
+}

@@ -11,6 +11,8 @@ export const images = {
       "/images/Final_Images/HomeScreen/homescreen_6.avif",
       "/images/Final_Images/HomeScreen/homescreen_7.avif",
       "/images/Final_Images/HomeScreen/homescreen_8.avif",
+      "/images/Final_Images/HomeScreen/homescreen_9.avif",
+      "/images/Final_Images/HomeScreen/homescreen_10.avif",
     ],
   },
 
@@ -21,12 +23,12 @@ export const images = {
     vision: "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
     process: "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
     cta: "/images/WEBSITE/2) HOTEL & RESTAURANT/5) KOHINOOR ELITE/KOHINOOR ELITE FINAL PHOTOS/KOHINOOR ELITE (1).avif",
-    value1: "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
-    value2: "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
-    value3: "/images/WEBSITE/4) JEWELLARY SHOPE/1) KRA/KRA (1).avif",
-    value4: "/images/WEBSITE/2) HOTEL & RESTAURANT/1) CRAVIN CAFE/CRAVIN CAFE FINAL PHOTO/Cravin Cafe (32).avif",
-    value5: "/images/WEBSITE/8) LOBBY AND BUILDING AMENTIES/2) PIRAMAL VAIKUNTH/VAIKUNTH (1).avif",
-    value6: "/images/WEBSITE/9) DISPLAY UNIT/1) Big Mishra/BIG MISHRA FINAL PHOTO/BIG MISHRA (1).avif",
+    value1: "/images/Final_Images/Bharat Residential/WhatsApp Image 2026-07-17 at 15.56.12.avif",
+    value2: "/images/Final_Images/HEMCO PHARMA/WhatsApp Image 2026-07-18 at 11.44.07.avif",
+    value3: "/images/Final_Images/CRAVIN CAFE/WhatsApp Image 2026-07-18 at 14.39.58.avif",
+    value4: "/images/Final_Images/6. PENINSULA/WhatsApp Image 2026-07-18 at 11.57.55.avif",
+    value5: "/images/Final_Images/10. ITC GHATKOPAR/WhatsApp Image 2026-07-18 at 12.35.27.avif",
+    value6: "/images/Final_Images/14. AMARDEEP PROJECTS/WhatsApp Image 2026-07-18 at 13.55.04.avif",
   },
 
   businesses: {
@@ -91,15 +93,16 @@ export const images = {
   },
 
   team: [
-    "/images/team/team_1.avif",
-    "/images/team/team_2.avif",
-    "/images/team/team_3.avif",
-    "/images/team/team_4.avif",
-    "/images/team/team_5.avif",
-    "/images/team/team_6.avif",
-    "/images/team/team_7.avif",
-    "/images/team/team_8.avif",
-    "/images/team/team_9.avif"
+    "/images/team/team-founder.avif",
+    "/images/team/team-md-ceo.avif",
+    "/images/team/team-non-executive-director.avif",
+    "/images/team/team-director.avif",
+    "/images/team/team-business-head.avif",
+    "/images/team/team-design-advisor.avif",
+    "/images/team/team-general-manager.avif",
+    "/images/team/team-accounts-head.avif",
+    "/images/team/team-project-head.avif",
+    "/images/team/team-hr-purchase-head.avif"
   ],
 
   manufacturing: [

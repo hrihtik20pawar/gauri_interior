@@ -78,8 +78,8 @@ export default function Testimonials() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   aria-label={`Go to testimonial ${index + 1}`}
-                  className={`min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full transition-all duration-300 ${
-                    index === currentIndex ? 'bg-brand-orange w-10' : 'bg-gray-300 w-2'
+                  className={`min-h-[16px] min-w-[16px] flex items-center justify-center rounded-full transition-all duration-300 ${
+                    index === currentIndex ? 'bg-brand-orange w-4' : 'bg-gray-300 w-1.5'
                   }`}
                 />
               ))}

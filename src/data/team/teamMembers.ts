@@ -1,12 +1,13 @@
-import { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import TeamMemberCard from '../../components/team/TeamMemberCard';
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  image: string;
+  linkedin: string;
+  description: string;
+}
 
-gsap.registerPlugin(ScrollTrigger);
-
-const teamMembers = [
+export const teamMembers: TeamMember[] = [
   {
     id: 'lalbachan-vishwakarma',
     name: "Lalbachan Vishwakarma",
@@ -88,73 +89,3 @@ const teamMembers = [
     description: "As the HR & Purchase Head of the Gauri Group of Companies, Nandini D. Kalambe leads the organization's human resource and procurement functions, ensuring operational efficiency and seamless business support. She plays a vital role in talent acquisition, employee engagement, vendor management, procurement planning, and supply chain coordination. By balancing people management with strategic purchasing, she ensures that the Group has the right talent, quality resources, and reliable vendor partnerships to successfully execute every project. Her commitment to professionalism, collaboration, and continuous improvement strengthens the organization's foundation for sustainable growth."
   }
 ];
-
-export { teamMembers };
-
-export default function MeetTheTeam() {
-  const container = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    if (!container.current) return;
-
-    gsap.fromTo('.tm-header',
-      { y: 40 },
-      { y: 0, duration: 0.8, ease: 'power2.out',
-        scrollTrigger: { trigger: container.current, start: 'top 80%' } },
-    );
-
-    gsap.fromTo('.tm-card',
-      { y: 50 },
-      { y: 0, duration: 0.8, stagger: 0.12, ease: 'power2.out', clearProps: 'all',
-        scrollTrigger: { trigger: '.tm-grid', start: 'top 80%' } },
-    );
-  }, { scope: container });
-
-  return (
-    <section ref={container} className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-[#faf9f6]">
-      <div className="max-w-[1500px] mx-auto">
-        <div className="tm-header text-center mb-16">
-          <p className="text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Our People</p>
-          <h2 className="text-4xl md:text-5xl font-serif text-brand-green mb-6">Meet Our Team</h2>
-          <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full" />
-        </div>
-
-        <div className="hidden lg:flex flex-col items-center gap-10 tm-grid">
-          <div className="flex justify-center">
-            <TeamMemberCard member={teamMembers[0]} fixedWidth />
-          </div>
-
-          <div className="flex justify-center gap-8">
-            {teamMembers.slice(1, 3).map((member) => (
-              <TeamMemberCard key={member.id} member={member} fixedWidth />
-            ))}
-          </div>
-
-          <div className="flex justify-center gap-8">
-            {teamMembers.slice(3, 6).map((member) => (
-              <TeamMemberCard key={member.id} member={member} fixedWidth />
-            ))}
-          </div>
-
-          <div className="flex justify-center gap-8">
-            {teamMembers.slice(6, 10).map((member) => (
-              <TeamMemberCard key={member.id} member={member} fixedWidth />
-            ))}
-          </div>
-        </div>
-
-        <div className="hidden md:grid lg:hidden grid-cols-2 gap-6">
-          {teamMembers.map((member) => (
-            <TeamMemberCard key={member.id} member={member} />
-          ))}
-        </div>
-
-        <div className="grid md:hidden grid-cols-1 gap-6">
-          {teamMembers.map((member) => (
-            <TeamMemberCard key={member.id} member={member} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}

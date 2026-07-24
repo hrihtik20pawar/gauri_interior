@@ -13,15 +13,7 @@ export default function Hero() {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [failedSlides, setFailedSlides] = useState<Set<number>>(new Set());
-
-  useEffect(() => {
-    if (failedSlides.size === 0) return;
-    if (failedSlides.has(currentSlide)) {
-      const nextIndex = (currentSlide + 1) % heroSlides.length;
-      setCurrentSlide(nextIndex);
-      goToSlide(nextIndex);
-    }
-  }, [failedSlides, currentSlide]);
+  const currentSlideRef = useRef(0);
 
   const goToSlide = useCallback((index: number) => {
     slideRefs.current.forEach((el, i) => {
@@ -42,6 +34,29 @@ export default function Hero() {
     });
   }, []);
 
+  useEffect(() => {
+    if (failedSlides.size === 0) return;
+    if (failedSlides.has(currentSlideRef.current)) {
+      const nextIndex = (currentSlideRef.current + 1) % heroSlides.length;
+      currentSlideRef.current = nextIndex;
+      setCurrentSlide(nextIndex);
+      goToSlide(nextIndex);
+    }
+  }, [failedSlides, goToSlide]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      let nextIndex = (currentSlideRef.current + 1) % heroSlides.length;
+      while (failedSlides.has(nextIndex) && nextIndex !== currentSlideRef.current) {
+        nextIndex = (nextIndex + 1) % heroSlides.length;
+      }
+      currentSlideRef.current = nextIndex;
+      setCurrentSlide(nextIndex);
+      goToSlide(nextIndex);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [failedSlides, goToSlide]);
+
   useGSAP(() => {
     const tl = gsap.timeline({ delay: 0.5 });
     tl.fromTo(slideRefs.current[0],
@@ -56,22 +71,24 @@ export default function Hero() {
   }, { scope: container });
 
   const handlePrev = useCallback(() => {
-    let newIndex = (currentSlide - 1 + heroSlides.length) % heroSlides.length;
-    while (failedSlides.has(newIndex) && newIndex !== currentSlide) {
+    let newIndex = (currentSlideRef.current - 1 + heroSlides.length) % heroSlides.length;
+    while (failedSlides.has(newIndex) && newIndex !== currentSlideRef.current) {
       newIndex = (newIndex - 1 + heroSlides.length) % heroSlides.length;
     }
+    currentSlideRef.current = newIndex;
     setCurrentSlide(newIndex);
     goToSlide(newIndex);
-  }, [currentSlide, goToSlide, failedSlides]);
+  }, [goToSlide, failedSlides]);
 
   const handleNext = useCallback(() => {
-    let newIndex = (currentSlide + 1) % heroSlides.length;
-    while (failedSlides.has(newIndex) && newIndex !== currentSlide) {
+    let newIndex = (currentSlideRef.current + 1) % heroSlides.length;
+    while (failedSlides.has(newIndex) && newIndex !== currentSlideRef.current) {
       newIndex = (newIndex + 1) % heroSlides.length;
     }
+    currentSlideRef.current = newIndex;
     setCurrentSlide(newIndex);
     goToSlide(newIndex);
-  }, [currentSlide, goToSlide, failedSlides]);
+  }, [goToSlide, failedSlides]);
 
   return (
     <section 
