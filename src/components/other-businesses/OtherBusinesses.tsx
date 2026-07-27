@@ -25,7 +25,7 @@ export default function OtherBusinesses({ currentId }: { currentId: string }) {
         {others.map((biz) => (
           <Link key={biz.id} to={`/business/${biz.id}`} className="group block">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-white flex items-center justify-center p-8">
-              <img loading="lazy" src={biz.logo} alt={biz.title} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+              <img loading="lazy" decoding="async" width="800" height="600" src={biz.logo} alt={biz.title} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
               <div className="absolute bottom-4 left-4 right-4">
                 <span className="bg-brand-orange text-white text-xs font-semibold px-3 py-1.5 rounded inline-flex items-center gap-1.5">

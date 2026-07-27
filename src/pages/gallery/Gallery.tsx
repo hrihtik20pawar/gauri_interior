@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback } from 'react';
+import React, { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import gsap from 'gsap';
 import { ChevronLeft, ChevronRight, X, Maximize2, Search } from 'lucide-react';
@@ -8,6 +8,8 @@ import { useSearchParams } from 'react-router-dom';
 import { images } from '../../constants/images';
 
 const heroSlides = images.hero.slides;
+const INITIAL_LOAD = 20;
+const LOAD_MORE_COUNT = 12;
 
 export default function Gallery() {
   const [searchParams] = useSearchParams();
@@ -16,10 +18,19 @@ export default function Gallery() {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredImages, setFilteredImages] = useState<GalleryImage[]>(galleryImages);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD);
   const galleryRef = useRef<HTMLDivElement>(null);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const lenis = useLenis();
   const [heroSlide, setHeroSlide] = useState(0);
+
+  const visibleImages = useMemo(
+    () => filteredImages.slice(0, visibleCount),
+    [filteredImages, visibleCount]
+  );
+
+  const hasMore = visibleCount < filteredImages.length;
 
 
   useEffect(() => {
@@ -88,7 +99,25 @@ export default function Gallery() {
     }
 
     setFilteredImages(result);
+    setVisibleCount(INITIAL_LOAD);
   }, [activeCategory, searchQuery]);
+
+  // IntersectionObserver for infinite scroll
+  useEffect(() => {
+    if (!loadMoreRef.current || !hasMore) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleCount(prev => Math.min(prev + LOAD_MORE_COUNT, filteredImages.length));
+        }
+      },
+      { rootMargin: '400px' }
+    );
+
+    observer.observe(loadMoreRef.current);
+    return () => observer.disconnect();
+  }, [hasMore, filteredImages.length]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -181,7 +210,7 @@ export default function Gallery() {
             className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
             style={{ opacity: heroSlide === i ? 1 : 0 }}
           >
-            <img src={src} alt="Interior design gallery showcase" loading={i === 0 ? "eager" : "lazy"} className="w-full h-full object-cover object-[center_65%]" />
+            <img src={src} alt="Interior design gallery showcase" loading={i === 0 ? "eager" : "lazy"} decoding="async" width="1920" height="1080" className="w-full h-full object-cover object-[center_65%]" />
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
@@ -229,7 +258,7 @@ export default function Gallery() {
             className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
             style={{ opacity: heroSlide === i ? 1 : 0 }}
           >
-            <img src={src} alt="Interior design gallery showcase" loading={i === 0 ? "eager" : "lazy"} className="w-full h-full object-cover object-[center_65%]" />
+            <img src={src} alt="Interior design gallery showcase" loading={i === 0 ? "eager" : "lazy"} decoding="async" width="1920" height="1080" className="w-full h-full object-cover object-[center_65%]" />
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
@@ -278,7 +307,7 @@ export default function Gallery() {
 
       <div className="px-4 md:px-8 lg:px-16 max-w-[1800px] mx-auto mt-6 sm:mt-8 md:mt-16">
         <div ref={galleryRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 auto-rows-[250px] sm:auto-rows-[300px] md:auto-rows-[400px]">
-          {filteredImages.map((item, index) => {
+          {visibleImages.map((item, index) => {
             return (
               <div
                 key={item.id}
@@ -322,6 +351,12 @@ export default function Gallery() {
         {filteredImages.length === 0 && (
           <div className="text-center py-20 sm:py-32 text-gray-500 px-4">
             <p className="text-lg sm:text-xl">No projects found matching your criteria.</p>
+          </div>
+        )}
+
+        {hasMore && filteredImages.length > 0 && (
+          <div ref={loadMoreRef} className="flex justify-center py-8">
+            <div className="w-8 h-8 border-2 border-brand-teal border-t-transparent rounded-full animate-spin" />
           </div>
         )}
       </div>

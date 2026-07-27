@@ -81,7 +81,7 @@ export default function Modal({ isOpen, onClose, children, className = '' }: Mod
       <div
         ref={modalRef}
         tabIndex={-1}
-        className={`relative bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 animate-fadeIn outline-none ${className}`}
+        className={`relative bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6 sm:p-8 animate-fadeIn outline-none ${className}`}
         onClick={(e) => e.stopPropagation()}
       >
         <button

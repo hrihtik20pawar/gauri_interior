@@ -17,12 +17,12 @@ export const images = {
   },
 
   about: {
-    main: "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
-    hero: "/images/WEBSITE/2) HOTEL & RESTAURANT/2) Ava Belapur/AVA BELAPUR FINAL PHOTOS/AVA BELAPUR (1).avif",
-    story: "/images/WEBSITE/2) HOTEL & RESTAURANT/4) ESKANA RESORT AND SPA/ESKANA RESORT AND SPA (014).avif",
-    vision: "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
-    process: "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
-    cta: "/images/WEBSITE/2) HOTEL & RESTAURANT/5) KOHINOOR ELITE/KOHINOOR ELITE FINAL PHOTOS/KOHINOOR ELITE (1).avif",
+    main: "/images/Final_Images/Bharat Residential/WhatsApp Image 2026-07-17 at 15.56.12.avif",
+    hero: "/images/Final_Images/CRAVIN CAFE/WhatsApp Image 2026-07-18 at 14.39.58.avif",
+    story: "/images/Final_Images/6. PENINSULA/WhatsApp Image 2026-07-18 at 11.57.55.avif",
+    vision: "/images/Final_Images/10. ITC GHATKOPAR/WhatsApp Image 2026-07-18 at 12.35.27.avif",
+    process: "/images/Final_Images/HEMCO PHARMA/WhatsApp Image 2026-07-18 at 11.44.07.avif",
+    cta: "/images/Final_Images/14. AMARDEEP PROJECTS/WhatsApp Image 2026-07-18 at 13.55.04.avif",
     value1: "/images/Final_Images/Bharat Residential/WhatsApp Image 2026-07-17 at 15.56.12.avif",
     value2: "/images/Final_Images/HEMCO PHARMA/WhatsApp Image 2026-07-18 at 11.44.07.avif",
     value3: "/images/Final_Images/CRAVIN CAFE/WhatsApp Image 2026-07-18 at 14.39.58.avif",
@@ -44,36 +44,36 @@ export const images = {
 
   projects: {
     oasisVilla: {
-      main: "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
+      main: "/images/Final_Images/Bharat Residential/WhatsApp Image 2026-07-17 at 15.56.12.avif",
       gallery: []
     },
     zenWorkspace: {
-      main: "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
+      main: "/images/Final_Images/HEMCO PHARMA/WhatsApp Image 2026-07-18 at 11.44.07.avif",
       gallery: []
     },
     minimalistKitchen: {
-      main: "/images/WEBSITE/2) HOTEL & RESTAURANT/1) CRAVIN CAFE/CRAVIN CAFE FINAL PHOTO/Cravin Cafe (32).avif",
+      main: "/images/Final_Images/CRAVIN CAFE/WhatsApp Image 2026-07-18 at 14.39.58.avif",
       gallery: []
     },
     skylinePenthouse: {
-      main: "/images/WEBSITE/9) DISPLAY UNIT/1) Big Mishra/BIG MISHRA FINAL PHOTO/BIG MISHRA (1).avif",
+      main: "/images/Final_Images/14. AMARDEEP PROJECTS/WhatsApp Image 2026-07-18 at 13.55.04.avif",
       gallery: []
     },
     boutiqueRetail: {
-      main: "/images/WEBSITE/4) JEWELLARY SHOPE/1) KRA/KRA (1).avif",
+      main: "/images/Final_Images/6. PENINSULA/WhatsApp Image 2026-07-18 at 11.57.55.avif",
       gallery: []
     },
     modernRenovation: {
-      main: "/images/WEBSITE/1) OFFICES/4) PISPL CALL CENTER/PISPL CALL CENTER FINAL PHOTO/IMG_0335.avif",
+      main: "/images/Final_Images/PISPL BPO/WhatsApp Image 2026-07-18 at 11.28.35.avif",
       gallery: []
     },
     works: [
-      "/images/WEBSITE/3) RESIDENCIAL/1) MAZDA/MAZDA FINAL PHOTO/MAZDA FINAL PHOTO (125).avif",
-      "/images/WEBSITE/1) OFFICES/6) Hemco Pharma - Office Work/HEMCO PHARMA FINAL PHOTO/HEMCO PHARMA (11).avif",
-      "/images/WEBSITE/2) HOTEL & RESTAURANT/1) CRAVIN CAFE/CRAVIN CAFE FINAL PHOTO/Cravin Cafe (32).avif",
-      "/images/WEBSITE/9) DISPLAY UNIT/1) Big Mishra/BIG MISHRA FINAL PHOTO/BIG MISHRA (1).avif",
-      "/images/WEBSITE/4) JEWELLARY SHOPE/1) KRA/KRA (1).avif",
-      "/images/WEBSITE/1) OFFICES/4) PISPL CALL CENTER/PISPL CALL CENTER FINAL PHOTO/IMG_0335.avif"
+      "/images/Final_Images/Bharat Residential/WhatsApp Image 2026-07-17 at 15.56.12.avif",
+      "/images/Final_Images/HEMCO PHARMA/WhatsApp Image 2026-07-18 at 11.44.07.avif",
+      "/images/Final_Images/CRAVIN CAFE/WhatsApp Image 2026-07-18 at 14.39.58.avif",
+      "/images/Final_Images/14. AMARDEEP PROJECTS/WhatsApp Image 2026-07-18 at 13.55.04.avif",
+      "/images/Final_Images/6. PENINSULA/WhatsApp Image 2026-07-18 at 11.57.55.avif",
+      "/images/Final_Images/PISPL BPO/WhatsApp Image 2026-07-18 at 11.28.35.avif"
     ]
   },
 

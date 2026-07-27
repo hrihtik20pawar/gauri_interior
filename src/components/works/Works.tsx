@@ -33,6 +33,9 @@ export default function Works() {
             <Link to={`/works/${project.id}`} key={project.id} className="work-item group relative overflow-hidden rounded-2xl aspect-[4/3] block">
               <img 
                 loading="lazy"
+                decoding="async"
+                width="800"
+                height="600"
                 src={project.image} 
                 alt={project.title} 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

@@ -43,6 +43,10 @@ export default function TeamMemberDetail() {
             key={idx}
             src={slide}
             alt="Interior design showcase"
+            loading={idx === 0 ? 'eager' : 'lazy'}
+            decoding="async"
+            width="1920"
+            height="1080"
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === currentSlide ? 'opacity-100' : 'opacity-0'}`}
           />
         ))}
@@ -50,10 +54,13 @@ export default function TeamMemberDetail() {
         <div className="relative z-10 h-full flex items-start md:items-center pt-32 md:pt-0 px-6 md:px-12 lg:px-24">
           <div className="max-w-6xl mx-auto w-full">
             <div className="flex flex-col md:flex-row items-center gap-12">
-              <div className="w-full md:w-1/3">
+              <div className="w-2/3 md:w-1/3 mx-auto md:mx-0">
                 <div className="rounded-[2rem] overflow-hidden shadow-2xl aspect-[3/4]">
                   <img 
-                    loading="lazy"
+                    loading="eager"
+                    decoding="async"
+                    width="400"
+                    height="533"
                     src={member.image} 
                     alt={member.name} 
                     className="w-full h-full object-cover"

@@ -50,7 +50,7 @@ export default function OurServices() {
           <div className="w-16 md:w-24 h-1 bg-brand-orange mx-auto rounded-full" />
         </div>
 
-        <div className="svc-grid grid grid-cols-3 gap-3 md:gap-5">
+        <div className="svc-grid grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-5">
           {services.map((svc, i) => (
             <div key={i} className="svc-card group bg-gray-50/50 rounded-xl p-3 md:p-6 border border-gray-100 hover:bg-brand-green hover:shadow-xl transition-all duration-150 text-center cursor-default">
               <div className="w-9 h-9 md:w-12 md:h-12 rounded-xl bg-brand-teal/10 group-hover:bg-white/20 flex items-center justify-center mx-auto mb-2 md:mb-4 transition-colors duration-150">

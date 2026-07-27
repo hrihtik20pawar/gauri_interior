@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { images } from '../../constants/images';
 
 const heroSlides = images.hero.slides;
+const MAX_PRELOADED = 3;
 
 export default function Hero() {
   const container = useRef<HTMLDivElement>(null);
@@ -95,24 +96,35 @@ export default function Hero() {
       ref={container} 
       id="hero"
       className="relative w-full h-screen min-h-[600px] flex items-center overflow-hidden -mt-[76px] pt-[76px]"
+      style={{ contain: 'layout style' }}
     >
-      {heroSlides.map((src, i) => (
-        <div
-          key={src}
-          ref={(el) => { if (el) slideRefs.current[i] = el; }}
-          className="absolute inset-0 z-0 hero-bg"
-          style={{ opacity: i === 0 ? 1 : 0 }}
-        >
-          <img
-            src={src}
-            alt="Interior design showcase"
-            loading={i === 0 ? 'eager' : 'lazy'}
-            className="w-full h-full object-cover object-[center_65%]"
-            onError={() => handleImageError(i)}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
-        </div>
-      ))}
+      {heroSlides.map((src, i) => {
+        const distance = Math.abs(i - currentSlide);
+        const shouldRender = distance <= 1 || (distance === 2 && i === 0);
+        if (!shouldRender && i > MAX_PRELOADED) return null;
+
+        return (
+          <div
+            key={src}
+            ref={(el) => { if (el) slideRefs.current[i] = el; }}
+            className="absolute inset-0 z-0 hero-bg"
+            style={{ opacity: i === 0 ? 1 : 0 }}
+          >
+            <img
+              src={src}
+              alt="Interior design showcase"
+              loading={i < 2 ? 'eager' : 'lazy'}
+              decoding="async"
+              fetchPriority={i === 0 ? 'high' : 'low'}
+              width="1920"
+              height="1080"
+              className="w-full h-full object-cover object-[center_65%]"
+              onError={() => handleImageError(i)}
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
+          </div>
+        );
+      })}
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-24 max-w-7xl mx-auto pt-24 md:pt-28">
         <div className="max-w-2xl items-start text-left">

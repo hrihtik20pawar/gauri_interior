@@ -1,10 +1,12 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useLenis } from '../../App';
+import Modal from '../../components/ui/Modal';
+import { siteConfig } from '../../constants/contact';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,6 +14,7 @@ export default function AboutCta() {
   const ctaRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const lenis = useLenis();
+  const [showContact, setShowContact] = useState(false);
 
   useGSAP(() => {
     if (!ctaRef.current) return;
@@ -32,30 +35,84 @@ export default function AboutCta() {
   };
 
   return (
-    <div ref={ctaRef} className="bg-brand-green py-24 md:py-32 px-6">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-6">
-          Let's Build Your Dream Space Together
-        </h2>
-        <p className="text-white/70 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-          Whether you're planning a residential renovation, commercial workspace, or a complete turnkey interior project, our team is ready to transform your vision into reality.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button
-            onClick={scrollToContact}
-            className="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold tracking-wide transition-all duration-300 hover:shadow-xl hover:shadow-orange-900/30 group"
-          >
-            Start Your Project
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
-          <button
-            onClick={() => navigate('/gallery')}
-            className="inline-flex items-center justify-center gap-2 backdrop-blur-md bg-white/10 border border-white/30 text-white px-8 py-4 rounded font-semibold tracking-wide hover:bg-white hover:text-brand-green transition-all duration-300"
-          >
-            View Our Gallery
-          </button>
+    <>
+      <div ref={ctaRef} className="bg-brand-green py-16 md:py-24 lg:py-32 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-6">
+            Let's Build Your Dream Space Together
+          </h2>
+          <p className="text-white/70 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+            Whether you're planning a residential renovation, commercial workspace, or a complete turnkey interior project, our team is ready to transform your vision into reality.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              onClick={() => setShowContact(true)}
+              className="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold tracking-wide transition-all duration-300 hover:shadow-xl hover:shadow-orange-900/30 group"
+            >
+              Start Your Project
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </button>
+            <button
+              onClick={() => navigate('/gallery')}
+              className="inline-flex items-center justify-center gap-2 backdrop-blur-md bg-white/10 border border-white/30 text-white px-8 py-4 rounded font-semibold tracking-wide hover:bg-white hover:text-brand-green transition-all duration-300"
+            >
+              View Our Gallery
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+
+      <Modal isOpen={showContact} onClose={() => setShowContact(false)}>
+        <div className="text-center mb-6">
+          <h3 className="text-2xl font-serif font-bold text-brand-green mb-2">Get in Touch</h3>
+          <p className="text-gray-500 text-sm">We'd love to hear from you. Reach out to us!</p>
+        </div>
+        <div className="space-y-4">
+          <a
+            href={siteConfig.contact.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+          >
+            <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
+            <span className="text-sm text-gray-600 leading-relaxed">{siteConfig.contact.address}</span>
+          </a>
+          <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+            <Phone className="w-5 h-5 shrink-0 text-brand-orange" />
+            <div className="flex flex-wrap gap-x-4 gap-y-1">
+              {siteConfig.contact.phones.map((phone) => (
+                <a key={phone} href={`tel:${phone.replace(/-/g, '')}`} className="text-sm text-gray-600 hover:text-brand-orange transition-colors">
+                  {phone}
+                </a>
+              ))}
+            </div>
+          </div>
+          <a
+            href={`mailto:${siteConfig.contact.email}`}
+            className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+          >
+            <Mail className="w-5 h-5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
+            <span className="text-sm text-gray-600">{siteConfig.contact.email}</span>
+          </a>
+          <a
+            href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+          >
+            <MessageCircle className="w-5 h-5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
+            <span className="text-sm text-gray-600">{siteConfig.contact.whatsappDisplay}</span>
+          </a>
+        </div>
+        <div className="mt-6 pt-4 border-t border-gray-100 text-center">
+          <button
+            onClick={() => { setShowContact(false); scrollToContact(); }}
+            className="text-sm text-brand-orange hover:text-orange-600 font-medium transition-colors"
+          >
+            Or scroll to full contact section →
+          </button>
+        </div>
+      </Modal>
+    </>
   );
 }

@@ -21,7 +21,10 @@ export default function ProjectDetail() {
 
       <div className="relative h-[60vh] min-h-[500px] w-full">
         <img 
-          loading="lazy"
+          loading="eager"
+          decoding="async"
+          width="1920"
+          height="1080"
           src={project.image} 
           alt={project.title} 
           className="w-full h-full object-cover"
@@ -77,7 +80,7 @@ export default function ProjectDetail() {
                 <h2 className="text-3xl font-serif text-brand-green mb-6">Gallery</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {project.gallery.map((img, i) => (
-                    <img key={i} loading="lazy" src={img} alt={`${project.title} - view ${i + 1}`} className="w-full h-80 object-cover rounded-2xl shadow-md" />
+                    <img key={i} loading="lazy" decoding="async" width="800" height="600" src={img} alt={`${project.title} - view ${i + 1}`} className="w-full h-80 object-cover rounded-2xl shadow-md" />
                   ))}
                 </div>
               </div>

@@ -15,7 +15,7 @@ export default function BusinessesPage() {
   return (
     <main className="min-h-screen bg-[#faf9f6]">
       <section className="relative h-[100dvh] min-h-[500px] overflow-hidden">
-        <img src={images.about.hero} alt="Our company ventures" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={images.about.hero} alt="Our company ventures" loading="eager" decoding="async" width="1920" height="1080" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-brand-green/50 to-brand-green/80" />
         <div className="relative z-10 h-full flex items-center justify-center px-6">
           <div className="max-w-6xl mx-auto text-center">

@@ -109,7 +109,7 @@ export default function Stats() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-sans font-semibold tracking-wide text-white">
-            <BrandName as="span" size="lg" color="teal" className="whitespace-nowrap">GAURI GROUP</BrandName> <span className="text-brand-orange">AT A GLANCE</span>
+            <BrandName as="span" size="lg" color="teal">GAURI GROUP</BrandName> <span className="text-brand-orange whitespace-nowrap">AT A GLANCE</span>
           </h2>
         </div>
 

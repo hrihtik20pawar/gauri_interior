@@ -49,7 +49,7 @@ export default function Clients() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="py-16 md:py-24 bg-gradient-to-b from-[#faf9f6] to-white overflow-hidden">
+    <section ref={containerRef} className="py-16 md:py-24 bg-gradient-to-b from-[#faf9f6] to-white overflow-hidden" style={{ contain: 'layout style' }}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-12">
         <div className="text-center">
           <p className="text-brand-orange font-bold tracking-[0.2em] uppercase text-sm mb-4">Our Partners</p>

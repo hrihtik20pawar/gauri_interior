@@ -30,7 +30,7 @@ export default function ProjectDetailView({ project, backLink, backLabel, heroHe
   return (
     <div className="min-h-screen bg-white pt-20 pb-24">
       <div className={`relative ${heroHeight} w-full`}>
-        <img loading="lazy" src={project.image} alt={project.title} className="w-full h-full object-cover" />
+        <img loading="eager" decoding="async" width="1920" height="1080" src={project.image} alt={project.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
         <div className="absolute inset-0 flex items-end">

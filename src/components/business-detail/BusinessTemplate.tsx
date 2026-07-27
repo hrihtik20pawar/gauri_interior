@@ -25,9 +25,9 @@ export default function BusinessTemplate({ business, variant = 'teal' }: Busines
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1">
-              <img loading="lazy" src={business.logo} alt={`${business.title} Logo`} className="h-16 md:h-20 w-auto object-contain mb-6" />
+              <img loading="lazy" decoding="async" width="200" height="80" src={business.logo} alt={`${business.title} Logo`} className="h-16 md:h-20 w-auto object-contain mb-6" />
               <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase mb-4">{business.heroSubtitle}</p>
-              <h1 className="text-5xl md:text-7xl font-serif text-gray-900 leading-tight mb-6">
+              <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif text-gray-900 leading-tight mb-6">
                 {business.heroTitleLine1}
                 {business.heroTitleLine2 && <><br /><span className={isOrange ? 'text-brand-orange' : 'text-teal-800'}>{business.heroTitleLine2}</span></>}
               </h1>

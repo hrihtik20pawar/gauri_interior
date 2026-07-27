@@ -68,9 +68,9 @@ export default function OurStory() {
 
           <div className="flex-1 order-1 lg:order-2 relative">
             <div className="story-image rounded-[2rem] overflow-hidden shadow-2xl">
-              <img loading="lazy" src={images.about.story} alt="Gauri Interior workspace" className="w-full h-[300px] md:h-[500px] object-cover" />
+              <img loading="lazy" decoding="async" width="800" height="600" src={images.about.story} alt="Gauri Interior workspace" className="w-full h-[300px] md:h-[500px] object-cover" />
             </div>
-            <div className="story-stat-card absolute -bottom-8 -left-4 lg:-left-8 bg-white rounded-2xl shadow-2xl p-6 max-w-[280px] border border-gray-100">
+            <div className="story-stat-card absolute -bottom-8 left-0 lg:-left-8 bg-white rounded-2xl shadow-2xl p-6 max-w-[280px] border border-gray-100">
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-brand-teal/10 flex items-center justify-center shrink-0">

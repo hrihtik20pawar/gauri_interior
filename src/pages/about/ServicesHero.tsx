@@ -77,6 +77,9 @@ export default function ServicesHero() {
               src={src}
               alt="Interior design services"
               loading={i === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+              width="1920"
+              height="1080"
               className="w-full h-full object-cover object-[center_65%]"
             />
           )}

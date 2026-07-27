@@ -78,11 +78,11 @@ export default function About() {
   }, { scope: container });
 
   return (
-    <section ref={container} className="py-24 px-6 md:px-12 lg:px-24 max-w-[1400px] mx-auto bg-white" id="about">
+    <section ref={container} className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-[1400px] mx-auto bg-white" id="about">
       <div className="flex flex-col lg:flex-row gap-16 mb-24 items-center">
         <div className="flex-1 lg:max-w-2xl">
           <p className="about-hero-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">About Us</p>
-          <h2 className="about-hero-text text-5xl md:text-6xl lg:text-7xl font-sans text-brand-green leading-[1.15] mb-8 tracking-wide">
+          <h2 className="about-hero-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans text-brand-green leading-[1.15] mb-8 tracking-wide">
             <BrandName as="span" size="lg">GAURI GROUP</BrandName>
           </h2>
           <p className="about-hero-text text-gray-700 text-xl leading-relaxed mb-6 font-medium text-justify">
@@ -110,7 +110,7 @@ export default function About() {
             loading="lazy"
             src="/images/about/new_office_image.avif"
             alt="Gauri Group Office"
-            className="about-office-image w-full h-[450px] md:h-[550px] object-cover rounded-xl shadow-2xl relative z-10"
+            className="about-office-image w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] object-cover rounded-xl shadow-2xl relative z-10"
           />
         </div>
       </div>
@@ -141,14 +141,17 @@ export default function About() {
                 <span className="text-gray-900 font-serif">Message</span>
               </h3>
 
-              <div className="space-y-3 text-gray-600 text-sm leading-relaxed text-justify">
-                <p>Dear Valued Clients, Partners, and Associates,</p>
-                <p>It gives me immense pride to welcome you to <BrandName as="span">GAURI GROUP.</BrandName></p>
-                <p>Our journey began with a simple vision—to create quality furniture through honest workmanship and unwavering dedication. Over the years, that vision has grown into a comprehensive turnkey interior solutions company, serving clients across diverse industries while maintaining the same values that laid our foundation.</p>
-                <p>At Gauri, we believe that every space tells a story. Whether it is a corporate office, a healthcare facility, an educational institution, a hospitality project, or a premium residence, our objective is to create environments that combine functionality, innovation, and aesthetics.</p>
-                <p>Our greatest strength lies in our people—their expertise, commitment, and passion for excellence. Together, we strive to deliver projects that exceed expectations in quality, safety, and timely execution.</p>
-                <p>As we expand through our group companies and embrace new opportunities, our commitment remains unchanged: to build long-term relationships based on trust, integrity, and exceptional service.</p>
-                <p>I sincerely thank our clients, employees, partners, and well-wishers for being an integral part of our journey. We look forward to creating many more inspiring spaces together.</p>
+              <div className="relative bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm">
+                <div className="text-brand-orange/30 text-5xl font-serif absolute top-4 left-5 select-none leading-none">&ldquo;</div>
+                <div className="space-y-3 text-gray-600 text-sm leading-relaxed text-justify pl-6 md:pl-8">
+                  <p className="!text-gray-900 font-semibold">Dear Valued Clients, Partners, and Associates,</p>
+                  <p>It gives me immense pride to welcome you to <BrandName as="span">GAURI GROUP.</BrandName></p>
+                  <p>Our journey began with a simple vision—to create quality furniture through honest workmanship and unwavering dedication. Over the years, that vision has grown into a comprehensive turnkey interior solutions company, serving clients across diverse industries while maintaining the same values that laid our foundation.</p>
+                  <p>At Gauri, we believe that every space tells a story. Whether it is a corporate office, a healthcare facility, an educational institution, a hospitality project, or a premium residence, our objective is to create environments that combine functionality, innovation, and aesthetics.</p>
+                  <p>Our greatest strength lies in our people—their expertise, commitment, and passion for excellence. Together, we strive to deliver projects that exceed expectations in quality, safety, and timely execution.</p>
+                  <p>As we expand through our group companies and embrace new opportunities, our commitment remains unchanged: to build long-term relationships based on trust, integrity, and exceptional service.</p>
+                  <p>I sincerely thank our clients, employees, partners, and well-wishers for being an integral part of our journey. We look forward to creating many more inspiring spaces together.</p>
+                </div>
               </div>
 
               <div className="mt-6">
@@ -159,7 +162,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="w-full md:w-[55%] flex items-start justify-center p-6 md:p-0 bg-gray-50 min-h-[450px] md:min-h-[750px] relative overflow-hidden rounded-r-3xl -ml-4 md:-ml-8">
+            <div className="w-full md:w-[55%] flex items-start justify-center p-6 md:p-0 bg-gray-50 min-h-[300px] md:min-h-[450px] lg:min-h-[750px] relative overflow-hidden rounded-r-3xl ml-0 md:-ml-8">
               <img
                 loading="lazy"
                 src="/images/team/team-md-ceo.avif"

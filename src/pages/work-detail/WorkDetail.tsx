@@ -19,9 +19,12 @@ export default function WorkDetail() {
   return (
     <div className="min-h-screen bg-white pb-24">
 
-      <div className="relative h-[70vh] min-h-[600px] w-full">
+      <div className="relative h-[70vh] min-h-[400px] md:min-h-[600px] w-full">
         <img 
-          loading="lazy"
+          loading="eager"
+          decoding="async"
+          width="1920"
+          height="1080"
           src={project.image} 
           alt={project.title} 
           className="w-full h-full object-cover"
@@ -77,7 +80,7 @@ export default function WorkDetail() {
                 <h2 className="text-3xl font-serif text-brand-green mb-6">Gallery</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {project.gallery.map((img, i) => (
-                    <img key={i} loading="lazy" src={img} alt={`${project.title} - view ${i + 1}`} className="w-full h-80 object-cover rounded-2xl shadow-md" />
+                    <img key={i} loading="lazy" decoding="async" width="800" height="600" src={img} alt={`${project.title} - view ${i + 1}`} className="w-full h-80 object-cover rounded-2xl shadow-md" />
                   ))}
                 </div>
               </div>
@@ -87,7 +90,7 @@ export default function WorkDetail() {
               <h2 className="text-3xl font-serif text-brand-green mb-6">More Views</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {[project.image, ...project.gallery].slice(0, 6).map((img, i) => (
-                  <img key={i} loading="lazy" src={img} alt={`${project.title} - additional view ${i + 1}`} className="w-full h-48 object-cover rounded-xl shadow-sm hover:shadow-md transition-shadow" />
+                  <img key={i} loading="lazy" decoding="async" width="600" height="400" src={img} alt={`${project.title} - additional view ${i + 1}`} className="w-full h-48 object-cover rounded-xl shadow-sm hover:shadow-md transition-shadow" />
                 ))}
               </div>
             </div>

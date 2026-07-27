@@ -54,7 +54,7 @@ export default function CoreValues() {
             return (
               <div key={i} className={`cv-row flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-16 items-center`}>
                 <div className="flex-1 rounded-[2rem] overflow-hidden shadow-xl">
-                  <img loading="lazy" src={val.image} alt={val.title} className="w-full h-[250px] md:h-[400px] object-cover" />
+                  <img loading="lazy" decoding="async" width="800" height="600" src={val.image} alt={val.title} className="w-full h-[250px] md:h-[400px] object-cover" />
                 </div>
                 <div className="flex-1">
                   <div className="w-14 h-14 rounded-2xl bg-brand-teal/10 flex items-center justify-center mb-6">

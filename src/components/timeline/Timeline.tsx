@@ -175,7 +175,7 @@ export default function Timeline() {
 
         <div className="text-center mb-12 md:mb-24 max-w-3xl mx-auto">
           <p className="timeline-header text-brand-orange font-bold tracking-[0.2em] uppercase text-sm mb-4">Our Journey</p>
-          <h2 className="timeline-header text-5xl md:text-6xl lg:text-7xl font-sans text-brand-green leading-[1.1] mb-6 uppercase">
+          <h2 className="timeline-header text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans text-brand-green leading-[1.1] mb-6 uppercase">
             The Story of <br /> <BrandName as="span" size="lg" className="text-brand-teal font-sans tracking-wide">GAURI Group</BrandName>
           </h2>
           <p className="timeline-header text-gray-500 text-xl leading-relaxed font-medium">

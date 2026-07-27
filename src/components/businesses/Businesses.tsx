@@ -66,7 +66,7 @@ export default function Businesses() {
             <div className="p-8 flex-1 flex flex-col">
               <div className="flex items-center gap-3 mb-6">
                 <div className="bg-gray-50 rounded-xl p-3 border border-gray-100">
-                  <img loading="lazy" src={biz.logo} alt="Business Logo" className="h-16 w-auto object-contain" />
+                  <img loading="lazy" decoding="async" width="200" height="80" src={biz.logo} alt="Business Logo" className="h-16 w-auto object-contain" />
                 </div>
               </div>
               <p className="text-gray-600 text-sm leading-relaxed mb-8">{biz.desc}</p>
@@ -76,7 +76,7 @@ export default function Businesses() {
               </Link>
             </div>
             <div className="h-64 w-full overflow-hidden bg-gray-50">
-              <img loading="lazy" src={biz.img} alt="Business Preview" className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700" />
+              <img loading="lazy" decoding="async" width="800" height="600" src={biz.img} alt="Business Preview" className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700" />
             </div>
           </div>
         ))}

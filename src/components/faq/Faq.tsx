@@ -3,7 +3,6 @@ import { Plus, Minus } from 'lucide-react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import BrandName from '../brand-name/BrandName';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,6 +62,9 @@ export default function Faq() {
           <div className="relative rounded-2xl overflow-hidden bg-gray-50 p-6 md:p-8">
             <img
               loading="lazy"
+              decoding="async"
+              width="800"
+              height="600"
               src="/images/about/new_office_image.avif"
               alt="Interior Design Studio"
               className="w-full h-[280px] md:h-[340px] object-cover rounded-xl mb-6"

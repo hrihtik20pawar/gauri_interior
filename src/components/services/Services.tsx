@@ -112,7 +112,7 @@ export default function Services() {
             <div key={idx} className={`service-card ${svc.bg} rounded-[2rem] shadow-xl shadow-gray-200/50 border border-gray-100 p-8 flex flex-col`}>
               <div className="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
                 <div className="bg-gray-50 rounded-xl p-3 border border-gray-100 shrink-0">
-                  <img loading="lazy" src={svc.logo} alt={`${svc.brand} Logo`} className="h-12 w-auto object-contain" />
+                  <img loading="lazy" decoding="async" width="200" height="60" src={svc.logo} alt={`${svc.brand} Logo`} className="h-12 w-auto object-contain" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-brand-green text-xl leading-tight"><BrandName as="span">{svc.brand}</BrandName></h3>
@@ -126,10 +126,10 @@ export default function Services() {
               </div>
 
               <div className="w-full h-48 rounded-xl overflow-hidden mb-8 shadow-inner">
-                <img loading="lazy" src={svc.img} alt={svc.title} className="w-full h-full object-cover" />
+                <img loading="lazy" decoding="async" width="800" height="400" src={svc.img} alt={svc.title} className="w-full h-full object-cover" />
               </div>
 
-              <div className="grid grid-cols-4 gap-2 mb-8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8">
                 {svc.features.map((feat, fidx) => (
                   <div key={fidx} className="flex flex-col items-center text-center">
                     <div className="text-teal-700 mb-2 p-2 rounded-lg bg-teal-50/50">
