@@ -90,20 +90,20 @@ export default function ServicesHero() {
       <div className="svc-hero-float-1 absolute top-[15%] right-[10%] w-72 h-72 bg-brand-teal/10 rounded-full blur-3xl" />
       <div className="svc-hero-float-2 absolute bottom-[20%] left-[5%] w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl" />
 
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
-        <p className="svc-hero-label text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">What We Do</p>
-        <h1 className="svc-hero-title font-serif text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-9xl font-bold mb-6 leading-none max-w-5xl">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-5 md:px-6 text-center">
+        <p className="svc-hero-label text-brand-orange font-bold tracking-wider uppercase text-xs sm:text-sm mb-3 md:mb-4">What We Do</p>
+        <h1 className="svc-hero-title font-serif text-white text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-9xl font-bold mb-4 md:mb-6 leading-none max-w-5xl">
           Crafting Spaces That Inspire.
         </h1>
-        <div className="svc-hero-line w-24 h-1 bg-brand-orange rounded-full mb-8 origin-center" />
-        <p className="svc-hero-sub text-white/80 text-lg md:text-xl max-w-2xl leading-relaxed font-medium mb-10">
+        <div className="svc-hero-line w-16 md:w-24 h-1 bg-brand-orange rounded-full mb-6 md:mb-8 origin-center" />
+        <p className="svc-hero-sub text-white/80 text-sm sm:text-base md:text-xl max-w-2xl leading-relaxed font-medium mb-6 md:mb-10">
           Comprehensive interior design, turnkey execution, and modular furniture solutions tailored to your vision.
         </p>
-        <div className="svc-hero-btns flex flex-wrap gap-4 justify-center">
-          <a href="#contact-us" className="bg-brand-orange text-white px-8 py-3.5 rounded font-medium hover:bg-brand-orange/90 transition-colors shadow-lg shadow-brand-orange/20">
+        <div className="svc-hero-btns flex flex-wrap gap-3 md:gap-4 justify-center">
+          <a href="#contact-us" className="bg-brand-orange text-white px-6 md:px-8 py-3 md:py-3.5 rounded text-sm md:text-base font-medium hover:bg-brand-orange/90 transition-colors shadow-lg shadow-brand-orange/20">
             Get a Free Consultation
           </a>
-          <a href="#our-services" className="backdrop-blur-md bg-white/10 border border-white/30 text-white px-8 py-3.5 rounded font-medium hover:bg-white hover:text-brand-green transition-colors">
+          <a href="#our-services" className="backdrop-blur-md bg-white/10 border border-white/30 text-white px-6 md:px-8 py-3 md:py-3.5 rounded text-sm md:text-base font-medium hover:bg-white hover:text-brand-green transition-colors">
             Explore Services
           </a>
         </div>

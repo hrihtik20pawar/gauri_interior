@@ -86,12 +86,12 @@ export default function AboutHero() {
       <div className="about-hero-float-1 absolute top-[15%] right-[10%] w-72 h-72 bg-brand-teal/10 rounded-full blur-3xl" />
       <div className="about-hero-float-2 absolute bottom-[20%] left-[5%] w-96 h-96 bg-brand-orange/10 rounded-full blur-3xl" />
 
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
-        <h1 className="about-hero-title font-serif text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-9xl font-bold mb-6 leading-none max-w-5xl">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-5 md:px-6 text-center">
+        <h1 className="about-hero-title font-serif text-white text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-9xl font-bold mb-4 md:mb-6 leading-none max-w-5xl">
           Designing Spaces That Inspire.
         </h1>
-        <div className="about-hero-line w-24 h-1 bg-brand-orange rounded-full mb-8 origin-center" />
-        <p className="about-hero-sub text-white/80 text-lg md:text-xl max-w-2xl leading-relaxed font-medium">
+        <div className="about-hero-line w-16 md:w-24 h-1 bg-brand-orange rounded-full mb-6 md:mb-8 origin-center" />
+        <p className="about-hero-sub text-white/80 text-sm sm:text-base md:text-xl max-w-2xl leading-relaxed font-medium">
           Creating timeless interiors through thoughtful design, expert craftsmanship, and complete turnkey execution.
         </p>
       </div>

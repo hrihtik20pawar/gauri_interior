@@ -36,25 +36,25 @@ export default function AboutCta() {
 
   return (
     <>
-      <div ref={ctaRef} className="bg-brand-green py-16 md:py-24 lg:py-32 px-6">
+      <div ref={ctaRef} className="bg-brand-green py-12 md:py-24 lg:py-32 px-5 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-4 md:mb-6">
             Let's Build Your Dream Space Together
           </h2>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 md:mb-10 leading-relaxed">
             Whether you're planning a residential renovation, commercial workspace, or a complete turnkey interior project, our team is ready to transform your vision into reality.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <button
               onClick={() => setShowContact(true)}
-              className="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold tracking-wide transition-all duration-300 hover:shadow-xl hover:shadow-orange-900/30 group"
+              className="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-600 text-white px-6 md:px-8 py-3 md:py-4 rounded text-sm md:text-base font-semibold tracking-wide transition-all duration-300 hover:shadow-xl hover:shadow-orange-900/30 group"
             >
               Start Your Project
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
             <button
               onClick={() => navigate('/gallery')}
-              className="inline-flex items-center justify-center gap-2 backdrop-blur-md bg-white/10 border border-white/30 text-white px-8 py-4 rounded font-semibold tracking-wide hover:bg-white hover:text-brand-green transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 backdrop-blur-md bg-white/10 border border-white/30 text-white px-6 md:px-8 py-3 md:py-4 rounded text-sm md:text-base font-semibold tracking-wide hover:bg-white hover:text-brand-green transition-all duration-300"
             >
               View Our Gallery
             </button>

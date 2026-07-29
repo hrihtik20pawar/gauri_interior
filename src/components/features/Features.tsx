@@ -49,29 +49,29 @@ export default function Features() {
   }, { scope: container });
 
   return (
-    <section ref={container} className="py-20 bg-white border-t border-b border-gray-100 overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 mb-10">
-        <h2 className="text-3xl md:text-4xl font-serif text-gray-900 font-medium text-center">
+    <section ref={container} className="py-12 md:py-20 bg-white border-t border-b border-gray-100 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-6 mb-6 md:mb-10">
+        <h2 className="text-2xl md:text-4xl font-serif text-gray-900 font-medium text-center">
           Our <span className="text-brand-orange">Services</span>
         </h2>
       </div>
 
       <div className="features-marquee relative overflow-hidden">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
         <div className="marquee-track flex animate-marquee">
           {duplicatedFeatures.map((feature, idx) => {
             const serialNum = String((idx % features.length) + 1).padStart(2, '0');
             return (
-              <div key={idx} className="flex-shrink-0 w-[280px] md:w-[320px] flex items-center gap-4 px-8 py-6">
-                <span className="text-5xl md:text-6xl font-serif font-bold text-brand-orange/40 leading-none select-none">{serialNum}</span>
+              <div key={idx} className="flex-shrink-0 w-[240px] md:w-[320px] flex items-center gap-3 md:gap-4 px-5 md:px-8 py-4 md:py-6">
+                <span className="text-4xl md:text-6xl font-serif font-bold text-brand-orange/40 leading-none select-none">{serialNum}</span>
                 <div className="flex flex-col items-start">
-                  <div className="text-teal-800 mb-3">
+                  <div className="text-teal-800 mb-2 md:mb-3">
                     {feature.icon}
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2 text-base">{feature.title}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed max-w-[200px]">{feature.desc}</p>
+                  <h3 className="font-semibold text-gray-900 mb-1 md:mb-2 text-sm md:text-base">{feature.title}</h3>
+                  <p className="text-xs md:text-sm text-gray-500 leading-relaxed max-w-[160px] md:max-w-[200px]">{feature.desc}</p>
                 </div>
               </div>
             );

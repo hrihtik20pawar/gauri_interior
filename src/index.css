@@ -16,9 +16,25 @@
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
   background-color: #faf9f6;
   color: #333333;
   scrollbar-width: thin;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -78,4 +94,42 @@ html, body {
 
 .gallery-item {
   contain: layout style paint;
+}
+
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+  /* Prevent horizontal overflow */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Smooth transitions for accordion items */
+  .faq-item {
+    will-change: auto;
+  }
+  
+  /* Ensure timeline cards don't overflow */
+  .timeline-card {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+  
+  /* Better touch targets on mobile */
+  button, a {
+    min-height: 44px;
+  }
+  
+  /* Prevent text overflow in all containers */
+  h1, h2, h3, h4, h5, h6, p, span, li {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+}
+
+/* Ensure proper line height for readability */
+@media (max-width: 768px) {
+  p, li, span {
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+  }
 }

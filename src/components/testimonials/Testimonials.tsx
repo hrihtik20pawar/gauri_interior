@@ -40,64 +40,64 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white">
+    <section className="py-12 md:py-24 px-5 md:px-12 lg:px-24 bg-white">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <p className="text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">Testimonials</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-brand-green mb-4">What Our Clients Say</h2>
-          <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
+        <div className="text-center mb-8 md:mb-12">
+          <p className="text-brand-orange font-bold tracking-wider uppercase text-xs sm:text-sm mb-3 md:mb-4">Testimonials</p>
+          <h2 className="text-2xl md:text-4xl font-serif text-brand-green mb-3 md:mb-4">What Our Clients Say</h2>
+          <div className="w-16 md:w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
         </div>
 
-        <div className="relative bg-gray-50 rounded-3xl p-8 md:p-12 lg:p-16">
-          <div className="mb-6">
-            <Quote className="w-10 h-10 text-brand-orange/30" />
+        <div className="relative bg-gray-50 rounded-2xl md:rounded-3xl p-5 md:p-12 lg:p-16">
+          <div className="mb-4 md:mb-6">
+            <Quote className="w-8 h-8 md:w-10 md:h-10 text-brand-orange/30" />
           </div>
 
-          <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-8">
+          <p className="text-gray-700 text-sm sm:text-base md:text-xl leading-relaxed mb-6 md:mb-8">
             "{testimonials[currentIndex].content}"
           </p>
 
-          <div className="w-16 h-0.5 bg-brand-orange mb-6"></div>
+          <div className="w-12 md:w-16 h-0.5 bg-brand-orange mb-4 md:mb-6"></div>
 
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full bg-brand-teal flex items-center justify-center">
-              <span className="text-white font-bold text-xl">
+          <div className="flex items-center gap-3 md:gap-4">
+            <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-brand-teal flex items-center justify-center shrink-0">
+              <span className="text-white font-bold text-base md:text-xl">
                 {testimonials[currentIndex].name.charAt(0)}
               </span>
             </div>
             <div>
-              <p className="text-brand-green font-bold text-lg">{testimonials[currentIndex].name}</p>
-              <p className="text-gray-500 text-sm">{testimonials[currentIndex].position}</p>
+              <p className="text-brand-green font-bold text-sm md:text-lg">{testimonials[currentIndex].name}</p>
+              <p className="text-gray-500 text-xs md:text-sm">{testimonials[currentIndex].position}</p>
             </div>
           </div>
 
-          <div className="flex items-center justify-between mt-10">
+          <div className="flex items-center justify-between mt-6 md:mt-10">
             <div className="flex gap-1">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   aria-label={`Go to testimonial ${index + 1}`}
-                  className={`min-h-[16px] min-w-[16px] flex items-center justify-center rounded-full transition-all duration-300 ${
-                    index === currentIndex ? 'bg-brand-orange w-4' : 'bg-gray-300 w-1.5'
+                  className={`min-h-[12px] min-w-[12px] md:min-h-[16px] md:min-w-[16px] flex items-center justify-center rounded-full transition-all duration-300 ${
+                    index === currentIndex ? 'bg-brand-orange w-3 md:w-4' : 'bg-gray-300 w-1.5'
                   }`}
                 />
               ))}
             </div>
-            <div className="flex gap-3">
+            <div className="flex gap-2 md:gap-3">
               <button
                 onClick={goToPrevious}
                 aria-label="Previous testimonial"
-                className="w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all duration-300"
+                className="w-9 h-9 md:w-12 md:h-12 rounded-full border-2 border-gray-200 flex items-center justify-center hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all duration-300"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
               </button>
               <button
                 onClick={goToNext}
                 aria-label="Next testimonial"
-                className="w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all duration-300"
+                className="w-9 h-9 md:w-12 md:h-12 rounded-full border-2 border-gray-200 flex items-center justify-center hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all duration-300"
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
               </button>
             </div>
           </div>

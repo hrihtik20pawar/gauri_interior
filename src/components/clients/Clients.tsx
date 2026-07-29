@@ -49,23 +49,23 @@ export default function Clients() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="py-16 md:py-24 bg-gradient-to-b from-[#faf9f6] to-white overflow-hidden" style={{ contain: 'layout style' }}>
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-12">
+    <section ref={containerRef} className="py-12 md:py-24 bg-gradient-to-b from-[#faf9f6] to-white overflow-hidden" style={{ contain: 'layout style' }}>
+      <div className="max-w-7xl mx-auto px-5 md:px-12 lg:px-24 mb-8 md:mb-12">
         <div className="text-center">
-          <p className="text-brand-orange font-bold tracking-[0.2em] uppercase text-sm mb-4">Our Partners</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-brand-green mb-4">Trusted by Leading Brands</h2>
-          <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
+          <p className="text-brand-orange font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-3 md:mb-4">Our Partners</p>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-serif text-brand-green mb-3 md:mb-4">Trusted by Leading Brands</h2>
+          <div className="w-16 md:w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
         </div>
       </div>
 
       <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
-        <div ref={scrollRef1} className="flex gap-8 md:gap-12 items-center w-max">
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-r from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-l from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
+        <div ref={scrollRef1} className="flex gap-5 md:gap-12 items-center w-max">
           {[...clients, ...clients].map((client, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 w-44 md:w-56 h-28 md:h-36 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center p-4 md:p-6 border border-gray-100 hover:border-brand-orange/30 group overflow-hidden"
+              className="flex-shrink-0 w-32 md:w-56 h-20 md:h-36 bg-white rounded-lg md:rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center p-3 md:p-6 border border-gray-100 hover:border-brand-orange/30 group overflow-hidden"
             >
               <img
                 loading="lazy"
@@ -78,14 +78,14 @@ export default function Clients() {
         </div>
       </div>
 
-      <div className="relative mt-8 md:mt-10">
-        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
-        <div ref={scrollRef2} className="flex gap-8 md:gap-12 items-center w-max">
+      <div className="relative mt-5 md:mt-10">
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-r from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-l from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
+        <div ref={scrollRef2} className="flex gap-5 md:gap-12 items-center w-max">
           {[...clientsRow2, ...clientsRow2].map((client, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 w-44 md:w-56 h-28 md:h-36 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center p-4 md:p-6 border border-gray-100 hover:border-brand-orange/30 group overflow-hidden"
+              className="flex-shrink-0 w-32 md:w-56 h-20 md:h-36 bg-white rounded-lg md:rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center p-3 md:p-6 border border-gray-100 hover:border-brand-orange/30 group overflow-hidden"
             >
               <img
                 loading="lazy"

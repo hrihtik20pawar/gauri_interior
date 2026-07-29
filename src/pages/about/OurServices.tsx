@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -20,43 +20,62 @@ const services = [
 
 export default function OurServices() {
   const container = useRef<HTMLDivElement>(null);
+  const [animated, setAnimated] = useState(false);
+
+  useEffect(() => {
+    const el = container.current;
+    if (!el || animated) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !animated) {
+            setAnimated(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.05, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [animated]);
 
   useGSAP(() => {
-    if (!container.current) return;
+    if (!container.current || !animated) return;
 
     gsap.fromTo('.svc-header',
-      { y: 40 },
+      { y: 40, opacity: 0 },
       {
-        y: 0, duration: 0.4, ease: 'power2.out',
-        scrollTrigger: { trigger: container.current, start: 'top 80%' }
+        y: 0, opacity: 1, duration: 0.4, ease: 'power2.out',
       },
     );
 
     gsap.fromTo('.svc-card',
-      { y: 30, scale: 0.95 },
+      { y: 30, scale: 0.95, opacity: 0 },
       {
-        y: 0, scale: 1, duration: 0.3, stagger: 0.03, ease: 'power2.out',
-        scrollTrigger: { trigger: '.svc-grid', start: 'top 80%' }
+        y: 0, scale: 1, opacity: 1, duration: 0.3, stagger: 0.03, ease: 'power2.out',
       },
     );
-  }, { scope: container });
+  }, { scope: container, dependencies: [animated] });
 
   return (
-    <section ref={container} className="py-16 md:py-32 px-4 md:px-12 lg:px-24 bg-white">
+    <section ref={container} className="py-12 md:py-32 px-4 md:px-12 lg:px-24 bg-white">
       <div className="max-w-[1500px] mx-auto">
-        <div className="svc-header text-center mb-10 md:mb-16">
-          <p className="text-brand-orange font-bold tracking-wider uppercase text-xs md:text-sm mb-3 md:mb-4">What We Do</p>
-          <h2 className="text-3xl md:text-5xl font-serif text-brand-green mb-4 md:mb-6">Our Services</h2>
-          <div className="w-16 md:w-24 h-1 bg-brand-orange mx-auto rounded-full" />
+        <div className="svc-header text-center mb-8 md:mb-16">
+          <p className="text-brand-orange font-bold tracking-wider uppercase text-[10px] md:text-sm mb-2 md:mb-4">What We Do</p>
+          <h2 className="text-2xl md:text-5xl font-serif text-brand-green mb-3 md:mb-6">Our Services</h2>
+          <div className="w-12 md:w-24 h-1 bg-brand-orange mx-auto rounded-full" />
         </div>
 
-        <div className="svc-grid grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-5">
+        <div className="svc-grid grid grid-cols-3 sm:grid-cols-3 gap-2 md:gap-5">
           {services.map((svc, i) => (
-            <div key={i} className="svc-card group bg-gray-50/50 rounded-xl p-3 md:p-6 border border-gray-100 hover:bg-brand-green hover:shadow-xl transition-all duration-150 text-center cursor-default">
-              <div className="w-9 h-9 md:w-12 md:h-12 rounded-xl bg-brand-teal/10 group-hover:bg-white/20 flex items-center justify-center mx-auto mb-2 md:mb-4 transition-colors duration-150">
-                <svc.icon className="w-4 h-4 md:w-6 md:h-6 text-brand-teal group-hover:text-white transition-colors duration-150" />
+            <div key={i} className="svc-card group bg-gray-50/50 rounded-lg md:rounded-xl p-2.5 md:p-6 border border-gray-100 hover:bg-brand-green hover:shadow-xl transition-all duration-150 text-center cursor-default">
+              <div className="w-8 h-8 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-brand-teal/10 group-hover:bg-white/20 flex items-center justify-center mx-auto mb-1.5 md:mb-4 transition-colors duration-150">
+                <svc.icon className="w-3.5 h-3.5 md:w-6 md:h-6 text-brand-teal group-hover:text-white transition-colors duration-150" />
               </div>
-              <p className="font-semibold text-gray-900 group-hover:text-white transition-colors duration-150 text-xs md:text-base leading-tight">{svc.title}</p>
+              <p className="font-semibold text-gray-900 group-hover:text-white transition-colors duration-150 text-[9px] md:text-base leading-tight">{svc.title}</p>
             </div>
           ))}
         </div>

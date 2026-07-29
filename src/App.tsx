@@ -23,37 +23,37 @@ gsap.registerPlugin(ScrollTrigger);
 const SiteFooter = React.memo(function SiteFooter() {
   return (
     <footer className="bg-brand-green text-white" id="contact-us">
-      <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-24 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+      <div className="max-w-[1500px] mx-auto px-5 md:px-12 lg:px-24 py-10 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
 
           <div>
-            <div className="mb-4">
+            <div className="mb-3 md:mb-4">
               <Logo isDark={true} size="sm" />
             </div>
-            <p className="text-white/60 text-sm leading-relaxed max-w-xs">
+            <p className="text-white/60 text-xs sm:text-sm leading-relaxed max-w-xs">
               Creating functional, inspiring, and truly personalized spaces since 2014.
             </p>
           </div>
 
           <div>
-            <h3 className="text-lg font-serif font-semibold mb-6">Get in Touch</h3>
-            <ul className="space-y-4">
+            <h3 className="text-base md:text-lg font-serif font-semibold mb-4 md:mb-6">Get in Touch</h3>
+            <ul className="space-y-3 md:space-y-4">
               <li>
                 <a
                   href={siteConfig.contact.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 text-white/70 hover:text-white transition-colors group"
+                  className="flex items-start gap-2.5 md:gap-3 text-white/70 hover:text-white transition-colors group"
                 >
-                  <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
-                  <span className="text-sm leading-relaxed">{siteConfig.contact.address}</span>
+                  <MapPin className="w-4 h-4 md:w-5 md:h-5 mt-0.5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
+                  <span className="text-xs sm:text-sm leading-relaxed">{siteConfig.contact.address}</span>
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-white/70">
-                <Phone className="w-5 h-5 shrink-0 text-brand-orange" />
-                <div className="flex flex-wrap gap-x-4 gap-y-1">
+              <li className="flex items-center gap-2.5 md:gap-3 text-white/70">
+                <Phone className="w-4 h-4 md:w-5 md:h-5 shrink-0 text-brand-orange" />
+                <div className="flex flex-wrap gap-x-3 md:gap-x-4 gap-y-1">
                   {siteConfig.contact.phones.map((phone) => (
-                    <a key={phone} href={`tel:${phone.replace(/-/g, '')}`} className="text-sm hover:text-white transition-colors">
+                    <a key={phone} href={`tel:${phone.replace(/-/g, '')}`} className="text-xs sm:text-sm hover:text-white transition-colors">
                       {phone}
                     </a>
                   ))}
@@ -63,31 +63,31 @@ const SiteFooter = React.memo(function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-lg font-serif font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-3">
+            <h3 className="text-base md:text-lg font-serif font-semibold mb-4 md:mb-6">Quick Links</h3>
+            <ul className="space-y-2.5 md:space-y-3">
               <li>
-                <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group">
-                  <Mail className="w-5 h-5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
-                  <span className="text-sm">{siteConfig.contact.email}</span>
+                <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-2.5 md:gap-3 text-white/70 hover:text-white transition-colors group">
+                  <Mail className="w-4 h-4 md:w-5 md:h-5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
+                  <span className="text-xs sm:text-sm">{siteConfig.contact.email}</span>
                 </a>
               </li>
               <li>
-                <a href={`https://wa.me/${siteConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group">
-                  <MessageCircle className="w-5 h-5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
-                  <span className="text-sm">{siteConfig.contact.whatsappDisplay}</span>
+                <a href={`https://wa.me/${siteConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 md:gap-3 text-white/70 hover:text-white transition-colors group">
+                  <MessageCircle className="w-4 h-4 md:w-5 md:h-5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
+                  <span className="text-xs sm:text-sm">{siteConfig.contact.whatsappDisplay}</span>
                 </a>
               </li>
             </ul>
 
-            <div className="flex gap-3 mt-6">
-              <a href="https://www.instagram.com/gauri_group__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
-                <Instagram className="w-5 h-5 text-white" />
+            <div className="flex gap-2.5 md:gap-3 mt-4 md:mt-6">
+              <a href="https://www.instagram.com/gauri_group__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 md:w-11 md:h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
+                <Instagram className="w-4 h-4 md:w-5 md:h-5 text-white" />
               </a>
-              <a href="https://www.linkedin.com/company/gauri-interior/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
-                <Linkedin className="w-5 h-5 text-white" />
+              <a href="https://www.linkedin.com/company/gauri-interior/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-9 h-9 md:w-11 md:h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
+                <Linkedin className="w-4 h-4 md:w-5 md:h-5 text-white" />
               </a>
-              <a href="https://www.facebook.com/gauriinterior" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
-                <Facebook className="w-5 h-5 text-white" />
+              <a href="https://www.facebook.com/gauriinterior" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-9 h-9 md:w-11 md:h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange/80 hover:scale-110 transition-all duration-300">
+                <Facebook className="w-4 h-4 md:w-5 md:h-5 text-white" />
               </a>
             </div>
           </div>
@@ -96,12 +96,12 @@ const SiteFooter = React.memo(function SiteFooter() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-24 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-sm">© {new Date().getFullYear()} <BrandName as="span">Gauri Interior Pvt. Ltd.</BrandName> All rights reserved.</p>
-          <div className="flex gap-4 sm:gap-6">
-            <a href="#contact-us" className="text-white/40 text-sm hover:text-white/70 transition-colors py-3">Contact Us</a>
-            <Link to="/about" className="text-white/40 text-sm hover:text-white/70 transition-colors py-3">About Us</Link>
-            <Link to="/gallery" className="text-white/40 text-sm hover:text-white/70 transition-colors py-3">Gallery</Link>
+        <div className="max-w-[1500px] mx-auto px-5 md:px-12 lg:px-24 py-4 md:py-6 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4">
+          <p className="text-white/40 text-xs sm:text-sm">© {new Date().getFullYear()} <BrandName as="span">Gauri Interior Pvt. Ltd.</BrandName> All rights reserved.</p>
+          <div className="flex gap-3 sm:gap-4 md:gap-6">
+            <a href="#contact-us" className="text-white/40 text-xs sm:text-sm hover:text-white/70 transition-colors py-2 md:py-3">Contact Us</a>
+            <Link to="/about" className="text-white/40 text-xs sm:text-sm hover:text-white/70 transition-colors py-2 md:py-3">About Us</Link>
+            <Link to="/gallery" className="text-white/40 text-xs sm:text-sm hover:text-white/70 transition-colors py-2 md:py-3">Gallery</Link>
           </div>
         </div>
       </div>
@@ -179,9 +179,39 @@ export default function App() {
     const isMobile = window.innerWidth < 768;
     
     if (isMobile) {
-      // On mobile, just register ScrollTrigger without Lenis
+      // On mobile, ensure ScrollTrigger works with native scroll
       gsap.ticker.lagSmoothing(0);
-      return;
+      
+      // Explicitly update ScrollTrigger on native scroll for mobile
+      const handleScroll = () => {
+        ScrollTrigger.update();
+      };
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      // Force-complete any stuck ScrollTrigger animations after load
+      const forceCompleteAnimations = () => {
+        ScrollTrigger.refresh(true);
+      };
+
+      const timer = setTimeout(forceCompleteAnimations, 800);
+      const timer2 = setTimeout(forceCompleteAnimations, 2000);
+
+      // Also handle visibility change on mobile
+      const handleVisibility = () => {
+        if (!document.hidden) {
+          setTimeout(() => {
+            ScrollTrigger.refresh(true);
+          }, 200);
+        }
+      };
+      document.addEventListener('visibilitychange', handleVisibility);
+
+      return () => {
+        clearTimeout(timer);
+        clearTimeout(timer2);
+        window.removeEventListener('scroll', handleScroll);
+        document.removeEventListener('visibilitychange', handleVisibility);
+      };
     }
 
     const lenis = new Lenis({
@@ -204,41 +234,15 @@ export default function App() {
       if (!document.hidden) {
         clearTimeout(refreshTimeout);
         refreshTimeout = setTimeout(() => {
-          // Force-complete all ScrollTrigger animations that never fired
-          ScrollTrigger.getAll().forEach(st => {
-            if (st.progress === 0) {
-              st.animation?.progress(1);
-            }
-          });
-          // Also clear any stuck inline opacity styles from gsap.fromTo
-          document.querySelectorAll('[style*="opacity: 0"]').forEach(el => {
-            const htmlEl = el as HTMLElement;
-            if (htmlEl.style.opacity === '0') {
-              htmlEl.style.removeProperty('opacity');
-              htmlEl.style.removeProperty('transform');
-            }
-          });
           ScrollTrigger.refresh(true);
-        }, 150);
+        }, 200);
       }
     };
     document.addEventListener('visibilitychange', handleVisibility);
 
-    // Global safety net: after 2s, force any remaining opacity:0 elements visible
-    const safetyTimer = setTimeout(() => {
-      document.querySelectorAll('[style*="opacity: 0"]').forEach(el => {
-        const htmlEl = el as HTMLElement;
-        if (htmlEl.style.opacity === '0') {
-          htmlEl.style.removeProperty('opacity');
-          htmlEl.style.removeProperty('transform');
-        }
-      });
-    }, 2000);
-
     return () => {
       document.removeEventListener('visibilitychange', handleVisibility);
       clearTimeout(refreshTimeout);
-      clearTimeout(safetyTimer);
       lenis.destroy();
     };
   }, []);

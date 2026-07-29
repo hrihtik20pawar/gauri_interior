@@ -95,7 +95,7 @@ export default function Hero() {
     <section 
       ref={container} 
       id="hero"
-      className="relative w-full h-screen min-h-[600px] flex items-center overflow-hidden -mt-[76px] pt-[76px]"
+      className="relative w-full h-screen min-h-[100vh] flex items-center overflow-hidden"
       style={{ contain: 'layout style' }}
     >
       {heroSlides.map((src, i) => {
@@ -126,19 +126,19 @@ export default function Hero() {
         );
       })}
 
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-24 max-w-7xl mx-auto pt-24 md:pt-28">
+      <div className="relative z-10 w-full px-5 md:px-12 lg:px-24 max-w-7xl mx-auto pt-20 md:pt-28">
         <div className="max-w-2xl items-start text-left">
-          <h1 className="hero-text text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.1] mb-6 drop-shadow-lg">
-            Designing Spaces <br /> That Reflect <br /> Your <span className="text-brand-orange">Lifestyle</span>
+          <h1 className="hero-text text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.1] mb-4 md:mb-6 drop-shadow-lg">
+            Designing Spaces <br className="hidden sm:block" /> That Reflect <br className="hidden sm:block" /> Your <span className="text-brand-orange">Lifestyle</span>
           </h1>
-          <p className="hero-text text-gray-200 text-lg md:text-xl mb-10 max-w-lg font-medium leading-relaxed drop-shadow-md ml-4 sm:ml-8 md:ml-20" style={{ fontStyle: 'italic' }}>
+          <p className="hero-text text-gray-200 text-sm sm:text-base md:text-xl mb-6 md:mb-10 max-w-lg font-medium leading-relaxed drop-shadow-md ml-0 sm:ml-8 md:ml-20" style={{ fontStyle: 'italic' }}>
             From concept to creation
           </p>
-          <div className="hero-text flex flex-wrap gap-4">
-            <button onClick={() => navigate('/gallery')} className="bg-brand-orange text-white px-8 py-3.5 rounded font-medium hover:bg-brand-orange/90 transition-colors flex items-center gap-2 shadow-lg shadow-brand-orange/20">
-              Explore Our Work <span className="text-xl leading-none">→</span>
+          <div className="hero-text flex flex-wrap gap-3 md:gap-4">
+            <button onClick={() => navigate('/gallery')} className="bg-brand-orange text-white px-6 md:px-8 py-3 md:py-3.5 rounded text-sm md:text-base font-medium hover:bg-brand-orange/90 transition-colors flex items-center gap-2 shadow-lg shadow-brand-orange/20">
+              Explore Our Work <span className="text-lg leading-none">→</span>
             </button>
-            <button onClick={() => navigate('/services')} className="backdrop-blur-md bg-white/10 border border-white/30 text-white px-8 py-3.5 rounded font-medium hover:bg-white hover:text-brand-green transition-colors">
+            <button onClick={() => navigate('/services')} className="backdrop-blur-md bg-white/10 border border-white/30 text-white px-6 md:px-8 py-3 md:py-3.5 rounded text-sm md:text-base font-medium hover:bg-white hover:text-brand-green transition-colors">
               Our Services
             </button>
           </div>

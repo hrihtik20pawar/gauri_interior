@@ -78,20 +78,20 @@ export default function About() {
   }, { scope: container });
 
   return (
-    <section ref={container} className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-[1400px] mx-auto bg-white" id="about">
-      <div className="flex flex-col lg:flex-row gap-16 mb-24 items-center">
+    <section ref={container} className="py-12 md:py-16 lg:py-24 px-5 md:px-12 lg:px-24 max-w-[1400px] mx-auto bg-white" id="about">
+      <div className="flex flex-col lg:flex-row gap-10 md:gap-16 mb-16 md:mb-24 items-center">
         <div className="flex-1 lg:max-w-2xl">
           <p className="about-hero-text text-brand-orange font-bold tracking-wider uppercase text-sm mb-4">About Us</p>
-          <h2 className="about-hero-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans text-brand-green leading-[1.15] mb-8 tracking-wide">
+          <h2 className="about-hero-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans text-brand-green leading-[1.15] mb-6 md:mb-8 tracking-wide">
             <BrandName as="span" size="lg">GAURI GROUP</BrandName>
           </h2>
-          <p className="about-hero-text text-gray-700 text-xl leading-relaxed mb-6 font-medium text-justify">
+          <p className="about-hero-text text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-4 md:mb-6 font-medium text-justify">
             Established in <strong className="text-brand-green">2012</strong>, <strong className="text-brand-orange"><BrandName as="span">GAURI INTERIOR PVT. LTD.</BrandName></strong> is the flagship company of the <strong className="text-brand-orange"><BrandName as="span">GAURI GROUP</BrandName></strong>, specializing in comprehensive turnkey interior contracting solutions. Built upon a legacy that began in <strong className="text-brand-green">1993</strong>, the company has grown into a trusted name in the interior industry by consistently delivering projects with exceptional quality, innovation, and precision.
           </p>
-          <p className="about-hero-text text-gray-700 text-xl leading-relaxed mb-6 font-medium text-justify">
+          <p className="about-hero-text text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-4 md:mb-6 font-medium text-justify">
             Our journey began in <strong className="text-brand-green">1993</strong>, when <strong className="text-brand-orange">Mr. Lalbachan Vishwakarma</strong> laid the foundation of the business by undertaking customized furniture projects with an unwavering commitment to quality and craftsmanship. Over the years, this passion evolved into executing complete turnkey interior projects across residential, commercial, corporate, hospitality, healthcare, educational, and retail sectors.
           </p>
-          <p className="about-hero-text text-gray-700 text-xl leading-relaxed font-medium text-justify">
+          <p className="about-hero-text text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed font-medium text-justify">
             Under the leadership of <strong className="text-brand-orange">Mr. Shilkumar L. Vishwakarma (Managing Director &amp; CEO)</strong>, <BrandName as="span">GAURI Group</BrandName> expanded into a diversified business ecosystem, bringing together multiple specialized ventures under one trusted brand.
           </p>
         </div>
@@ -115,101 +115,95 @@ export default function About() {
         </div>
       </div>
 
-      <div className="mb-12">
-        <div className="text-center mb-10">
-          <p className="text-brand-orange font-semibold tracking-widest uppercase text-sm mb-3">A Message From Our Leadership</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-brand-green">Building Spaces. Building Relationships.</h2>
-          <div className="w-16 h-1 bg-brand-orange mx-auto rounded-full mt-4"></div>
-        </div>
-
-        <div className="bg-white rounded-3xl shadow-xl overflow-visible relative">
-          <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 z-20">
-            <svg width="100" height="100" viewBox="0 0 80 80" fill="none" className="opacity-20">
-              <path d="M30 45C30 51.627 24.627 57 18 57C11.373 57 6 51.627 6 45C6 32.297 16.297 22 29 22V30C22.373 30 17 35.373 17 42H24C27.314 42 30 44.686 30 48V45ZM66 45C66 51.627 60.627 57 54 57C47.373 57 42 51.627 42 45C42 32.297 52.297 22 65 22V30C58.373 30 53 35.373 53 42H60C63.314 42 66 44.686 66 48V45Z" fill="#E8734A" />
-            </svg>
+      <div className="mb-8 md:mb-12">
+        <div className="bg-white rounded-2xl md:rounded-3xl shadow-xl overflow-hidden relative max-w-full">
+          <div className="absolute top-4 right-4 md:top-6 md:right-6 z-20">
+            <button className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:bg-white transition-colors shadow-sm">
+              <svg className="w-4 h-4 md:w-5 md:h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+              </svg>
+            </button>
           </div>
 
           <div className="flex flex-col md:flex-row items-stretch">
-            <div className="w-full md:w-[45%] p-8 md:p-10 lg:p-12 relative z-10">
-              <div className="mb-5">
-                <p className="text-brand-orange font-semibold tracking-widest uppercase text-xs mb-2">Message From The Managing Director</p>
-                <div className="w-10 h-0.5 bg-brand-orange rounded-full"></div>
+            <div className="w-full md:w-[55%] p-5 sm:p-6 md:p-10 lg:p-12 relative z-10">
+              <div className="mb-4 md:mb-6">
+                <div className="text-brand-orange/20 text-5xl md:text-7xl font-serif leading-none select-none mb-2">&ldquo;</div>
+                <p className="text-brand-orange font-semibold tracking-widest uppercase text-[10px] sm:text-xs mb-2 md:mb-3">Message From The Managing Director</p>
+                <div className="w-8 md:w-10 h-0.5 bg-brand-orange rounded-full"></div>
               </div>
 
-              <h3 className="text-2xl md:text-3xl mb-5">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-6">
                 <span className="text-gray-900 font-serif">Managing Director's</span><br />
                 <span className="text-gray-900 font-serif">Message</span>
               </h3>
 
-              <div className="relative bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm">
-                <div className="text-brand-orange/30 text-5xl font-serif absolute top-4 left-5 select-none leading-none">&ldquo;</div>
-                <div className="space-y-3 text-gray-600 text-sm leading-relaxed text-justify pl-6 md:pl-8">
-                  <p className="!text-gray-900 font-semibold">Dear Valued Clients, Partners, and Associates,</p>
-                  <p>It gives me immense pride to welcome you to <BrandName as="span">GAURI GROUP.</BrandName></p>
-                  <p>Our journey began with a simple vision—to create quality furniture through honest workmanship and unwavering dedication. Over the years, that vision has grown into a comprehensive turnkey interior solutions company, serving clients across diverse industries while maintaining the same values that laid our foundation.</p>
-                  <p>At Gauri, we believe that every space tells a story. Whether it is a corporate office, a healthcare facility, an educational institution, a hospitality project, or a premium residence, our objective is to create environments that combine functionality, innovation, and aesthetics.</p>
-                  <p>Our greatest strength lies in our people—their expertise, commitment, and passion for excellence. Together, we strive to deliver projects that exceed expectations in quality, safety, and timely execution.</p>
-                  <p>As we expand through our group companies and embrace new opportunities, our commitment remains unchanged: to build long-term relationships based on trust, integrity, and exceptional service.</p>
-                  <p>I sincerely thank our clients, employees, partners, and well-wishers for being an integral part of our journey. We look forward to creating many more inspiring spaces together.</p>
-                </div>
+              <div className="space-y-3 md:space-y-4 text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed text-justify">
+                <p className="!text-gray-900 font-medium">Dear Valued Clients, Partners, and Associates,</p>
+                <p>It gives me immense pride to welcome you to <BrandName as="span">GAURI GROUP.</BrandName></p>
+                <p>Our journey began with a simple vision—to create quality furniture through honest workmanship and unwavering dedication. Over the years, that vision has grown into a comprehensive turnkey interior solutions company, serving clients across diverse industries while maintaining the same values that laid our foundation.</p>
+                <p>At Gauri, we believe that every space tells a story. Whether it is a corporate office, a healthcare facility, an educational institution, a hospitality project, or a premium residence, our objective is to create environments that combine functionality, innovation, and aesthetics.</p>
+                <p>Our greatest strength lies in our people—their expertise, commitment, and passion for excellence. Together, we strive to deliver projects that exceed expectations in quality, safety, and timely execution.</p>
+                <p>As we expand through our group companies and embrace new opportunities, our commitment remains unchanged: to build long-term relationships based on trust, integrity, and exceptional service.</p>
+                <p>I sincerely thank our clients, employees, partners, and well-wishers for being an integral part of our journey. We look forward to creating many more inspiring spaces together.</p>
               </div>
 
-              <div className="mt-6">
-                <p className="text-gray-700 text-sm mb-2">Warm Regards,</p>
-                <p className="text-brand-green font-bold text-base">Mr. Shilkumar L. Vishwakarma</p>
-                <p className="text-gray-600 text-sm">Managing Director & CEO</p>
-                <p className="text-brand-green font-bold text-sm mt-1"><BrandName as="span">GAURI GROUP OF COMPANIES</BrandName></p>
+              <div className="mt-6 md:mt-8">
+                <p className="text-gray-500 text-xs sm:text-sm mb-2 md:mb-3">Warm Regards,</p>
+                <p className="text-brand-green font-bold text-sm sm:text-base md:text-lg">Mr. Shilkumar L. Vishwakarma</p>
+                <p className="text-gray-600 text-xs sm:text-sm">Managing Director & CEO</p>
+                <p className="text-brand-green font-bold text-xs sm:text-sm mt-1"><BrandName as="span">GAURI GROUP OF COMPANIES</BrandName></p>
               </div>
             </div>
 
-            <div className="w-full md:w-[55%] flex items-start justify-center p-6 md:p-0 bg-gray-50 min-h-[300px] md:min-h-[450px] lg:min-h-[750px] relative overflow-hidden rounded-r-3xl ml-0 md:-ml-8">
-              <img
-                loading="lazy"
-                src="/images/team/team-md-ceo.avif"
-                alt="Managing Director - GAURI GROUP"
-                className="w-full h-full object-cover object-top"
-              />
+            <div className="w-full md:w-[45%] flex items-center justify-center p-4 sm:p-5 md:p-8 bg-gray-50 min-h-[250px] sm:min-h-[300px] md:min-h-[400px] lg:min-h-[500px] relative overflow-hidden rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
+              <div className="w-full h-full max-h-[350px] md:max-h-[450px] rounded-xl overflow-hidden shadow-lg">
+                <img
+                  loading="lazy"
+                  src="/images/team/team-md-ceo.avif"
+                  alt="Managing Director - GAURI GROUP"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
             </div>
           </div>
         </div>
-
-
       </div>
 
-      <div className="about-text mb-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-sans text-brand-green mb-4">Why Choose <BrandName as="span">Gauri</BrandName>?</h2>
-          <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
+      <div className="about-text mb-8 md:mb-12">
+        <div className="text-center mb-6 md:mb-12">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-sans text-brand-green mb-3 md:mb-4">Why Choose <BrandName as="span">Gauri</BrandName>?</h2>
+          <div className="w-16 md:w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
           {whyChooseItems.slice(0, 4).map((item, idx) => (
-            <div key={idx} onClick={() => setSelectedReason(item)} className="flex items-center gap-4 bg-white border border-gray-100 rounded-xl px-6 py-4 shadow-sm cursor-pointer hover:shadow-md hover:border-brand-orange/30 transition-all">
-              <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0">
-                <span className="text-brand-orange font-bold text-sm">{idx + 1}</span>
+            <div key={idx} onClick={() => setSelectedReason(item)} className="flex items-center gap-2.5 sm:gap-4 bg-white border border-gray-100 rounded-xl px-3 sm:px-5 md:px-6 py-3 sm:py-4 shadow-sm cursor-pointer hover:shadow-md hover:border-brand-orange/30 transition-all">
+              <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0">
+                <span className="text-brand-orange font-bold text-[10px] sm:text-xs md:text-sm">{idx + 1}</span>
               </div>
               <div>
-                <h4 className="font-bold text-gray-900 text-sm">{item.title}</h4>
-                <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
+                <h4 className="font-bold text-gray-900 text-[11px] sm:text-xs md:text-sm">{item.title}</h4>
+                <p className="text-gray-500 text-[9px] sm:text-[10px] md:text-xs leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="p-8 rounded-2xl border border-gray-100">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-serif text-brand-green mb-4">Our USP at <BrandName as="span" className="font-sans">Gauri</BrandName></h2>
-          <div className="w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
+      <div className="p-4 sm:p-5 md:p-8 rounded-xl md:rounded-2xl border border-gray-100">
+        <div className="text-center mb-5 md:mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-serif text-brand-green mb-3 md:mb-4">Our USP at <BrandName as="span" className="font-sans">Gauri</BrandName></h2>
+          <div className="w-16 md:w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
         </div>
-        <div className="about-text flex flex-col sm:flex-row items-stretch gap-4">
-          <InfoCard icon={CheckCircle2} iconClassName="w-8 h-8 text-teal-700 stroke-[1.5]" title="Client-Centric Approach" description="Your vision is our priority." />
-          <ArrowRight className="w-5 h-5 text-gray-300 shrink-0 hidden sm:block" />
-          <InfoCard icon={PenTool} iconClassName="w-8 h-8 text-teal-700 stroke-[1.5]" title="Innovative Design" description="Creative solutions for every space." />
-          <ArrowRight className="w-5 h-5 text-gray-300 shrink-0 hidden sm:block" />
-          <InfoCard icon={ShieldCheck} iconClassName="w-8 h-8 text-teal-700 stroke-[1.5]" title="Quality Craftsmanship" description="Precision in every detail." />
-          <ArrowRight className="w-5 h-5 text-gray-300 shrink-0 hidden sm:block" />
-          <InfoCard icon={Clock} iconClassName="w-8 h-8 text-teal-700 stroke-[1.5]" title="Timely Delivery" description="Commitment you can rely on." />
+        <div className="about-text flex flex-col sm:flex-row items-stretch gap-2.5 sm:gap-4">
+          <InfoCard icon={CheckCircle2} iconClassName="w-7 h-7 md:w-8 md:h-8 text-teal-700 stroke-[1.5]" title="Client-Centric Approach" description="Your vision is our priority." />
+          <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-gray-300 shrink-0 hidden sm:block" />
+          <InfoCard icon={PenTool} iconClassName="w-7 h-7 md:w-8 md:h-8 text-teal-700 stroke-[1.5]" title="Innovative Design" description="Creative solutions for every space." />
+          <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-gray-300 shrink-0 hidden sm:block" />
+          <InfoCard icon={ShieldCheck} iconClassName="w-7 h-7 md:w-8 md:h-8 text-teal-700 stroke-[1.5]" title="Quality Craftsmanship" description="Precision in every detail." />
+          <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-gray-300 shrink-0 hidden sm:block" />
+          <InfoCard icon={Clock} iconClassName="w-7 h-7 md:w-8 md:h-8 text-teal-700 stroke-[1.5]" title="Timely Delivery" description="Commitment you can rely on." />
         </div>
       </div>
 
