@@ -17,18 +17,18 @@ export const images = {
   },
 
   about: {
-    main: "/images/Final_Images/Bharat Residential/WhatsApp Image 2026-07-17 at 15.56.12.avif",
-    hero: "/images/Final_Images/CRAVIN CAFE/WhatsApp Image 2026-07-18 at 14.39.58.avif",
-    story: "/images/Final_Images/6. PENINSULA/WhatsApp Image 2026-07-18 at 11.57.55.avif",
-    vision: "/images/Final_Images/10. ITC GHATKOPAR/WhatsApp Image 2026-07-18 at 12.35.27.avif",
-    process: "/images/Final_Images/HEMCO PHARMA/WhatsApp Image 2026-07-18 at 11.44.07.avif",
-    cta: "/images/Final_Images/14. AMARDEEP PROJECTS/WhatsApp Image 2026-07-18 at 13.55.04.avif",
-    value1: "/images/Final_Images/Bharat Residential/WhatsApp Image 2026-07-17 at 15.56.12.avif",
-    value2: "/images/Final_Images/HEMCO PHARMA/WhatsApp Image 2026-07-18 at 11.44.07.avif",
-    value3: "/images/Final_Images/CRAVIN CAFE/WhatsApp Image 2026-07-18 at 14.39.58.avif",
-    value4: "/images/Final_Images/6. PENINSULA/WhatsApp Image 2026-07-18 at 11.57.55.avif",
-    value5: "/images/Final_Images/10. ITC GHATKOPAR/WhatsApp Image 2026-07-18 at 12.35.27.avif",
-    value6: "/images/Final_Images/14. AMARDEEP PROJECTS/WhatsApp Image 2026-07-18 at 13.55.04.avif",
+    main: "/images/new_images_works/Residential/GULATI HOUSE/WhatsApp Image 2026-07-29 at 12.46.42.avif",
+    hero: "/images/new_images_works/Residential/MAZDA/WhatsApp Image 2026-07-29 at 12.44.34.avif",
+    story: "/images/new_images_works/Residential/PARLE AGRO/WhatsApp Image 2026-07-29 at 12.43.49 (1).avif",
+    vision: "/images/new_images_works/Residential/PURNIMA & DIVYA SETHI/WhatsApp Image 2026-07-29 at 12.45.52.avif",
+    process: "/images/new_images_works/Residential/SANDEEP AGRAWAL/WhatsApp Image 2026-07-29 at 12.45.25 (1).avif",
+    cta: "/images/new_images_works/Residential/GULATI HOUSE/WhatsApp Image 2026-07-29 at 12.46.43 (1).avif",
+    value1: "/images/new_images_works/Residential/MAZDA/WhatsApp Image 2026-07-29 at 12.44.35 (1).avif",
+    value2: "/images/new_images_works/Residential/PARLE AGRO/WhatsApp Image 2026-07-29 at 12.43.50 (1).avif",
+    value3: "/images/new_images_works/Residential/PURNIMA & DIVYA SETHI/WhatsApp Image 2026-07-29 at 12.45.53.avif",
+    value4: "/images/new_images_works/Residential/SANDEEP AGRAWAL/WhatsApp Image 2026-07-29 at 12.45.26 (1).avif",
+    value5: "/images/new_images_works/Residential/GULATI HOUSE/WhatsApp Image 2026-07-29 at 12.46.44 (1).avif",
+    value6: "/images/new_images_works/Residential/MAZDA/WhatsApp Image 2026-07-29 at 12.44.36 (1).avif",
   },
 
   businesses: {
@@ -44,52 +44,52 @@ export const images = {
 
   projects: {
     oasisVilla: {
-      main: "/images/Final_Images/Bharat Residential/WhatsApp Image 2026-07-17 at 15.56.12.avif",
+      main: "/images/new_images_works/Residential/GULATI HOUSE/WhatsApp Image 2026-07-29 at 12.46.45.avif",
       gallery: []
     },
     zenWorkspace: {
-      main: "/images/Final_Images/HEMCO PHARMA/WhatsApp Image 2026-07-18 at 11.44.07.avif",
+      main: "/images/new_images_works/Residential/MAZDA/WhatsApp Image 2026-07-29 at 12.44.37 (1).avif",
       gallery: []
     },
     minimalistKitchen: {
-      main: "/images/Final_Images/CRAVIN CAFE/WhatsApp Image 2026-07-18 at 14.39.58.avif",
+      main: "/images/new_images_works/Residential/PARLE AGRO/WhatsApp Image 2026-07-29 at 12.43.51 (1).avif",
       gallery: []
     },
     skylinePenthouse: {
-      main: "/images/Final_Images/14. AMARDEEP PROJECTS/WhatsApp Image 2026-07-18 at 13.55.04.avif",
+      main: "/images/new_images_works/Residential/PURNIMA & DIVYA SETHI/WhatsApp Image 2026-07-29 at 12.45.54 (1).avif",
       gallery: []
     },
     boutiqueRetail: {
-      main: "/images/Final_Images/6. PENINSULA/WhatsApp Image 2026-07-18 at 11.57.55.avif",
+      main: "/images/new_images_works/Residential/SANDEEP AGRAWAL/WhatsApp Image 2026-07-29 at 12.45.27 (1).avif",
       gallery: []
     },
     modernRenovation: {
-      main: "/images/Final_Images/PISPL BPO/WhatsApp Image 2026-07-18 at 11.28.35.avif",
+      main: "/images/new_images_works/Residential/GULATI HOUSE/WhatsApp Image 2026-07-29 at 12.46.44 (2).avif",
       gallery: []
     },
     works: [
-      "/images/Final_Images/Bharat Residential/WhatsApp Image 2026-07-17 at 15.56.12.avif",
-      "/images/Final_Images/HEMCO PHARMA/WhatsApp Image 2026-07-18 at 11.44.07.avif",
-      "/images/Final_Images/CRAVIN CAFE/WhatsApp Image 2026-07-18 at 14.39.58.avif",
-      "/images/Final_Images/14. AMARDEEP PROJECTS/WhatsApp Image 2026-07-18 at 13.55.04.avif",
-      "/images/Final_Images/6. PENINSULA/WhatsApp Image 2026-07-18 at 11.57.55.avif",
-      "/images/Final_Images/PISPL BPO/WhatsApp Image 2026-07-18 at 11.28.35.avif"
+      "/images/new_images_works/Residential/GULATI HOUSE/WhatsApp Image 2026-07-29 at 12.46.42.avif",
+      "/images/new_images_works/Residential/MAZDA/WhatsApp Image 2026-07-29 at 12.44.34.avif",
+      "/images/new_images_works/Residential/PARLE AGRO/WhatsApp Image 2026-07-29 at 12.43.49 (1).avif",
+      "/images/new_images_works/Residential/PURNIMA & DIVYA SETHI/WhatsApp Image 2026-07-29 at 12.45.52.avif",
+      "/images/new_images_works/Residential/SANDEEP AGRAWAL/WhatsApp Image 2026-07-29 at 12.45.25 (1).avif",
+      "/images/new_images_works/Residential/GULATI HOUSE/WhatsApp Image 2026-07-29 at 12.46.43 (1).avif"
     ]
   },
 
   gallery: {
-    g1: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=60&w=600",
-    g2: "https://images.unsplash.com/photo-1600607687644-aac4c15cecb1?auto=format&fit=crop&q=60&w=600",
-    g3: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=60&w=600",
-    g4: "https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?auto=format&fit=crop&q=60&w=600",
-    g5: "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&q=60&w=600",
-    g6: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=60&w=600",
-    g7: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&q=60&w=600",
-    g8: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=60&w=600",
-    g9: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=60&w=600",
-    g10: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=60&w=600",
-    g11: "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&q=60&w=600",
-    g12: "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&q=60&w=600"
+    g1: "/images/new_images_works/Residential/GULATI HOUSE/WhatsApp Image 2026-07-29 at 12.46.42.avif",
+    g2: "/images/new_images_works/Residential/MAZDA/WhatsApp Image 2026-07-29 at 12.44.34.avif",
+    g3: "/images/new_images_works/Residential/PARLE AGRO/WhatsApp Image 2026-07-29 at 12.43.49 (1).avif",
+    g4: "/images/new_images_works/Residential/PURNIMA & DIVYA SETHI/WhatsApp Image 2026-07-29 at 12.45.52.avif",
+    g5: "/images/new_images_works/Residential/SANDEEP AGRAWAL/WhatsApp Image 2026-07-29 at 12.45.25 (1).avif",
+    g6: "/images/new_images_works/Residential/GULATI HOUSE/WhatsApp Image 2026-07-29 at 12.46.43 (1).avif",
+    g7: "/images/new_images_works/Residential/MAZDA/WhatsApp Image 2026-07-29 at 12.44.35 (1).avif",
+    g8: "/images/new_images_works/Residential/PARLE AGRO/WhatsApp Image 2026-07-29 at 12.43.50 (1).avif",
+    g9: "/images/new_images_works/Residential/PURNIMA & DIVYA SETHI/WhatsApp Image 2026-07-29 at 12.45.53.avif",
+    g10: "/images/new_images_works/Residential/SANDEEP AGRAWAL/WhatsApp Image 2026-07-29 at 12.45.26 (1).avif",
+    g11: "/images/new_images_works/Residential/GULATI HOUSE/WhatsApp Image 2026-07-29 at 12.46.44 (1).avif",
+    g12: "/images/new_images_works/Residential/MAZDA/WhatsApp Image 2026-07-29 at 12.44.36 (1).avif"
   },
 
   team: [

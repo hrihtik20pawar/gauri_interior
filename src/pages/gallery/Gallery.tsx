@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import gsap from 'gsap';
-import { ChevronLeft, ChevronRight, X, Maximize2, Search } from 'lucide-react';
-import { galleryImages, galleryCategories, GalleryImage } from '../../data/gallery/gallery';
+import { ChevronLeft, ChevronRight, X, Maximize2, Search, ChevronDown } from 'lucide-react';
+import { galleryImages, galleryCategories, categorySubcategories, GalleryImage } from '../../data/gallery/gallery';
 import { useLenis } from '../../App';
 import { useSearchParams } from 'react-router-dom';
 import { images } from '../../constants/images';
@@ -15,6 +15,7 @@ export default function Gallery() {
   const [searchParams] = useSearchParams();
   const initialCategory = searchParams.get('category') || "All";
   const [activeCategory, setActiveCategory] = useState(initialCategory);
+  const [activeSubcategory, setActiveSubcategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredImages, setFilteredImages] = useState<GalleryImage[]>(galleryImages);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -47,6 +48,11 @@ export default function Gallery() {
       setActiveCategory(category);
     }
   }, [searchParams]);
+
+  // Reset subcategory when category changes
+  useEffect(() => {
+    setActiveSubcategory("All");
+  }, [activeCategory]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -90,6 +96,10 @@ export default function Gallery() {
       result = result.filter(img => img.category === activeCategory);
     }
 
+    if (activeSubcategory !== "All") {
+      result = result.filter(img => img.title === activeSubcategory);
+    }
+
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
       result = result.filter(img =>
@@ -100,7 +110,7 @@ export default function Gallery() {
 
     setFilteredImages(result);
     setVisibleCount(INITIAL_LOAD);
-  }, [activeCategory, searchQuery]);
+  }, [activeCategory, activeSubcategory, searchQuery]);
 
   // IntersectionObserver for infinite scroll
   useEffect(() => {
@@ -243,6 +253,21 @@ export default function Gallery() {
               </button>
             ))}
           </div>
+          {activeCategory !== "All" && categorySubcategories[activeCategory] && (
+            <div className="relative mt-3 w-full">
+              <select
+                value={activeSubcategory}
+                onChange={(e) => setActiveSubcategory(e.target.value)}
+                className="w-full pl-4 pr-10 py-3 rounded-xl bg-white/90 backdrop-blur-sm border border-white/20 focus:outline-none focus:ring-2 focus:ring-brand-teal/50 transition-all text-gray-700 shadow-sm text-sm appearance-none cursor-pointer"
+              >
+                <option value="All">All {activeCategory}</option>
+                {categorySubcategories[activeCategory].map((name) => (
+                  <option key={name} value={name}>{name}</option>
+                ))}
+              </select>
+              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
+            </div>
+          )}
         </div>
       </div>
 
@@ -299,6 +324,21 @@ export default function Gallery() {
                 </button>
               ))}
             </div>
+            {activeCategory !== "All" && categorySubcategories[activeCategory] && (
+              <div className="gallery-hero-text relative max-w-md mx-auto mt-6 px-2">
+                <select
+                  value={activeSubcategory}
+                  onChange={(e) => setActiveSubcategory(e.target.value)}
+                  className="w-full pl-4 pr-12 py-3 sm:py-4 rounded-2xl bg-white/90 backdrop-blur-sm border border-white/20 focus:outline-none focus:ring-2 focus:ring-brand-teal/50 transition-all text-gray-700 shadow-sm text-sm sm:text-base appearance-none cursor-pointer"
+                >
+                  <option value="All">All {activeCategory}</option>
+                  {categorySubcategories[activeCategory].map((name) => (
+                    <option key={name} value={name}>{name}</option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
+              </div>
+            )}
           </div>
         </div>
 

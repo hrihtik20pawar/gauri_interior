@@ -8,11 +8,11 @@ import { Link } from 'react-router-dom';
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
-  { icon: Building2, title: 'Turnkey Projects', description: 'Complete end-to-end project execution from concept to handover, handling every detail professionally.', category: 'Offices' },
-  { icon: Armchair, title: 'Modular Furniture', description: 'Custom-manufactured modular furniture solutions crafted with precision and premium materials.', category: 'Display Units' },
+  { icon: Building2, title: 'Turnkey Projects', description: 'Complete end-to-end project execution from concept to handover, handling every detail professionally.', category: 'Commercial' },
+  { icon: Armchair, title: 'Modular Furniture', description: 'Custom-manufactured modular furniture solutions crafted with precision and premium materials.', category: 'Retail Work' },
   { icon: Home, title: 'Residential Interiors', description: 'Homes that reflect your personality — from apartments to luxury villas, designed for comfortable living.', category: 'Residential' },
-  { icon: Briefcase, title: 'Commercial Interiors', description: 'Workspaces, retail outlets, and commercial environments designed for productivity and brand impact.', category: 'Offices' },
-  { icon: CheckCircle2, title: 'Complete Execution', description: 'Comprehensive project management covering civil work, electrical, plumbing, carpentry, and finishing.', category: 'Hotels & Restaurants' },
+  { icon: Briefcase, title: 'Commercial Interiors', description: 'Workspaces, retail outlets, and commercial environments designed for productivity and brand impact.', category: 'Commercial' },
+  { icon: CheckCircle2, title: 'Complete Execution', description: 'Comprehensive project management covering civil work, electrical, plumbing, carpentry, and finishing.', category: 'Institutional' },
   { icon: PenTool, title: 'Interior Design', description: 'Thoughtful design that transforms spaces into functional, beautiful environments tailored to your vision.', category: 'Residential' },
 ];
 
