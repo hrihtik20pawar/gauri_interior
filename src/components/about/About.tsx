@@ -194,7 +194,7 @@ export default function About() {
           <h2 className="text-xl sm:text-2xl md:text-4xl font-serif text-brand-green mb-3 md:mb-4">Our USP at <BrandName as="span" className="font-sans">Gauri</BrandName></h2>
           <div className="w-16 md:w-24 h-1 bg-brand-orange mx-auto rounded-full"></div>
         </div>
-        <div className="about-text flex flex-col sm:flex-row items-stretch gap-2.5 sm:gap-4">
+        <div className="about-text flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4">
           <InfoCard icon={CheckCircle2} iconClassName="w-7 h-7 md:w-8 md:h-8 text-teal-700 stroke-[1.5]" title="Client-Centric Approach" description="Your vision is our priority." />
           <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-gray-300 shrink-0 hidden sm:block" />
           <InfoCard icon={PenTool} iconClassName="w-7 h-7 md:w-8 md:h-8 text-teal-700 stroke-[1.5]" title="Innovative Design" description="Creative solutions for every space." />
