@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { Home, ArrowLeft, ArrowRight, Phone } from 'lucide-react';
+import { Home, ArrowLeft, ArrowRight, Phone, Mail, MessageCircle, MapPin } from 'lucide-react';
 import { siteConfig } from '../../constants/contact';
 
 const quickLinks = [
@@ -117,14 +117,44 @@ export default function NotFound() {
         </div>
 
         <div className="error-contact opacity-0 border-t border-gray-200 pt-6">
-          <p className="text-gray-400 text-sm mb-3">Need help? Reach out to us</p>
-          <a
-            href={`tel:${siteConfig.contact.phones[0].replace(/-/g, '')}`}
-            className="inline-flex items-center gap-2 text-brand-teal hover:text-brand-orange transition-colors text-sm font-medium"
-          >
-            <Phone className="w-4 h-4" />
-            {siteConfig.contact.phones[0]}
-          </a>
+          <p className="text-gray-400 text-sm mb-4">Need help? Reach out to us</p>
+          <div className="space-y-3">
+            <a
+              href={siteConfig.contact.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start justify-center gap-2 text-gray-500 hover:text-brand-orange transition-colors text-sm group"
+            >
+              <MapPin className="w-4 h-4 mt-0.5 shrink-0 group-hover:scale-110 transition-transform" />
+              <span className="leading-relaxed max-w-md">{siteConfig.contact.address}</span>
+            </a>
+            <div className="flex items-center justify-center gap-2 text-gray-500 text-sm">
+              <Phone className="w-4 h-4 shrink-0 text-brand-orange" />
+              <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
+                {siteConfig.contact.phones.map((phone) => (
+                  <a key={phone} href={`tel:${phone.replace(/-/g, '')}`} className="hover:text-brand-orange transition-colors">
+                    {phone}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <a
+              href={`mailto:${siteConfig.contact.email}`}
+              className="flex items-center justify-center gap-2 text-gray-500 hover:text-brand-orange transition-colors text-sm group"
+            >
+              <Mail className="w-4 h-4 shrink-0 group-hover:scale-110 transition-transform" />
+              {siteConfig.contact.email}
+            </a>
+            <a
+              href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 text-gray-500 hover:text-brand-orange transition-colors text-sm group"
+            >
+              <MessageCircle className="w-4 h-4 shrink-0 group-hover:scale-110 transition-transform" />
+              {siteConfig.contact.whatsappDisplay}
+            </a>
+          </div>
         </div>
 
       </div>
