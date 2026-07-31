@@ -129,10 +129,10 @@ export default function Hero() {
       <div className="relative z-10 w-full px-5 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto py-16 sm:py-20 md:pt-28 lg:pt-0 flex items-center">
         <div className="max-w-2xl items-start text-left">
           <h1 className="hero-text text-[28px] sm:text-3xl md:text-5xl lg:text-7xl font-serif text-white leading-[1.15] mb-3 sm:mb-4 md:mb-6 drop-shadow-lg">
-            Designing Spaces <br className="hidden sm:block" /> That Reflect <br className="hidden sm:block" /> Your <span className="text-brand-orange">Lifestyle</span>
+            Designing Spaces <br className="hidden sm:block" /> That Reflect <br className="hidden sm:block" /> Your <span className="text-brand-orange italic">Style</span>
           </h1>
-          <p className="hero-text text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl mb-5 sm:mb-6 md:mb-10 max-w-md sm:max-w-lg font-medium leading-relaxed drop-shadow-md ml-0 sm:ml-8 md:ml-20" style={{ fontStyle: 'italic' }}>
-            From concept to creation
+          <p className="hero-text text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl mb-5 sm:mb-6 md:mb-10 max-w-md sm:max-w-lg font-medium leading-relaxed drop-shadow-md ml-0 sm:ml-8 md:ml-20">
+            Crafting elegant interiors that inspire comfort and elevate living.
           </p>
           <div className="hero-text flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto">
             <button onClick={() => navigate('/gallery')} className="bg-brand-orange text-white px-6 md:px-8 py-3 md:py-3.5 rounded text-sm md:text-base font-medium hover:bg-brand-orange/90 transition-colors flex items-center justify-center sm:justify-start gap-2 shadow-lg shadow-brand-orange/20 min-h-[48px] w-full sm:w-auto">
@@ -159,6 +159,25 @@ export default function Hero() {
       >
         <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
       </button>
+
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2 hero-text">
+        {heroSlides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => {
+              currentSlideRef.current = i;
+              setCurrentSlide(i);
+              goToSlide(i);
+            }}
+            className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 ${
+              i === currentSlide
+                ? 'bg-brand-orange w-6 sm:w-7'
+                : 'bg-white/50 hover:bg-white/80'
+            }`}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
+      </div>
     </section>
   );
 }

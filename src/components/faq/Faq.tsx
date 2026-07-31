@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { Plus, Minus } from 'lucide-react';
+import { Plus, Minus, MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Modal from '../ui/Modal';
+import { siteConfig } from '../../constants/contact';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -156,6 +158,7 @@ export default function Faq() {
   const [showCount, setShowCount] = useState(5);
   const container = useRef<HTMLDivElement>(null);
   const [animated, setAnimated] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
     const el = container.current;
@@ -219,12 +222,12 @@ export default function Faq() {
             <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-4 md:mb-6">
               We'd love to hear from you. Reach out to our team for personalized guidance on your next project.
             </p>
-            <a
-              href="#contact-us"
+            <button
+              onClick={() => setShowContact(true)}
               className="flex items-center justify-center gap-2 bg-brand-orange text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-brand-orange/90 transition-colors duration-200 mx-auto"
             >
               Contact Us
-            </a>
+            </button>
           </div>
         </div>
 
@@ -271,6 +274,50 @@ export default function Faq() {
         </div>
 
       </div>
+
+      <Modal isOpen={showContact} onClose={() => setShowContact(false)}>
+        <div className="text-center mb-6">
+          <h3 className="text-2xl font-serif font-bold text-brand-green mb-2">Get in Touch</h3>
+          <p className="text-gray-500 text-sm">We'd love to hear from you. Reach out to us!</p>
+        </div>
+        <div className="space-y-4">
+          <a
+            href={siteConfig.contact.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+          >
+            <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
+            <span className="text-sm text-gray-600 leading-relaxed">{siteConfig.contact.address}</span>
+          </a>
+          <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+            <Phone className="w-5 h-5 shrink-0 text-brand-orange" />
+            <div className="flex flex-wrap gap-x-4 gap-y-1">
+              {siteConfig.contact.phones.map((phone) => (
+                <a key={phone} href={`tel:${phone.replace(/-/g, '')}`} className="text-sm text-gray-600 hover:text-brand-orange transition-colors">
+                  {phone}
+                </a>
+              ))}
+            </div>
+          </div>
+          <a
+            href={`mailto:${siteConfig.contact.email}`}
+            className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+          >
+            <Mail className="w-5 h-5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
+            <span className="text-sm text-gray-600">{siteConfig.contact.email}</span>
+          </a>
+          <a
+            href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+          >
+            <MessageCircle className="w-5 h-5 shrink-0 text-brand-orange group-hover:scale-110 transition-transform" />
+            <span className="text-sm text-gray-600">{siteConfig.contact.whatsappDisplay}</span>
+          </a>
+        </div>
+      </Modal>
     </section>
   );
 }

@@ -41,11 +41,11 @@ export const categorySubcategories: Record<string, string[]> = {
     "Hemmo Pharma",
     "PISPL",
     "BMR",
-    "Bobby Parekh",
+    "Bobby Parikh",
     "Mahesh Gupta - Peninsula",
-    "Temrind Tours",
+    "Tamarind Tours",
     "ITC",
-    "Practicle Finance"
+    "Practical Finance"
   ],
   "Retail Work": [
     "Tara Jewels",
@@ -72,10 +72,10 @@ export const categorySubcategories: Record<string, string[]> = {
     "Hear & Dental Clinic",
     "Amaha Clinic",
     "Pradhan Dental Clinic",
-    "Iskana Resort (29-05-26)",
+    "Ikshana Resort (29-05-26)",
     "Kohinoor Hotel",
     "Airport Lunge",
-    "Iskana Resort - Sample Room",
+    "Ikshana Resort - Sample Room",
     "United Shippers"
   ],
   "Warehousing & Factory's": [
@@ -102,7 +102,7 @@ const folders: FolderConfig[] = [
 
   // Luxury Villas
   { folder: "PIRAMAL BANGLOW", title: "Piramar Banglow", category: "Luxury Villas" },
-  { folder: "SAMIR CHENNAI BANGLOW", title: "Samir Chennai Banglow", category: "Luxury Villas" },
+  { folder: "SAMIR CHENNAI BANGLOW", title: "Samir Chennai Bungalow", category: "Luxury Villas" },
   { folder: "MAZDA", title: "Mazda - Alibaug", category: "Luxury Villas" },
   { folder: "ASHOK NIRWANA", title: "Ashok Nirvana - Mahesh Gupta", category: "Luxury Villas" },
 
@@ -112,11 +112,11 @@ const folders: FolderConfig[] = [
   { folder: "HEMCO PHARMA", title: "Hemmo Pharma", category: "Commercial" },
   { folder: "PISPL BPO", title: "PISPL", category: "Commercial" },
   { folder: "BMR ADVISOR OFFICE", title: "BMR", category: "Commercial" },
-  { folder: "12. BOBBY PAREKH", title: "Bobby Parekh", category: "Commercial" },
+  { folder: "12. BOBBY PAREKH", title: "Bobby Parikh", category: "Commercial" },
   { folder: "6. PENINSULA", title: "Mahesh Gupta - Peninsula", category: "Commercial" },
-  { folder: "11. TAMARIND TOUR", title: "Temrind Tours", category: "Commercial" },
+  { folder: "11. TAMARIND TOUR", title: "Tamarind Tours", category: "Commercial" },
   { folder: "10. ITC GHATKOPAR", title: "ITC", category: "Commercial" },
-  { folder: "13. PRACTICLE FINANCE", title: "Practicle Finance", category: "Commercial" },
+  { folder: "13. PRACTICLE FINANCE", title: "Practical Finance", category: "Commercial" },
 
   // Retail Work - exact sequence
   { folder: "TARA JEWELS", title: "Tara Jewels", category: "Retail Work" },
@@ -143,10 +143,10 @@ const folders: FolderConfig[] = [
   { folder: "HEAR & DENTAL CLINIC", title: "Hear & Dental Clinic", category: "Hospitality Project" },
   { folder: "AMAHA CLINIC", title: "Amaha Clinic", category: "Hospitality Project" },
   { folder: "PRADHAN DENTAL CLINIC", title: "Pradhan Dental Clinic", category: "Hospitality Project" },
-  { folder: "ISKANA RESORT", title: "Iskana Resort (29-05-26)", category: "Hospitality Project" },
+  { folder: "ISKANA RESORT", title: "Ikshana Resort (29-05-26)", category: "Hospitality Project" },
   { folder: "KOHINOOR HOTEL", title: "Kohinoor Hotel", category: "Hospitality Project" },
   { folder: "AIRPORT LUNGE", title: "Airport Lunge", category: "Hospitality Project" },
-  { folder: "ISKANA RESORT SAMPLE", title: "Iskana Resort - Sample Room", category: "Hospitality Project" },
+  { folder: "ISKANA RESORT SAMPLE", title: "Ikshana Resort - Sample Room", category: "Hospitality Project" },
   { folder: "15. UNITED SHIPPERS", title: "United Shippers", category: "Hospitality Project" },
 
   // Warehousing & Factory's

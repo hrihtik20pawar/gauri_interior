@@ -23,7 +23,7 @@ const timelineSteps = [
     num: "02",
     title: "The Beginning",
     highlight: "",
-    image: "/images/Final_Images/HEMCO PHARMA/WhatsApp Image 2026-07-18 at 11.43.21.avif",
+    image: "/images/timeline/timeline_01.avif",
     items: [
       "Slowly and steadily.",
       "We evolved & started delivering complete Turnkey Projects.",
@@ -258,7 +258,7 @@ export default function Timeline() {
                           loading="lazy"
                           src={step.image}
                           alt={step.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                       </div>
