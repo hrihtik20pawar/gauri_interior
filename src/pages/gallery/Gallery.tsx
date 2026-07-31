@@ -8,8 +8,7 @@ import { useSearchParams } from 'react-router-dom';
 import { images } from '../../constants/images';
 
 const heroSlides = images.hero.slides;
-const INITIAL_LOAD = 20;
-const LOAD_MORE_COUNT = 12;
+const INITIAL_LOAD = 10;
 
 export default function Gallery() {
   const [searchParams] = useSearchParams();
@@ -21,7 +20,6 @@ export default function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD);
   const galleryRef = useRef<HTMLDivElement>(null);
-  const loadMoreRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const lenis = useLenis();
   const [heroSlide, setHeroSlide] = useState(0);
@@ -32,7 +30,6 @@ export default function Gallery() {
   );
 
   const hasMore = visibleCount < filteredImages.length;
-
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -111,23 +108,6 @@ export default function Gallery() {
     setFilteredImages(result);
     setVisibleCount(INITIAL_LOAD);
   }, [activeCategory, activeSubcategory, searchQuery]);
-
-  // IntersectionObserver for infinite scroll
-  useEffect(() => {
-    if (!loadMoreRef.current || !hasMore) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setVisibleCount(prev => Math.min(prev + LOAD_MORE_COUNT, filteredImages.length));
-        }
-      },
-      { rootMargin: '400px' }
-    );
-
-    observer.observe(loadMoreRef.current);
-    return () => observer.disconnect();
-  }, [hasMore, filteredImages.length]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -395,8 +375,13 @@ export default function Gallery() {
         )}
 
         {hasMore && filteredImages.length > 0 && (
-          <div ref={loadMoreRef} className="flex justify-center py-8">
-            <div className="w-8 h-8 border-2 border-brand-teal border-t-transparent rounded-full animate-spin" />
+          <div className="flex justify-center py-8">
+            <button
+              onClick={() => setVisibleCount(filteredImages.length)}
+              className="bg-brand-teal text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-brand-teal/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-brand-teal/20"
+            >
+              View More ({filteredImages.length - visibleCount} remaining)
+            </button>
           </div>
         )}
       </div>
