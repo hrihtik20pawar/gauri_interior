@@ -117,7 +117,7 @@ export default function Stats() {
   }, [countersStarted]);
 
   return (
-    <section ref={container} className="bg-brand-green py-12 md:py-20 px-5 md:px-6 relative overflow-hidden">
+    <section ref={container} className="bg-brand-green py-12 md:py-20 px-5 sm:px-6 md:px-12 lg:px-24 relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-8 md:mb-14">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-sans font-semibold tracking-wide text-white leading-tight">

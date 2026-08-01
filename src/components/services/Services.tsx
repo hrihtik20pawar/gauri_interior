@@ -118,7 +118,7 @@ export default function Services() {
   ];
 
   return (
-    <section ref={container} className="py-16 md:py-24 px-5 md:px-12 lg:px-24 bg-gray-50/50" id="services">
+    <section ref={container} className="py-14 md:py-24 px-5 sm:px-6 md:px-12 lg:px-24 bg-gray-50/50" id="services">
       <div className="max-w-[1500px] mx-auto">
         <div className="mb-10 md:mb-16 max-w-2xl">
           <h2 className="service-header text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-teal-800 mb-4 md:mb-6 font-medium">Our Services</h2>

@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gauri Interior Pvt. Ltd. — Technical Documentation</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  :root {
+    --brand-green: #0d2d24;
+    --brand-teal: #2a948c;
+    --brand-orange: #ea5b23;
+    --brand-beige: #f9f6f0;
+    --text-dark: #1a1a1a;
+    --text-muted: #555;
+    --border: #e0e0e0;
+    --bg-page: #ffffff;
+    --bg-code: #f4f4f4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background: var(--bg-page);
+    line-height: 1.7;
+    font-size: 11pt;
+  }
+
+  @page {
+    size: A4;
+    margin: 20mm 18mm 20mm 18mm;
+  }
+
+  .cover {
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--brand-green) 0%, #15453a 50%, var(--brand-teal) 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 40px;
+  }
+
+  .cover-logo {
+    display: grid;
+    grid-template-columns: repeat(3, 28px);
+    grid-template-rows: repeat(3, 28px);
+    gap: 4px;
+    margin-bottom: 40px;
+  }
+
+  .cover-logo .tile { border-radius: 4px; }
+  .cover-logo .teal { background: var(--brand-teal); }
+  .cover-logo .dark { background: #0a1f19; }
+
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42pt;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+  }
+
+  .cover h1 .dot { color: var(--brand-orange); }
+
+  .cover .subtitle {
+    font-size: 16pt;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 40px;
+  }
+
+  .cover .meta {
+    font-size: 10pt;
+    opacity: 0.7;
+    margin-top: 60px;
+  }
+
+  .cover .meta div { margin-bottom: 4px; }
+
+  .toc {
+    page-break-after: always;
+    padding: 40px 0;
+  }
+
+  .toc h2 {
+    font-size: 22pt;
+    font-weight: 700;
+    color: var(--brand-green);
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--brand-teal);
+    padding-bottom: 10px;
+  }
+
+  .toc-list {
+    list-style: none;
+    counter-reset: toc-counter;
+  }
+
+  .toc-list li {
+    counter-increment: toc-counter;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+    font-size: 11pt;
+  }
+
+  .toc-list li::before {
+    content: counter(toc-counter) ".";
+    font-weight: 700;
+    color: var(--brand-teal);
+    margin-right: 10px;
+    display: inline-block;
+    width: 25px;
+  }
+
+  .toc-list li a {
+    color: var(--text-dark);
+    text-decoration: none;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24pt;
+    color: var(--brand-green);
+    margin: 30px 0 15px 0;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18pt;
+    color: var(--brand-green);
+    margin: 25px 0 12px 0;
+    border-left: 4px solid var(--brand-teal);
+    padding-left: 12px;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 13pt;
+    font-weight: 600;
+    color: var(--brand-green);
+    margin: 18px 0 8px 0;
+    page-break-after: avoid;
+  }
+
+  h4 {
+    font-size: 11pt;
+    font-weight: 600;
+    color: var(--brand-teal);
+    margin: 14px 0 6px 0;
+  }
+
+  p { margin-bottom: 10px; }
+
+  .section { page-break-inside: avoid; margin-bottom: 20px; }
+  .page-break { page-break-before: always; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 9.5pt;
+  }
+
+  th {
+    background: var(--brand-green);
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  td {
+    padding: 7px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) { background: #f9fafb; }
+
+  code {
+    background: var(--bg-code);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 9pt;
+    font-family: 'Consolas', 'Courier New', monospace;
+  }
+
+  pre {
+    background: var(--brand-green);
+    color: #e0e0e0;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 10px 0;
+    font-size: 9pt;
+    line-height: 1.5;
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 8.5pt;
+    font-weight: 600;
+    margin: 2px 4px 2px 0;
+  }
+
+  .badge-green { background: #d4edda; color: #155724; }
+  .badge-blue { background: #d1ecf1; color: #0c5460; }
+  .badge-orange { background: #fff3cd; color: #856404; }
+  .badge-red { background: #f8d7da; color: #721c24; }
+  .badge-teal { background: #e0f5f3; color: #0d2d24; }
+
+  .architecture-box {
+    border: 2px solid var(--brand-teal);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0;
+    background: #f0faf8;
+  }
+
+  .architecture-box h3 {
+    margin-top: 0;
+    color: var(--brand-teal);
+  }
+
+  .flow-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .flow-box {
+    background: var(--brand-green);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 9pt;
+    text-align: center;
+    min-width: 100px;
+  }
+
+  .flow-box.teal { background: var(--brand-teal); }
+  .flow-box.orange { background: var(--brand-orange); }
+  .flow-box.light { background: #e0f5f3; color: var(--brand-green); border: 2px solid var(--brand-teal); }
+
+  .flow-arrow {
+    font-size: 18pt;
+    color: var(--brand-teal);
+    font-weight: 700;
+  }
+
+  .feature-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 10px 0;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+
+  .feature-card h4 {
+    margin-top: 0;
+    color: var(--brand-green);
+  }
+
+  .callout {
+    background: var(--brand-beige);
+    border-left: 4px solid var(--brand-orange);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+    font-size: 10pt;
+  }
+
+  .callout.info { border-left-color: var(--brand-teal); }
+  .callout.warning { border-left-color: #ffc107; }
+  .callout.success { border-left-color: #28a745; }
+
+  .diagram-container {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 16px 0;
+    background: #fafafa;
+    text-align: center;
+  }
+
+  .diagram-title {
+    font-weight: 600;
+    color: var(--brand-green);
+    margin-bottom: 12px;
+    font-size: 10pt;
+  }
+
+  .tree {
+    font-family: monospace;
+    font-size: 9pt;
+    line-height: 1.6;
+    background: var(--brand-green);
+    color: #c8e6c9;
+    padding: 16px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 10px 0;
+  }
+
+  .tree .folder { color: var(--brand-teal); font-weight: 700; }
+  .tree .file { color: #a5d6a7; }
+  .tree .highlight { color: var(--brand-orange); font-weight: 700; }
+
+  ul, ol { margin: 8px 0 12px 24px; }
+  li { margin-bottom: 4px; }
+
+  .footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 9pt;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  @media print {
+    .cover { min-height: auto; height: 100vh; }
+    .page-break { page-break-before: always; }
+    .section { page-break-inside: avoid; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== COVER PAGE ==================== -->
+<div class="cover">
+  <div class="cover-logo">
+    <div class="tile teal"></div><div class="tile dark"></div><div class="tile teal"></div>
+    <div class="tile dark"></div><div class="tile teal"></div><div class="tile dark"></div>
+    <div class="tile teal"></div><div class="tile dark"></div><div class="tile teal"></div>
+  </div>
+  <h1>Gauri <span class="dot">●</span> Group</h1>
+  <div class="subtitle">Technical Documentation</div>
+  <p style="max-width:600px; opacity:0.85; font-size:11pt; line-height:1.8;">
+    A comprehensive technical breakdown of the corporate website for<br>
+    <strong>Gauri Interior Pvt. Ltd.</strong> — covering architecture, features,<br>
+    technologies, components, and deployment.
+  </p>
+  <div class="meta">
+    <div><strong>Project:</strong> gauriinteriorpvtltd.com</div>
+    <div><strong>Version:</strong> 1.0.0</div>
+    <div><strong>Date:</strong> August 2026</div>
+    <div><strong>Stack:</strong> React 19 · TypeScript · Vite · Tailwind CSS · GSAP</div>
+  </div>
+</div>
+
+<!-- ==================== TABLE OF CONTENTS ==================== -->
+<div class="toc">
+  <h2>Table of Contents</h2>
+  <ol class="toc-list">
+    <li><a href="#overview">Project Overview</a></li>
+    <li><a href="#tech-stack">Technology Stack</a></li>
+    <li><a href="#architecture">Architecture & Project Structure</a></li>
+    <li><a href="#routing">Routing & Pages</a></li>
+    <li><a href="#components">Component Breakdown</a></li>
+    <li><a href="#animations">Animations & Interactions</a></li>
+    <li><a href="#styling">Styling & Theming</a></li>
+    <li><a href="#gallery">Gallery & Media System</a></li>
+    <li><a href="#performance">Performance Optimization</a></li>
+    <li><a href="#seo">SEO & Accessibility</a></li>
+    <li><a href="#data">Data Architecture</a></li>
+    <li><a href="#deployment">Deployment & Build</a></li>
+    <li><a href="#features">Feature Summary</a></li>
+  </ol>
+</div>
+
+<!-- ==================== 1. OVERVIEW ==================== -->
+<h1 id="overview">1. Project Overview</h1>
+
+<div class="architecture-box">
+  <h3>What is Gauri Interior Pvt. Ltd.?</h3>
+  <p>
+    <strong>Gauri Interior Pvt. Ltd.</strong> is a Mumbai-based premium interior design, renovation, and turnkey project execution company, part of the <strong>Gauri Group of Companies</strong> (established 2012, legacy since 1993). The company offers interior design services for residential, commercial, hospitality, healthcare, educational, and retail spaces across India.
+  </p>
+  <p>
+    This documentation covers the official corporate website — a modern, animated single-page application (SPA) built to showcase the company's projects, services, team, and brand identity.
+  </p>
+</div>
+
+<table>
+  <tr><th style="width:35%">Property</th><th>Details</th></tr>
+  <tr><td><strong>Live URL</strong></td><td>https://gauriinteriorpvtltd.com/</td></tr>
+  <tr><td><strong>Headquarters</strong></td><td>Shop No.47, Centrium Shopping Centre, Kandivali (East), Mumbai - 400 101</td></tr>
+  <tr><td><strong>Contact</strong></td><td>mail@gauriinteriorpvtltd.com · 98200 91263 · 022-49704263</td></tr>
+  <tr><td><strong>Services</strong></td><td>Interior Design, Modular Kitchens, Design Studio, Manufacturing</td></tr>
+  <tr><td><strong>Business Verticals</strong></td><td>4 — Interior, Kitchen, Studio, Nikhil</td></tr>
+  <tr><td><strong>Social Media</strong></td><td>Instagram · LinkedIn · Facebook</td></tr>
+</table>
+
+<!-- ==================== 2. TECH STACK ==================== -->
+<h1 id="tech-stack" class="page-break">2. Technology Stack</h1>
+
+<p>The website is built with a modern frontend stack optimized for performance, animation, and developer experience.</p>
+
+<h2>2.1 Core Technologies</h2>
+
+<div class="diagram-container">
+  <div class="diagram-title">Technology Layer Diagram</div>
+  <div class="flow-diagram">
+    <div class="flow-box">React 19</div>
+    <div class="flow-arrow">+</div>
+    <div class="flow-box teal">TypeScript</div>
+    <div class="flow-arrow">+</div>
+    <div class="flow-box orange">Vite 6</div>
+  </div>
+  <div class="flow-diagram" style="margin-top:4px;">
+    <div class="flow-arrow">↓</div>
+  </div>
+  <div class="flow-diagram">
+    <div class="flow-box light">Tailwind CSS v4</div>
+    <div class="flow-arrow">+</div>
+    <div class="flow-box light">GSAP 3.15</div>
+    <div class="flow-arrow">+</div>
+    <div class="flow-box light">Lenis Scroll</div>
+  </div>
+</div>
+
+<table>
+  <tr><th>Library</th><th>Version</th><th>Purpose</th></tr>
+  <tr><td><span class="badge badge-blue">react</span></td><td>^19.0.1</td><td>Core UI framework — component-based rendering</td></tr>
+  <tr><td><span class="badge badge-blue">react-dom</span></td><td>^19.0.1</td><td>React DOM renderer for web</td></tr>
+  <tr><td><span class="badge badge-blue">react-router-dom</span></td><td>^7.18.1</td><td>Client-side routing with lazy loading</td></tr>
+  <tr><td><span class="badge badge-green">vite</span></td><td>^6.2.3</td><td>Build tool and development server</td></tr>
+  <tr><td><span class="badge badge-green">@vitejs/plugin-react</span></td><td>^5.0.4</td><td>Vite React plugin for JSX/Fast Refresh</td></tr>
+  <tr><td><span class="badge badge-green">tailwindcss</span></td><td>^4.1.14</td><td>Utility-first CSS framework (CSS-native config)</td></tr>
+  <tr><td><span class="badge badge-green">@tailwindcss/vite</span></td><td>^4.1.14</td><td>Tailwind CSS Vite integration plugin</td></tr>
+  <tr><td><span class="badge badge-orange">gsap</span></td><td>^3.15.0</td><td>GreenSock Animation Platform — scroll, tweens, timelines</td></tr>
+  <tr><td><span class="badge badge-orange">@gsap/react</span></td><td>^2.1.2</td><td>React hooks for GSAP (<code>useGSAP</code>)</td></tr>
+  <tr><td><span class="badge badge-teal">lenis</span></td><td>^1.3.25</td><td>Smooth scroll library (disabled on mobile)</td></tr>
+  <tr><td><span class="badge badge-teal">lucide-react</span></td><td>^0.546.0</td><td>Icon library (Mail, Phone, Chevron, Arrow, etc.)</td></tr>
+  <tr><td><span class="badge badge-red">typescript</span></td><td>~5.8.2</td><td>Type safety and static analysis</td></tr>
+  <tr><td><span class="badge badge-red">sharp</span></td><td>^0.53.3</td><td>Image processing (AVIF conversion script)</td></tr>
+  <tr><td><span class="badge badge-red">puppeteer</span></td><td>^25.4.0</td><td>Headless browser (HTML-to-image screenshots)</td></tr>
+</table>
+
+<!-- ==================== 3. ARCHITECTURE ==================== -->
+<h1 id="architecture" class="page-break">3. Architecture & Project Structure</h1>
+
+<h2>3.1 Directory Layout</h2>
+
+<div class="tree">
+<span class="folder">gauri_interior-main/</span>
+├── <span class="folder">public/</span>                    <span style="color:#888"># Static assets served as-is</span>
+│   ├── <span class="folder">images/</span>              <span style="color:#888"># 100+ AVIF images organized by category</span>
+│   │   ├── <span class="folder">Final_Images/</span>    <span style="color:#888"># Project photos (commercial, residential, etc.)</span>
+│   │   ├── <span class="folder">new_images_works/</span><span style="color:#888"># Residential project photos</span>
+│   │   ├── <span class="folder">team/</span>           <span style="color:#888"># 10 team member portraits</span>
+│   │   ├── <span class="folder">clients/</span>        <span style="color:#888"># 15 client logos (TATA, Mahindra, SBI, etc.)</span>
+│   │   ├── <span class="folder">businesses/</span>     <span style="color:#888"># 4 business vertical logos</span>
+│   │   └── <span class="folder">timeline/</span>       <span style="color:#888"># Timeline images</span>
+│   ├── <span class="file highlight">favicon.svg</span>         <span style="color:#888"># CSS-style 3x3 tile grid favicon</span>
+│   ├── <span class="file">robots.txt</span>
+│   ├── <span class="file">sitemap.xml</span>
+│   └── <span class="file">web.config</span>          <span style="color:#888"># IIS deployment config</span>
+├── <span class="folder">src/</span>                       <span style="color:#888"># Application source code</span>
+│   ├── <span class="folder">components/</span>          <span style="color:#888"># 29 React components (24 directories)</span>
+│   │   ├── <span class="folder">about/</span>           <span style="color:#888"># About section with MD message & USP cards</span>
+│   │   ├── <span class="folder">hero/</span>            <span style="color:#888"># Full-screen hero slider (10 slides)</span>
+│   │   ├── <span class="folder">navbar/</span>          <span style="color:#888"># Fixed navigation with dropdown & mobile menu</span>
+│   │   ├── <span class="folder">gallery/</span>         <span style="color:#888"># Gallery with filters, search, lightbox</span>
+│   │   ├── <span class="folder">timeline/</span>        <span style="color:#888"># Company history timeline (1993–2027)</span>
+│   │   ├── <span class="folder">stats/</span>           <span style="color:#888"># Animated counters section</span>
+│   │   ├── <span class="folder">clients/</span>         <span style="color:#888"># Infinite marquee client logos</span>
+│   │   ├── <span class="folder">testimonials/</span>    <span style="color:#888"># Client testimonials carousel</span>
+│   │   ├── <span class="folder">faq/</span>             <span style="color:#888"># FAQ accordion with contact modal</span>
+│   │   ├── <span class="folder">services/</span>        <span style="color:#888"># Services grid for 4 verticals</span>
+│   │   ├── <span class="folder">businesses/</span>      <span style="color:#888"># "Our Ventures" section</span>
+│   │   ├── <span class="folder">business-detail/</span> <span style="color:#888"># Reusable business page template</span>
+│   │   ├── <span class="folder">project-detail/</span>  <span style="color:#888"># Reusable project page template</span>
+│   │   ├── <span class="folder">works/</span>           <span style="color:#888"># Featured projects grid</span>
+│   │   ├── <span class="folder">team/</span>            <span style="color:#888"># Team member cards & LinkedIn icons</span>
+│   │   ├── <span class="folder">footer/</span>          <span style="color:#888"># Full footer with contact & social links</span>
+│   │   ├── <span class="folder">ui/</span>              <span style="color:#888"># Reusable UI: Modal, InfoCard, HeroSlider, ErrorBoundary</span>
+│   │   └── ... <span style="color:#888">(10+ more component directories)</span>
+│   ├── <span class="folder">data/</span>                <span style="color:#888"># Static data files</span>
+│   │   ├── <span class="folder">businesses/</span>     <span style="color:#888"># Business vertical data (typed interfaces)</span>
+│   │   ├── <span class="folder">projects/</span>       <span style="color:#888"># Project data with slugs, categories, galleries</span>
+│   │   ├── <span class="folder">gallery/</span>        <span style="color:#888"># 100+ images across 17 project folders</span>
+│   │   └── <span class="folder">team/</span>           <span style="color:#888"># 10 team members with profiles</span>
+│   ├── <span class="folder">constants/</span>           <span style="color:#888"># Image registry, contact config, etc.</span>
+│   ├── <span class="folder">hooks/</span>               <span style="color:#888"># Custom hooks (useSEO, useLenis, usePerformance)</span>
+│   ├── <span class="folder">pages/</span>               <span style="color:#888"># 12 page components (lazy loaded)</span>
+│   ├── <span class="folder">scripts/</span>             <span style="color:#888"># Build/utility scripts</span>
+│   ├── <span class="file highlight">App.tsx</span>              <span style="color:#888"># Root component with routing & providers</span>
+│   ├── <span class="file">index.css</span>            <span style="color:#888"># Tailwind v4 config + global styles</span>
+│   └── <span class="file">main.tsx</span>             <span style="color:#888"># Entry point</span>
+├── <span class="file">index.html</span>                <span style="color:#888"># SEO meta, JSON-LD, OG tags, font preconnect</span>
+├── <span class="file">vite.config.ts</span>            <span style="color:#888"># Build config: wwwroot output, chunk splitting</span>
+├── <span class="file">tsconfig.json</span>
+├── <span class="file">package.json</span>
+├── <span class="file">vercel.json</span>               <span style="color:#888"># Vercel SPA rewrites</span>
+└── <span class="file">web.config</span>                <span style="color:#888"># IIS/Azure deployment config</span>
+</div>
+
+<h2>3.2 Data Flow Architecture</h2>
+
+<div class="diagram-container">
+  <div class="diagram-title">Application Data Flow</div>
+  <div class="flow-diagram">
+    <div class="flow-box">Static Data<br><small>(TypeScript files)</small></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box teal">React Components<br><small>(29 components)</small></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box orange">GSAP Animations<br><small>(ScrollTrigger)</small></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box light">DOM Rendering<br><small>(Virtual DOM)</small></div>
+  </div>
+  <p style="margin-top:12px; font-size:9pt; color:var(--text-muted);">
+    All data is hardcoded in TypeScript — no backend API, no CMS, no server-side rendering.
+  </p>
+</div>
+
+<!-- ==================== 4. ROUTING ==================== -->
+<h1 id="routing" class="page-break">4. Routing & Pages</h1>
+
+<p>The application uses <strong>React Router v7</strong> with lazy-loaded route components for optimal code splitting.</p>
+
+<table>
+  <tr><th>Route</th><th>Page</th><th>Description</th></tr>
+  <tr><td><code>/</code></td><td>Home</td><td>Full homepage: Hero slider → Stats → About → Timeline → Clients → Testimonials → FAQ</td></tr>
+  <tr><td><code>/about</code></td><td>About Page</td><td>About Hero, Businesses grid, Meet the Team (10 members)</td></tr>
+  <tr><td><code>/services</code></td><td>Services Page</td><td>Services Hero, Who We Are, Vision & Mission, Core Values, CTA</td></tr>
+  <tr><td><code>/gallery</code></td><td>Gallery</td><td>Category filters, search, image grid with lightbox viewer</td></tr>
+  <tr><td><code>/businesses</code></td><td>Businesses Page</td><td>Hero + Businesses grid for all 4 ventures</td></tr>
+  <tr><td><code>/business/:id</code></td><td>Business Detail</td><td>Individual business pages (interior, kitchen, studio, nikhil)</td></tr>
+  <tr><td><code>/projects/:slug</code></td><td>Project Detail</td><td>Individual project page with gallery and metadata</td></tr>
+  <tr><td><code>/works/:id</code></td><td>Work Detail</td><td>Individual work/portfolio detail page</td></tr>
+  <tr><td><code>/team/:id</code></td><td>Team Member Detail</td><td>Individual team member profile page</td></tr>
+  <tr><td><code>/why-us</code></td><td>Generic Page</td><td>"Coming Soon" placeholder page</td></tr>
+  <tr><td><code>/projects</code></td><td>Redirect</td><td>Redirects to <code>/gallery</code></td></tr>
+  <tr><td><code>*</code></td><td>Not Found</td><td>Animated 404 page with quick links and contact info</td></tr>
+</table>
+
+<div class="callout info">
+  <strong>Note:</strong> All page components use <code>React.lazy()</code> for code splitting. A <code>PageTransition</code> component handles fade-in animation and scroll reset on route changes.
+</div>
+
+<!-- ==================== 5. COMPONENTS ==================== -->
+<h1 id="components" class="page-break">5. Component Breakdown</h1>
+
+<h2>5.1 Layout & Navigation Components</h2>
+
+<table>
+  <tr><th>Component</th><th>File</th><th>Description</th></tr>
+  <tr>
+    <td><strong>Navbar</strong></td>
+    <td><code>navbar/Navbar.tsx</code></td>
+    <td>Fixed top navigation with scroll-based background transition (transparent → white). Desktop: horizontal links + "Get in Touch" dropdown (Phone/Email/WhatsApp). Mobile: hamburger menu with dark overlay. GSAP stagger animation for nav items.</td>
+  </tr>
+  <tr>
+    <td><strong>Footer</strong></td>
+    <td><footer/Footer.tsx</footer></td>
+    <td>3-column footer: logo+tagline, contact info (address/phones), quick links (email/WhatsApp) + social icons (Instagram/LinkedIn/Facebook). Copyright bar.</td>
+  </tr>
+  <tr>
+    <td><strong>BackButton</strong></td>
+    <td><code>back-button/BackButton.tsx</code></td>
+    <td>Floating orange circular button (ArrowLeft) on sub-pages. Desktop only. Hides on main routes.</td>
+  </tr>
+  <tr>
+    <td><strong>ScrollToTop</strong></td>
+    <td><code>scroll-to-top/ScrollToTop.tsx</code></td>
+    <td>Floating button (bottom-right) appearing after 400px scroll. Scrolls to hero or top.</td>
+  </tr>
+</table>
+
+<h2>5.2 Brand & Identity Components</h2>
+
+<table>
+  <tr><th>Component</th><th>File</th><th>Description</th></tr>
+  <tr>
+    <td><strong>Logo</strong></td>
+    <td><code>logo/Logo.tsx</code></td>
+    <td>CSS-based 3×3 tile grid (no image) with brand pattern (teal tiles on corners/center). "GAURI GROUP" text with signature orange dot over the "I". Supports typewriter animation and blueprint mode.</td>
+  </tr>
+  <tr>
+    <td><strong>BrandName</strong></td>
+    <td><code>brand-name/BrandName.tsx</code></td>
+    <td>Smart text component detecting "Gauri" and rendering it with distinctive styling (teal + orange dot). Also detects "Studio" for italic orange treatment. Supports different HTML tags and sizes.</td>
+  </tr>
+  <tr>
+    <td><strong>Preloader</strong></td>
+    <td><code>preloader/Preloader.tsx</code></td>
+    <td>Full-screen loading overlay with animated logo (scale, bounce, fade). GSAP timeline controls body scroll lock until complete.</td>
+  </tr>
+</table>
+
+<h2>5.3 Homepage Section Components</h2>
+
+<table>
+  <tr><th>Component</th><th>File</th><th>Description</th></tr>
+  <tr>
+    <td><strong>Hero</strong></td>
+    <td><code>hero/Hero.tsx</code></td>
+    <td>Full-screen hero with 10-slide image carousel (AVIF format). Auto-advance every 5s, prev/next buttons, dot indicators, error fallback. GSAP entrance animations for text elements.</td>
+  </tr>
+  <tr>
+    <td><strong>Stats</strong></td>
+    <td><code>stats/Stats.tsx</code></td>
+    <td>"At a Glance" counter section on dark green background. 6 animated counters: 30+ Years, 560+ Projects, 600+ Clients, 4 Verticals, 150+ Professionals, Pan India. GSAP counter animations with 3D icon rotation.</td>
+  </tr>
+  <tr>
+    <td><strong>About</strong></td>
+    <td><code>about/About.tsx</code></td>
+    <td>Company history, Managing Director's message card with portrait, "Why Choose Us" cards (9 items with modal popup), "Our USP" info cards. Blueprint line/corner animations on image.</td>
+  </tr>
+  <tr>
+    <td><strong>Timeline</strong></td>
+    <td><code>timeline/Timeline.tsx</code></td>
+    <td>Company history timeline (6 milestones from 1993–2027) with alternating left/right cards. Vertical line fills on scroll (GSAP scrub). Card slide-in animations, glow effects on year icons.</td>
+  </tr>
+  <tr>
+    <td><strong>Clients</strong></td>
+    <td><code>clients/Clients.tsx</code></td>
+    <td>Dual-row infinite marquee of 15 client logos (TATA, Mahindra, SBI, Reliance, etc.) scrolling in opposite directions via GSAP. Edge fade gradients.</td>
+  </tr>
+  <tr>
+    <td><strong>Testimonials</strong></td>
+    <td><code>testimonials/Testimonials.tsx</code></td>
+    <td>Client testimonials carousel with 4 testimonials, prev/next buttons, dot indicators, quote styling.</td>
+  </tr>
+  <tr>
+    <td><strong>Faq</strong></td>
+    <td><code>faq/Faq.tsx</code></td>
+    <td>FAQ accordion with 10 questions. Sticky image card with "Contact Us" button (opens modal). GSAP-animated accordion. Show more/less toggle.</td>
+  </tr>
+  <tr>
+    <td><strong>Values</strong></td>
+    <td><code>values/Values.tsx</code></td>
+    <td>Company values on dark green background. 5 values (Integrity, Collaboration, Excellence, Innovation, Passion) with icons. Staggered GSAP entrance.</td>
+  </tr>
+  <tr>
+    <td><strong>Features</strong></td>
+    <td><code>features/Features.tsx</code></td>
+    <td>Horizontal CSS marquee of 6 features with numbered cards. Tripled for infinite scroll effect.</td>
+  </tr>
+  <tr>
+    <td><strong>Works</strong></td>
+    <td><code>works/Works.tsx</code></td>
+    <td>Homepage featured projects grid (6 projects). Hover reveals overlay with category and title. Links to /works/:id. GSAP staggered entrance.</td>
+  </tr>
+  <tr>
+    <td><strong>Businesses</strong></td>
+    <td><code>businesses/Businesses.tsx</code></td>
+    <td>"Our Ventures" section showing 4 business cards with logos, descriptions, images. Links to /business/:id.</td>
+  </tr>
+</table>
+
+<h2>5.4 Reusable UI Components</h2>
+
+<table>
+  <tr><th>Component</th><th>File</th><th>Description</th></tr>
+  <tr>
+    <td><strong>Modal</strong></td>
+    <td><code>ui/Modal.tsx</code></td>
+    <td>Accessible modal dialog with focus trap, Escape key close, click-outside close, body scroll lock, backdrop overlay.</td>
+  </tr>
+  <tr>
+    <td><strong>InfoCard</strong></td>
+    <td><code>ui/InfoCard.tsx</code></td>
+    <td>Reusable card with icon, title, description, optional click handler, teal top border.</td>
+  </tr>
+  <tr>
+    <td><strong>HeroSlider</strong></td>
+    <td><code>ui/HeroSlider.tsx</code></td>
+    <td>Reusable full-screen hero slider with touch swipe support, auto-advance, prev/next controls, gradient overlay, lazy/eager loading strategy.</td>
+  </tr>
+  <tr>
+    <td><strong>ErrorBoundary</strong></td>
+    <td><code>ui/ErrorBoundary.tsx</code></td>
+    <td>Offline detection component. Shows "No Internet Connection" message with retry button.</td>
+  </tr>
+  <tr>
+    <td><strong>TeamMemberCard</strong></td>
+    <td><code>team/TeamMemberCard.tsx</code></td>
+    <td>Team member card with photo, name, role, LinkedIn icon. Links to /team/:id.</td>
+  </tr>
+  <tr>
+    <td><strong>LinkedInIcon</strong></td>
+    <td><code>team/LinkedInIcon.tsx</code></td>
+    <td>LinkedIn icon button with hover effects, multiple sizes, light/dark variants.</td>
+  </tr>
+  <tr>
+    <td><strong>BusinessTemplate</strong></td>
+    <td><code>business-detail/BusinessTemplate.tsx</code></td>
+    <td>Reusable full-page template for business detail pages with hero, about, services, gallery.</td>
+  </tr>
+  <tr>
+    <td><strong>ProjectDetailView</strong></td>
+    <td><code>project-detail/ProjectDetailView.tsx</code></td>
+    <td>Reusable project detail template with hero, metadata, gallery, and sticky sidebar.</td>
+  </tr>
+</table>
+
+<!-- ==================== 6. ANIMATIONS ==================== -->
+<h1 id="animations" class="page-break">6. Animations & Interactions</h1>
+
+<p>The website makes extensive use of <strong>GSAP (GreenSock Animation Platform)</strong> and <strong>Lenis smooth scroll</strong> for a premium, polished user experience.</p>
+
+<h2>6.1 GSAP Animation Catalog</h2>
+
+<table>
+  <tr><th>Animation</th><th>Location</th><th>Technique</th></tr>
+  <tr><td>Hero slide crossfade</td><td>Hero.tsx</td><td><code>gsap.to()</code> opacity crossfade, timeline for text entrance</td></tr>
+  <tr><td>Preloader sequence</td><td>Preloader.tsx</td><td>GSAP timeline: scale in → bounce → fade out</td></tr>
+  <tr><td>Page transitions</td><td>App.tsx</td><td><code>gsap.fromTo()</code> fade + slide on route change</td></tr>
+  <tr><td>Nav item stagger</td><td>Navbar.tsx</td><td><code>gsap.fromTo()</code> stagger animation</td></tr>
+  <tr><td>Scroll-triggered reveals</td><td>All sections</td><td><code>ScrollTrigger</code> with <code>start: 'top 75%'</code></td></tr>
+  <tr><td>Counter animations</td><td>Stats.tsx</td><td><code>gsap.to()</code> counting from 0 to target</td></tr>
+  <tr><td>Timeline line fill</td><td>Timeline.tsx</td><td><code>scrollTrigger.scrub</code> for progressive animation</td></tr>
+  <tr><td>Blueprint line reveal</td><td>About.tsx</td><td>Horizontal/vertical line + corner dot pop</td></tr>
+  <tr><td>Card slide-ins</td><td>Timeline, About</td><td>Alternate left/right slide on scroll</td></tr>
+  <tr><td>3D icon rotation</td><td>Stats.tsx</td><td><code>rotateY: 360</code> with <code>back.out</code> easing</td></tr>
+  <tr><td>Client marquee</td><td>Clients.tsx</td><td>Infinite horizontal scroll with <code>repeat: -1</code></td></tr>
+  <tr><td>FAQ accordion</td><td>Faq.tsx</td><td>GSAP height animation for smooth open/close</td></tr>
+  <tr><td>Clip-path reveals</td><td>VisionMission, OurStory</td><td><code>clipPath: inset()</code> reveal animations</td></tr>
+  <tr><td>Parallax floats</td><td>Heroes</td><td><code>scrub: true</code> scroll-linked floating elements</td></tr>
+</table>
+
+<h2>6.2 Lenis Smooth Scroll</h2>
+
+<div class="architecture-box">
+  <h3>Integration Details</h3>
+  <ul>
+    <li>Initialized in <code>App.tsx</code> with <code>duration: 1.2</code> and custom easing</li>
+    <li>Integrated with GSAP ticker: <code>gsap.ticker.add((time) => lenis.raf(time * 1000))</code></li>
+    <li>Connected to ScrollTrigger: <code>lenis.on('scroll', ScrollTrigger.update)</code></li>
+    <li><strong>Disabled on mobile</strong> (&lt; 768px) for performance</li>
+    <li>Tab switching fix: <code>visibilitychange</code> event triggers <code>ScrollTrigger.refresh()</code></li>
+    <li>Accessible via <code>useLenis()</code> context hook</li>
+  </ul>
+</div>
+
+<h2>6.3 Animation Pattern</h2>
+
+<div class="callout info">
+  <strong>Consistent Pattern:</strong> Most sections use an <code>IntersectionObserver</code> that triggers an <code>animated</code> boolean state, which gates GSAP animations via <code>useGSAP</code> dependency. This ensures animations only fire when sections scroll into view — not on page load.
+</div>
+
+<!-- ==================== 7. STYLING ==================== -->
+<h1 id="styling" class="page-break">7. Styling & Theming</h1>
+
+<h2>7.1 Tailwind CSS v4 Configuration</h2>
+
+<p>Tailwind v4 uses <strong>CSS-native configuration</strong> via the <code>@theme</code> directive in <code>src/index.css</code> — no separate <code>tailwind.config.js</code> file.</p>
+
+<pre><code>@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --color-brand-green: #0d2d24;
+  --color-brand-teal: #2a948c;
+  --color-brand-orange: #ea5b23;
+  --color-brand-beige: #f9f6f0;
+}</code></pre>
+
+<h2>7.2 Brand Color System</h2>
+
+<div style="display:flex; gap:12px; margin:12px 0; flex-wrap:wrap;">
+  <div style="text-align:center;">
+    <div style="width:80px; height:80px; border-radius:10px; background:#0d2d24;"></div>
+    <div style="font-size:9pt; margin-top:4px;"><strong>Green</strong><br>#0d2d24<br>Primary Dark</div>
+  </div>
+  <div style="text-align:center;">
+    <div style="width:80px; height:80px; border-radius:10px; background:#2a948c;"></div>
+    <div style="font-size:9pt; margin-top:4px;"><strong>Teal</strong><br>#2a948c<br>Accent</div>
+  </div>
+  <div style="text-align:center;">
+    <div style="width:80px; height:80px; border-radius:10px; background:#ea5b23;"></div>
+    <div style="font-size:9pt; margin-top:4px;"><strong>Orange</strong><br>#ea5b23<br>CTA / Highlight</div>
+  </div>
+  <div style="text-align:center;">
+    <div style="width:80px; height:80px; border-radius:10px; background:#f9f6f0; border:1px solid #ddd;"></div>
+    <div style="font-size:9pt; margin-top:4px;"><strong>Beige</strong><br>#f9f6f0<br>Background</div>
+  </div>
+  <div style="text-align:center;">
+    <div style="width:80px; height:80px; border-radius:10px; background:#faf9f6; border:1px solid #ddd;"></div>
+    <div style="font-size:9pt; margin-top:4px;"><strong>Off-White</strong><br>#faf9f6<br>Body BG</div>
+  </div>
+</div>
+
+<h2>7.3 Typography</h2>
+
+<table>
+  <tr><th>Font</th><th>Usage</th><th>Weights</th></tr>
+  <tr><td><strong>Inter</strong> (sans-serif)</td><td>Body text, headings, UI elements</td><td>400, 500, 600, 700</td></tr>
+  <tr><td><strong>Playfair Display</strong> (serif)</td><td>Section headings, hero titles</td><td>400, 700, 400 italic, 700 italic</td></tr>
+</table>
+
+<h2>7.4 Custom CSS Features</h2>
+
+<ul>
+  <li><strong>GPU Optimization:</strong> <code>.hero-bg</code>, <code>.timeline-card</code>, <code>.gallery-item</code> use <code>will-change</code> and <code>contain</code> properties</li>
+  <li><strong>Responsive Hero Heights:</strong> 60vh (mobile) → 80vh (tablet) → 100vh (desktop)</li>
+  <li><strong>Touch Targets:</strong> Minimum 44px for mobile interactive elements</li>
+  <li><strong>Marquee Animation:</strong> 40s linear infinite keyframe for features carousel</li>
+  <li><strong>Scroll Lock:</strong> <code>.scroll-locked</code> class for modal/overlay body lock</li>
+</ul>
+
+<!-- ==================== 8. GALLERY ==================== -->
+<h1 id="gallery" class="page-break">8. Gallery & Media System</h1>
+
+<h2>8.1 Image Management</h2>
+
+<div class="architecture-box">
+  <h3>Centralized Image Registry</h3>
+  <p>All images are managed through a single source of truth in <code>src/constants/images.ts</code>, with gallery data in <code>src/data/gallery/gallery.ts</code> containing 100+ images across 17 project folders.</p>
+</div>
+
+<h2>8.2 Gallery Features</h2>
+
+<table>
+  <tr><th>Feature</th><th>Implementation</th></tr>
+  <tr><td><strong>Category Filters</strong></td><td>8 categories: All, Residential, Luxury Villas, Commercial, Retail Work, Developers, Institutional, Hospitality, Warehousing</td></tr>
+  <tr><td><strong>Subcategory Dropdown</strong></td><td>Per-category project names (e.g., under Commercial: Hemmo Pharma, PISPL, etc.)</td></tr>
+  <tr><td><strong>Search</strong></td><td>Real-time search by project name or category</td></tr>
+  <tr><td><strong>Lazy Loading</strong></td><td>Initial 10 images, "View More" button loads additional batches</td></tr>
+  <tr><td><strong>Masonry Grid</strong></td><td>Mixed <code>col-span-1/2</code>, <code>row-span-2</code> for visual variety</td></tr>
+  <tr><td><strong>Lightbox</strong></td><td>Full-screen viewer with keyboard nav (Esc/←/→), touch swipe, image counter, Lenis lock</td></tr>
+  <tr><td><strong>Image Format</strong></td><td>AVIF (primary) with JPEG fallbacks</td></tr>
+</table>
+
+<h2>8.3 Hero Slider</h2>
+
+<p>The homepage hero features a 10-slide auto-advancing carousel with:</p>
+<ul>
+  <li>AVIF format images (1920×1080)</li>
+  <li>Auto-advance every 5 seconds</li>
+  <li>Previous/Next navigation buttons</li>
+  <li>Dot indicators for slide selection</li>
+  <li>Touch swipe support on mobile</li>
+  <li>GSAP crossfade transitions</li>
+  <li>Error fallback for failed image loads</li>
+  <li>First image <code>loading="eager"</code>, rest <code>loading="lazy"</code></li>
+</ul>
+
+<!-- ==================== 9. PERFORMANCE ==================== -->
+<h1 id="performance" class="page-break">9. Performance Optimization</h1>
+
+<h2>9.1 Code Splitting</h2>
+
+<div class="flow-diagram" style="margin:16px 0;">
+  <div class="flow-box">Main Bundle<br><small>App + Router</small></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box teal">Page Chunks<br><small>Lazy loaded</small></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box orange">Vendor Chunks<br><small>Pre-split</small></div>
+</div>
+
+<table>
+  <tr><th>Chunk</th><th>Contents</th></tr>
+  <tr><td><code>vendor-react</code></td><td>react, react-dom, react-router-dom</td></tr>
+  <tr><td><code>vendor-gsap</code></td><td>gsap, @gsap/react</td></tr>
+  <tr><td><code>vendor-utils</code></td><td>lenis, lucide-react</td></tr>
+  <tr><td>Page chunks</td><td>Each page component lazy-loaded via <code>React.lazy()</code></td></tr>
+</table>
+
+<h2>9.2 Image Optimization</h2>
+
+<ul>
+  <li><strong>AVIF Format:</strong> Modern, high-compression image format (batch converted via <code>scripts/convert-to-avif.cjs</code>)</li>
+  <li><strong>Lazy Loading:</strong> All images except hero LCP use <code>loading="lazy"</code></li>
+  <li><strong>Preloading:</strong> Hero image preloaded in <code>index.html</code> for LCP optimization</li>
+  <li><strong>Sharp Processing:</strong> AVIF quality 80 (90 for PNG), with size reduction reporting</li>
+</ul>
+
+<h2>9.3 CSS & Runtime Optimizations</h2>
+
+<ul>
+  <li><strong>GPU Acceleration:</strong> <code>will-change</code> and <code>contain</code> on animation-heavy elements</li>
+  <li><strong>Lenis Mobile Disable:</strong> Smooth scroll disabled on mobile for better performance</li>
+  <li><strong>Chunk Size Warning:</strong> Set to 600KB limit in Vite config</li>
+  <li><strong>esbuild Minification:</strong> Fast JS and CSS minification</li>
+  <li><strong>Performance Monitoring:</strong> <code>usePerformance</code> hook tracks LCP, CLS, FID via PerformanceObserver</li>
+</ul>
+
+<h2>9.4 Build Output</h2>
+
+<pre><code>// vite.config.ts
+build: {
+  outDir: 'wwwroot',    // ASP.NET convention
+  target: 'es2020',
+  minify: 'esbuild',
+  cssMinify: true,
+  chunkSizeWarningLimit: 600,
+}</code></pre>
+
+<!-- ==================== 10. SEO ==================== -->
+<h1 id="seo" class="page-break">10. SEO & Accessibility</h1>
+
+<h2>10.1 SEO Features</h2>
+
+<table>
+  <tr><th>Feature</th><th>Implementation</th></tr>
+  <tr><td><strong>Dynamic Meta Tags</strong></td><td><code>useSEO</code> hook sets title + description per route</td></tr>
+  <tr><td><strong>Open Graph Tags</strong></td><td>og:title, og:description, og:image, og:url in index.html</td></tr>
+  <tr><td><strong>Twitter Cards</strong></td><td>twitter:card, twitter:title, twitter:description, twitter:image</td></tr>
+  <tr><td><strong>JSON-LD</strong></td><td>LocalBusiness schema with address, geo, phone, email, hours, social links</td></tr>
+  <tr><td><strong>Canonical URL</strong></td><td>https://gauriinteriorpvtltd.com/</td></tr>
+  <tr><td><strong>robots.txt</strong></td><td>Allows all, disallows /api/ and /dist/</td></tr>
+  <tr><td><strong>sitemap.xml</strong></td><td>6 URLs: /, /about, /gallery, /services, /businesses, /why-us</td></tr>
+  <tr><td><strong>Semantic HTML</strong></td><td>Uses <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code> elements</td></tr>
+</table>
+
+<h2>10.2 JSON-LD Structured Data</h2>
+
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Gauri Interior Pvt. Ltd.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shop No.47, Centrium Shopping Centre",
+    "addressLocality": "Kandivali (East)",
+    "addressRegion": "Mumbai",
+    "postalCode": "400 101"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 19.2068,
+    "longitude": 72.8542
+  },
+  "telephone": ["+91-9820091263", "022-49704263"],
+  "email": "mail@gauriinteriorpvtltd.com"
+}</code></pre>
+
+<h2>10.3 Accessibility</h2>
+
+<ul>
+  <li><code>aria-label</code> on buttons and interactive elements</li>
+  <li><code>aria-modal</code>, <code>role="dialog"</code> on modals</li>
+  <li>Focus trap in Modal component</li>
+  <li>Escape key closes modals and lightbox</li>
+  <li><code>aria-expanded</code> on accordion items</li>
+  <li>Alt text on all images</li>
+  <li>Minimum touch target size: 44px on mobile</li>
+</ul>
+
+<!-- ==================== 11. DATA ==================== -->
+<h1 id="data" class="page-break">11. Data Architecture</h1>
+
+<p>All data is <strong>statically defined</strong> in TypeScript files — no backend API, no CMS integration, no server-side rendering.</p>
+
+<table>
+  <tr><th>Data Module</th><th>File</th><th>Contents</th></tr>
+  <tr><td><strong>Image Registry</strong></td><td><code>constants/images.ts</code></td><td>Centralized image path references for all components</td></tr>
+  <tr><td><strong>Contact Config</strong></td><td><code>constants/contact.ts</code></td><td>Phone numbers, email, address, social links</td></tr>
+  <tr><td><strong>Business Data</strong></td><td><code>data/businesses/businessesData.ts</strong></td><td>4 business verticals with typed interfaces</td></tr>
+  <tr><td><strong>Project Data</strong></td><td><code>data/projects/projects.ts</code></td><td>Projects with slugs, categories, galleries, metadata</td></tr>
+  <tr><td><strong>Gallery Data</strong></td><td><code>data/gallery/gallery.ts</code></td><td>100+ images, 17 project folders, folder-based organization</td></tr>
+  <tr><td><strong>Team Data</strong></td><td><code>data/team/teamMembers.ts</code></td><td>10 team members with names, roles, photos, LinkedIn profiles</td></tr>
+  <tr><td><strong>Image Inventory</strong></td><td><code>data/imageInventory.ts</code></td><td>JSON catalog of all image assets</td></tr>
+</table>
+
+<h2>11.1 Custom Hooks</h2>
+
+<table>
+  <tr><th>Hook</th><th>Purpose</th></tr>
+  <tr><td><code>useSEO</code></td><td>Dynamic page title and meta description per route</td></tr>
+  <tr><td><code>useLenis</code></td><td>Access Lenis smooth scroll instance via context</td></tr>
+  <tr><td><code>usePerformance</code></td><td>Track LCP, CLS, FID via PerformanceObserver</td></tr>
+</table>
+
+<!-- ==================== 12. DEPLOYMENT ==================== -->
+<h1 id="deployment" class="page-break">12. Deployment & Build</h1>
+
+<h2>12.1 Build Pipeline</h2>
+
+<div class="flow-diagram" style="margin:16px 0;">
+  <div class="flow-box teal">npm run build<br><small>vite build</small></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box">wwwroot/<br><small>Production files</small></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box orange">Deploy to<br><small>IIS / Vercel / Azure</small></div>
+</div>
+
+<h2>12.2 Deployment Targets</h2>
+
+<table>
+  <tr><th>Platform</th><th>Config File</th><th>Details</th></tr>
+  <tr><td><strong>Vercel</strong></td><td><code>vercel.json</code></td><td>SPA rewrite: all non-asset routes → <code>/index.html</code></td></tr>
+  <tr><td><strong>IIS / Azure</strong></td><td><code>web.config</code></td><td>SPA rewrite, MIME types (.avif, .webp, .svg, .woff2), security headers, cache control, compression</td></tr>
+  <tr><td><strong>ASP.NET</strong></td><td><code>vite.config.ts</code></td><td><code>outDir: 'wwwroot'</code> — standard ASP.NET static file location</td></tr>
+</table>
+
+<h2>12.3 IIS Web.config Features</h2>
+
+<ul>
+  <li><strong>SPA Rewrite:</strong> Catch-all rule sends non-file/non-directory requests to <code>index.html</code></li>
+  <li><strong>MIME Types:</strong> .avif, .webp, .json, .svg, .woff, .woff2</li>
+  <li><strong>Security Headers:</strong> X-Content-Type-Options, X-Frame-Options, X-XSS-Protection</li>
+  <li><strong>Caching:</strong> Cache-Control: 1 year for static assets</li>
+  <li><strong>Compression:</strong> Enabled for text, JS, JSON, SVG</li>
+</ul>
+
+<h2>12.4 NPM Scripts</h2>
+
+<table>
+  <tr><th>Script</th><th>Command</th><th>Purpose</th></tr>
+  <tr><td><code>dev</code></td><td><code>vite --port=3000 --host=0.0.0.0</code></td><td>Start dev server on port 3000</td></tr>
+  <tr><td><code>build</code></td><td><code>vite build</code></td><td>Production build to <code>wwwroot/</code></td></tr>
+  <tr><td><code>preview</code></td><td><code>vite preview</code></td><td>Preview production build locally</td></tr>
+  <tr><td><code>clean</code></td><td><code>rm -rf dist server.js</code></td><td>Clean build artifacts</td></tr>
+  <tr><td><code>lint</code></td><td><code>tsc --noEmit</code></td><td>TypeScript type checking</td></tr>
+</table>
+
+<h2>12.5 Utility Scripts</h2>
+
+<table>
+  <tr><th>Script</th><th>Purpose</th></tr>
+  <tr><td><code>scripts/convert-to-avif.cjs</code></td><td>Batch converts JPEG images to AVIF using Sharp. Quality 80 (90 for PNG). Reports size reduction.</td></tr>
+  <tr><td><code>scripts/html-to-image.mjs</code></td><td>Converts HTML to PNG screenshot using Puppeteer (headless browser, 800×1100 @ 2x).</td></tr>
+</table>
+
+<!-- ==================== 13. FEATURES SUMMARY ==================== -->
+<h1 id="features" class="page-break">13. Feature Summary</h1>
+
+<h2>13.1 Complete Feature List</h2>
+
+<table>
+  <tr><th style="width:5%">#</th><th style="width:30%">Feature</th><th>Details</th></tr>
+  <tr><td>1</td><td><strong>Responsive Navigation</strong></td><td>Fixed navbar, scroll-based bg transition, mobile hamburger, "Get in Touch" dropdown</td></tr>
+  <tr><td>2</td><td><strong>Hero Image Carousel</strong></td><td>10 AVIF slides, auto-advance, touch swipe, GSAP crossfade, dot indicators</td></tr>
+  <tr><td>3</td><td><strong>Animated Counters</strong></td><td>6 stats with GSAP counting animation and 3D icon rotation</td></tr>
+  <tr><td>4</td><td><strong>Company Timeline</strong></td><td>6 milestones (1993–2027), scroll-driven line fill, alternating card layout</td></tr>
+  <tr><td>5</td><td><strong>Client Logo Marquee</strong></td><td>Dual-row infinite scroll, 15 logos, opposite directions, edge fade</td></tr>
+  <tr><td>6</td><td><strong>Testimonials Carousel</strong></td><td>4 testimonials, prev/next, dot navigation</td></tr>
+  <tr><td>7</td><td><strong>FAQ Accordion</strong></td><td>10 questions, GSAP animation, contact modal, show more/less</td></tr>
+  <tr><td>8</td><td><strong>Gallery with Lightbox</strong></td><td>100+ images, 8 category filters, search, masonry grid, fullscreen lightbox</td></tr>
+  <tr><td>9</td><td><strong>Business Detail Pages</strong></td><td>4 business verticals with reusable template, hero, gallery, cross-links</td></tr>
+  <tr><td>10</td><td><strong>Project Detail Pages</strong></td><td>Individual project pages with gallery, metadata, sticky sidebar</td></tr>
+  <tr><td>11</td><td><strong>Team Profiles</strong></td><td>10 team members with photos, roles, LinkedIn links</td></tr>
+  <tr><td>12</td><td><strong>Preloader</strong></td><td>Animated logo sequence with GSAP timeline, body scroll lock</td></tr>
+  <tr><td>13</td><td><strong>Page Transitions</strong></td><td>Fade + slide animation on route changes</td></tr>
+  <tr><td>14</td><td><strong>Smooth Scroll</strong></td><td>Lenis with GSAP integration, disabled on mobile</td></tr>
+  <tr><td>15</td><td><strong>Scroll-Triggered Animations</strong></td><td>IntersectionObserver + GSAP ScrollTrigger on all sections</td></tr>
+  <tr><td>16</td><td><strong>Blueprint Animations</strong></td><td>Line/corner reveal animations on About section images</td></tr>
+  <tr><td>17</td><td><strong>Infinite Marquee</strong></td><td>CSS-based horizontal scroll for features section</td></tr>
+  <tr><td>18</td><td><strong>Contact Modal</strong></td><td>Accessible dialog with focus trap, escape close, scroll lock</td></tr>
+  <tr><td>19</td><td><strong>Offline Detection</strong></td><td>ErrorBoundary shows "No Internet" with retry button</td></tr>
+  <tr><td>20</td><td><strong>SEO Optimization</strong></td><td>Dynamic meta, JSON-LD, OG tags, sitemap, robots.txt</td></tr>
+  <tr><td>21</td><td><strong>Performance Monitoring</strong></td><td>LCP, CLS, FID tracking via PerformanceObserver</td></tr>
+  <tr><td>22</td><td><strong>Image Optimization</strong></td><td>AVIF format, lazy loading, LCP preloading, Sharp batch conversion</td></tr>
+  <tr><td>23</td><td><strong>Code Splitting</strong></td><td>Lazy-loaded pages, vendor chunk separation</td></tr>
+  <tr><td>24</td><td><strong>Animated 404 Page</strong></td><td>GSAP entrance, quick links, contact info</td></tr>
+  <tr><td>25</td><td><strong>CSS Logo</strong></td><td>Pure CSS 3×3 tile grid logo (no image file), typewriter support</td></tr>
+  <tr><td>26</td><td><strong>Brand Name Styling</strong></td><td>Auto-detects "Gauri" and applies signature orange dot styling</td></tr>
+  <tr><td>27</td><td><strong>Scroll-to-Top</strong></td><td>Floating button appearing after 400px scroll</td></tr>
+  <tr><td>28</td><td><strong>Back Button</strong></td><td>Floating orange button on sub-pages (desktop only)</td></tr>
+  <tr><td>29</td><td><strong>Values Section</strong></td><td>5 company values with icons, staggered GSAP entrance on dark green</td></tr>
+  <tr><td>30</td><td><strong>Responsive Design</strong></td><td>Mobile-first, 4 breakpoints, extra-small screen support (360px)</td></tr>
+</table>
+
+<h2>13.2 Project Statistics</h2>
+
+<div style="display:flex; gap:16px; flex-wrap:wrap; margin:16px 0;">
+  <div class="feature-card" style="flex:1; min-width:120px; text-align:center;">
+    <div style="font-size:28pt; font-weight:800; color:var(--brand-teal);">29</div>
+    <div style="font-size:9pt; color:var(--text-muted);">React Components</div>
+  </div>
+  <div class="feature-card" style="flex:1; min-width:120px; text-align:center;">
+    <div style="font-size:28pt; font-weight:800; color:var(--brand-orange);">12</div>
+    <div style="font-size:9pt; color:var(--text-muted);">Page Routes</div>
+  </div>
+  <div class="feature-card" style="flex:1; min-width:120px; text-align:center;">
+    <div style="font-size:28pt; font-weight:800; color:var(--brand-green);">100+</div>
+    <div style="font-size:9pt; color:var(--text-muted);">AVIF Images</div>
+  </div>
+  <div class="feature-card" style="flex:1; min-width:120px; text-align:center;">
+    <div style="font-size:28pt; font-weight:800; color:var(--brand-teal);">30</div>
+    <div style="font-size:9pt; color:var(--text-muted);">Features</div>
+  </div>
+  <div class="feature-card" style="flex:1; min-width:120px; text-align:center;">
+    <div style="font-size:28pt; font-weight:800; color:var(--brand-orange);">~80</div>
+    <div style="font-size:9pt; color:var(--text-muted);">Source Files</div>
+  </div>
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<div class="footer" style="margin-top:60px; padding-top:30px;">
+  <div style="display:flex; justify-content:center; margin-bottom:16px;">
+    <div style="display:grid; grid-template-columns: repeat(3, 18px); gap:3px;">
+      <div style="background:#2a948c; border-radius:3px; width:18px; height:18px;"></div>
+      <div style="background:#0a1f19; border-radius:3px; width:18px; height:18px;"></div>
+      <div style="background:#2a948c; border-radius:3px; width:18px; height:18px;"></div>
+      <div style="background:#0a1f19; border-radius:3px; width:18px; height:18px;"></div>
+      <div style="background:#2a948c; border-radius:3px; width:18px; height:18px;"></div>
+      <div style="background:#0a1f19; border-radius:3px; width:18px; height:18px;"></div>
+      <div style="background:#2a948c; border-radius:3px; width:18px; height:18px;"></div>
+      <div style="background:#0a1f19; border-radius:3px; width:18px; height:18px;"></div>
+      <div style="background:#2a948c; border-radius:3px; width:18px; height:18px;"></div>
+    </div>
+  </div>
+  <p style="font-weight:600; color:var(--brand-green);">Gauri Interior Pvt. Ltd.</p>
+  <p>Technical Documentation — August 2026</p>
+  <p style="font-size:8pt; margin-top:8px;">
+    Built with React 19 · TypeScript · Vite 6 · Tailwind CSS v4 · GSAP 3.15 · Lenis
+  </p>
+</div>
+
+</body>
+</html>

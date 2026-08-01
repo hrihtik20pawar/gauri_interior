@@ -71,7 +71,7 @@ export default function HeroSlider({
               decoding="async"
               width="1920"
               height="1080"
-              className="w-full h-full object-cover object-[center_65%]"
+              className="w-full h-full object-cover sm:object-[center_65%] object-[center_30%]"
             />
           )}
         </div>

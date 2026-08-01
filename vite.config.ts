@@ -16,6 +16,7 @@ export default defineConfig(() => {
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },
     build: {
+      outDir: 'wwwroot',
       target: 'es2020',
       minify: 'esbuild' as const,
       cssMinify: true,

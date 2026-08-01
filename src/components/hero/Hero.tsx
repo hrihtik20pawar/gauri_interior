@@ -95,8 +95,7 @@ export default function Hero() {
     <section 
       ref={container} 
       id="hero"
-      className="relative w-full min-h-[65vh] md:min-h-[80vh] lg:h-screen flex items-center overflow-hidden"
-      style={{ contain: 'layout style' }}
+      className="relative w-full h-[100dvh] lg:h-screen flex items-center overflow-hidden bg-black"
     >
       {heroSlides.map((src, i) => {
         const distance = Math.abs(i - currentSlide);
@@ -107,7 +106,7 @@ export default function Hero() {
           <div
             key={src}
             ref={(el) => { if (el) slideRefs.current[i] = el; }}
-            className="absolute inset-0 z-0 hero-bg"
+            className="absolute inset-0 z-0 hero-bg h-full"
             style={{ opacity: i === 0 ? 1 : 0 }}
           >
             <img
@@ -118,27 +117,27 @@ export default function Hero() {
               fetchPriority={i === 0 ? 'high' : 'low'}
               width="1920"
               height="1080"
-              className="w-full h-full object-cover object-center sm:object-[center_65%]"
+              className="w-full h-full object-cover sm:object-[center_65%] object-[center_30%] scale-[1.02]"
               onError={() => handleImageError(i)}
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/50"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70"></div>
           </div>
         );
       })}
 
       <div className="relative z-10 w-full px-5 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto py-16 sm:py-20 md:pt-28 lg:pt-0 flex items-center">
         <div className="max-w-2xl items-start text-left">
-          <h1 className="hero-text text-[28px] sm:text-3xl md:text-5xl lg:text-7xl font-serif text-white leading-[1.15] mb-3 sm:mb-4 md:mb-6 drop-shadow-lg">
+          <h1 className="hero-text hero-heading font-serif text-white leading-[1.1] mb-3 sm:mb-4 md:mb-6 drop-shadow-lg">
             Designing Spaces <br className="hidden sm:block" /> That Reflect <br className="hidden sm:block" /> Your <span className="text-brand-orange italic">Style</span>
           </h1>
           <p className="hero-text text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl mb-5 sm:mb-6 md:mb-10 max-w-md sm:max-w-lg font-medium leading-relaxed drop-shadow-md ml-0 sm:ml-8 md:ml-20">
             Crafting elegant interiors that inspire comfort and elevate living.
           </p>
           <div className="hero-text flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto">
-            <button onClick={() => navigate('/gallery')} className="bg-brand-orange text-white px-6 md:px-8 py-3 md:py-3.5 rounded text-sm md:text-base font-medium hover:bg-brand-orange/90 transition-colors flex items-center justify-center sm:justify-start gap-2 shadow-lg shadow-brand-orange/20 min-h-[48px] w-full sm:w-auto">
+            <button onClick={() => navigate('/gallery')} className="bg-brand-orange text-white px-6 md:px-8 py-3.5 md:py-3.5 rounded-xl text-sm md:text-base font-semibold hover:bg-brand-orange/90 transition-colors flex items-center justify-center sm:justify-start gap-2 shadow-lg shadow-brand-orange/20 min-h-[50px] w-full sm:w-auto">
               Explore Our Work <span className="text-lg leading-none">→</span>
             </button>
-            <button onClick={() => navigate('/services')} className="backdrop-blur-md bg-white/10 border border-white/30 text-white px-6 md:px-8 py-3 md:py-3.5 rounded text-sm md:text-base font-medium hover:bg-white hover:text-brand-green transition-colors min-h-[48px] w-full sm:w-auto">
+            <button onClick={() => navigate('/services')} className="backdrop-blur-md bg-white/10 border border-white/30 text-white px-6 md:px-8 py-3.5 md:py-3.5 rounded-xl text-sm md:text-base font-medium hover:bg-white hover:text-brand-green transition-colors min-h-[50px] w-full sm:w-auto">
               Our Services
             </button>
           </div>
@@ -160,7 +159,7 @@ export default function Hero() {
         <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
       </button>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2 hero-text">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:flex gap-2 hero-text">
         {heroSlides.map((_, i) => (
           <button
             key={i}
