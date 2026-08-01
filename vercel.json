@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "wwwroot",
   "rewrites": [
     {
       "source": "/((?!assets/).*)",
