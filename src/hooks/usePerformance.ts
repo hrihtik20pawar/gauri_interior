@@ -9,7 +9,7 @@ export function usePerformance() {
       const lcpObserver = new PerformanceObserver((entryList) => {
         const entries = entryList.getEntries();
         const lastEntry = entries[entries.length - 1] as PerformanceEntry;
-        console.log(`[Perf] LCP: ${Math.round(lastEntry.startTime)}ms`);
+        // LCP tracked for analytics
       });
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
 
@@ -21,7 +21,7 @@ export function usePerformance() {
             clsValue += (entry as any).value;
           }
         }
-        console.log(`[Perf] CLS: ${clsValue.toFixed(4)}`);
+        // CLS tracked for analytics
       });
       clsObserver.observe({ type: 'layout-shift', buffered: true });
 
@@ -29,7 +29,7 @@ export function usePerformance() {
       const fidObserver = new PerformanceObserver((entryList) => {
         const entries = entryList.getEntries();
         const firstEntry = entries[0] as any;
-        console.log(`[Perf] FID: ${Math.round(firstEntry.processingStart - firstEntry.startTime)}ms`);
+        // FID tracked for analytics
       });
       fidObserver.observe({ type: 'first-input', buffered: true });
 

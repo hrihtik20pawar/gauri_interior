@@ -19,17 +19,21 @@ export default defineConfig(() => {
       outDir: 'wwwroot',
       target: 'es2020',
       minify: 'esbuild' as const,
-      cssMinify: true,
+      cssMinify: 'esbuild' as const,
       rollupOptions: {
         output: {
           manualChunks: {
             'vendor-react': ['react', 'react-dom', 'react-router-dom'],
             'vendor-gsap': ['gsap', '@gsap/react'],
-            'vendor-utils': ['lenis', 'lucide-react'],
+            'vendor-utils': ['lenis'],
+            'vendor-icons': ['lucide-react'],
           },
         },
       },
       chunkSizeWarningLimit: 600,
+      reportCompressedSize: false,
+      sourcemap: false,
+      emptyOutDir: true,
     },
   };
 });

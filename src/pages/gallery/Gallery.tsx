@@ -193,7 +193,7 @@ export default function Gallery() {
   return (
     <div className="min-h-screen bg-[#faf9f6] pb-24 overflow-x-hidden">
 
-      <div className="sm:hidden relative w-full h-[70vh] min-h-[400px] overflow-hidden -mt-[64px]">
+      <div className="sm:hidden relative w-full h-[100dvh] min-h-[400px] overflow-hidden -mt-[64px] bg-black">
         {heroSlides.map((src, i) => (
           <div
             key={src}
@@ -339,6 +339,7 @@ export default function Gallery() {
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
+                  decoding="async"
                   className="relative w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 

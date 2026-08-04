@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { images } from '../../constants/images';
 
 const heroSlides = images.hero.slides;
-const MAX_PRELOADED = 3;
+const MAX_PRELOADED = 2;
 
 export default function Hero() {
   const container = useRef<HTMLDivElement>(null);
@@ -112,7 +112,7 @@ export default function Hero() {
             <img
               src={src}
               alt="Interior design showcase"
-              loading={i < 2 ? 'eager' : 'lazy'}
+              loading={i === 0 ? 'eager' : 'lazy'}
               decoding="async"
               fetchPriority={i === 0 ? 'high' : 'low'}
               width="1920"

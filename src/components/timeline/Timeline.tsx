@@ -10,7 +10,7 @@ const timelineSteps = [
     num: "01",
     title: "Gauri Group Founded",
     highlight: "Gauri Group",
-    image: "/images/Final_Images/Bharat Residential/WhatsApp Image 2026-07-17 at 15.55.53.avif",
+    image: "/images/timeline/1993_logo.avif",
     items: [
       "Our journey began in 1993.",
       "Mr. Lalbachan Vishwakarma entered the Furniture Industry.",
@@ -48,7 +48,7 @@ const timelineSteps = [
     num: "04",
     title: "Nikhil Enterprise",
     highlight: "Nikhil Enterprise",
-    image: "/images/Final_Images/BMR ADVISOR OFFICE/WhatsApp Image 2026-07-18 at 11.13.08.avif",
+    image: "/images/finalimages(2)/Commercial/BMR ADVISOR/WhatsApp Image 2026-07-29 at 15.28.30.avif",
     items: [
       "Expanded further with our second venture.",
       "NIKHIL ENTERPRISES.",
@@ -60,7 +60,7 @@ const timelineSteps = [
     num: "05",
     title: "GAURI'S KITCHEN",
     highlight: "GAURI'S KITCHEN",
-    image: "/images/Final_Images/6. PENINSULA/WhatsApp Image 2026-07-18 at 11.48.05.avif",
+    image: "/images/finalimages(2)/Commercial/PENINSULA/WhatsApp Image 2026-07-29 at 15.50.18.avif",
     items: [
       "We brought comfort and style to every home.",
       "Launched GAURI'S KITCHEN.",
@@ -73,7 +73,7 @@ const timelineSteps = [
     num: "06",
     title: "Gauri Designing Studio",
     highlight: "Gauri Designing Studio",
-    image: "/images/Final_Images/PISPL BPO/WhatsApp Image 2026-07-18 at 11.27.48.avif",
+    image: "/images/finalimages(2)/Commercial/JISL/WhatsApp Image 2026-07-29 at 15.11.10.avif",
     items: [
       "Upcoming venture.",
       "GAURI'S DESIGNING STUDIO.",

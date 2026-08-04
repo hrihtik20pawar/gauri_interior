@@ -2,8 +2,6 @@ import inventory from './imageInventory.json';
 
 export type ImageInventory = typeof inventory;
 
-export type WebsiteCategory = keyof ImageInventory['website'];
-
 export interface ImageEntry {
   name: string;
   category: string;
@@ -16,14 +14,7 @@ export function getAllImages(): ImageEntry[] {
   const inv = inventory as Record<string, any>;
 
   for (const [category, data] of Object.entries(inv)) {
-    if (category === 'website') {
-      for (const [subKey, subData] of Object.entries(data as Record<string, any>)) {
-        const displayName = subData._displayName || subKey;
-        collectImages(subData, category, displayName, images);
-      }
-    } else {
-      collectImages(data, category, category, images);
-    }
+    collectImages(data, category, category, images);
   }
 
   return images;

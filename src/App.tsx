@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { Suspense, useEffect, useState, useRef, createContext, useContext, useMemo } from 'react';
+import React, { Suspense, useEffect, useState, useRef, createContext, useContext } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, Navigate, Link } from 'react-router-dom';
 import Lenis from 'lenis';
 import gsap from 'gsap';
