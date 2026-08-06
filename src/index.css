@@ -96,7 +96,6 @@ html, body {
 .hero-bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .hero-heading {

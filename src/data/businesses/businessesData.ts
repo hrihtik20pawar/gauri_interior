@@ -34,7 +34,7 @@ export const businessesData: Record<string, BusinessData> = {
     heroTitleLine2: "",
     heroDesc: "Established in 2012, GAURI INTERIOR PVT. LTD. is the flagship company of the GAURI GROUP, specializing in comprehensive turnkey interior contracting solutions.",
     heroImg: images.businesses.interior,
-    whoWeAreImg: images.gallery.g8,
+    whoWeAreImg: '',
     details: "Established in 2012, GAURI INTERIOR PVT. LTD. is the flagship company of the GAURI GROUP, specializing in comprehensive turnkey interior contracting solutions. Built upon a legacy that began in 1993, the company has grown into a trusted name in the interior industry by consistently delivering projects with exceptional quality, innovation, and precision.",
     details2: "We offer end-to-end interior solutions for corporate offices, commercial spaces, retail outlets, hospitality, healthcare, educational institutions, industrial facilities, and premium residences. From design coordination and manufacturing to execution, installation, and project management, every project is managed under one roof.",
     details3: "Our commitment to superior craftsmanship, advanced manufacturing, timely execution, and customer satisfaction has enabled us to build lasting relationships with clients across India.",
@@ -53,14 +53,7 @@ export const businessesData: Record<string, BusinessData> = {
     aboutTitle: "Gauri Interior\nPvt. Ltd.",
     servicesTitle: "Our Services",
     promiseLabel: "Our Promise",
-    showcase: [
-      { title: "Modern Luxury Villa", category: "Residential", img: images.projects.oasisVilla.main },
-      { title: "Corporate Office Space", category: "Commercial", img: images.projects.zenWorkspace.main },
-      { title: "Premium Modular Kitchen", category: "Modular Furniture", img: images.projects.minimalistKitchen.main },
-      { title: "Elegant Bedroom Design", category: "Residential", img: images.gallery.g1 },
-      { title: "Retail Store Interior", category: "Commercial", img: images.projects.boutiqueRetail.main },
-      { title: "Modular Office Workstation", category: "Modular Furniture", img: images.gallery.g2 }
-    ]
+    showcase: []
   },
   kitchen: {
     id: "kitchen",
@@ -89,14 +82,7 @@ export const businessesData: Record<string, BusinessData> = {
     aboutTitle: "Gauri's\nKitchen",
     servicesTitle: "Our Solutions",
     promiseLabel: "Our Promise",
-    showcase: [
-      { title: "Minimalist Kitchen", category: "Modular", img: images.projects.minimalistKitchen.main },
-      { title: "Modular Wardrobe", category: "Storage", img: images.gallery.g5 },
-      { title: "Luxury Dining", category: "Dining", img: images.gallery.g9 },
-      { title: "Smart Storage", category: "Storage", img: images.gallery.g3 },
-      { title: "Classic Kitchen", category: "Modular", img: images.gallery.g11 },
-      { title: "Modern Pantry", category: "Storage", img: images.gallery.g10 }
-    ]
+    showcase: []
   },
   studio: {
     id: "studio",
@@ -127,14 +113,7 @@ export const businessesData: Record<string, BusinessData> = {
     aboutTitle: "Gauri's Designing\nStudio",
     servicesTitle: "What We Offer",
     promiseLabel: "Our Vision",
-    showcase: [
-      { title: "3D Visualization", category: "Design", img: images.gallery.g12 },
-      { title: "Concept Design", category: "Planning", img: images.gallery.g8 },
-      { title: "Material Selection", category: "Consulting", img: images.gallery.g11 },
-      { title: "Space Planning", category: "Design", img: images.gallery.g7 },
-      { title: "Interior Styling", category: "Styling", img: images.gallery.g4 },
-      { title: "Exterior Rendering", category: "Visualization", img: images.gallery.g6 }
-    ]
+    showcase: []
   },
   nikhil: {
     id: "nikhil",
@@ -145,7 +124,7 @@ export const businessesData: Record<string, BusinessData> = {
     heroTitleLine2: "",
     heroDesc: "Founded in 2017, NIKHIL ENTERPRISES serves as the procurement and distribution arm of the GAURI GROUP, supplying high-quality hardware, plywood, laminates, decorative surfaces, modular fittings, and allied interior products.",
     heroImg: images.businesses.nikhil,
-    whoWeAreImg: images.gallery.g8,
+    whoWeAreImg: '',
     details: "Founded in 2017, NIKHIL ENTERPRISES serves as the procurement and distribution arm of the GAURI GROUP, supplying high-quality hardware, plywood, laminates, decorative surfaces, modular fittings, and allied interior products.",
     details2: "We work with leading national and international brands to provide architects, interior designers, contractors, builders, and homeowners with reliable products that combine durability, functionality, and aesthetics.",
     details3: "With a strong focus on product quality, competitive pricing, inventory availability, and prompt service, NIKHIL ENTERPRISES has become a trusted destination for complete interior material solutions.",
@@ -163,13 +142,6 @@ export const businessesData: Record<string, BusinessData> = {
     aboutTitle: "Nikhil\nEnterprises",
     servicesTitle: "Product Categories",
     promiseLabel: "Our Promise",
-    showcase: [
-      { title: "Product Distribution", category: "Trading", img: images.gallery.g8 },
-      { title: "Supply Chain Solutions", category: "Logistics", img: images.gallery.g6 },
-      { title: "Quality Procurement", category: "Sourcing", img: images.gallery.g12 },
-      { title: "Bulk Trading", category: "Wholesale", img: images.gallery.g2 },
-      { title: "Market Expansion", category: "Strategy", img: images.gallery.g1 },
-      { title: "Partnership Network", category: "Business", img: images.gallery.g4 }
-    ]
+    showcase: []
   }
 };

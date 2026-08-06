@@ -12,7 +12,7 @@ const INITIAL_LOAD = 10;
 
 export default function Gallery() {
   const [searchParams] = useSearchParams();
-  const initialCategory = searchParams.get('category') || "All";
+  const initialCategory = searchParams.get('category') || galleryCategories[0];
   const [activeCategory, setActiveCategory] = useState(initialCategory);
   const [activeSubcategory, setActiveSubcategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
@@ -23,6 +23,7 @@ export default function Gallery() {
   const heroRef = useRef<HTMLDivElement>(null);
   const lenis = useLenis();
   const [heroSlide, setHeroSlide] = useState(0);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const visibleImages = useMemo(
     () => filteredImages.slice(0, visibleCount),
@@ -38,7 +39,6 @@ export default function Gallery() {
     if (meta) meta.setAttribute('content', 'Explore our curated portfolio of interior design projects - hotels, offices, residences, healthcare spaces, and more by Gauri Interior in Mumbai.');
   }, []);
 
-  // Update activeCategory when URL search params change
   useEffect(() => {
     const category = searchParams.get('category');
     if (category && galleryCategories.includes(category)) {
@@ -67,6 +67,17 @@ export default function Gallery() {
     };
   }, [lightboxIndex, lenis]);
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('.gallery-dropdown')) {
+        setShowDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const heroTouchStartX = useRef<number>(0);
 
   const handleHeroTouchStart = useCallback((e: React.TouchEvent) => {
@@ -89,7 +100,7 @@ export default function Gallery() {
   useEffect(() => {
     let result = galleryImages;
 
-    if (activeCategory !== "All") {
+    if (activeCategory) {
       result = result.filter(img => img.category === activeCategory);
     }
 
@@ -220,34 +231,69 @@ export default function Gallery() {
           </div>
           <div className="flex flex-wrap gap-2">
             {galleryCategories.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-3 py-2.5 rounded-full text-xs font-medium transition-all duration-300 ${
-                  activeCategory === cat
-                    ? 'bg-brand-teal text-white shadow-lg shadow-teal-900/20'
-                    : 'bg-white/90 backdrop-blur-sm text-gray-700 hover:bg-white border border-white/30'
-                }`}
-              >
-                {cat}
-              </button>
+              <div key={cat} className="relative gallery-dropdown">
+                <button
+                  onClick={() => {
+                    if (activeCategory === cat) {
+                      setShowDropdown(!showDropdown);
+                    } else {
+                      setActiveCategory(cat);
+                      setActiveSubcategory("All");
+                      setShowDropdown(true);
+                    }
+                  }}
+                  className={`flex items-center gap-1.5 px-3 py-2.5 rounded-full text-xs font-medium transition-all duration-300 ${
+                    activeCategory === cat
+                      ? 'bg-brand-teal text-white shadow-lg shadow-teal-900/20'
+                      : 'bg-white/90 backdrop-blur-sm text-gray-700 hover:bg-white border border-white/30'
+                  }`}
+                >
+                  {cat}
+                  {categorySubcategories[cat] && (
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${activeCategory === cat && showDropdown ? 'rotate-180' : ''}`} />
+                  )}
+                </button>
+                {activeCategory === cat && showDropdown && categorySubcategories[cat] && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 z-50 overflow-hidden">
+                    <div className="px-4 py-3 border-b border-gray-100">
+                      <p className="font-bold text-gray-900 text-sm">{cat}</p>
+                    </div>
+                    <div className="py-2">
+                      <button
+                        onClick={() => {
+                          setActiveSubcategory("All");
+                          setShowDropdown(false);
+                        }}
+                        className={`w-full text-left px-4 py-2.5 text-sm transition-all duration-200 ${
+                          activeSubcategory === "All"
+                            ? 'bg-brand-teal/10 text-brand-teal font-medium'
+                            : 'text-gray-600 hover:bg-gray-50'
+                        }`}
+                      >
+                        All {cat}
+                      </button>
+                      {categorySubcategories[cat].map((name) => (
+                        <button
+                          key={name}
+                          onClick={() => {
+                            setActiveSubcategory(name);
+                            setShowDropdown(false);
+                          }}
+                          className={`w-full text-left px-4 py-2.5 text-sm transition-all duration-200 ${
+                            activeSubcategory === name
+                              ? 'bg-brand-teal/10 text-brand-teal font-medium'
+                              : 'text-gray-600 hover:bg-gray-50'
+                          }`}
+                        >
+                          {name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
-          {activeCategory !== "All" && categorySubcategories[activeCategory] && (
-            <div className="relative mt-3 w-full">
-              <select
-                value={activeSubcategory}
-                onChange={(e) => setActiveSubcategory(e.target.value)}
-                className="w-full pl-4 pr-10 py-3 rounded-xl bg-white/90 backdrop-blur-sm border border-white/20 focus:outline-none focus:ring-2 focus:ring-brand-teal/50 transition-all text-gray-700 shadow-sm text-sm appearance-none cursor-pointer"
-              >
-                <option value="All">All {activeCategory}</option>
-                {categorySubcategories[activeCategory].map((name) => (
-                  <option key={name} value={name}>{name}</option>
-                ))}
-              </select>
-              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
-            </div>
-          )}
         </div>
       </div>
 
@@ -291,34 +337,69 @@ export default function Gallery() {
 
             <div className="gallery-hero-text flex flex-wrap justify-center gap-2 sm:gap-3 px-2">
               {galleryCategories.map(cat => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
-                    activeCategory === cat
-                      ? 'bg-brand-teal text-white shadow-lg shadow-teal-900/20 scale-105'
-                      : 'bg-white/90 backdrop-blur-sm text-gray-600 hover:bg-white hover:text-gray-900 border border-white/20'
-                  }`}
-                >
-                  {cat}
-                </button>
+                <div key={cat} className="relative gallery-dropdown">
+                  <button
+                    onClick={() => {
+                      if (activeCategory === cat) {
+                        setShowDropdown(!showDropdown);
+                      } else {
+                        setActiveCategory(cat);
+                        setActiveSubcategory("All");
+                        setShowDropdown(true);
+                      }
+                    }}
+                    className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
+                      activeCategory === cat
+                        ? 'bg-brand-teal text-white shadow-lg shadow-teal-900/20 scale-105'
+                        : 'bg-white/90 backdrop-blur-sm text-gray-600 hover:bg-white hover:text-gray-900 border border-white/20'
+                    }`}
+                  >
+                    {cat}
+                    {categorySubcategories[cat] && (
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeCategory === cat && showDropdown ? 'rotate-180' : ''}`} />
+                    )}
+                  </button>
+                  {activeCategory === cat && showDropdown && categorySubcategories[cat] && (
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 z-50 overflow-hidden">
+                      <div className="px-5 py-4 border-b border-gray-100">
+                        <p className="font-bold text-gray-900 text-base">{cat}</p>
+                      </div>
+                      <div className="py-2">
+                        <button
+                          onClick={() => {
+                            setActiveSubcategory("All");
+                            setShowDropdown(false);
+                          }}
+                          className={`w-full text-left px-5 py-3 text-sm transition-all duration-200 ${
+                            activeSubcategory === "All"
+                              ? 'bg-brand-teal/10 text-brand-teal font-medium'
+                              : 'text-gray-600 hover:bg-gray-50'
+                          }`}
+                        >
+                          All {cat}
+                        </button>
+                        {categorySubcategories[cat].map((name) => (
+                          <button
+                            key={name}
+                            onClick={() => {
+                              setActiveSubcategory(name);
+                              setShowDropdown(false);
+                            }}
+                            className={`w-full text-left px-5 py-3 text-sm transition-all duration-200 ${
+                              activeSubcategory === name
+                                ? 'bg-brand-teal/10 text-brand-teal font-medium'
+                                : 'text-gray-600 hover:bg-gray-50'
+                            }`}
+                          >
+                            {name}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
-            {activeCategory !== "All" && categorySubcategories[activeCategory] && (
-              <div className="gallery-hero-text relative max-w-md mx-auto mt-6 px-2">
-                <select
-                  value={activeSubcategory}
-                  onChange={(e) => setActiveSubcategory(e.target.value)}
-                  className="w-full pl-4 pr-12 py-3 sm:py-4 rounded-2xl bg-white/90 backdrop-blur-sm border border-white/20 focus:outline-none focus:ring-2 focus:ring-brand-teal/50 transition-all text-gray-700 shadow-sm text-sm sm:text-base appearance-none cursor-pointer"
-                >
-                  <option value="All">All {activeCategory}</option>
-                  {categorySubcategories[activeCategory].map((name) => (
-                    <option key={name} value={name}>{name}</option>
-                  ))}
-                </select>
-                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
-              </div>
-            )}
           </div>
         </div>
 

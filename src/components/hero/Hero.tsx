@@ -95,7 +95,7 @@ export default function Hero() {
     <section 
       ref={container} 
       id="hero"
-      className="relative w-full h-[100dvh] lg:h-screen flex items-center overflow-hidden bg-black"
+      className="relative w-full min-h-screen lg:h-screen flex items-center overflow-hidden bg-black"
     >
       {heroSlides.map((src, i) => {
         const distance = Math.abs(i - currentSlide);
@@ -117,17 +117,17 @@ export default function Hero() {
               fetchPriority={i === 0 ? 'high' : 'low'}
               width="1920"
               height="1080"
-              className="w-full h-full object-cover sm:object-[center_65%] object-[center_30%] scale-[1.02]"
+              className="w-full h-full object-contain md:object-cover object-center bg-black md:scale-[1.02] scale-100"
               onError={() => handleImageError(i)}
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black/75"></div>
           </div>
         );
       })}
 
-      <div className="relative z-10 w-full px-5 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto py-16 sm:py-20 md:pt-28 lg:pt-0 flex items-center">
+      <div className="relative z-10 w-full px-5 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto pt-44 sm:pt-24 md:pt-28 lg:pt-0 flex items-center">
         <div className="max-w-2xl items-start text-left">
-          <h1 className="hero-text hero-heading font-serif text-white leading-[1.1] mb-3 sm:mb-4 md:mb-6 drop-shadow-lg">
+          <h1 className="hero-text font-serif text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-3 sm:mb-4 md:mb-6 drop-shadow-xl">
             Designing Spaces <br className="hidden sm:block" /> That Reflect <br className="hidden sm:block" /> Your <span className="text-brand-orange italic">Style</span>
           </h1>
           <p className="hero-text text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl mb-5 sm:mb-6 md:mb-10 max-w-md sm:max-w-lg font-medium leading-relaxed drop-shadow-md ml-0 sm:ml-8 md:ml-20">
@@ -146,14 +146,14 @@ export default function Hero() {
 
       <button
         onClick={handlePrev}
-        className="absolute left-3 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/60 transition-colors hero-text"
+        className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md items-center justify-center text-white hover:bg-black/60 transition-colors hero-text"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
       </button>
       <button
         onClick={handleNext}
-        className="absolute right-3 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/60 transition-colors hero-text"
+        className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md items-center justify-center text-white hover:bg-black/60 transition-colors hero-text"
         aria-label="Next slide"
       >
         <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />

@@ -50,7 +50,9 @@ export default function Testimonials() {
 
         <div className="relative bg-gray-50 rounded-2xl md:rounded-3xl p-5 md:p-12 lg:p-16">
           <div className="mb-4 md:mb-6">
-            <Quote className="w-8 h-8 md:w-10 md:h-10 text-brand-orange/30" />
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-orange/10 flex items-center justify-center">
+              <Quote className="w-5 h-5 md:w-6 md:h-6 text-brand-orange" />
+            </div>
           </div>
 
           <p className="text-gray-700 text-sm sm:text-base md:text-xl leading-relaxed mb-6 md:mb-8">
@@ -72,16 +74,21 @@ export default function Testimonials() {
           </div>
 
           <div className="flex items-center justify-between mt-6 md:mt-10">
-            <div className="flex gap-1">
+            <div className="flex gap-1.5 md:gap-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   aria-label={`Go to testimonial ${index + 1}`}
-                  className={`min-h-[12px] min-w-[12px] md:min-h-[16px] md:min-w-[16px] flex items-center justify-center rounded-full transition-all duration-300 ${
-                    index === currentIndex ? 'bg-brand-orange w-3 md:w-4' : 'bg-gray-300 w-1.5'
-                  }`}
-                />
+                >
+                  <div
+                    className={`transition-all duration-300 ease-in-out ${
+                      index === currentIndex
+                        ? "w-7 h-2.5 rounded-full bg-brand-orange shadow-md shadow-brand-orange/40"
+                        : "w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400"
+                    }`}
+                  />
+                </button>
               ))}
             </div>
             <div className="flex gap-2 md:gap-3">

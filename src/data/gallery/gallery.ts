@@ -9,7 +9,6 @@ export interface GalleryImage {
 }
 
 export const galleryCategories = [
-  "All",
   "Residential",
   "Luxury Villas",
   "Commercial",
@@ -344,35 +343,22 @@ function buildGalleryItems(): GalleryImage[] {
     "col-span-1", "col-span-2", "row-span-2", "col-span-1",
   ];
 
-  const queues: { config: FolderConfig; files: string[]; cursor: number }[] = [];
-  for (const config of folders) {
-    const files = imageFiles[config.folder] || [];
-    queues.push({ config, files, cursor: 0 });
-  }
-
   const items: GalleryImage[] = [];
   let idx = 0;
-  let remaining = queues.length;
 
-  while (remaining > 0) {
-    for (let i = queues.length - 1; i >= 0; i--) {
-      const q = queues[i];
-      if (q.cursor >= q.files.length) {
-        queues.splice(i, 1);
-        remaining--;
-        continue;
-      }
+  for (const config of folders) {
+    const files = imageFiles[config.folder] || [];
+    for (const file of files) {
       idx++;
       items.push({
         id: `g-${idx}`,
-        title: q.config.title,
-        category: q.config.category,
-        image: q.files[q.cursor],
-        companyLogo: q.config.companyLogo,
+        title: config.title,
+        category: config.category,
+        image: file,
+        companyLogo: config.companyLogo,
         span: spans[idx % spans.length],
         type: "gallery",
       });
-      q.cursor++;
     }
   }
 

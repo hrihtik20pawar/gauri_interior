@@ -77,20 +77,7 @@ export const images = {
     ]
   },
 
-  gallery: {
-    g1: "/images/finalimages(2)/Resedential/GULATI HOUSE/WhatsApp Image 2026-07-29 at 12.46.42.avif",
-    g2: "/images/finalimages(2)/Resedential/MAZDA/WhatsApp Image 2026-07-29 at 12.44.34.avif",
-    g3: "/images/finalimages(2)/Resedential/PARLE AGRO/WhatsApp Image 2026-07-29 at 12.43.49 (1).avif",
-    g4: "/images/finalimages(2)/Resedential/PURNIMA & DIVYA SETHI/WhatsApp Image 2026-07-29 at 12.45.52.avif",
-    g5: "/images/finalimages(2)/Resedential/SANDEEP AGRAWAL/WhatsApp Image 2026-07-29 at 12.45.25 (1).avif",
-    g6: "/images/finalimages(2)/Resedential/GULATI HOUSE/WhatsApp Image 2026-07-29 at 12.46.43 (1).avif",
-    g7: "/images/finalimages(2)/Resedential/MAZDA/WhatsApp Image 2026-07-29 at 12.44.35 (1).avif",
-    g8: "/images/finalimages(2)/Resedential/PARLE AGRO/WhatsApp Image 2026-07-29 at 12.43.50 (1).avif",
-    g9: "/images/finalimages(2)/Resedential/PURNIMA & DIVYA SETHI/WhatsApp Image 2026-07-29 at 12.45.53.avif",
-    g10: "/images/finalimages(2)/Resedential/SANDEEP AGRAWAL/WhatsApp Image 2026-07-29 at 12.45.26 (1).avif",
-    g11: "/images/finalimages(2)/Resedential/GULATI HOUSE/WhatsApp Image 2026-07-29 at 12.46.44 (1).avif",
-    g12: "/images/finalimages(2)/Resedential/MAZDA/WhatsApp Image 2026-07-29 at 12.44.36 (1).avif"
-  },
+  gallery: {} as Record<string, string>,
 
   team: [
     "/images/team/team-founder.avif",
