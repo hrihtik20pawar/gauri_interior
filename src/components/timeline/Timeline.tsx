@@ -36,7 +36,7 @@ const timelineSteps = [
     num: "03",
     title: "Gauri Interior Pvt. Ltd.",
     highlight: "Gauri Interior Pvt. Ltd.",
-    image: "/images/Final_Images/CRAVIN CAFE/WhatsApp Image 2026-07-18 at 14.38.40.avif",
+    image: "/images/businesses/interior_logo.avif",
     items: [
       "With the vision of our current MD & CEO Mr. Shilkumar L. Vishwakarma.",
       "We launched our 1st venture.",
@@ -48,7 +48,7 @@ const timelineSteps = [
     num: "04",
     title: "Nikhil Enterprise",
     highlight: "Nikhil Enterprise",
-    image: "/images/finalimages(2)/Commercial/BMR ADVISOR/WhatsApp Image 2026-07-29 at 15.28.30.avif",
+    image: "/images/businesses/Nikhil_logo.avif",
     items: [
       "Expanded further with our second venture.",
       "NIKHIL ENTERPRISES.",
@@ -60,7 +60,7 @@ const timelineSteps = [
     num: "05",
     title: "GAURI'S KITCHEN",
     highlight: "GAURI'S KITCHEN",
-    image: "/images/finalimages(2)/Commercial/PENINSULA/WhatsApp Image 2026-07-29 at 15.50.18.avif",
+    image: "/images/businesses/kitchen_logo.avif",
     items: [
       "We brought comfort and style to every home.",
       "Launched GAURI'S KITCHEN.",
@@ -73,7 +73,7 @@ const timelineSteps = [
     num: "06",
     title: "Gauri Designing Studio",
     highlight: "Gauri Designing Studio",
-    image: "/images/finalimages(2)/Commercial/JISL/WhatsApp Image 2026-07-29 at 15.11.10.avif",
+    image: "images/businesses/studio_logo.avif",
     items: [
       "Upcoming venture.",
       "GAURI'S DESIGNING STUDIO.",
@@ -253,14 +253,14 @@ export default function Timeline() {
                   <div className={`w-full md:w-1/2 pl-12 sm:pl-14 md:pl-0 md:px-12 ${isEven ? 'md:text-right md:pr-16' : 'md:text-left md:pl-16'}`}>
                     <div className="timeline-card bg-white/60 backdrop-blur-md rounded-[1.25rem] md:rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group overflow-hidden">
 
-                      <div className="relative h-36 sm:h-40 md:h-56 overflow-hidden">
+                      <div className="relative h-48 sm:h-56 md:h-56 overflow-hidden flex items-center justify-center bg-white">
                         <img
                           loading="lazy"
                           src={step.image}
                           alt={step.title}
-                          className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-full object-contain p-3 sm:p-4 md:p-2 max-h-full group-hover:scale-105 transition-transform duration-500"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
                       </div>
 
                       <div className="p-4 sm:p-5 md:p-10">

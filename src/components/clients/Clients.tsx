@@ -20,7 +20,8 @@ const clients = [
   { name: "Cafco", logo: "/images/clients/client-15-05-31.avif" },
 ];
 
-const clientsRow2 = [...clients].reverse();
+const clientsRow1 = clients.slice(0, 8);
+const clientsRow2 = clients.slice(8);
 
 export default function Clients() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -62,7 +63,7 @@ export default function Clients() {
         <div className="absolute left-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-r from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
         <div className="absolute right-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-l from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
         <div ref={scrollRef1} className="flex gap-5 md:gap-12 items-center w-max">
-          {[...clients, ...clients].map((client, idx) => (
+          {[...clientsRow1, ...clientsRow1].map((client, idx) => (
             <div
               key={idx}
               className="flex-shrink-0 w-32 md:w-56 h-20 md:h-36 bg-white rounded-lg md:rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center p-3 md:p-6 border border-gray-100 hover:border-brand-orange/30 group overflow-hidden"

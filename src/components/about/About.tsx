@@ -117,16 +117,8 @@ export default function About() {
 
       <div className="mb-8 md:mb-12">
         <div className="bg-white rounded-2xl shadow-[0_2px_20px_rgb(0,0,0,0.06)] border border-gray-100 overflow-hidden relative max-w-full">
-          <div className="absolute top-4 right-4 md:top-5 md:right-5 z-20">
-            <button className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:bg-white transition-colors shadow-sm">
-              <svg className="w-3.5 h-3.5 md:w-4 md:h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-              </svg>
-            </button>
-          </div>
-
           <div className="flex flex-col md:flex-row items-stretch">
-            <div className="w-full md:w-[55%] p-5 sm:p-6 md:p-8 lg:p-10 relative z-10">
+            <div className="w-full md:w-[42%] p-5 sm:p-6 md:p-8 lg:p-10 relative z-10">
               <div className="mb-4 md:mb-5">
                 <div className="text-brand-orange/20 text-5xl md:text-6xl font-serif leading-none select-none mb-1">&ldquo;</div>
                 <p className="text-brand-orange font-semibold tracking-widest uppercase text-[10px] sm:text-xs mb-2 md:mb-3">Message From The Managing Director</p>
@@ -138,14 +130,13 @@ export default function About() {
                 <span className="text-gray-900 font-serif">Message</span>
               </h3>
 
-              <div className="space-y-2.5 md:space-y-3 text-gray-600 text-xs sm:text-sm md:text-[14px] leading-relaxed text-justify">
+              <div className="max-w-[540px] space-y-2.5 md:space-y-3 text-gray-600 text-xs sm:text-sm md:text-[14px] leading-relaxed text-justify">
                 <p className="!text-gray-900 font-medium">Dear Valued Clients, Partners, and Associates,</p>
                 <p>It gives me immense pride to welcome you to <BrandName as="span">GAURI GROUP.</BrandName></p>
                 <p>Our journey began with a simple vision—to create quality furniture through honest workmanship and unwavering dedication. Over the years, that vision has grown into a comprehensive turnkey interior solutions company, serving clients across diverse industries while maintaining the same values that laid our foundation.</p>
                 <p>At Gauri, we believe that every space tells a story. Whether it is a corporate office, a healthcare facility, an educational institution, a hospitality project, or a premium residence, our objective is to create environments that combine functionality, innovation, and aesthetics.</p>
                 <p>Our greatest strength lies in our people—their expertise, commitment, and passion for excellence. Together, we strive to deliver projects that exceed expectations in quality, safety, and timely execution.</p>
                 <p>As we expand through our group companies and embrace new opportunities, our commitment remains unchanged: to build long-term relationships based on trust, integrity, and exceptional service.</p>
-                <p>I sincerely thank our clients, employees, partners, and well-wishers for being an integral part of our journey. We look forward to creating many more inspiring spaces together.</p>
               </div>
 
               <div className="mt-5 md:mt-7">
@@ -156,12 +147,12 @@ export default function About() {
               </div>
             </div>
 
-            <div className="w-full md:w-[45%] flex items-center justify-center bg-[#f5f3ee] min-h-[300px] sm:min-h-[350px] md:min-h-[450px] lg:min-h-[520px] relative overflow-hidden rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
+            <div className="w-full md:w-[58%] min-h-[280px] sm:min-h-[330px] md:min-h-[430px] lg:min-h-[500px] relative overflow-hidden rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none bg-white">
               <img
                 loading="lazy"
                 src="/images/team/team-md-ceo.avif"
                 alt="Managing Director - GAURI GROUP"
-                className="w-full h-full absolute inset-0 object-cover object-top"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </div>
