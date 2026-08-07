@@ -40,6 +40,7 @@ export const categorySubcategories: Record<string, string[]> = {
     "Practical Finance",
     "Sanjay Kapoor Office",
     "Amardeep Projects",
+    "United Shippers",
   ],
   "Retail Work": [
     "Cravin Cafe",
@@ -49,9 +50,7 @@ export const categorySubcategories: Record<string, string[]> = {
   "Institutional": [
     "Jaihind College",
   ],
-  "Hospitality Project": [
-    "United Shippers",
-  ],
+  "Hospitality Project": [],
   "Warehousing & Factory's": [
     "PIPSL Chennai Godown",
   ],
@@ -86,6 +85,7 @@ const folders: FolderConfig[] = [
   { folder: "13. PRACTICLE FINANCE", title: "Practical Finance", category: "Commercial" },
   { folder: "9. SANJAY KAPOOR OFFICE", title: "Sanjay Kapoor Office", category: "Commercial" },
   { folder: "14. AMARDEEP PROJECTS", title: "Amardeep Projects", category: "Commercial" },
+  { folder: "15. UNITED SHIPPERS", title: "United Shippers", category: "Commercial" },
 
   // Retail Work
   { folder: "CRAVIN CAFE", title: "Cravin Cafe", category: "Retail Work" },
@@ -94,9 +94,6 @@ const folders: FolderConfig[] = [
 
   // Institutional
   { folder: "8. JAINHIND COLLEGE LABORATORY", title: "Jaihind College", category: "Institutional" },
-
-  // Hospitality Project
-  { folder: "15. UNITED SHIPPERS", title: "United Shippers", category: "Hospitality Project" },
 
   // Warehousing & Factory's
   { folder: "7. PIPSL CHENNAI GODOWN", title: "PIPSL Chennai Godown", category: "Warehousing & Factory's" },
@@ -318,7 +315,6 @@ const imageFiles: Record<string, string[]> = {
   "15. UNITED SHIPPERS": [
     "/images/Final_Images/15. UNITED SHIPPERS/WhatsApp Image 2026-07-18 at 14.19.00.avif",
     "/images/Final_Images/15. UNITED SHIPPERS/WhatsApp Image 2026-07-18 at 14.19.05.avif",
-    "/images/Final_Images/15. UNITED SHIPPERS/WhatsApp Image 2026-07-18 at 14.19.12.avif",
     "/images/Final_Images/15. UNITED SHIPPERS/WhatsApp Image 2026-07-18 at 14.19.18.avif",
     "/images/Final_Images/15. UNITED SHIPPERS/WhatsApp Image 2026-07-18 at 14.19.28.avif",
   ],
