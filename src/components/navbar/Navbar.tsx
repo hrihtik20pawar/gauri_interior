@@ -1,4 +1,4 @@
-import { Mail, MessageCircle, Phone, ChevronDown } from 'lucide-react';
+import { Mail, MessageCircle, Phone } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
@@ -10,50 +10,13 @@ interface MegaMenuItem {
   items: { name: string; path: string; description?: string }[];
 }
 
-const megaMenuData: MegaMenuItem[] = [
-  {
-    category: 'Interiors',
-    items: [
-      { name: 'Gauri Interior Pvt. Ltd.', path: '/business/interior', description: 'Turnkey interior contracting' },
-      { name: 'Corporate Offices', path: '/business/interior', description: 'Premium workspace solutions' },
-      { name: 'Commercial Fit-Outs', path: '/business/interior', description: 'Retail & commercial spaces' },
-    ],
-  },
-  {
-    category: 'Kitchen & Furniture',
-    items: [
-      { name: "Gauri's Kitchen", path: '/business/kitchen', description: 'Modular kitchen solutions' },
-      { name: 'Wardrobes', path: '/business/kitchen', description: 'Storage & organization' },
-      { name: 'Bedroom Furniture', path: '/business/kitchen', description: 'Custom bedroom designs' },
-    ],
-  },
-  {
-    category: 'Design Studio',
-    items: [
-      { name: "Gauri's Designing Studio", path: '/business/studio', description: 'Design consultancy (Launching 2027)' },
-      { name: '3D Visualization', path: '/business/studio', description: 'Concept & rendering' },
-      { name: 'Space Planning', path: '/business/studio', description: 'Architectural planning' },
-    ],
-  },
-  {
-    category: 'Materials',
-    items: [
-      { name: 'Nikhil Enterprises', path: '/business/nikhil', description: 'Premium interior materials' },
-      { name: 'Hardware & Fittings', path: '/business/nikhil', description: 'Architectural hardware' },
-      { name: 'Plywood & Laminates', path: '/business/nikhil', description: 'Decorative surfaces' },
-    ],
-  },
-];
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
-  const [megaMenuOpen, setMegaMenuOpen] = useState(false);
   const location = useLocation();
   const desktopContactRef = useRef<HTMLDivElement>(null);
   const mobileContactRef = useRef<HTMLDivElement>(null);
-  const megaMenuRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLElement>(null);
   const [navHeight, setNavHeight] = useState(0);
 
@@ -92,10 +55,8 @@ export default function Navbar() {
       const target = event.target as Node;
       const clickedInsideDesktop = desktopContactRef.current?.contains(target);
       const clickedInsideMobile = mobileContactRef.current?.contains(target);
-      const clickedInsideMega = megaMenuRef.current?.contains(target);
-      if (!clickedInsideDesktop && !clickedInsideMobile && !clickedInsideMega) {
+      if (!clickedInsideDesktop && !clickedInsideMobile) {
         setContactOpen(false);
-        setMegaMenuOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -119,7 +80,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Businesses", path: "#", hasMegaMenu: true },
+    { name: "Businesses", path: "/businesses" },
     { name: "Services", path: "/services" },
     { name: "Gallery", path: "/gallery" },
   ];
@@ -135,20 +96,6 @@ export default function Navbar() {
 
         <div className="hidden lg:flex items-center gap-8 text-sm font-medium shrink-0">
           {navLinks.map((link, i) => {
-            if (link.hasMegaMenu) {
-              return (
-                <div key={i} className="relative">
-                  <button
-                    onClick={() => setMegaMenuOpen(!megaMenuOpen)}
-                    className={`nav-item transition-colors hover:text-brand-orange flex items-center gap-1 ${scrolled ? 'text-gray-700' : 'text-white'} ${megaMenuOpen ? (scrolled ? 'border-b-2 border-brand-orange pb-1 text-brand-orange font-semibold' : 'border-b-2 border-brand-orange pb-1 text-brand-orange') : ''}`}
-                  >
-                    {link.name}
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${megaMenuOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                </div>
-              );
-            }
-
             const isActive = location.pathname === link.path;
             return (
               <Link
@@ -244,52 +191,12 @@ export default function Navbar() {
       >
         <div className="py-4 px-6 flex flex-col">
           {navLinks.map((link, i) => {
-            if (link.hasMegaMenu) {
-              return (
-                <div key={i}>
-                  <button
-                    onClick={() => setMegaMenuOpen(!megaMenuOpen)}
-                    className={`font-medium py-3.5 w-full text-left transition-colors border-b border-white/10 flex items-center justify-between ${
-                      megaMenuOpen
-                        ? 'text-brand-orange border-l-4 border-brand-orange pl-4 -ml-[1px]'
-                        : 'text-white hover:text-brand-orange hover:bg-white/5 rounded-lg px-2'
-                    }`}
-                  >
-                    {link.name}
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${megaMenuOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  
-                  {megaMenuOpen && (
-                    <div className="pl-4 py-2 border-b border-white/10">
-                      {megaMenuData.map((category, idx) => (
-                        <div key={idx} className="mb-3">
-                          <h4 className="text-xs font-semibold text-white/60 uppercase tracking-wider mb-2">{category.category}</h4>
-                          <ul className="space-y-1">
-                            {category.items.map((item, itemIdx) => (
-                              <li key={itemIdx}>
-                                <Link
-                                  to={item.path}
-                                  onClick={() => { setMegaMenuOpen(false); setIsOpen(false); }}
-                                  className="block text-sm text-white/80 hover:text-brand-orange py-1.5 transition-colors"
-                                >
-                                  {item.name}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            }
-
             const isActive = location.pathname === link.path;
             return (
               <Link 
                 key={i} 
                 to={link.path} 
+                onClick={() => setIsOpen(false)}
                 className={`font-medium py-3.5 block transition-colors border-b border-white/10 last:border-b-0 ${
                   isActive 
                     ? 'text-brand-orange border-l-4 border-brand-orange pl-4 -ml-[1px]' 
@@ -356,45 +263,6 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-
-    {megaMenuOpen && (
-      <div 
-        ref={megaMenuRef}
-        className="hidden lg:block fixed left-0 right-0 bg-white border-t border-gray-100 shadow-2xl z-40"
-        style={{ top: `${navHeight}px` }}
-      >
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 lg:px-24 py-8">
-          <div className="flex items-center gap-2 mb-6">
-            <h3 className="text-lg font-semibold text-gray-900">Our Businesses</h3>
-            <span className="text-sm text-gray-400">|</span>
-            <p className="text-sm text-gray-500">Explore our diverse portfolio of companies</p>
-          </div>
-          <div className="grid grid-cols-4 gap-8">
-            {megaMenuData.map((category, idx) => (
-              <div key={idx}>
-                <h4 className="text-sm font-bold text-gray-900 mb-4 uppercase tracking-wider">{category.category}</h4>
-                <ul className="space-y-3">
-                  {category.items.map((item, itemIdx) => (
-                    <li key={itemIdx}>
-                      <Link
-                        to={item.path}
-                        onClick={() => setMegaMenuOpen(false)}
-                        className="group block"
-                      >
-                        <p className="text-sm font-medium text-gray-700 group-hover:text-brand-orange transition-colors">{item.name}</p>
-                        {item.description && (
-                          <p className="text-xs text-gray-400 group-hover:text-gray-500 transition-colors">{item.description}</p>
-                        )}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    )}
   </>
   );
 }
