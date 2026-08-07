@@ -95,7 +95,7 @@ export default function Hero() {
     <section 
       ref={container} 
       id="hero"
-      className="relative w-full h-[100svh] lg:h-screen flex items-center overflow-hidden bg-black"
+      className="relative w-full h-[65vh] sm:h-[75vh] md:h-[85vh] lg:h-screen flex items-center overflow-hidden bg-black"
     >
       {heroSlides.map((slide, i) => {
         const distance = Math.abs(i - currentSlide);
@@ -117,7 +117,7 @@ export default function Hero() {
               fetchPriority={i === 0 ? 'high' : 'low'}
               width="1920"
               height="1080"
-              className="w-full h-full object-cover object-center scale-[1.02]"
+              className="w-full h-full object-cover object-[65%_center] md:object-center scale-[1.02]"
               onError={() => handleImageError(i)}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-black/70"></div>
@@ -125,22 +125,21 @@ export default function Hero() {
         );
       })}
 
-      <div className="relative z-10 w-full px-5 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto pt-28 sm:pt-24 md:pt-28 lg:pt-0 flex items-center">
+      <div className="relative z-10 w-full px-5 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto pt-16 sm:pt-20 md:pt-24 lg:pt-0 flex items-center">
         <div className="max-w-2xl items-start text-left">
           <h1 
-            className="hero-text font-serif text-white leading-[1.1] mb-3 sm:mb-4 md:mb-6 drop-shadow-xl"
-            style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)' }}
+            className="hero-text font-serif text-white leading-[1.1] mb-2 sm:mb-4 md:mb-6 drop-shadow-xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
           >
             Designing Spaces <br className="hidden sm:block" /> That Reflect <br className="hidden sm:block" /> Your <span className="text-brand-orange italic">Style</span>
           </h1>
-          <p className="hero-text text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl mb-5 sm:mb-6 md:mb-10 max-w-sm sm:max-w-lg md:ml-20 font-medium leading-relaxed drop-shadow-md">
+          <p className="hero-text text-gray-200 text-xs sm:text-sm md:text-lg lg:text-xl mb-4 sm:mb-6 md:mb-10 max-w-sm sm:max-w-lg md:ml-20 font-medium leading-relaxed drop-shadow-md">
             Crafting elegant interiors that inspire comfort and elevate living.
           </p>
           <div className="hero-text flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto max-w-[320px] sm:max-w-none mx-auto sm:mx-0">
-            <button onClick={() => navigate('/gallery')} className="bg-brand-orange text-white px-6 md:px-8 py-3.5 md:py-3.5 rounded-xl text-sm md:text-base font-semibold hover:bg-brand-orange/90 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand-orange/20 min-h-[50px] w-full sm:w-auto">
+            <button onClick={() => navigate('/gallery')} className="bg-brand-orange text-white px-5 sm:px-6 md:px-8 py-3 sm:py-3.5 md:py-3.5 rounded-xl text-xs sm:text-sm md:text-base font-semibold hover:bg-brand-orange/90 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand-orange/20 min-h-[44px] sm:min-h-[50px] w-full sm:w-auto">
               Explore Our Work <span className="text-lg leading-none">→</span>
             </button>
-            <button onClick={() => navigate('/services')} className="backdrop-blur-md bg-white/10 border border-white/30 text-white px-6 md:px-8 py-3.5 md:py-3.5 rounded-xl text-sm md:text-base font-medium hover:bg-white hover:text-brand-green transition-colors min-h-[50px] w-full sm:w-auto">
+            <button onClick={() => navigate('/services')} className="backdrop-blur-md bg-white/10 border border-white/30 text-white px-5 sm:px-6 md:px-8 py-3 sm:py-3.5 md:py-3.5 rounded-xl text-xs sm:text-sm md:text-base font-medium hover:bg-white hover:text-brand-green transition-colors min-h-[44px] sm:min-h-[50px] w-full sm:w-auto">
               Our Services
             </button>
           </div>

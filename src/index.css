@@ -142,9 +142,9 @@ html, body {
   
   /* Hero section mobile optimizations */
   #hero {
-    height: 100dvh !important;
-    min-height: 100dvh !important;
-    max-height: 100dvh !important;
+    height: 65vh !important;
+    min-height: 65vh !important;
+    max-height: 65vh !important;
   }
   
   /* Prevent body overflow on mobile */
@@ -168,24 +168,25 @@ html, body {
   }
   
   #hero {
-    height: 100dvh !important;
-    min-height: 100dvh !important;
-    max-height: 100dvh !important;
+    height: 60vh !important;
+    min-height: 60vh !important;
+    max-height: 60vh !important;
   }
 }
 
 /* Small phones */
 @media (min-width: 361px) and (max-width: 480px) {
   #hero {
-    height: 100dvh !important;
-    min-height: 100dvh !important;
-    max-height: 100dvh !important;
+    height: 65vh !important;
+    min-height: 65vh !important;
+    max-height: 65vh !important;
   }
 }
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
   #hero {
-    min-height: 80vh;
+    height: 85vh !important;
+    min-height: 85vh !important;
   }
 }
