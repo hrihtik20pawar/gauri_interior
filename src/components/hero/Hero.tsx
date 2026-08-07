@@ -109,29 +109,6 @@ export default function Hero() {
             className="absolute inset-0 z-0 hero-bg h-full"
             style={{ opacity: i === 0 ? 1 : 0 }}
           >
-            <div className="md:hidden absolute inset-0">
-              <img
-                src={slide.desktop}
-                alt=""
-                aria-hidden="true"
-                className="absolute inset-0 w-full h-full object-cover blur-md scale-110"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-full h-[70vh] max-h-[600px] px-4">
-                  <img
-                    src={slide.desktop}
-                    alt="Interior design showcase"
-                    loading={i === 0 ? 'eager' : 'lazy'}
-                    decoding="async"
-                    fetchPriority={i === 0 ? 'high' : 'low'}
-                    width="1920"
-                    height="1080"
-                    className="w-full h-full object-cover object-center rounded-lg shadow-2xl"
-                    onError={() => handleImageError(i)}
-                  />
-                </div>
-              </div>
-            </div>
             <img
               src={slide.desktop}
               alt="Interior design showcase"
@@ -140,7 +117,7 @@ export default function Hero() {
               fetchPriority={i === 0 ? 'high' : 'low'}
               width="1920"
               height="1080"
-              className="hidden md:block w-full h-full object-cover object-center scale-[1.02]"
+              className="w-full h-full object-cover object-center scale-[1.02]"
               onError={() => handleImageError(i)}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-black/70"></div>
