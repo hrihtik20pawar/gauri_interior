@@ -434,6 +434,7 @@ export default function Gallery() {
 
       </div>
 
+      {!showDropdown && (
       <div className="px-4 md:px-8 lg:px-16 max-w-[1800px] mx-auto mt-6 sm:mt-8 md:mt-16">
         <div ref={galleryRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 auto-rows-[250px] sm:auto-rows-[300px] md:auto-rows-[400px]">
           {visibleImages.map((item, index) => {
@@ -495,6 +496,7 @@ export default function Gallery() {
           </div>
         )}
       </div>
+      )}
 
       {lightboxIndex !== null && filteredImages[lightboxIndex] && createPortal(
         <div
