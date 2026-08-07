@@ -39,16 +39,21 @@ export default function TeamMemberDetail() {
 
       <section className="relative h-[100dvh] min-h-[500px] overflow-hidden">
         {images.hero.slides.map((slide, idx) => (
-          <img
-            key={idx}
-            src={slide}
-            alt="Interior design showcase"
-            loading={idx === 0 ? 'eager' : 'lazy'}
-            decoding="async"
-            width="1920"
-            height="1080"
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === currentSlide ? 'opacity-100' : 'opacity-0'}`}
-          />
+          <picture key={idx}>
+            <source
+              media="(max-width:768px)"
+              srcSet={slide.mobile}
+            />
+            <img
+              src={slide.desktop}
+              alt="Interior design showcase"
+              loading={idx === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+              width="1920"
+              height="1080"
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === currentSlide ? 'opacity-100' : 'opacity-0'}`}
+            />
+          </picture>
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-brand-green/50 to-brand-green/80" />
         <div className="relative z-10 h-full flex items-start md:items-center pt-32 md:pt-0 px-6 md:px-12 lg:px-24">

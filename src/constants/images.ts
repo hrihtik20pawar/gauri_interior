@@ -1,19 +1,42 @@
+export interface HeroSlide {
+  desktop: string;
+  mobile: string;
+}
+
+const desktopSlides = [
+  "/images/finalimages(2)/HomeScreen/homescreen_1.avif",
+  "/images/finalimages(2)/HomeScreen/homescreen_2.avif",
+  "/images/finalimages(2)/HomeScreen/homescreen_3.avif",
+  "/images/finalimages(2)/HomeScreen/homescreen_4.avif",
+  "/images/finalimages(2)/HomeScreen/homescreen_5.avif",
+  "/images/finalimages(2)/HomeScreen/homescreen_6.avif",
+  "/images/finalimages(2)/HomeScreen/homescreen_7.avif",
+  "/images/finalimages(2)/HomeScreen/homescreen_8.avif",
+  "/images/finalimages(2)/HomeScreen/homescreen_9.avif",
+  "/images/finalimages(2)/HomeScreen/homescreen_10.avif",
+];
+
+const mobileSlides = [
+  "/images/hero/mobile/homescreen_1.avif",
+  "/images/hero/mobile/homescreen_2.avif",
+  "/images/hero/mobile/homescreen_3.avif",
+  "/images/hero/mobile/homescreen_4.avif",
+  "/images/hero/mobile/homescreen_5.avif",
+  "/images/hero/mobile/homescreen_6.avif",
+  "/images/hero/mobile/homescreen_7.avif",
+  "/images/hero/mobile/homescreen_8.avif",
+  "/images/hero/mobile/homescreen_9.avif",
+  "/images/hero/mobile/homescreen_10.avif",
+];
+
 export const images = {
   logo: "/images/about/main_logo.avif",
 
   hero: {
-    slides: [
-      "/images/finalimages(2)/HomeScreen/homescreen_1.avif",
-      "/images/finalimages(2)/HomeScreen/homescreen_2.avif",
-      "/images/finalimages(2)/HomeScreen/homescreen_3.avif",
-      "/images/finalimages(2)/HomeScreen/homescreen_4.avif",
-      "/images/finalimages(2)/HomeScreen/homescreen_5.avif",
-      "/images/finalimages(2)/HomeScreen/homescreen_6.avif",
-      "/images/finalimages(2)/HomeScreen/homescreen_7.avif",
-      "/images/finalimages(2)/HomeScreen/homescreen_8.avif",
-      "/images/finalimages(2)/HomeScreen/homescreen_9.avif",
-      "/images/finalimages(2)/HomeScreen/homescreen_10.avif",
-    ],
+    slides: desktopSlides.map((desktop, i) => ({
+      desktop,
+      mobile: mobileSlides[i],
+    })) satisfies HeroSlide[],
   },
 
   about: {

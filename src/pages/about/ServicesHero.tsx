@@ -3,11 +3,11 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { images } from '../../constants/images';
+import { images, HeroSlide } from '../../constants/images';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const heroSlides = images.hero.slides;
+const heroSlides: HeroSlide[] = images.hero.slides;
 
 export default function ServicesHero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -67,21 +67,27 @@ export default function ServicesHero() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {heroSlides.map((src, i) => (
+      {heroSlides.map((slide, i) => (
         <div
-          key={src}
+          key={slide.desktop}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentSlide === i ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         >
           {Math.abs(currentSlide - i) <= 1 && (
-            <img
-              src={src}
-              alt="Interior design services"
-              loading={i === 0 ? 'eager' : 'lazy'}
-              decoding="async"
-              width="1920"
-              height="1080"
-              className="w-full h-full object-cover sm:object-[center_65%] object-[center_30%]"
-            />
+            <picture>
+              <source
+                media="(max-width:768px)"
+                srcSet={slide.mobile}
+              />
+              <img
+                src={slide.desktop}
+                alt="Interior design services"
+                loading={i === 0 ? 'eager' : 'lazy'}
+                decoding="async"
+                width="1920"
+                height="1080"
+                className="w-full h-full object-cover sm:object-[center_65%] object-[center_30%]"
+              />
+            </picture>
           )}
         </div>
       ))}

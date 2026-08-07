@@ -5,9 +5,9 @@ import { ChevronLeft, ChevronRight, X, Maximize2, Search, ChevronDown } from 'lu
 import { galleryImages, galleryCategories, categorySubcategories, GalleryImage } from '../../data/gallery/gallery';
 import { useLenis } from '../../App';
 import { useSearchParams } from 'react-router-dom';
-import { images } from '../../constants/images';
+import { images, HeroSlide } from '../../constants/images';
 
-const heroSlides = images.hero.slides;
+const heroSlides: HeroSlide[] = images.hero.slides;
 const INITIAL_LOAD = 10;
 
 export default function Gallery() {
@@ -205,13 +205,27 @@ export default function Gallery() {
     <div className="min-h-screen bg-[#faf9f6] pb-24 overflow-x-hidden">
 
       <div className="sm:hidden relative w-full h-[100dvh] min-h-[400px] overflow-hidden -mt-[64px] bg-black">
-        {heroSlides.map((src, i) => (
+        {heroSlides.map((slide, i) => (
           <div
-            key={src}
+            key={slide.desktop}
             className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
             style={{ opacity: heroSlide === i ? 1 : 0 }}
           >
-            <img src={src} alt="Interior design gallery showcase" loading={i === 0 ? "eager" : "lazy"} decoding="async" width="1920" height="1080" className="w-full h-full object-cover object-[center_65%]" />
+            <picture>
+              <source
+                media="(max-width:768px)"
+                srcSet={slide.mobile}
+              />
+              <img
+                src={slide.desktop}
+                alt="Interior design gallery showcase"
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding="async"
+                width="1920"
+                height="1080"
+                className="w-full h-full object-cover object-[center_65%]"
+              />
+            </picture>
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
@@ -303,13 +317,27 @@ export default function Gallery() {
         onTouchStart={handleHeroTouchStart}
         onTouchEnd={handleHeroTouchEnd}
       >
-        {heroSlides.map((src, i) => (
+        {heroSlides.map((slide, i) => (
           <div
-            key={src}
+            key={slide.desktop}
             className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
             style={{ opacity: heroSlide === i ? 1 : 0 }}
           >
-            <img src={src} alt="Interior design gallery showcase" loading={i === 0 ? "eager" : "lazy"} decoding="async" width="1920" height="1080" className="w-full h-full object-cover object-[center_65%]" />
+            <picture>
+              <source
+                media="(max-width:768px)"
+                srcSet={slide.mobile}
+              />
+              <img
+                src={slide.desktop}
+                alt="Interior design gallery showcase"
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding="async"
+                width="1920"
+                height="1080"
+                className="w-full h-full object-cover object-[center_65%]"
+              />
+            </picture>
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />

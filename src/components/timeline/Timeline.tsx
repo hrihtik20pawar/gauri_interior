@@ -242,7 +242,7 @@ export default function Timeline() {
                 <div key={step.num} className={`timeline-item relative flex flex-col md:flex-row items-center w-full ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
 
                   <div className="hidden md:block w-1/2 px-12 flex items-center justify-center">
-                    <span className="text-7xl lg:text-8xl font-sans text-brand-orange/20 font-bold whitespace-nowrap">
+                    <span className="text-7xl lg:text-8xl font-sans text-brand-orange font-bold whitespace-nowrap">
                       {step.year}
                     </span>
                   </div>
@@ -264,7 +264,7 @@ export default function Timeline() {
                       </div>
 
                       <div className="p-4 sm:p-5 md:p-10">
-                        <span className="inline-block text-3xl sm:text-4xl md:text-6xl font-sans text-gray-100 font-bold mb-2 md:mb-4 -mt-2 md:-mt-4 -ml-1 md:-ml-2 group-hover:text-brand-orange/10 transition-colors duration-300">
+                        <span className="inline-block text-3xl sm:text-4xl md:text-6xl font-sans text-brand-orange font-bold mb-2 md:mb-4 -mt-2 md:-mt-4 -ml-1 md:-ml-2 transition-colors duration-300">
                           {step.num}
                         </span>
                         <h3 className="text-lg sm:text-xl md:text-3xl font-sans text-brand-green mb-3 md:mb-6">
