@@ -24,6 +24,7 @@ export default function Gallery() {
   const lenis = useLenis();
   const [heroSlide, setHeroSlide] = useState(0);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [dropdownButtonRect, setDropdownButtonRect] = useState<DOMRect | null>(null);
 
   const visibleImages = useMemo(
     () => filteredImages.slice(0, visibleCount),
@@ -70,7 +71,7 @@ export default function Gallery() {
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (!target.closest('.gallery-dropdown')) {
+      if (!target.closest('.gallery-dropdown') && !target.closest('.gallery-portal-dropdown')) {
         setShowDropdown(false);
       }
     };
@@ -247,12 +248,19 @@ export default function Gallery() {
             {galleryCategories.map(cat => (
               <div key={cat} className="relative gallery-dropdown">
                 <button
-                  onClick={() => {
+                  onClick={(e) => {
+                    const rect = e.currentTarget.getBoundingClientRect();
                     if (activeCategory === cat) {
-                      setShowDropdown(!showDropdown);
+                      if (showDropdown) {
+                        setShowDropdown(false);
+                      } else {
+                        setDropdownButtonRect(rect);
+                        setShowDropdown(true);
+                      }
                     } else {
                       setActiveCategory(cat);
                       setActiveSubcategory("All");
+                      setDropdownButtonRect(rect);
                       setShowDropdown(true);
                     }
                   }}
@@ -267,44 +275,6 @@ export default function Gallery() {
                     <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${activeCategory === cat && showDropdown ? 'rotate-180' : ''}`} />
                   )}
                 </button>
-                {activeCategory === cat && showDropdown && categorySubcategories[cat] && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 z-50 overflow-hidden">
-                    <div className="px-4 py-3 border-b border-gray-100">
-                      <p className="font-bold text-gray-900 text-sm">{cat}</p>
-                    </div>
-                    <div className="py-2">
-                      <button
-                        onClick={() => {
-                          setActiveSubcategory("All");
-                          setShowDropdown(false);
-                        }}
-                        className={`w-full text-left px-4 py-2.5 text-sm transition-all duration-200 ${
-                          activeSubcategory === "All"
-                            ? 'bg-brand-teal/10 text-brand-teal font-medium'
-                            : 'text-gray-600 hover:bg-gray-50'
-                        }`}
-                      >
-                        All {cat}
-                      </button>
-                      {categorySubcategories[cat].map((name) => (
-                        <button
-                          key={name}
-                          onClick={() => {
-                            setActiveSubcategory(name);
-                            setShowDropdown(false);
-                          }}
-                          className={`w-full text-left px-4 py-2.5 text-sm transition-all duration-200 ${
-                            activeSubcategory === name
-                              ? 'bg-brand-teal/10 text-brand-teal font-medium'
-                              : 'text-gray-600 hover:bg-gray-50'
-                          }`}
-                        >
-                          {name}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
             ))}
           </div>
@@ -367,12 +337,24 @@ export default function Gallery() {
               {galleryCategories.map(cat => (
                 <div key={cat} className="relative gallery-dropdown">
                   <button
-                    onClick={() => {
+                    ref={(el) => {
+                      if (el && activeCategory === cat) {
+                        (el as any).__rect = el.getBoundingClientRect();
+                      }
+                    }}
+                    onClick={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
                       if (activeCategory === cat) {
-                        setShowDropdown(!showDropdown);
+                        if (showDropdown) {
+                          setShowDropdown(false);
+                        } else {
+                          setDropdownButtonRect(rect);
+                          setShowDropdown(true);
+                        }
                       } else {
                         setActiveCategory(cat);
                         setActiveSubcategory("All");
+                        setDropdownButtonRect(rect);
                         setShowDropdown(true);
                       }
                     }}
@@ -387,44 +369,6 @@ export default function Gallery() {
                       <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeCategory === cat && showDropdown ? 'rotate-180' : ''}`} />
                     )}
                   </button>
-                  {activeCategory === cat && showDropdown && categorySubcategories[cat] && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 z-50 overflow-hidden">
-                      <div className="px-5 py-4 border-b border-gray-100">
-                        <p className="font-bold text-gray-900 text-base">{cat}</p>
-                      </div>
-                      <div className="py-2">
-                        <button
-                          onClick={() => {
-                            setActiveSubcategory("All");
-                            setShowDropdown(false);
-                          }}
-                          className={`w-full text-left px-5 py-3 text-sm transition-all duration-200 ${
-                            activeSubcategory === "All"
-                              ? 'bg-brand-teal/10 text-brand-teal font-medium'
-                              : 'text-gray-600 hover:bg-gray-50'
-                          }`}
-                        >
-                          All {cat}
-                        </button>
-                        {categorySubcategories[cat].map((name) => (
-                          <button
-                            key={name}
-                            onClick={() => {
-                              setActiveSubcategory(name);
-                              setShowDropdown(false);
-                            }}
-                            className={`w-full text-left px-5 py-3 text-sm transition-all duration-200 ${
-                              activeSubcategory === name
-                                ? 'bg-brand-teal/10 text-brand-teal font-medium'
-                                : 'text-gray-600 hover:bg-gray-50'
-                            }`}
-                          >
-                            {name}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
@@ -496,6 +440,55 @@ export default function Gallery() {
           </div>
         )}
       </div>
+      )}
+
+      {showDropdown && dropdownButtonRect && activeCategory && categorySubcategories[activeCategory] && createPortal(
+        <div
+          className="fixed z-[150] gallery-portal-dropdown"
+          style={{
+            top: dropdownButtonRect.bottom + 8,
+            left: dropdownButtonRect.left + dropdownButtonRect.width / 2,
+            transform: 'translateX(-50%)',
+          }}
+        >
+          <div className="w-72 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden">
+            <div className="px-5 py-4 border-b border-gray-100">
+              <p className="font-bold text-gray-900 text-base">{activeCategory}</p>
+            </div>
+            <div className="py-2 max-h-[50vh] overflow-y-auto">
+              <button
+                onClick={() => {
+                  setActiveSubcategory("All");
+                  setShowDropdown(false);
+                }}
+                className={`w-full text-left px-5 py-3 text-sm transition-all duration-200 ${
+                  activeSubcategory === "All"
+                    ? 'bg-brand-teal/10 text-brand-teal font-medium'
+                    : 'text-gray-600 hover:bg-gray-50'
+                }`}
+              >
+                All {activeCategory}
+              </button>
+              {categorySubcategories[activeCategory].map((name) => (
+                <button
+                  key={name}
+                  onClick={() => {
+                    setActiveSubcategory(name);
+                    setShowDropdown(false);
+                  }}
+                  className={`w-full text-left px-5 py-3 text-sm transition-all duration-200 ${
+                    activeSubcategory === name
+                      ? 'bg-brand-teal/10 text-brand-teal font-medium'
+                      : 'text-gray-600 hover:bg-gray-50'
+                  }`}
+                >
+                  {name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>,
+        document.body
       )}
 
       {lightboxIndex !== null && filteredImages[lightboxIndex] && createPortal(
